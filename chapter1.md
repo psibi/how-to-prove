@@ -89,3 +89,16 @@ Or 2 + 1 = 3
 They are giving redundant information (5,11) in the question to
 confuse you!
 
+Exercise 4
+-----------
+
+Find five consecutive integers that are not prime.
+
+We need to use Theorem 4 for solving this problem.
+
+Let n = 5. By Theorem 4, 5 numbers from (n+1)! + 2 will not be prime.
+
+They are: 722, 723, 724, 72, 726
+
+
+
