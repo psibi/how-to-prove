@@ -60,13 +60,13 @@ the third one indicates 3^n - 2^n.
 * (10,False,False)
 
 Well, so looking at the second column it seems I can come up with some
-sensible conjugate:
+sensible conjecture:
 
-Sibi's (Too much, huh?) conjugate: 3^n - 1 is never a prime number for
+Sibi's (Too much, huh?) conjecture: 3^n - 1 is never a prime number for
 any positive integer greater than 1.
 
 For third column, I can't see any pattern there. Still I can produce
-some idiotic conjugate: For all numbers n greater than 5, 3^n - 2^n is
+some idiotic conjecture: For all numbers n greater than 5, 3^n - 2^n is
 not a prime number.
 
 Exercise 3)
@@ -115,3 +115,14 @@ Next two numbers are: 496,8128
 
 Findingg 8128 with a paper and pen will be a nightmare!
 
+Exercise 6
+-----------
+
+The sequence 3, 5, 7 is a list of three prime numbers such that each pair of
+adjacent numbers in the list differ by two. Are there any more such “triplet
+primes”?
+
+I don't know, it seems unlikely though. Once again I will write a
+[program](https://github.com/psibi/rwh/blob/78a5676662b7ecc3b2a01bdeb326986bb4d496cb/misc/Factor.hs#L35)
+to check this stuff. I checked it from the first 2000 numbers and I
+wans't able to find any triplet primes, Sorry!
