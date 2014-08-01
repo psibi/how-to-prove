@@ -100,5 +100,18 @@ Let n = 5. By Theorem 4, 5 numbers from (n+1)! + 2 will not be prime.
 
 They are: 722, 723, 724, 72, 726
 
+Exercise 5
+-----------
 
+Use the table in Figure 1 and the discussion on p. 5 to find two more perfect
+numbers.
+
+Two perfect numbers are already given in the book: 6,28. I would
+rather write a
+[program](https://github.com/psibi/rwh/blob/a8cd5f077ed3b47e07e4dd3020ec6986c769a64b/misc/Factor.hs#L26)
+rather than drawing a table to find out the next two perfect numbers.
+
+Next two numbers are: 496,8128
+
+Findingg 8128 with a paper and pen will be a nightmare!
 
