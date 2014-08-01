@@ -69,3 +69,23 @@ For third column, I can't see any pattern there. Still I can produce
 some idiotic conjugate: For all numbers n greater than 5, 3^n - 2^n is
 not a prime number.
 
+Exercise 3)
+-----------
+
+The proof of Theorem 3 gives a method for finding a prime number different
+from any in a given list of prime numbers.
+(a) Use this method to find a prime different from 2, 3, 5, and 7.
+(b) Use this method to find a prime different from 2, 5, and 11.
+
+The way to solve this problem is to understand Theorem 3 (Euler's
+Theorem ?).
+
+(a) 2.3.5.7 + 1 = 211
+(b) 2.3.5.7.11 + 1 = 2311
+
+Or 2 + 1 = 3
+   2.3 + 1 = 7
+
+They are giving redundant information (5,11) in the question to
+confuse you!
+
