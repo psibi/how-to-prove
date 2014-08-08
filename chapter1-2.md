@@ -48,3 +48,59 @@ b)
     F T F | T
     F F T | F
     F F F | F
+
+Exercise 3
+-----------
+
+a)
+
+    p q | p + q
+    T T | F 
+    T F | T
+    F T | T
+    F F | F
+
+b)
+
+Find a formula using only the connectives ∧, ∨, and ¬ that is equiv-
+alent to P + Q. Justify your answer with a truth table.
+
+Now in the above truth table (3 (a)) see for which rows you are
+getting True and write down their logical connective:
+
+    (p ∧ ¬q) ∨ (¬p ∧ q)
+
+    p q | ((p & ~q) | (~p & q))
+    ---------------------------
+    T T | F
+    T F | T
+    F T | T
+    F F | F
+
+Exercise 4
+----------
+
+(a)
+
+    p q | p ↓ q
+    T T | F
+    T F | F
+    F T | F
+    F F | T
+
+(b)
+
+    ¬p ∧ ¬q
+
+(c)
+
+Find formulas using only the connective ↓ that are equivalent to ¬P,
+P ∨ Q, and P ∧ Q.
+
+    p ↓ p
+    ¬(p ↓ q) ≡ (p ↓ q) ↓ (p ↓ q)
+    ¬p ↓ ¬q  ≡ (p ↓ p) ↓ (q ↓ q)
+
+¬
+∨
+p ∧ q
