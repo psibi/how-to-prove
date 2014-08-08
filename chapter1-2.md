@@ -101,6 +101,40 @@ P ∨ Q, and P ∧ Q.
     ¬(p ↓ q) ≡ (p ↓ q) ↓ (p ↓ q)
     ¬p ↓ ¬q  ≡ (p ↓ p) ↓ (q ↓ q)
 
+Exercise 6
+----------
+
+    Some mathematicians write P | Q to mean “P and Q are not both true.”
+    (This connective is called nand, and is used in the study of circuits in
+    computer science.)
+    (a) Make a truth table for P | Q.
+    (b) Find a formula using only the connectives ∧, ∨, and ¬ that is equiv-
+    alent to P | Q.
+    (c) Find formulas using only the connective | that are equivalent to ¬P,
+    P ∨ Q, and P ∧ Q.
+
+(a)
+
+    p q | p | q
+    T T | F
+    T F | T
+    F T | T
+    F F | T
+
+(b)
+
+One of these:
+
+    ¬(p ∧ q)         (p | q ≡ ¬(p ∧ q))
+    ¬p ∨ ¬q          (p | q ≡ ¬p ∨ ¬q)
+
+(c)
+
+    ¬p ≡ (p | p)
+    p ∨ q ≡ (¬p | ¬q) ≡ ((p | p) | (q | q))
+    p ∧ q = ¬(p | q) ≡ (p | q) | (p | q)
+    
+
 ¬
-∨
+p ∨ q
 p ∧ q
