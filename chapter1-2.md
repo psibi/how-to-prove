@@ -80,6 +80,26 @@ getting True and write down their logical connective:
 Exercise 4
 ----------
 
+    Find a formula using only the connectives ∧ and ¬ that is equivalent to
+    P ∨ Q. Justify your answer with a truth table.
+
+The truth table for `P v Q` follows like this:
+
+    p q | (p v q)
+    -------------
+    T T | T
+    T F | T
+    F T | T
+    F F | F
+
+From De-morgan's theorem:
+
+    ¬(P v Q) ≡ ¬P ∧ ¬Q
+    (P v Q) ≡ ¬(¬P ∧ ¬Q)
+
+Exercise 5
+----------
+
 (a)
 
     p q | p ↓ q
@@ -97,7 +117,7 @@ Exercise 4
 Find formulas using only the connective ↓ that are equivalent to ¬P,
 P ∨ Q, and P ∧ Q.
 
-    p ↓ p
+    p ↓ p 
     ¬(p ↓ q) ≡ (p ↓ q) ↓ (p ↓ q)
     ¬p ↓ ¬q  ≡ (p ↓ p) ↓ (q ↓ q)
 
@@ -132,7 +152,7 @@ One of these:
 
     ¬p ≡ (p | p)
     p ∨ q ≡ (¬p | ¬q) ≡ ((p | p) | (q | q))
-    p ∧ q = ¬(p | q) ≡ (p | q) | (p | q)
+    p ∧ q ≡ ¬(p | q) ≡ (p | q) | (p | q)
     
 
 ¬
