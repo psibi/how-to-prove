@@ -407,5 +407,110 @@ Truth tables:
 From the truth tables, `(b)` is contradiction. `(c)` and `(d)` are
 both tautologies. `(a)` is neither of them.
 
+Exercise 10
+-----------
 
-¬ p ∨ q p ∧ q
+The first was checked in text, so I will skip it.
+Distributive law: `P ∧ (Q ∨ R)` is equivalent to `(P ∧ Q) ∨ (P ∧ R)`
+
+    P Q R | (P & (Q | R))
+    ---------------------
+    T T T | T
+    T T F | T
+    T F T | T
+    T F F | F
+    F T T | F
+    F T F | F
+    F F T | F
+    F F F | F
+
+    P Q R | ((P & Q) | (P & R))
+    ---------------------------
+    T T T | T
+    T T F | T
+    T F T | T
+    T F F | F
+    F T T | F
+    F T F | F
+    F F T | F
+    F F F | F
+
+Duh, they are equivalent.
+
+Exercise 11
+------------
+
+    Use the laws stated in the text to find simpler formulas equivalent to these
+    formulas. (See Examples 1.2.5 and 1.2.7.)
+    (a) ¬(¬P ∧ ¬Q).
+    (b) (P ∧ Q) ∨ (P ∧ ¬Q).
+    (c) ¬(P ∧ ¬Q) ∨ (¬P ∧ Q).
+
+(a)
+
+    ¬(¬P ∧ ¬Q)
+    => P ∨ Q    (Demorgan's law)
+
+(b)
+
+    (P ∧ Q) ∨ (P ∧ ¬Q)
+    => ((P ∧ Q) ∨ P) ∧ ((P ∧ Q) ∨ ¬Q)  [Distributive law]
+    => (P ∨ (P ∧ Q)) ∧ (¬Q ∨ (P ∧ Q))  [Associative law]
+    => P ∧ ((¬Q ∨ P) ∧ (¬Q ∨ Q)) [Absorption law & Distributive law]
+    => P ∧ (¬Q ∨ P) 
+    => P [Absorption law]
+
+(c)
+
+    ¬(P ∧ ¬Q) ∨ (¬P ∧ Q)
+    => (¬P ∨ Q) ∨ (¬P ∧ Q) [Demorgan's law]
+    => (¬P ∨ Q ∨ ¬P) ∧ (¬P ∨ Q ∨ Q) [Distributive law]
+    => (¬P ∨ Q) ∧ (¬P ∨ Q) [Idempotent law]
+    => (¬P ∨ Q)  [Idempotent law]
+
+Exercise 12
+------------
+
+    Use the laws stated in the text to find simpler formulas equivalent to these
+    formulas. (See Examples 1.2.5 and 1.2.7.)
+    (a) ¬(¬P ∨ Q) ∨ (P ∧ ¬R).
+    (b) ¬(¬P ∧ Q) ∨ (P ∧ ¬R).
+    (c) (P ∧ R) ∨ [¬R ∧ (P ∨ Q)]
+
+(a)
+
+    ¬(¬P ∨ Q) ∨ (P ∧ ¬R)
+    => (P ∧ ¬Q) ∨ (P ∧ ¬R) [Demorgan's law]
+
+Can't reduce more than this. Let me know if it's more reducible than
+this.
+
+(b)
+
+    ¬(¬P ∧ Q) ∨ (P ∧ ¬R)
+    => (P ∨ ¬Q) ∨ (P ∧ ¬R) [Demorgan's law]
+    => (P ∨ ¬Q ∨ P) ∧ (P ∨ ¬Q ∨ ¬R) [Distributive law]
+    => (P v ¬Q) ∧ (P ∨ ¬Q ∨ ¬R) [Idempotent law]
+    => (P v ¬Q) [Absorption law]
+
+(c)
+
+    (P ∧ R) ∨ [¬R ∧ (P ∨ Q)]
+    => (P ∧ R) ∨ (¬R ∧ P) ∨ (¬R ∧ Q) [Distributive law]
+    => (P ∧ (R ∨ ¬R)) ∨ (¬R ∧ Q) [Distributive law]
+    => P ∨ (¬R ∧ Q) 
+
+Exercise 13
+------------
+
+    Use the first DeMorgan’s law and the double negation law to derive the
+    second DeMorgan’s law.
+
+Firt Demorgan's law: `¬(P ∧ Q) is equivalent to ¬P ∨ ¬Q`
+Second Demorgan's law: `¬(P ∨ Q) is equivalent to ¬P ∧ ¬Q`
+
+    ¬(P ∨ Q) [LHS of second demorgan's law]
+    => ¬(¬¬P ∨ ¬¬Q) [Double negation]
+    => ¬(¬(¬P ∧ ¬Q)) [Demorgan's first law]
+    => (¬P ∧ ¬Q) [RHS of second demorgan's law]
+
