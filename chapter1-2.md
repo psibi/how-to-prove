@@ -514,3 +514,61 @@ Second Demorgan's law: `¬(P ∨ Q) is equivalent to ¬P ∧ ¬Q`
     => ¬(¬(¬P ∧ ¬Q)) [Demorgan's first law]
     => (¬P ∧ ¬Q) [RHS of second demorgan's law]
 
+Exercise 14
+-----------
+
+    Note that the associative laws say only that parentheses are unnecessary
+    when combining three statements with ∧ or ∨. In fact, these laws can be
+    used to justify leaving parentheses out when more than three statements
+    are combined. Use associative laws to show that [P ∧ (Q ∧ R)] ∧ S is
+    equivalent to (P ∧ Q) ∧ (R ∧ S).
+
+So, the solution goes like this:
+
+    [P ∧ (Q ∧ R)] ∧ S
+    => ((P ∧ Q) ∧ R) ∧ S
+    => (P ∧ Q) ∧ (R ∧ S)
+
+Exercise 15
+-----------
+
+That's easy: 2^n
+
+Exercise 16
+-----------
+
+Let's take conjugate of all the rows where it is true and then take
+the disjunctions of them. Or more simpler way would be to take
+conjugate of where it is false and inverse them in this case:
+
+    ¬(¬P ∧ Q)
+    => P ∨ ¬Q
+
+Exercise 17
+-----------
+
+Solve using the same strategy as above:
+
+    (¬P ∧ Q) ∨ (P ∧ ¬Q)
+    => ((¬P ∧ Q) ∨ P) ∧ ((¬P ∧ Q) ∨ ¬Q)
+    => (P ∨ Q) ∧ (¬P ∨ ¬Q)
+
+Exercise 18
+-----------
+
+    Suppose the conclusion of an argument is a tautology. What can you
+    conclude about the validity of the argument? What if the conclusion is
+    a contradiction? What if one of the premises is either a tautology or a
+    contradiction?
+
+If the conclusion of an argument is a tautology, then no matter what
+the condition of the premise it is true for all the cases. Ain't that
+wonderful! Similarly if the conclusion is a contradiction, then no
+matter what the condition of the premises it is false for all the
+cases. How prejudiced it is! We cannot say anything about the validity
+of the argument in this case.
+
+What if one of the premises is either a tautology or a contradiction?
+Doesn't really matter as the conclusion of an argument is an
+tautology.
+
