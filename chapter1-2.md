@@ -311,7 +311,101 @@ Argument is invalid because the according to the conclusion when `E =
 F` and `S = F`, the premise should be valid which is not the case.
 
 
+Exercise 8
+----------
 
-¬
-p ∨ q
-p ∧ q
+    Use truth tables to determine which of the following formulas are equiv-
+    alent to each other:
+    (a) (P ∧ Q) ∨ (¬P ∧ ¬Q).
+    (b) ¬P ∨ Q.
+    (c) (P ∨ ¬Q) ∧ (Q ∨ ¬P).
+    (d) ¬(P ∨ Q).
+    (e) (Q ∧ P) ∨ ¬P
+
+    P Q | ((P & Q) | (~P & ~Q))
+    ---------------------------
+    T T | T
+    T F | F
+    F T | F
+    F F | T
+
+    P Q | (~P | Q)
+    --------------
+    T T | T
+    T F | F
+    F T | T
+    F F | T
+
+    P Q | ((P | ~Q) & (Q | ~P))
+    ---------------------------
+    T T | T
+    T F | F
+    F T | F
+    F F | T
+
+    P Q | ~(P | Q)
+    --------------
+    T T | F
+    T F | F
+    F T | F
+    F F | T
+
+    P Q | ((Q & P) | ~P)
+    --------------------
+    T T | T
+    T F | F
+    F T | T
+    F F | T
+
+From the truth table `(a)` and `(c)` are equivalent to each other.
+Another thing that is equivalent is `(b)` and `(e)`.
+
+Exercise 9
+----------
+
+    Use truth tables to determine which of these statements are tautologies,
+    which are contradictions, and which are neither:
+    (a) (P ∨ Q) ∧ (¬P ∨ ¬Q).
+    (b) (P ∨ Q) ∧ (¬P ∧ ¬Q).
+    (c) (P ∨ Q) ∨ (¬P ∨ ¬Q).
+    (d) [P ∧ (Q ∨ ¬R)] ∨ (¬P ∨ R).
+
+Truth tables:
+
+    P Q | ((P | Q) & (~P | ~Q))
+    ---------------------------
+    T T | F
+    T F | T
+    F T | T
+    F F | F
+
+    P Q | ((P | Q) & (~P & ~Q))
+    ---------------------------
+    T T | F
+    T F | F
+    F T | F
+    F F | F
+
+    P Q | ((P | Q) | (~P | ~Q))
+    ---------------------------
+    T T | T
+    T F | T
+    F T | T
+    F F | T
+
+    P Q R | ((P & (Q | ~R)) | (~P | R))
+    -----------------------------------
+    T T T | T
+    T T F | T
+    T F T | T
+    T F F | T
+    F T T | T
+    F T F | T
+    F F T | T
+    F F F | T
+
+From the truth tables, `(b)` is contradiction. `(c)` and `(d)` are
+both tautologies. `(a)` is neither of them.
+
+
+¬ p ∨ q p ∧ q
