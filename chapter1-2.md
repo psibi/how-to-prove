@@ -155,6 +155,163 @@ One of these:
     p ∧ q ≡ ¬(p | q) ≡ (p | q) | (p | q)
     
 
+Exercise 7
+-----------
+
+    Use truth tables to determine whether or not the arguments in exercise 7
+    of Section 1.1 are valid.
+
+Take the conjunction of all the premises `¬(J ∧ P) ∧ (P ∨ C) ∧ J` and
+draw it's truth table.
+
+    C J P | (~(J & P) & ((P | C) & J))
+    ----------------------------------
+    T T T | F
+    T T F | T
+    T F T | F
+    T F F | F
+    F T T | F
+    F T F | F
+    F F T | F
+    F F F | F
+
+where
+
+    J = Jane will win the math prize
+    P = Pete will win the math prize
+    C = Pete will win the chemistry prize.
+
+Now, the result is True when `C` and `J` are true. Hence the
+conclusion that Pete will win the chemistry prize is true.
+
+(b)
+
+Some symbols:
+
+    B = Beef will be the main course.
+    F = Fish will be the main course.
+    P = Peas will be the vegetable.
+    C = Corn will be the vegetable.
+
+Take the conjunction of all the premises `(B ∨ F) ∧ (P ∨ C) ∧ ¬(F ∧
+C)` and draw it's truth table:
+
+    B C F P | ((B | F) & ((P | C) & ~(F & C)))
+    ------------------------------------------
+    T T T T | F
+    T T T F | F
+    T T F T | T
+    T T F F | T
+    T F T T | T
+    T F T F | F
+    T F F T | T
+    T F F F | F
+    F T T T | F
+    F T T F | F
+    F T F T | F
+    F T F F | F
+    F F T T | T
+    F F T F | F
+    F F F T | F
+    F F F F | F
+
+Conclusion is `¬(B ∧ P)`:
+
+    B P | ~(B & P)
+    --------------
+    T T | F
+    T F | T
+    F T | T
+    F F | T
+
+The argument is invalid because `~(B & P)` is `F` when `B = T` and `P
+= T`. But in third row when `B = T` and `P = T` in conjunction of
+premise, it is `T`. To interpret it literally, they can have Beef as
+main course and Peas as the vegetable, but the conclusion of the
+statement says otherwise.
+
+(c)
+
+Symbols:
+
+    J = John is telling the truth.
+    B = Bill is telling the truth.
+    S = Sam is telling the truth.
+
+Premises:
+    J ∨ B
+    ¬S ∨ ¬B
+
+Conclusion:
+    J ∨ ¬S
+
+Conjunction of Premises: `(J ∨ B) ∧ (¬S ∨ ¬B)`
+
+    B J S | ((J | B) & (~S | ~B))
+    -----------------------------
+    T T T | F
+    T T F | T
+    T F T | F
+    T F F | T
+    F T T | T
+    F T F | T
+    F F T | F
+    F F F | F
+
+Conclusion truth table:
+
+    J S | (J | ~S)
+    --------------
+    T T | T
+    T F | T
+    F T | F
+    F F | T
+
+Whenever the conclusion truth table is `T`, for those parameters of
+`J` and `S`, the premises truth table is also true which implies that
+the conlusion is valid.
+
+(d)
+
+Symbols:
+
+    S = Sales will go up.
+    B = Boss will be happy.
+    E = Expenses will go up.
+
+Premises:
+    (S ∧ B) ∨ (E ∧ ¬B)
+
+Premise truth table:
+
+    B E S | ((S & B) | (E & ~B))
+    ----------------------------
+    T T T | T
+    T T F | F
+    T F T | T
+    T F F | F
+    F T T | T
+    F T F | T
+    F F T | F
+    F F F | F
+
+Conclusion:
+    ¬(S ∧ E)
+
+Conclusion truth table:
+
+    E S | ~(S & E)
+    --------------
+    T T | F
+    T F | T
+    F T | T
+    F F | T
+
+Argument is invalid because the according to the conclusion when `E =
+F` and `S = F`, the premise should be valid which is not the case.
+
+
+
 ¬
 p ∨ q
 p ∧ q
