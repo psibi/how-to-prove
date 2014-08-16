@@ -200,3 +200,119 @@ p -> q is the same as "p only if q"
     ¬W ∨ R ∨ S ∨ R
     R ∨ ¬W ∨ S
     ¬R -> ¬W ∨ S (Converse of (a))
+
+Exercise 4
+-----------
+
+    Use truth tables to determine whether or not the following arguments are
+    valid:
+    (a) Either sales or expenses will go up. If sales go up, then the boss will
+    be happy. If expenses go up, then the boss will be unhappy. Therefore,
+    sales and expenses will not both go up.
+    (b) If the tax rate and the unemployment rate both go up, then there will
+    be a recession. If the GNP goes up, then there will not be a recession.
+    The GNP and taxes are both going up. Therefore, the unemployment
+    rate is not going up.
+    (c) The warning light will come on if and only if the pressure is too high and
+    the relief valve is clogged. The relief valve is not clogged. Therefore,
+    the warning light will come on if and only if the pressure is too
+    high.
+
+(a)
+
+S = Sales will go up.
+E = Expenses will go up.
+B = Boss will be happy.
+
+    S ∨ E
+    S -> B
+    E -> ¬B
+    ---------
+    ¬(S ∧ E)
+
+Conjunction of predicate: `(S ∨ E) ∧ (S -> B) ∧ (E -> ¬B)`
+
+Conclusion: `¬(S ∧ E)`:
+
+Truth table of `((S | E) & ((S -> B) & (E -> ~B))) -> ~(S & E)`
+
+    B E S | (((S | E) & ((S -> B) & (E -> ~B))) -> ~(S & E))
+    --------------------------------------------------------
+    T T T | T
+    T T F | T
+    T F T | T
+    T F F | T
+    F T T | T
+    F T F | T
+    F F T | T
+    F F F | T
+
+Voila, the argument is valid.
+
+(b)
+
+T = Tax rate goes up
+U = Unemployment rate goes up.
+R = There will be recession.
+G = GNP goes up.
+
+    (T ∧ U) -> R
+    G -> ¬R
+    G ∧ T
+    -------------
+    ¬U
+
+Disjunction of premises: `((T ∧ U) -> R) ∧ (G -> ¬R) ∧ (G ∧ T)`
+Conclusion: `¬U`
+
+Truth table of `((T ∧ U) -> R) ∧ (G -> ¬R) ∧ (G ∧ T) -> ¬U`:
+
+    G R T U | ((((T & U) -> R) & ((G -> ~R) & (G & T))) -> ~U)
+    ----------------------------------------------------------
+    T T T T | T
+    T T T F | T
+    T T F T | T
+    T T F F | T
+    T F T T | T
+    T F T F | T
+    T F F T | T
+    T F F F | T
+    F T T T | T
+    F T T F | T
+    F T F T | T
+    F T F F | T
+    F F T T | T
+    F F T F | T
+    F F F T | T
+    F F F F | T
+
+The argument is valid.
+
+(c)
+
+W = Warning light will come
+P = Pressure is too high
+R = Relief valve is clogged.
+
+    W <-> (P ∧ R)
+    ¬R
+    -------------
+    W <-> P
+
+Disjunction of premises: `(W <-> (P ∧ R)) ∧ ¬R`
+Conclusion: `W <-> P`
+
+Truth table for `((W <-> (P ∧ R)) ∧ ¬R) -> (W <-> P)`:
+
+    P R W | (((W <-> (P & R)) & ~R) -> (W <-> P))
+    ---------------------------------------------
+    T T T | T
+    T T F | T
+    T F T | T
+    T F F | F
+    F T T | T
+    F T F | T
+    F F T | T
+    F F F | T
+
+The truth table isn't `T` for all the cases and hence the argument is invalid.
