@@ -375,4 +375,120 @@ Exercise 6
     ¬(P ∧ Q) ∨ R
     (P ∧ Q) -> R
 
-∨∧¬
+Exercise 7
+-----------
+
+    (a) Show that (P → Q) ∧ (Q → R) is equivalent to (P → R) ∧
+    [(P ↔ Q) ∨ (R ↔ Q)].
+    (b) Show that (P → Q) ∨ (Q → R) is a tautology.
+
+(a)
+
+Truth table of `(P → Q) ∧ (Q → R)`:
+
+    P Q R | ((P -> Q) & (Q -> R))
+    -----------------------------
+    T T T | T
+    T T F | F
+    T F T | F
+    T F F | F
+    F T T | T
+    F T F | F
+    F F T | T
+    F F F | T
+
+Truth table of `(P → R) ∧ [(P ↔ Q) ∨ (R ↔ Q)]`:
+
+    P Q R | ((P -> R) & ((P <-> Q) | (R <-> Q)))
+    --------------------------------------------
+    T T T | T
+    T T F | F
+    T F T | F
+    T F F | F
+    F T T | T
+    F T F | F
+    F F T | T
+    F F F | T
+
+As seen in the truth table, they are equivalent.
+
+(b)
+
+Truth table of `(P → Q) ∨ (Q → R)`:
+
+    P Q R | ((P -> Q) | (Q -> R))
+    -----------------------------
+    T T T | T
+    T T F | T
+    T F T | T
+    T F F | T
+    F T T | T
+    F T F | T
+    F F T | T
+    F F F | T
+
+As every row in fourth column is `T`, they are tautology.
+
+Exercise 8
+-----------
+
+    Find a formula involving only the connectives ¬ and → that is equivalent
+    to P ∧ Q.
+
+Soln:
+
+    P ∧ Q
+    ¬(¬P ∨ ¬Q)
+    ¬(P -> ¬Q)
+
+Exercise 9
+-----------
+
+    Find a formula involving only the connectives ¬ and → that is equivalent
+    to P ↔ Q.
+
+Soln:
+
+    P <-> Q
+    (P -> Q) ∧ (Q -> P)
+    ¬(¬(P -> Q) ∨ ¬(Q -> P))
+    ¬((P -> Q) -> ¬(Q -> P))
+
+Exercise 10
+------------
+
+    Which of the following formulas are equivalent?
+    (a) P → (Q → R).
+    (b) Q → (P → R).
+    (c) (P → Q) ∧ (P → R).
+    (d) (P ∧ Q) → R.
+    (e) P → (Q ∧ R).
+
+(a)
+
+    P → (Q → R)
+    ¬P ∨ ¬Q ∨ R
+
+(b)
+
+    Q → (P → R)
+    ¬Q ∨ ¬P ∨ R
+
+(c)
+
+    (P → Q) ∧ (P → R)
+    (¬P ∨ Q) ∧ (¬P ∨ R)
+    ¬P ∨ (Q ∧ R)
+
+(d)
+
+    (P ∧ Q) → R
+    ¬P ∨ ¬Q ∨ R
+
+(e)
+
+    P → (Q ∧ R)
+    ¬P ∨ (Q ∧ R)
+
+(a), (b) & (d) are equivalent.
+(c) & (e) are equivalent.
