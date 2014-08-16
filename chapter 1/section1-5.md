@@ -346,5 +346,33 @@ Exercise 5
     ¬P ∨ Q ∨ ¬P ∨ R
     ¬P ∨ (Q ∨ R)
     P -> (Q ∨ R)
-    
+
+Exercise 6
+-----------
+
+    (a) Show that (P → R) ∧ (Q → R) is equivalent to (P ∨ Q) → R.
+    (b) Formulate and verify a similar equivalence involving (P → R) ∨
+    (Q → R).
+
+(a)
+
+    (P -> R) ∧ (Q -> R)
+    (¬P ∨ R) ∧ (¬Q ∨ R)
+    ((¬P ∨ R) ∧ ¬Q) ∨ ((¬P ∨ R) ∧ R)
+    ((¬P ∨ R) ∧ ¬Q) ∨ R
+    (¬P ∧ ¬Q) ∨ (R ∧ ¬Q) ∨ R
+    (¬P ∧ ¬Q) ∨ ((R ∨ R) ∧ (¬Q ∨ R))
+    (¬P ∧ ¬Q) ∨ (R ∧ (¬Q ∨ R))
+    (¬P ∧ ¬Q) ∨ R
+    ¬(P ∨ Q) ∨ R
+    (P ∨ Q) -> R
+
+(b)
+
+    (P -> R) ∨ (Q -> R)
+    (¬P ∨ R) ∨ (¬Q ∨ R)
+    ¬P ∨ ¬Q ∨ R
+    ¬(P ∧ Q) ∨ R
+    (P ∧ Q) -> R
+
 ∨∧¬
