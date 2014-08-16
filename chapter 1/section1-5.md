@@ -221,7 +221,9 @@ Exercise 4
 (a)
 
 S = Sales will go up.
+
 E = Expenses will go up.
+
 B = Boss will be happy.
 
     S ∨ E
@@ -252,8 +254,11 @@ Voila, the argument is valid.
 (b)
 
 T = Tax rate goes up
+
 U = Unemployment rate goes up.
+
 R = There will be recession.
+
 G = GNP goes up.
 
     (T ∧ U) -> R
@@ -291,7 +296,9 @@ The argument is valid.
 (c)
 
 W = Warning light will come
+
 P = Pressure is too high
+
 R = Relief valve is clogged.
 
     W <-> (P ∧ R)
@@ -316,3 +323,28 @@ Truth table for `((W <-> (P ∧ R)) ∧ ¬R) -> (W <-> P)`:
     F F F | T
 
 The truth table isn't `T` for all the cases and hence the argument is invalid.
+
+Exercise 5
+-----------
+
+    (a) Show that P ↔ Q is equivalent to (P ∧ Q) ∨ (¬P ∧ ¬Q).
+    (b) Show that (P → Q) ∨ (P → R) is equivalent to P → (Q ∨ R).
+
+(a)
+
+    P <-> Q
+    (P -> Q) ∧ (Q -> P)
+    (¬P ∨ Q) ∧ (¬Q ∨ P)
+    ((¬P ∨ Q) ∧ ¬Q) ∨ ((¬P ∨ Q) ∧ P)
+    (¬P ∧ ¬Q) ∨ (Q ∧ P)
+    (P ∧ Q) ∨ (¬P ∧ ¬Q)
+
+(b)
+
+    (P -> Q) ∨ (P -> R)
+    (¬P ∨ Q) ∨ (¬P ∨ R)
+    ¬P ∨ Q ∨ ¬P ∨ R
+    ¬P ∨ (Q ∨ R)
+    P -> (Q ∨ R)
+    
+∨∧¬
