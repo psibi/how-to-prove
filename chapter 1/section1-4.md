@@ -62,6 +62,11 @@ Exercise 2
 Any set along with `(A ∩ B) \ C` forms a disjoint set. Also, `(B ∩ C)
 \ A ⊆ A ∪ B`
 
+Exercise 3
+-----------
+
+
+
 Exercise 3 & 4 & 6
 -------------------
 
@@ -191,3 +196,28 @@ So, the key thing to figure out here is that if set B contains any
 elements which is present in set `A`, then `(A ∪ B) \ B` is not equal
 to `A`.
 
+Exercise 13
+-----------
+
+    Use any method you wish to verify the following identities:
+    (a) (A &#9653; B) ∪ C = (A ∪ C) &#9653; (B \ C).
+    (b) (A &#9653; B) ∩ C = (A ∩ C) &#9653; (B ∩ C).
+    (c) (A &#9653; B) \ C = (A \ C) &#9653; (B \ C)
+
+(a)
+
+A &#9653; B = (A \ B) ∪ (B \ A) = (A ∪ B) \ (A ∩ B)
+
+(A &#9653; B) ∪ C
+= x ∈ (A &#9653; B) ∪ C
+= x ∈ (A \ B) ∪ (B \ A) ∪ C
+= (x ∈ A ∧ x ∈ ¬B) ∨ (x ∈ B ∧ x ∈ ¬A) ∨ x ∈ C
+= ((x ∈ A ∧ x ∈ ¬B) ∨ (x ∈ B)) ∧ ((x ∈ A ∧ x ∈ ¬B) ∨ (x ∈ ¬A)) ∨ x ∈ C
+= ((x ∈ A ∨ x ∈ B) ∧ (x ∈ ¬B ∨ x ∈ ¬A)) ∨ x ∈ C
+= (x ∈ C ∨ (x ∈ A ∨ x ∈ B)) ∧ (x ∈ C ∨ (x ∈ ¬B ∨ x ∈ ¬A))
+= ((x ∈ A ∨ x ∈ C) ∨ x ∈ B) ∧ (x ∈ ¬B ∨ x ∈ C ∨ x ∈ ¬A)
+= (x ∈ (A ∪ C) ∨ x ∈ B) ∧ (¬(x ∈ B ∧ x ∈ ¬C) ∨ x ∈ ¬A)
+= (x ∈ (A ∪ C) ∨ x ∈ B) ∧ (x ∈ (B \ C) ∨ x ∈ ¬A)
+= (x ∈ (A ∪ C) ∧ (x ∈ (B \ C) ∨ x ∈ ¬A)) ∨ (x ∈ B ∧ (x ∈ (B \ C) ∨ x ∈
+¬A))
+= (x ∈ (A ∪ C) ∧ (B \ C)) ∨ (x ∈ (A ∪ C) ∧ x ∈ ¬A))
