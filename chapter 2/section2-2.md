@@ -24,8 +24,10 @@ S(x) = x is a saint.
 
 (b)
 
-    There does not exist someone in the calculus room And such that
-    for all students y, if y is enrolled in Discrete math, then x is
+* ¬(Somebody in the calculus room is smarter than everybody in the
+    discrete math class)
+* There does not exist someone in the calculus room And such that for
+    all students y, if y is enrolled in Discrete math, then x is
     smarter than y.
 
 C(x) = x is in calculus room.
@@ -37,8 +39,8 @@ S(x,y) = x is smarter than y.
 
 (c)
 
-    If someone doesn't like Mary, then that someone must by mary Mary
-    If someone isn't Mary, then someone likes Mary.
+* If someone doesn't like Mary, then that someone must by mary Mary
+* If someone isn't Mary, then someone likes Mary.
 
 L(x,y) = x likes y
     ∀x(¬(x = m) -> L(x,m))
@@ -76,16 +78,78 @@ Exercise 2
 R(x) = x bought Rolls Royce with cash.
 U(x) = x has a rich uncle.
 
-    R(x) -> U(x)
+    ∀x(R(x) -> U(x))
 
 (b)
 
-If x in the dorm has the measles, then for every y who is a friend of
-x in the dorm will have to be quarantined.
-
+D(x) = x is in the dorm
 M(x) = x in the dorm has measles
 F(y,x) = y is a friend of x
 Q(y) = Quarantine y
 
-    ∀x(M(x) -> ∃y(F(y,x) ∧ Q(y)))
-        ∀∃
+* (Someone in the dorm has measles) -> (everyone who has a friend in
+the dorm will have to be quarantined)
+* `∃x(D(x) ∧ M(x)` -> ∀y(If `y` is a friend of `z` and `z` lives in
+  dorm then `y` has to be quarantined)
+* `∃x(D(x) ∧ M(x)) -> ∀y(∃z(F(y,z) ∧ D(z)) -> Q(y))`
+
+(c)
+
+F(x) = x failed the test
+G(x,y) = x got y grade.
+T(x,y) = x will tutor y
+
+
+* (Nobody failed the test) -> (Everybody who got an A will tutor
+  someone who got a D)
+* ¬(Somebody failed the test) -> ∀y(If y got A grade, then y will
+  tutor someone who got a D)
+* `¬(∃x F(x)) -> ∀y(G(y,'A') -> ∃z(T(y,z) ∧ G(z,'D')))`
+
+(d)
+
+D(x) = x can do it
+
+    ∃x D(x) -> D(J)
+
+(e)
+
+D(x) = x can do it
+
+    D(J) -> ∀xD(x)
+
+Exercise 3
+-----------
+
+    Analyze the logical forms of the following statements. The universe of
+    discourse is R. What are the free variables in each statement?
+    (a) Every number that is larger than x is larger than y.
+    (b) For every number a, the equation ax^2 + 4x − 2 = 0 has at least one
+    solution iff a ≥ −2.
+    (c) All solutions of the inequality x^3 − 3x < 3 are smaller than 10.
+    (d) If there is a number x such that x^2 + 5x = w and there is a number y
+    such that 4 − y^2 = w, then w is between −10 and 10.
+
+(a)
+
+    ∀z (z > x) -> (z > y)
+
+Free variables: x and y
+
+(b)
+
+    ∀a∃x (ax^2 + 4x − 2 = 0) <-> (a >= -2)
+
+No free variables.
+
+(c)
+
+    ∀x [x^3 − 3x < 3 -> x < 10]
+
+No free variables.
+
+(d)
+
+    (∃x (x^2 + 5x = w) ∧ ∃y (4 − y^2 = w)) -> (-10 < w < 10)
+
+Free variable: w
