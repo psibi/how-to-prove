@@ -24,8 +24,10 @@ S(x) = x is a saint.
 
 (b)
 
-    There does not exist someone in the calculus room And such that
-    for all students y, if y is enrolled in Discrete math, then x is
+* ¬(Somebody in the calculus room is smarter than everybody in the
+    discrete math class)
+* There does not exist someone in the calculus room And such that for
+    all students y, if y is enrolled in Discrete math, then x is
     smarter than y.
 
 C(x) = x is in calculus room.
@@ -37,8 +39,8 @@ S(x,y) = x is smarter than y.
 
 (c)
 
-    If someone doesn't like Mary, then that someone must by mary Mary
-    If someone isn't Mary, then someone likes Mary.
+* If someone doesn't like Mary, then that someone must by mary Mary
+* If someone isn't Mary, then someone likes Mary.
 
 L(x,y) = x likes y
     ∀x(¬(x = m) -> L(x,m))
@@ -76,16 +78,19 @@ Exercise 2
 R(x) = x bought Rolls Royce with cash.
 U(x) = x has a rich uncle.
 
-    R(x) -> U(x)
+    ∀x(R(x) -> U(x))
 
 (b)
 
-If x in the dorm has the measles, then for every y who is a friend of
-x in the dorm will have to be quarantined.
-
+D(x) = x is in the dorm
 M(x) = x in the dorm has measles
 F(y,x) = y is a friend of x
 Q(y) = Quarantine y
 
-    ∀x(M(x) -> ∃y(F(y,x) ∧ Q(y)))
-        ∀∃
+* (Someone in the dorm has measles) -> (everyone who has a friend in
+the dorm will have to be quarantined)
+* `∃x(D(x) ∧ M(x)` -> ∀y(If `y` is a friend of `z` and `z` lives in
+  dorm then `y` has to be quarantined)
+* ∃x(D(x) ∧ M(x)) -> ∀y(∃z(F(y,z) ∧ D(z)) -> Q(y))
+
+
