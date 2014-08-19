@@ -153,3 +153,28 @@ No free variables.
     (∃x (x^2 + 5x = w) ∧ ∃y (4 − y^2 = w)) -> (-10 < w < 10)
 
 Free variable: w
+
+Exercise 4
+-----------
+
+    Translate the following statements into idiomatic English.
+    (a) ∀x[(H (x) ∧ ¬∃y M(x, y)) → U (x)], where H (x) means “x is a man,”
+    M(x, y) means “x is married to y,” and U (x) means “x is unhappy.”
+    (b) ∃z(P(z, x) ∧ S(z, y) ∧ W (y)), where P(z, x) means “z is a parent of
+    x,” S(z, y) means “z and y are siblings,” and W (y) means “y is a
+    woman.”
+
+(a)
+
+* `∀x[(H (x) ∧ ¬∃y M(x, y)) → U (x)]`
+* `∀x`(if x is a man and for some y, x isn't married to y then x is
+  unhappy)
+* for all x, if x is a man and for some y, x isn't married to  y then
+  x is unhappy.
+* Every unmarried man is unhappy.
+
+(b)
+
+* `∃z(P(z, x) ∧ S(z, y) ∧ W (y))`
+* `∃z`(z is a parent of x AND z and y are siblings AND y is a woman)
+* y is a sibling to z. 
