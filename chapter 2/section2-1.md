@@ -235,4 +235,31 @@ parent.
 
 (c)
 
+See also this
+[thread](http://math.stackexchange.com/questions/903549/concluding-truth-value-from-universe-of-discourse)
+for the discussion.
+
 * `¬∃x∃y P(x, y)`
+* `¬∃x(∃y(P(x, y)))`
+* There does not exist some x, there exists some y such that x is a
+  parent of y.
+* There is no x such that x is a parent of someone.
+* There does not exist anyone who is a parent of someone.
+
+        False
+
+(d)
+
+* `∃x¬∃y P(x, y)`
+* For some x, there exists no y such that x is a parent of y.
+* `x` has no children.
+* Some parents have no children.
+
+        True
+
+(e)
+
+* `∃x∃y¬P(x, y)`
+* There exists some x and y such that x is not a parent to y.
+
+        True
