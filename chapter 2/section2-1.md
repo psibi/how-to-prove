@@ -263,3 +263,58 @@ for the discussion.
 * There exists some x and y such that x is not a parent to y.
 
         True
+
+Exercise 7
+-----------
+
+    Are these statements true or false? The universe of discourse is N.
+    (a) ∀x∃y(2x − y = 0).
+    (b) ∃y∀x(2x − y = 0).
+    (c) ∀x∃y(x − 2y = 0).
+    (d) ∀x(x < 10 → ∀y(y < x → y < 9)).
+    (e) ∃y∃z(y + z = 100).
+    (f) ∀x∃y(y > x ∧ ∃z(y + z = 100)).
+
+(a)
+
+* `∀x∃y(2x − y = 0)`
+* For all x and some y such that `2x − y = 0`
+
+        True
+
+(b)
+
+* `∃y∀x(2x − y = 0)`
+* There exists some number y such that `2x − y = 0` for any number x.
+
+        False
+
+(c)
+
+* `∀x∃y(x − 2y = 0)`
+* For any number x, there exists some number y such that `x − 2y = 0`.
+
+        False  (CounterExample: x = 3)
+
+(d)
+
+* `∀x(x < 10 → ∀y(y < x → y < 9))`
+* For any number x, if `x < 10` then for any number y, `y < x` implies
+  `y < 9`.
+
+        True
+
+(e)
+
+* `∃y∃z(y + z = 100)`
+
+        True
+
+(f)
+
+* `∀x∃y(y > x ∧ ∃z(y + z = 100))`
+* `∀x∃y(x < y ∧ ∃z(y + z = 100))`
+* Counterexample: y = 1000, x = 999, z = 0
+
+        False
+
