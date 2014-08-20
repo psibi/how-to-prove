@@ -178,3 +178,61 @@ Exercise 4
 * `∃z(P(z, x) ∧ S(z, y) ∧ W (y))`
 * `∃z`(z is a parent of x AND z and y are siblings AND y is a woman)
 * y is a sibling to z. 
+
+Exercise 5
+-----------
+
+    Translate the following statements into idiomatic mathematical English.
+    (a) ∀x[(P(x) ∧ ¬(x = 2)) → O(x)], where P(x) means “x is a prime
+    number” and O(x) means “x is odd.”
+    (b) ∃x[P(x) ∧ ∀y(P(y) → y ≤ x)], where P(x) means “x is a perfect
+    number.”
+
+(a)
+
+* `∀x[(P(x) ∧ ¬(x = 2)) → O(x)]`
+* `∀x`(If x is a prime number AND x is not equal to 2, then x is an
+  odd number)
+* Every prime number except 2 is an odd number.
+
+(b)
+
+* `∃x[P(x) ∧ ∀y(P(y) → y ≤ x)]`
+* ∃x(P(x) ∧ ∀y(If y is a perfect number then y is less than or equal
+  to x.))
+* ∃x(P(x) ∧ Every perfect number is less than or equal to x.)
+* There exists a perfect number such that all the perfect numbers are
+  either less than or equal to it.
+
+Exercise 6
+-----------
+
+    Are these statements true or false? The universe of discourse is the set of
+    all people, and P(x, y) means “x is a parent of y.”
+    (a) ∃x∀y P(x, y).
+    (b) ∀x∃y P(x, y).
+    (c) ¬∃x∃y P(x, y).
+    (d) ∃x¬∃y P(x, y).
+    (e) ∃x∃y¬P(x, y).
+
+(a)
+
+* `∃x∀y P(x, y)`
+* There exists some parent x who is parent to all the peoples.
+
+This may appear true theoretically, but one cannot be a parent to
+himeself and hence False.
+
+    False
+
+(b)
+
+* `∀x∃y P(x, y)`
+* Everyone is parent to someone.
+
+This is clearly `False` because if x is parent to y, then y is not a
+parent.
+
+(c)
+
+* `¬∃x∃y P(x, y)`
