@@ -318,3 +318,57 @@ Exercise 7
 
         False
 
+Exercise 8
+----------
+
+    Are these statements true or false? The universe of discourse is R.
+    (a) ∀x∃y(2x − y = 0).
+    (b) ∃y∀x(2x − y = 0).
+    (c) ∀x∃y(x − 2y = 0).
+    (d) ∀x(x < 10 → ∀y(y < x → y < 9)).
+    (e) ∃y∃z(y + z = 100).
+    (f) ∀x∃y(y > x ∧ ∃z(y + z = 100)).
+
+(a)
+
+* `∀x∃y(2x − y = 0)`
+* For all x, there exist some y such that `2x - y = 0`
+
+        True
+
+(b)
+
+* `∃y∀x(2x − y = 0)`
+* There exists some `y`, such that for any `x` it is `2x - y = 0`
+
+        False
+
+(c)
+
+* `∀x∃y(x − 2y = 0)`
+* For all x and y `x - 2y = 0`
+
+        True
+
+(d)
+
+* `∀x(x < 10 → ∀y(y < x → y < 9))`
+* For all x, if `x < 10` then for all y `(y < x → y < 9)`
+
+        False (x = 9.9, y = 9.8)
+
+(e)
+
+* `∃y∃z(y + z = 100)`
+* For some y and z, `y + z = 100`
+
+        True
+
+(f)
+
+* `∀x∃y(y > x ∧ ∃z(y + z = 100))`
+* For all `x` and some `y`, `y > x` and there exists some `z` such
+  that `y + z = 100`
+
+        True
+
