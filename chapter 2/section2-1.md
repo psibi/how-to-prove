@@ -318,3 +318,38 @@ Exercise 7
 
         False
 
+Exercise 8
+-----------
+
+    Same as exercise 7 but with R as the universe of discourse.
+
+(b) & (c) & (f)
+
+Since `N` is a subset of `R`, the places where it was `False` already
+for `N` will also be `False` for this question.
+
+So (b) & (c) & (f) are `False`.
+
+(a)
+
+* `∀x∃y(2x − y = 0)`
+
+        True
+
+(d)
+
+
+(e)
+
+
+    (a) ∀x∃y(2x − y = 0).
+    (b) ∃y∀x(2x − y = 0).
+    (c) ∀x∃y(x − 2y = 0).
+    (d) ∀x(x < 10 → ∀y(y < x → y < 9)).
+    (e) ∃y∃z(y + z = 100).
+    (f) ∀x∃y(y > x ∧ ∃z(y + z = 100)).
+
+Exericse 9
+-----------
+
+    Same as exercise 7 but with Z as the universe of discourse.
