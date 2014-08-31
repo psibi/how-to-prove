@@ -121,6 +121,19 @@ Negate:
 * `∃x∀y ¬(L(x,y) ∧ ¬∃z∀a(L(z,a)))`
 * `(∃x∀y ¬L(x,y)) ∨ (∃z∀a(L(z,a)))`
 
+* (There exists `x` such that for all `y`, x doesn't like y) ∨ (Someone
+  likes everyone)
+* (Someone doesn't like anyone) or (Someone likes everyone)
 
+Either someone doesn't like anyone or someone likes everyone.
 
+(c)
 
+* `¬(∀a ∈ A∃b ∈ B(a ∈ C ↔ b ∈ C))`
+* `∃a ∈ A ∀b ∈ B ¬(a ∈ C ↔ b ∈ C)`
+
+(d)
+
+* `¬∀y > 0∃x(ax^2 + bx + c = y)`
+* `∃y > 0∀x¬(ax^2 + bx + c = y)`
+* `∃y > 0∀x¬(ax^2 + bx + c ≠ y)`
