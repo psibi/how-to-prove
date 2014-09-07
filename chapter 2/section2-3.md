@@ -30,3 +30,13 @@ Exercise 1
 * `∀x (x ∈ A -> x ∈ {2n + 1 | n ∈ N})`
 * `∀x (x ∈ A -> ∃n ∈ N(x = 2n + 1))`
 
+(c)
+
+* `{n^2 + n + 1 | n ∈ N} ⊆ {2n + 1 | n ∈ N}`
+* `∀x (x ∈ {n^2 + n + 1 | n ∈ N} -> x ∈ {2n + 1 | n ∈ N})`
+* `∀x (∃n ∈ N(x = n^2 + n + 1) -> ∃n ∈ N(x = 2n + 1))`
+
+(d)
+
+* ¬(P(∪<sub>i∈I</sub>A<sub>i</sub>) ⊆ ∪<sub>i∈I</sub>P(A<sub>i</sub>)
+
