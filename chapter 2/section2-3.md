@@ -38,5 +38,5 @@ Exercise 1
 
 (d)
 
-* ¬(P(∪<sub>i∈I</sub>A<sub>i</sub>) ⊆ ∪<sub>i∈I</sub>P(A<sub>i</sub>)
+* `¬(P(∪<sub>i∈I</sub>A<sub>i</sub>) ⊆ ∪<sub>i∈I</sub>P(A<sub>i</sub>))`
 
