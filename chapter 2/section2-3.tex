@@ -1,0 +1,37 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Minimalists Report template
+% Author: Sibi <sibi@psibi.in>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\title{Chapter 2 (Section 2.3)}
+\author{Sibi}
+\date{\today}
+\maketitle
+\newpage
+
+\section{Problem 1}
+
+\begin{center}
+(1.1) $F \subseteq \wp(A)$
+\end{center}  
+\begin{align*}
+\forall x (x \in F \implies x \in \wp(A)) \\
+\forall x (x \in F \implies x \subseteq A) \\
+\forall x (x \in F \implies \forall y (y \in x \implies y \in A)) 
+\end{align*}
+
+\begin{center}
+(1.2) $A \subseteq \{2n + 1 | n \in \mathbb{N}\}$ \\
+\end{center}
+\begin{align*}
+\forall x (x \in A \implies x \in \{2n + 1 | n \in \mathbb{N}\}) \\
+\forall x (x \in A \implies \exists n \in \mathbb{N} (x=2n+1))
+\end{align*}
+
+
+\end{document}
