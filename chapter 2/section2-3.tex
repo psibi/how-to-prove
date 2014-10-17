@@ -65,4 +65,134 @@ x \notin \cup_{i \in I} \wp(A_i)) \\
 \exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
 \land (\forall i \in I(\exists z (z \in x \land \neg(z \in A_i))))) \\
 \end{align*}
+
+\section{Problem 2}
+\begin{center}
+(2.1) $x \in \cup F \setminus \cup G $
+\end{center}
+\begin{align*}
+x \in \cup F \land x \notin \cup G \\
+\exists A \in F(x \in A) \land \exists A \in G(x \notin A)
+\end{align*}
+
+\begin{center}
+(2.2) $\left\{ x \in B \mid x \notin C\right\} \in \wp(A)$ 
+\end{center}
+\begin{align*}
+\left\{ x \in B \mid x \notin C\right\} \subseteq A  \\
+\forall y(y \in \left\{ x \in B \mid x \notin C\right\} \implies y \in A) \\
+\forall y(y \in  B \land y \notin C \implies y \in A) \\
+\end{align*}
+
+\begin{center}
+(2.3) $ x \in \cap_{i \in I}(A_i \cup B_i)$ 
+\end{center}
+\begin{align*}
+\forall i \in I(x \in (A_i \cup B_i)) \\
+\forall i \in I(x \in A_i \lor x \in B_i)
+\end{align*}
+
+\begin{center}
+(2.4) $x \in (\cap_{i \in I}A_i) \cup (\cap_{i \in I}B_i)$ 
+\end{center}
+\begin{align*}
+\forall i \in I(x \in A_i)) \lor (\forall i \in I(x \in B_i)
+\end{align*}
+
+\section{Problem 3}
+\begin{align*}
+  \left\{\left\{\varnothing\right\}, \varnothing \right\}
+\end{align*}
+
+\section{Problem 4}
+\begin{align*}
+  F = \left\{ \left\{red, green, blue \right\}, \left\{orange, red,
+  green\right\}, \left\{purple, red, green, blue \right\} \right\} \\
+  \cup F = \left\{ red, green, blue, orange, purple\right\} \\
+  \cap F = \left\{ red, green\right\} \\
+\end{align*}
+
+\section{Problem 5}
+\begin{align*}
+  F = \left\{ \left\{3,7,12 \right\}, \left\{5,7,16
+  \right\}, \left\{5,12,23 \right\} \right\} \\
+  \cup F = \left\{ 3,7,12,5,16,23 \right\} \\
+  \cap F = \varnothing \\
+\end{align*}
+
+\section{Problem 6}
+\begin{center}
+  $I = \left\{2,3,4,5\right\}$ \\
+  $A_i = \left\{i, i+1, i-1, 2*i\right\}$ \\
+\end{center}
+\begin{align*}
+  A_2 = \left\{2,3,1,4\right\} \\
+  A_3 = \left\{3,4,2,6\right\} \\
+  A_4 = \left\{4,5,3,8\right\} \\
+  A_5 = \left\{5,6,4,10\right\} \\
+  \cap_{i \in I}A_i = \left\{4 \right\} \\
+  \cup_{i \in I}A_i = \left\{1,2,3,4,5,6,8,10 \right\} \\
+\end{align*}
+
+\section{Problem 7}
+Too lazy to figure out when they live.
+Or if you want a more reasonable answer: Left as an exercise to the reader :P
+\section{Problem 8}
+\begin{center}
+  $I = \left\{2,3\right\}$ \\
+  $A_i = \left\{ i,2i \right\}$ \\
+  $B_i = \left\{ i, i + 1 \right\}$ \\
+\end{center}
+\begin{align*}
+  A_2 = \left\{ 2, 4 \right\} \\
+  A_3 = \left\{ 3, 6 \right\} \\
+  B_2 = \left\{ 2, 3 \right\} \\
+  B_3 = \left\{ 3, 4 \right\} \\ \\
+  \cap_{i \in I}(A_i \cup B_i) = \left\{3,4 \right\} \\
+  (\cap_{i \in I}A_i) \cup (\cap_{i \in I}B_i) = \left\{ 3\right\} \\ \\
+  No they are not equivalent. 2(c) and 2(d) are not equivalent to each other.
+\end{align*}
+
+\section{Problem 9}
+\begin{align*}
+  Let X = \cup_{i \in I} (A_i \cap B_i) \\
+  Let Y = (\cup_{i \in I}A_i) \cap (\cup_{i \in  I} B_i) \\ \\
+  x \in X is equivalent to x \in \cup_{i \in I} (A_i \cap B_i) \\
+  \exists i \in I(x \in (A_i \cap B_i))) \\
+  \exists i \in I(x \in A_i \land x \in B_i) \\ \\
+  x \in Y is equivalent to x \in (\cup_{i \in I}A_i) \cap (\cup_{i \in  I} B_i) \\
+  (x \in \cup_{i \in I}A_i) \land (x \in \cup_{i \in  I} B_i) \\
+  \exists i \in I(x \in A_i) \land \exists i \in I (x \in B_i) \\ \\
+\end{align*}
+Now clearly they are not equivalent to each other. A trivial example of them would be:
+$Let I = \left\{1,2\right\}$ \\
+$A_i = \left\{i\right\}$ \\
+$B_i = \left\{2i\right\}$ \\
+
+\section{Problem 10}
+\begin{align*}
+  x \in \wp(A \cap B) \\
+  x \subseteq (A \cap B) \\
+  \forall y (y \in x \implies y \in (A \cap B)) \\
+  \forall y (y \in x \implies y \in A \land y \in B) \\
+  \forall y (y \notin x \lor (y \in A \land y \in B)) \\
+  \forall y ((y \notin x \lor y \in A) \land (y \notin x \lor y \in B)) \\
+  \forall y(y \in x \implies y \in A) \land \forall y(y \in x \implies y \in B) \\ \\
+  x \in \wp(A) \cap \wp(B) \\
+  x \in \wp(A) \land x \in \wp(B) \\
+  x \subseteq A \land x \subseteq B \\
+  \forall y(y \in x \implies y \in A) \land \forall y(y \in x \implies y \in B) \\
+\end{align*}
+%% \left\{ \right\} 
+\section{Problem 11}
+\begin{align*}
+ A = \left\{1 \right\} \\
+ B = \left\{2 \right\} \\
+ \wp(A \cup B) = \left\{\left\{1,2 \right\},\left\{1 \right\}, \left\{2 \right\}, \varnothing  \right\} \\
+ \wp(A) \cup \wp(B) = \left\{ \left\{1 \right\},\left\{2 \right\}, \varnothing  \right\} 
+\end{align*}
+
+\section{Problem 12}
+\begin{align*}
+\end{align*}
 \end{document}
