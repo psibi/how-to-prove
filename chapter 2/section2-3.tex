@@ -7,6 +7,7 @@
 \usepackage{verbatim}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{amssymb}
 \begin{document}
 \title{Chapter 2 (Section 2.3)}
 \author{Sibi}
@@ -33,5 +34,35 @@
 \forall x (x \in A \implies \exists n \in \mathbb{N} (x=2n+1))
 \end{align*}
 
+\begin{center}
+(1.3) $\{n^2 + n + 1 | n \in \mathbb{N} \} \subseteq \{2n + 1 | n \in \mathbb{N} \}$ \\
+\end{center}
+\begin{align*}
+\forall x (x \in \left\{n^2 + n + 1 \mid n \in \mathbb{N} \right\}) \implies (x \in \left\{2n + 1 \mid n \in \mathbb{N} \right\}) \\
+\forall x (\exists n \in \mathbb{N} (x = n^2 + n + 1)) \implies (\exists n \in \mathbb{N} (x=2n+1)) \\
+\end{align*}
 
+\begin{center}
+(1.4) $\wp(\cup_{i \in I} A_i) \nsubseteq \cup_{i \in I} \wp(A_i)$
+\end{center}
+\begin{align*}
+\exists x(x \in \wp(\cup_{i \in I} A_i) \land x \notin \cup_{i \in I} \wp(A_i)) \\
+\exists x(x \subseteq \cup_{i \in I} A_i \land x \notin \cup_{i \in I} \wp(A_i)) \\
+\exists x( \forall y (y \in x \implies y \in \cup_{i \in I} A_i) \land
+x \notin \cup_{i \in I} \wp(A_i)) \\
+\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+\land x \notin \cup_{i \in I} \wp(A_i)) \\
+\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+\land \neg (x \in \cup_{i \in I} \wp(A_i))) \\
+\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+\land \neg (\exists i \in I(x \in \wp(A_i)))) \\
+\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+\land \neg (\exists i \in I(x \subseteq A_i))) \\
+\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+\land \neg (\exists i \in I(\forall z (z \in x \implies z \in A_i)))) \\
+\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+\land (\forall i \in I(\exists z \neg(z \in x \implies z \in A_i)))) \\
+\exists x( \forall y (y \in x \implies \exists i \in I(y \in A_i))
+\land (\forall i \in I(\exists z (z \in x \land \neg(z \in A_i))))) \\
+\end{align*}
 \end{document}
