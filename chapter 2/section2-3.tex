@@ -193,6 +193,106 @@ $B_i = \left\{2i\right\}$ \\
 \end{align*}
 
 \section{Problem 12}
+Probelm (a)
 \begin{align*}
+  \cup_{i \in I}(A_i \cup B_i) = (\cup_{i \in I}A_i) \cup (\cup_{i \in  I}B_i) \\\\
+  x \in \cup_{i \in I}(A_i \cup B_i) \\
+  \exists i \in I(x \in A_i \cup B_i) \\
+  \exists i \in I(x \in A_i \lor x \in B_i)\\\\
+  x \in (\cup_{i \in I}A_i) \cup (\cup_{i \in I}B_i) \\
+  x \in (\cup_{i \in I}A_i) \lor x \in (\cup_{i \in I}B_i) \\
+  \exists i \in I(x \in A_i) \lor \exists i \in I(x \in B_i) \\
+  \exists i \in I(x \in A_i \lor x \in B_i) \\
 \end{align*}
+Probelm (b)
+\begin{align*}
+  (\cap F) \cap (\cap G) = \cap(F \cup G)\\
+  x \in (\cap F) \cap (\cap G) \\
+  x \in (\cap F) \land x \in (\cap G) \\
+  \forall A \in F(x \in A) \land \forall A \in G(x \in A)\\\\
+  x \in \cap(F \cup G) \\
+  \forall A \in (F \cup G)(x \in A)\\
+  \forall A(A \in (F \cup G) \implies x \in A) \\
+  \forall A(A \in F \lor A \in G \implies x \in A)\\
+  \forall A((A \notin F \land A \notin G) \lor x \in A)\\
+  \forall A((A \notin F \lor x \in A) \land (A \notin G \lor x \in A))\\
+  \forall A(A \notin F \lor x \in A) \land \forall A(A \notin G \lor x \in A)\\
+  \forall A(A \in F \implies x \in A) \land \forall A(A \in G \implies x \in A)\\
+  \forall A \in F(x \in A) \land \forall A \in G(x \in A)\\
+\end{align*}
+Problem (c)
+\begin{align*}
+  \cap_{i \in I}(A_i \setminus B_i) = (\cap_{i \in I}A_i) \setminus (\cup_{i \in I}B_i)\\
+  x \in \cap_{i \in I}(A_i \setminus B_i) \\
+  \forall i \in I(x \in (A_i \setminus B_i)) \\
+  \forall i \in I(x \in A_i \land x \notin B_i)\\
+  \forall i \in I(x \in A_i) \land \forall i \in I(x \notin B_i)\\\\
+  x \in (\cap_{i \in I}A_i) \setminus (\cup_{i \in I}B_i)\\
+  x \in (\cap_{i \in I}A_i) \land x \notin (\cup_{i \in I}B_i) \\
+  \forall i \in I(x \in A_i) \land \neg (x \in \cup_{i \in I}B_i) \\
+  \forall i \in I(x \in A_i) \land \neg (\exists i \in I(x \in B_i)) \\
+  \forall i \in I(x \in A_i) \land \forall i \in I (x \notin B_i)
+\end{align*}
+
+\section{Problem 13}
+$$ I = \{1,2\} $$
+$$ J = \{3,4\} $$
+$$ A_{i,j} = \{i, j, i+j\} $$
+Problem (a)
+\begin{align}
+  B_j = U_{i \in I}A_{i,j} = A_{1,j} \cup A_{2,j} \\
+  B_3 = A_{1,3} \cup A_{2,3} \\
+  = \{ 1,3,4 \} \cup \{ 2,3,5 \} \\
+  = \{1,2,3,4,5\} \\ \\
+  B_4 = A_{1,4} \cup A_{2,4} \\
+  = \{1,4,5\} \cup \{2,4,6\} \\
+  = \{1,2,4,5,6\} \\
+\end{align}
+Problem (b)
+\begin{align*}
+  \cap_{j \in J}B_j \\
+  B_3 \cap B_4 \\
+  \{1,2,4,5\} \\
+\end{align*}
+Problem (c)
+\begin{align*}
+  \cup_{i \in I}(\cap_{j \in J}A_{i,j}) \\
+  \cup_{i \in I}(A_{i,3} \cap A_{i,4}) \\
+  (A_{1,3} \cap A_{1,4}) \cup (A_{2,3} \cap A_{2,4}) \\
+  (\{1,3,4\} \cap \{1,4,5\}) \cup (\{2,3,5\} \cap \{2,4,6\}) \\
+  \{1,4\} \cup \{2\} \\
+  \{1,2,4\} \\
+\end{align*}
+No, they are not equivalent. \\
+Problem (d)
+\begin{align*}
+  x \in \cap_{j \in J}(\cup_{i \in I}A_{i,j}) \\
+  \forall j \in J(x \in \cup_{i \in I}A_{i,j})\\
+  \forall j \in J(\exists i \in I(x \in A_{i,j}))\\ \\
+  x \in \cup_{i \in I}(\cap_{j \in J}A_{i,j}) \\
+  \exists i \in I(x \in (\cap_{j \in J}A_{i,j})) \\
+  \exists i \in I(\forall j \in J(x \in A_{i,j}))\\
+\end{align*}
+  No, they are not equivalent.
+\section{Problem 14}
+Problem (a)
+\begin{align*}
+  x \in \cup F \\
+  \exists A \in F(x \in A)  \\
+  \exists A (A \in F \land x \in A) \\
+\end{align*}
+Now if $F$ is $\emptyset$ then the statement is obviously false. There
+is no $A$ that will satisfy that logical form. Hence $\cup \emptyset =
+\emptyset$ \\
+
+Problem (b)
+\begin{align*}
+  x \in \cap F \\
+  \forall A \in F(x \in A) \\
+  \forall x (A \in F \implies x \in A) \\
+\end{align*}
+Now if $F$ is $\emptyset$, then the antecedant is false. But the
+logical form is vacously true. So every element in $U$ will satisfy
+that. Therefore, $\cap \emptyset = U$
 \end{document}
+
