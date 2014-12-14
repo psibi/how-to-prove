@@ -52,5 +52,100 @@ element in A. From $x \in A$ and $A \subseteq B$, it follows that $x
 \in B$. Let there be some $y \in A$ and from $A \nsubseteq C$, it
 follows that $y \notin C$. Therefore, $x \in B$ and $y \notin C$.
 Since x is arbitrary, $y \in B$. Therefore, $y \nsubseteq C$.
+
+\section{Problem 5}
+
+Suppose $A \subseteq B \setminus C$ and $A \neq \emptyset$. Let x be
+some element in A. From $x \in A$ and $A \subseteq B \setminus C$, it
+follows that $x \in B$ and $x \notin C$. Therefore $x \in B \land x
+\notin C$, so $B \nsubseteq C$.
+
+\section{Problem 6}
+
+Let x be arbitrary, then
+\begin{align*}
+  x \in A \setminus (B \cap C) \iff x \in A \land x \notin (B \cap C) \\
+                               \iff x \in A \land \neg (x \in B \land
+                               C) \\
+                               \iff x \in A \land \neg(x \in B \land x
+                               \in C) \\
+                               \iff x \in A \land (x \notin B \lor x
+                               \notin C) \\
+                               \iff (x \in A \land x \notin B) \lor (x
+                               \in A \land x \notin C) \\
+                               \iff x \in (A \setminus B) \lor x \in
+                               (A \setminus C) \\
+                               \iff x \in (A \setminus B) \cup (A
+                               \setminus C)
+\end{align*}
+
+Thus, $\forall x (x \in A \setminus (B \cap C)) \iff x \in (A
+\setminus B) \cup (A \setminus C)$, so $A \setminus (B \cap C) = (A
+\setminus B) \cup (A \setminus C)$.
+
+\section{Problem 7}
+
+( $\Rightarrow$ ) Let A and B be arbitrary set. Suppose $x \in P(A
+\cap B)$. Then by definition,  $x \subseteq A \cap B$. Let y be an
+arbitrary element such that $y \in x$. From $y \in x$ and $x \subseteq
+A \cap B$, it follows that $y \in A \cap B$. Similarly, $x \in P(B)$.
+Therefore $x \in (P(A) \cap P(B))$.
+
+( $\Leftarrow$ ) Suppose $x \in P(A) \cap P(B)$. Then $x \in P(A)$ and
+$x \in P(B)$, so $x \subseteq A$ and $x \subseteq B$. Let y be an
+arbitrary element in x, then $y \in A$ and $y \in B$. Therefore, $y
+\in A \cap B$. Since $y \in x$ and $y \in A \cap B$, it follows that
+$x \subseteq A \cap B$. Thus, $x \in P(A \cap B)$.
+
+\section{Problem 8}
+
+( $\Rightarrow$ ) Suppose $A \subseteq B$. Let x be an arbitrary
+element in $A$. It follows that $x \in A$ and $x \in B$, therefore $x
+\subseteq P(A)$ and $x \subseteq P(B)$. Let y be an arbitrary element
+in x. From, $y \in x$ and $x \subseteq P(A)$, it follows that $y \in
+P(A)$. Similarly $y \in P(B)$. Since y is arbitrary, $P(A) \subseteq
+P(B)$.
+
+( $\Leftarrow$ ) Let x be an arbitrary element in $P(A)$. Suppose
+$P(A) \subseteq P(B)$. It follows that $x \in P(A)$ and $x \in P(B)$,
+therefore $x \subseteq A$ and $x \subseteq B$. From here, we can
+conclude that $A \subseteq B$.
+
+\section{Problem 9}
+
+Suppose x and y are odd integers. Let k be some number such that $x =
+2k + 1$. Similarly, let j be some number such that $y = 2j + 1$.
+Multiplying x and y, we get $2(2kj + k + j) + 1$. Since $2kj + k + j$
+is an integer, we can conclude that $xy$ is an odd number.
+
+\section{Problem 10}
+
+( $\Rightarrow$ ) Let n be an arbitrary number in $ \mathbb{Z}$. We will prove
+the contrapositive. Suppose n is a odd number. Then there exists some
+k such that $n = 2k + 1$. Multiplying n with $n^2$ we get $2(2k^3 +
+6k^2 + 3k) + 1$. Since $2k^3 + 6k^2 + 3k + 1$ is an integer, it
+follows that $n^3$ is an odd number.
+
+( $\Leftarrow$ ) Let n be an arbitrary number in $ \mathbb{Z} $. Suppose n is
+even. Then there is an some number k such that $n = 2k$. Multiplying n
+by $n^2$, we get $n(n^2) = 2k(2k)^2 = 2k(4k^2) = 2(4k^3)$. Since
+$4k^3$ is an integer, it follows that $n^3$ is an even number.
+
+\section{Problem 11}
+
+Solution(a)
+
+You cannot introduce the same integer $k$ in both cases.
+
+Solution(b)
+
+\begin{align*}
+  n = 0 \land m = 1 \\
+  n^2 - m^2 = 0 - 1 = -1 \\
+  n + m = 0 + 1 \\
+\end{align*}
+
 \end{document}
+
+
 
