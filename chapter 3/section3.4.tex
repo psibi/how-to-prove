@@ -232,6 +232,99 @@ Solution (c)
 
 \section{Problem 18}
 
+( $\Rightarrow$ ) Suppose $(\cup F) \cap (\cup G) \subseteq \cup (F
+\cap G)$. Let $x$ be an arbitrary element in $\forall A \in F \forall
+B \in G (A \cap B)$, so $x \in A$ and $x \in B$. Suppose $A \in F$ and
+$x \in A$, it follows that $x \in \cup F$. Similarly, $x \in \cup G$,
+therefore $x \in (\cup F) \cap (\cup G)$. From, $x \in (\cup F) \cap
+(\cup G)$ and $(\cup F) \cap (\cup G) \subseteq \cup (F \cap G)$ it
+follows that $x \in \cup (F \cap G).$ Since $x$ is arbitrary $\forall
+A \in F \forall B \in G (A \cap B) \subseteq \cup (F \cap G)$.
+
+( $\Leftarrow$ ) Suppose $\forall A \in F \forall B \in G (A \cap B)
+\subseteq \cup (F \cap G)$. Let $x$ be an arbitrary element in $(\cup
+F) \cap (\cup G)$. Therefore $x \in \cup F$, it follows that there
+exists a set $f \in F$ such that $x \in f$. Similarly there exists a
+set $g \in G$ such that $x \in g$. Since $\forall A \in F \forall B \in G (A \cap B)
+\subseteq \cup (F \cap G)$, so $(f \cap g) \subseteq \cup (F \cap G)$,
+it follows $x \in (F \cap G)$. Since $x$ is arbitrary, we can conclude
+that $(\cup F) \cap (\cup G) \subseteq \cup(F \cap G)$.
+
+\section{Problem 19}
+
+( $\Rightarrow$ ) Suppose $(\cup F) \cap (\cup G) = \emptyset$. Let
+$A$ be an arbitrary element in $F$ and $B$ be an arbitrary element in
+$G$. Let $x$ be an arbitrary element in $A$. From $x \in A$ and $A \in
+F$, it follows that $x \in \cup F$. Also, from $x \in \cup F$ and
+$(\cup F) \cap (\cup G)$, it follows that $x \notin \cup G$, so $x
+\notin B$. Since $x$ is arbitrary and $x \in A$ and $x \notin B$ it
+follows that $A \cap B = \emptyset$. Therefore if $(\cup F) \cap (\cup
+G) = \emptyset$, then $\forall A \in F \forall B \in G (A \cap B =
+\emptyset)$.
+
+( $\Leftarrow$ ) Suppose $\forall A \in F \forall B \in G (A \cap B =
+\emptyset)$. Let $x$ be an arbitrary element in $\cup F$. Then there
+is some element $f$ in $F$ such that $x \in F$. From $\forall A \in F
+\forall B \in G (A \cap B = \emptyset)$, it follows $f \cap B =
+\emptyset$. Since $x \in f$, it follows that $x \notin B$. Since $x
+\notin B$, it follows that $x \notin \cup G$. Since $x$ is arbitrary
+and $x \in \cup F$ and $x \notin \cup G$, it follows that $(\cup F)
+\cap (\cup G) = \emptyset$. Therefore, if $\forall A \in F \forall B
+\in G (A \cap B = \emptyset)$ then $(\cup F) \cap (\cup G)$.
+
+\section{Problem 20}
+
+Solution (a)
+
+Let $x$ be an arbitrary element in $(\cup F) \setminus (\cup G)$, so
+$x \in \cup F$ and $x \notin \cup G$. From $x \in \cup F$, we can
+conclude that there is some $A$ in $F$ such that $x \in A$. From $x
+\notin \cup G$, we can conclude that for all elements $B$ in $G$, $x
+\notin B$. $A \notin G$ because if it was in $G$, it will lead to
+contradiction. Therefore, $A \in F \setminus G$. From $x \in F$ and $A
+\in F \setminus G$ it follows that $x \in \cup (F \setminus G)$. Since
+$x$ is arbitrary it follows that $(\cup F) \setminus (\cup G)
+\subseteq \cup (F \setminus G)$.
+
+Solution (b)
+
+Problem is with this line: Since $x \in A$ and $A \notin G$, $x \notin
+\cup G$.
+
+Example: $x = 1 \land A = \{1\} \land G = \{\{1,2\}\} \land x
+\in \cup G$.
+
+Solution (c)
+
+( $\Rightarrow$ ) Suppose $\cup(F \setminus G) \subseteq (\cup F)
+\setminus (\cup G)$. Let $A$ be an arbitrary element in $F \setminus
+G$ and $B$ be an arbitrary element in $G$. Let $x$ be an arbitrary
+element in $A$. From $A \in F \setminus G$ and $x \in A$, it follows
+that $x \in \cup (F \setminus G)$. Since $x \in \cup(F \setminus G)$
+and from $\cup(F \setminus G) \subseteq (\cup F) \setminus (\cup G)$,
+it follows that $x \in (\cup F) \setminus (\cup G)$. So $x \in \cup F$
+and $x \notin \cup G$. Since $x \notin \cup G$ and $B \in G$, it
+follows that $x \notin B$. So, $x \in A$ and $x \notin B$. Since $x$
+is arbitrary $A \cap B = \emptyset$.
+
+( $\Leftarrow$ ) Suppose $\forall A \in (F \setminus G) \forall B \in
+G(A \cap B = \emptyset)$. Let $x$ be an arbitrary element in $\cup(F
+\setminus G)$. Then there is some element $Y$ in $F \setminus G$ such
+that $x \in Y$. From $Y \in F \setminus G$, it follows that $Y \in F$
+and $Y \notin G$. Since $x \in Y$ and $Y \in F$ it follows that $x \in
+\cup F$. We will prove the contradiction. Let us assume $x \in \cup
+G$. Since $x \in \cup G$, it follows that there is some element $g$ in
+$G$ such that $x \in g$. But this contradicts the fact that for all
+element $B$ in $G$ if $x$ is in $A$ and $x \notin B$, so $x \notin \cup
+G$. Since $x$ is arbitrary, we can conclude $\cup (F \setminus G)
+\subseteq (\cup F) \setminus (\cup G)$.
+
+Solution (d)
+\begin{align*}
+F = \{\{1,2\}\} \\
+G = \{\{2\}\}  
+\end{align*}
+
 \end{document}
 
 
