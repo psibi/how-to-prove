@@ -336,8 +336,99 @@ $G$, $x$ is not present in element. Therefore $x \notin B$. Since x is
 an arbitrary element, $A \nsubseteq B$. So, if $\cup F \nsubseteq \cup
 G$, then $\exists A \in F \forall B \in G (A \nsubseteq B)$.
 
+\section{Problem 22}
 
+Solution(a)
 
+Proof strategy using Binconditional and Conjunction.
+
+Solution(b)
+
+($\Rightarrow$) Let $x$ be an arbitrary element in $B \setminus
+(\cup_{i \in I} A_i)$, so $x \in B$ and $x \notin \cup_{i \in I}A_i$.
+From $x \notin \cup_{i \in I}A_i$, it follows that for all element $i$
+in $I$, $x \notin A_i$. So. $x \in B$ and $x \notin A_i$, therefore $x
+\in B \setminus A_i$. So, $ x \in \cap_{i \in I}(B \setminus A_i)$.
+
+($\Leftarrow$) Let $x$ be an arbitrary element in $\cap_{i \in I}(B
+\setminus A_i)$. This means for all element $i \in I$, $x \in B
+\setminus A_i$. So $x \in B$ and $x \notin A_i$. Since i is arbitrary
+and $x \notin A_i$, it follows that $\forall i \in I(x \notin A_i)$.
+So, $x \notin \cup_{i \in I}A_i$. Therefore, $x \in B \setminus
+(\cup_{i \in I}A_i)$.
+
+Solution(c)
+
+$\cup_{i \in I}(B \setminus A_i)$
+
+\section{Problem 23}
+
+Solution(a)
+
+Let $x$ be an arbitrary element in $\cup_{i \in I}(A_i \setminus
+B_i)$. Then there exists an element $i$ in $I$ such that $x \in A_i
+\setminus B_i$. So $x \in A_i$ and $x \notin B_i$. From $x \in A_i$,
+it follows $x \in \cup_{i \in I}A_i$. From $x \notin B_i$, it follows
+that $x \notin \cap_{i \in I}B_i$. Therefore, $x \in (\cup_{i \in
+  I}A_i) \setminus (\cap_{i \in I}B_i)$. Since $x$ is arbitrary,
+$\cup_{i \in I}(A_i \setminus B_i) \subseteq (\cup_{i \in I}A_i)
+\setminus (\cap_{i \in I}B_i)$.
+
+Solution (b)
+
+\begin{align*}
+  I = \{1,2\} \\
+  A_i = \{\{0,1\},\{2\}\} \\
+  B_i = \{\{2\}\}
+\end{align*}
+
+\section{Problem 24}
+
+Solution(a)
+
+Let $x$ be an arbitrary element in $\cup_{i \in I}(A_i \cap B_i)$. Then
+there exists some element $i \in I$ such that $x \in A_i \cap B_i$, so
+$x \in A_i$ and $x \in B_i$. From $x \in A_i$, it follows that $x \in
+\cup_{i \in I}A_i$. Similarly from $x \in B_i$, it follows that $x \in
+\cup_{i \in I}B_i$. So, $x \in (\cup_{i \in I}A_i \cap \cup_{i \in
+  I}B_i)$. Since x is arbitrary, we can conclude that $\cup_{i \in I}
+(A_i \cap B_i) \subseteq (\cup_{i \in I} A_i) \cap (\cup_{i \in
+  I}B_i)$.
+
+Solution(b)
+
+\begin{align*}
+  i = \{1,2\} \\
+  A_i = \{\{1\},\{2\}\} \\
+  B_i = \{\{1,2\}, \{3\}\}
+\end{align*}
+
+\section{Problem 25}
+
+Let $a$ and $b$ be any arbitrary element in $\mathbb{Z}$. Let $c$ be
+some element in $\mathbb{Z}$. Since $a$ and $c$ are integer, then
+there exists some integer $k$ such that $ak = c$, so $a | c$.
+Similarly we can prove that $ b | c$.
+
+\section{Problem 26}
+
+Solution(a)
+
+($\Rightarrow$) Let $n$ be an arbitrary element in $\mathbb{Z}$.
+Suppose $15 | n$. Then there exists an integer $k$ such that $15k =
+n$. From $15k = n$, it follows that $3(5k) = n$, so $3 | n$.
+Similarly, from $15k = n$, it follows that $5(3k) = n$, so $5|n$.
+Therefore, if $15 | n$ then $3|n \land 5|n$.
+
+($\Leftarrow$) Suppose $3|n$ and $5|n$. We will prove the
+contradiction. Suppose $15 is not divisible by n$, then there exists
+some $k$ such that $15 k \neq n$. From $15k \neq n$, it follows $3(5k)
+\neq n$. But this contradicts the fact that $3|n$. Therefore, $15 |
+n$.
+
+Solution(b)
+
+$n = 30$
 
 \end{document}
 
