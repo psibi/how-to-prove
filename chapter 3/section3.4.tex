@@ -1,0 +1,436 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Sibi <sibi@psibi.in>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\setlength\parskip{\baselineskip}
+\begin{document}
+\title{Chapter 3 (Section 3.4)}
+\author{Sibi}
+\date{\today}
+\maketitle
+\newpage
+
+\section{Problem 1}
+
+( $\Rightarrow$ ) Suppose $\forall x ( P(x) \land Q(x))$. Let y be
+arbitrary. Then since $\forall x (P(x) \land Q(x))$, $P(y) \land Q(y)$
+and so in particular $P(y)$. Since y is arbitrary, this shows that
+$\forall x P(x)$. Similarly, $\forall x Q(x)$ for arbitrary y. Thus,
+$\forall x P(x) \land \forall x Q(x)$.
+
+( $\Leftarrow$ ) Suppose $\forall x P(x) \land \forall x Q(x)$. Let y
+be arbitrary. Then since $\forall x P(x)$, $P(y)$ and similarly since
+$\forall x Q(x)$, $Q(y)$. Thus $P(y) \land Q(y)$ and since y is
+arbitrary, it follows that $\forall x(P(x) \land Q(x))$.
+
+\section{Problem 2}
+
+Suppose $A \subseteq B \land A \subseteq C$. Let x be an arbitrary
+element in $A$. From $x \in A$ and $A \subseteq B$, it follows that $x
+\in B$. Similarly, from $x \in A$ and $A \subseteq C$, it follows that
+$x \in C$. Therefore, $x \in (B \cap C)$. Since x is arbitrary, we can
+conclude that $A \subseteq B \cap C$.
+
+\section{Problem 3}
+
+Suppose $A \subseteq B$. Let $C$ be an arbitrary set and x be an
+arbitrary element in $C \setminus B$. It follows that $x \in C$ and $x
+\notin B$. From $x \notin B$ and $A \subseteq B$, it follows that $x
+\notin A$. Therefore $x \in C$ and $x \notin A$. Since x is arbitrary,
+$C/B \subseteq C/A$.
+
+\section{Problem 4}
+
+Suppose $A \subseteq B \cap A \nsubseteq C$. Let x be an arbitrary
+element in A. From $x \in A$ and $A \subseteq B$, it follows that $x
+\in B$. Let there be some $y \in A$ and from $A \nsubseteq C$, it
+follows that $y \notin C$. Therefore, $x \in B$ and $y \notin C$.
+Since x is arbitrary, $y \in B$. Therefore, $y \nsubseteq C$.
+
+\section{Problem 5}
+
+Suppose $A \subseteq B \setminus C$ and $A \neq \emptyset$. Let x be
+some element in A. From $x \in A$ and $A \subseteq B \setminus C$, it
+follows that $x \in B$ and $x \notin C$. Therefore $x \in B \land x
+\notin C$, so $B \nsubseteq C$.
+
+\section{Problem 6}
+
+Let x be arbitrary, then
+\begin{align*}
+  x \in A \setminus (B \cap C) \iff x \in A \land x \notin (B \cap C) \\
+                               \iff x \in A \land \neg (x \in B \land
+                               C) \\
+                               \iff x \in A \land \neg(x \in B \land x
+                               \in C) \\
+                               \iff x \in A \land (x \notin B \lor x
+                               \notin C) \\
+                               \iff (x \in A \land x \notin B) \lor (x
+                               \in A \land x \notin C) \\
+                               \iff x \in (A \setminus B) \lor x \in
+                               (A \setminus C) \\
+                               \iff x \in (A \setminus B) \cup (A
+                               \setminus C)
+\end{align*}
+
+Thus, $\forall x (x \in A \setminus (B \cap C)) \iff x \in (A
+\setminus B) \cup (A \setminus C)$, so $A \setminus (B \cap C) = (A
+\setminus B) \cup (A \setminus C)$.
+
+\section{Problem 7}
+
+( $\Rightarrow$ ) Let A and B be arbitrary set. Suppose $x \in P(A
+\cap B)$. Then by definition,  $x \subseteq A \cap B$. Let y be an
+arbitrary element such that $y \in x$. From $y \in x$ and $x \subseteq
+A \cap B$, it follows that $y \in A \cap B$. Similarly, $x \in P(B)$.
+Therefore $x \in (P(A) \cap P(B))$.
+
+( $\Leftarrow$ ) Suppose $x \in P(A) \cap P(B)$. Then $x \in P(A)$ and
+$x \in P(B)$, so $x \subseteq A$ and $x \subseteq B$. Let y be an
+arbitrary element in x, then $y \in A$ and $y \in B$. Therefore, $y
+\in A \cap B$. Since $y \in x$ and $y \in A \cap B$, it follows that
+$x \subseteq A \cap B$. Thus, $x \in P(A \cap B)$.
+
+\section{Problem 8}
+
+( $\Rightarrow$ ) Suppose $A \subseteq B$. Let x be an arbitrary
+element in $A$. It follows that $x \in A$ and $x \in B$, therefore $x
+\subseteq P(A)$ and $x \subseteq P(B)$. Let y be an arbitrary element
+in x. From, $y \in x$ and $x \subseteq P(A)$, it follows that $y \in
+P(A)$. Similarly $y \in P(B)$. Since y is arbitrary, $P(A) \subseteq
+P(B)$.
+
+( $\Leftarrow$ ) Let x be an arbitrary element in $P(A)$. Suppose
+$P(A) \subseteq P(B)$. It follows that $x \in P(A)$ and $x \in P(B)$,
+therefore $x \subseteq A$ and $x \subseteq B$. From here, we can
+conclude that $A \subseteq B$.
+
+\section{Problem 9}
+
+Suppose x and y are odd integers. Let k be some number such that $x =
+2k + 1$. Similarly, let j be some number such that $y = 2j + 1$.
+Multiplying x and y, we get $2(2kj + k + j) + 1$. Since $2kj + k + j$
+is an integer, we can conclude that $xy$ is an odd number.
+
+\section{Problem 10}
+
+( $\Rightarrow$ ) Let n be an arbitrary number in $ \mathbb{Z}$. We will prove
+the contrapositive. Suppose n is a odd number. Then there exists some
+k such that $n = 2k + 1$. Multiplying n with $n^2$ we get $2(2k^3 +
+6k^2 + 3k) + 1$. Since $2k^3 + 6k^2 + 3k + 1$ is an integer, it
+follows that $n^3$ is an odd number.
+
+( $\Leftarrow$ ) Let n be an arbitrary number in $ \mathbb{Z} $. Suppose n is
+even. Then there is an some number k such that $n = 2k$. Multiplying n
+by $n^2$, we get $n(n^2) = 2k(2k)^2 = 2k(4k^2) = 2(4k^3)$. Since
+$4k^3$ is an integer, it follows that $n^3$ is an even number.
+
+\section{Problem 11}
+
+Solution(a)
+
+You cannot introduce the same integer $k$ in both cases.
+
+Solution(b)
+
+\begin{align*}
+  n = 0 \land m = 1 \\
+  n^2 - m^2 = 0 - 1 = -1 \\
+  n + m = 0 + 1 \\
+\end{align*}
+
+\section{Problem 12}
+
+( $\Rightarrow$ ) Let x be an arbitrary element in R. Let there be
+some $y$ in $\mathbb{R}$. We will prove the contrapositive. Suppose $x
+= 1$, then $x + y = 1 + y$ and $xy = y$. So, $x + y \neq xy$.
+Therefore, if $x + y = xy$, then $x \neq 1$.
+
+( $\Leftarrow$ ) Let x be an arbitrary element in $R$. Suppose $x \neq
+1$. Let $y = x / x - 1$. Summing it with $x$, $x+y = xy$. Therefore if
+$ x \neq 1$, then $x + y = xy$.
+
+\section{Problem 13}
+
+( $\Rightarrow$ ) Let $z = 1$. Let x be an arbitrary element in
+$\mathbb{R^+}$. Let $y$ be an element in $\mathbb{R}$. Suppose $y - x
+= y / x$. We will prove the contradiction. Let $x = z$, it follows
+that $x = 1$. Putting it in $y - x$, we get $y -x = y - 1$. Similarly,
+putting it in $y - x$, we get $y - x = y - 1$. Similarly, putting it
+in $y / x$, we get $y / x = y$. Therefore $y - x \neq y/x$. But it
+contradicts the fact that $y - x = y / x$, so $x \neq z$. Therefore,
+if $y -x = y/x$, then $x \neq z$.
+
+( $\Leftarrow$ ) Let $z = 1$. Let $x$ be an arbitrary element in
+$\mathbb{R^+}$. Let $y = x^2 / x - 1$. Suppose $x \neq z$. Solving $ y
+- x = \frac{x^2}{x - 1} = \frac{x}{x - 1} * \frac{x}{x} =
+\frac{y}{x}$. So, $y - x = \frac{y}{a}$. Therefore if $x \neq z$, then
+$y - x = \frac{y}{x}$.
+
+\section{Problem 14}
+
+Let x be an arbitrary element in $\cup \{ A \setminus B | A \in F \}$.
+It follows that there exists some $A$ in $F$ such that $x \in A
+\setminus B$. So, $x \in A$ and $x \notin B$. From $x \in A$ and $x
+\notin B$, it follows that $A \nsubseteq B$. Since $A \nsubseteq B$,
+it follows that $A \notin P(B)$. So $A \in F$ and $A \notin P(B)$, $A
+\in F \setminus P(B)$. Since $x \in A$, it follows that $x \in \cup(F
+\setminus P(B))$. Since x is arbitrary, we can conclude that $\cup \{
+A \setminus B | A \in F \} \subseteq \cup (F \setminus P(B))$.
+
+\section{Problem 15}
+
+Let $A$ be an arbitrary element in $F$ and $B$ be some element in $G$.
+Suppose $\forall A \in F \exists B \in G (A \cap B = \emptyset)$. Let
+$x$ be an arbitrary element in $A$. From $x \in A$ and $A \in F$, it
+follows that $x \in \cup F$. Let us assume that $x \in \cap G$. Then
+for all element in $G$, x is present in it. But this contradicts the
+fact that there is some element $B in G$ such that $x \notin B$.
+Therefore $x \notin \cap G$, So $\cup F$ and $\cap G$ are disjoint
+sets.
+
+\section{Problem 16}
+
+( $\Leftarrow$ ) Let $x$ be an arbitrary element in $A$. Since $A \in
+P(A)$, then by definition of $\cup P(A)$, $x \in \cup P(A)$.
+
+( $\Rightarrow$ ) Let $x$ be an arbitrary element in $\cup P(A)$. Then
+by definition, there exists some element $B$ in $P(A)$ such that $x
+\in B$. Since $B \in P(A)$, it follows that $B \subseteq A$. From $x
+\in B$ and $B \subseteq A$, it follows that $x \in A$. Since x is
+arbitrary, $\cup P(A) \subseteq A$.
+
+\section{Problem 17}
+
+Solution (a)
+
+( $\Leftarrow$ ) Let $x$ be an arbitrary element in $\cup(F \cap G)$.
+Then there exists some element $A$ in $F \cap G$ such that $x \in A$.
+Since $A \in F$ and $A \in G$, from $x \in A$, we can conclude that $x
+\in \cup F$ and $x \in \cup G$. Therefore, $x \in (\cup F) \cap (\cup
+G)$. Since $x$ is arbitrary, we can conclude that $(F \cap G)
+\subseteq (\cup F) \cap (\cup G)$.
+
+Solution (b)
+
+Both $A$ cannot be same.
+
+Solution (c)
+
+\begin{align*}
+  F = \{\{1\}\} \\
+  G = \{\{1\}, \{2\}\} \\
+  \cup (F \cap G) = \emptyset \\
+  \cup (F) \cap \cup (G) = \{1\} \\
+\end{align*}
+
+\section{Problem 18}
+
+( $\Rightarrow$ ) Suppose $(\cup F) \cap (\cup G) \subseteq \cup (F
+\cap G)$. Let $x$ be an arbitrary element in $\forall A \in F \forall
+B \in G (A \cap B)$, so $x \in A$ and $x \in B$. Suppose $A \in F$ and
+$x \in A$, it follows that $x \in \cup F$. Similarly, $x \in \cup G$,
+therefore $x \in (\cup F) \cap (\cup G)$. From, $x \in (\cup F) \cap
+(\cup G)$ and $(\cup F) \cap (\cup G) \subseteq \cup (F \cap G)$ it
+follows that $x \in \cup (F \cap G).$ Since $x$ is arbitrary $\forall
+A \in F \forall B \in G (A \cap B) \subseteq \cup (F \cap G)$.
+
+( $\Leftarrow$ ) Suppose $\forall A \in F \forall B \in G (A \cap B)
+\subseteq \cup (F \cap G)$. Let $x$ be an arbitrary element in $(\cup
+F) \cap (\cup G)$. Therefore $x \in \cup F$, it follows that there
+exists a set $f \in F$ such that $x \in f$. Similarly there exists a
+set $g \in G$ such that $x \in g$. Since $\forall A \in F \forall B \in G (A \cap B)
+\subseteq \cup (F \cap G)$, so $(f \cap g) \subseteq \cup (F \cap G)$,
+it follows $x \in (F \cap G)$. Since $x$ is arbitrary, we can conclude
+that $(\cup F) \cap (\cup G) \subseteq \cup(F \cap G)$.
+
+\section{Problem 19}
+
+( $\Rightarrow$ ) Suppose $(\cup F) \cap (\cup G) = \emptyset$. Let
+$A$ be an arbitrary element in $F$ and $B$ be an arbitrary element in
+$G$. Let $x$ be an arbitrary element in $A$. From $x \in A$ and $A \in
+F$, it follows that $x \in \cup F$. Also, from $x \in \cup F$ and
+$(\cup F) \cap (\cup G)$, it follows that $x \notin \cup G$, so $x
+\notin B$. Since $x$ is arbitrary and $x \in A$ and $x \notin B$ it
+follows that $A \cap B = \emptyset$. Therefore if $(\cup F) \cap (\cup
+G) = \emptyset$, then $\forall A \in F \forall B \in G (A \cap B =
+\emptyset)$.
+
+( $\Leftarrow$ ) Suppose $\forall A \in F \forall B \in G (A \cap B =
+\emptyset)$. Let $x$ be an arbitrary element in $\cup F$. Then there
+is some element $f$ in $F$ such that $x \in F$. From $\forall A \in F
+\forall B \in G (A \cap B = \emptyset)$, it follows $f \cap B =
+\emptyset$. Since $x \in f$, it follows that $x \notin B$. Since $x
+\notin B$, it follows that $x \notin \cup G$. Since $x$ is arbitrary
+and $x \in \cup F$ and $x \notin \cup G$, it follows that $(\cup F)
+\cap (\cup G) = \emptyset$. Therefore, if $\forall A \in F \forall B
+\in G (A \cap B = \emptyset)$ then $(\cup F) \cap (\cup G)$.
+
+\section{Problem 20}
+
+Solution (a)
+
+Let $x$ be an arbitrary element in $(\cup F) \setminus (\cup G)$, so
+$x \in \cup F$ and $x \notin \cup G$. From $x \in \cup F$, we can
+conclude that there is some $A$ in $F$ such that $x \in A$. From $x
+\notin \cup G$, we can conclude that for all elements $B$ in $G$, $x
+\notin B$. $A \notin G$ because if it was in $G$, it will lead to
+contradiction. Therefore, $A \in F \setminus G$. From $x \in F$ and $A
+\in F \setminus G$ it follows that $x \in \cup (F \setminus G)$. Since
+$x$ is arbitrary it follows that $(\cup F) \setminus (\cup G)
+\subseteq \cup (F \setminus G)$.
+
+Solution (b)
+
+Problem is with this line: Since $x \in A$ and $A \notin G$, $x \notin
+\cup G$.
+
+Example: $x = 1 \land A = \{1\} \land G = \{\{1,2\}\} \land x
+\in \cup G$.
+
+Solution (c)
+
+( $\Rightarrow$ ) Suppose $\cup(F \setminus G) \subseteq (\cup F)
+\setminus (\cup G)$. Let $A$ be an arbitrary element in $F \setminus
+G$ and $B$ be an arbitrary element in $G$. Let $x$ be an arbitrary
+element in $A$. From $A \in F \setminus G$ and $x \in A$, it follows
+that $x \in \cup (F \setminus G)$. Since $x \in \cup(F \setminus G)$
+and from $\cup(F \setminus G) \subseteq (\cup F) \setminus (\cup G)$,
+it follows that $x \in (\cup F) \setminus (\cup G)$. So $x \in \cup F$
+and $x \notin \cup G$. Since $x \notin \cup G$ and $B \in G$, it
+follows that $x \notin B$. So, $x \in A$ and $x \notin B$. Since $x$
+is arbitrary $A \cap B = \emptyset$.
+
+( $\Leftarrow$ ) Suppose $\forall A \in (F \setminus G) \forall B \in
+G(A \cap B = \emptyset)$. Let $x$ be an arbitrary element in $\cup(F
+\setminus G)$. Then there is some element $Y$ in $F \setminus G$ such
+that $x \in Y$. From $Y \in F \setminus G$, it follows that $Y \in F$
+and $Y \notin G$. Since $x \in Y$ and $Y \in F$ it follows that $x \in
+\cup F$. We will prove the contradiction. Let us assume $x \in \cup
+G$. Since $x \in \cup G$, it follows that there is some element $g$ in
+$G$ such that $x \in g$. But this contradicts the fact that for all
+element $B$ in $G$ if $x$ is in $A$ and $x \notin B$, so $x \notin \cup
+G$. Since $x$ is arbitrary, we can conclude $\cup (F \setminus G)
+\subseteq (\cup F) \setminus (\cup G)$.
+
+Solution (d)
+\begin{align*}
+F = \{\{1,2\}\} \\
+G = \{\{2\}\}  
+\end{align*}
+
+\section{Problem 21}
+
+Suppose $\cup F \nsubseteq \cup G$. Let there be some element $A \in
+F$ and let $B$ be an arbitrary element in $G$. Let $x$ be an arbitrary
+element in $A$. From $x \in A$ and $A \in F$, it follows that $x \in
+\cup F$. From $x \in \cup F$ and $\cup F \nsubseteq \cup G$, it
+follows that $x \notin \cup G$. This means that for all element in
+$G$, $x$ is not present in element. Therefore $x \notin B$. Since x is
+an arbitrary element, $A \nsubseteq B$. So, if $\cup F \nsubseteq \cup
+G$, then $\exists A \in F \forall B \in G (A \nsubseteq B)$.
+
+\section{Problem 22}
+
+Solution(a)
+
+Proof strategy using Binconditional and Conjunction.
+
+Solution(b)
+
+($\Rightarrow$) Let $x$ be an arbitrary element in $B \setminus
+(\cup_{i \in I} A_i)$, so $x \in B$ and $x \notin \cup_{i \in I}A_i$.
+From $x \notin \cup_{i \in I}A_i$, it follows that for all element $i$
+in $I$, $x \notin A_i$. So. $x \in B$ and $x \notin A_i$, therefore $x
+\in B \setminus A_i$. So, $ x \in \cap_{i \in I}(B \setminus A_i)$.
+
+($\Leftarrow$) Let $x$ be an arbitrary element in $\cap_{i \in I}(B
+\setminus A_i)$. This means for all element $i \in I$, $x \in B
+\setminus A_i$. So $x \in B$ and $x \notin A_i$. Since i is arbitrary
+and $x \notin A_i$, it follows that $\forall i \in I(x \notin A_i)$.
+So, $x \notin \cup_{i \in I}A_i$. Therefore, $x \in B \setminus
+(\cup_{i \in I}A_i)$.
+
+Solution(c)
+
+$\cup_{i \in I}(B \setminus A_i)$
+
+\section{Problem 23}
+
+Solution(a)
+
+Let $x$ be an arbitrary element in $\cup_{i \in I}(A_i \setminus
+B_i)$. Then there exists an element $i$ in $I$ such that $x \in A_i
+\setminus B_i$. So $x \in A_i$ and $x \notin B_i$. From $x \in A_i$,
+it follows $x \in \cup_{i \in I}A_i$. From $x \notin B_i$, it follows
+that $x \notin \cap_{i \in I}B_i$. Therefore, $x \in (\cup_{i \in
+  I}A_i) \setminus (\cap_{i \in I}B_i)$. Since $x$ is arbitrary,
+$\cup_{i \in I}(A_i \setminus B_i) \subseteq (\cup_{i \in I}A_i)
+\setminus (\cap_{i \in I}B_i)$.
+
+Solution (b)
+
+\begin{align*}
+  I = \{1,2\} \\
+  A_i = \{\{0,1\},\{2\}\} \\
+  B_i = \{\{2\}\}
+\end{align*}
+
+\section{Problem 24}
+
+Solution(a)
+
+Let $x$ be an arbitrary element in $\cup_{i \in I}(A_i \cap B_i)$. Then
+there exists some element $i \in I$ such that $x \in A_i \cap B_i$, so
+$x \in A_i$ and $x \in B_i$. From $x \in A_i$, it follows that $x \in
+\cup_{i \in I}A_i$. Similarly from $x \in B_i$, it follows that $x \in
+\cup_{i \in I}B_i$. So, $x \in (\cup_{i \in I}A_i \cap \cup_{i \in
+  I}B_i)$. Since x is arbitrary, we can conclude that $\cup_{i \in I}
+(A_i \cap B_i) \subseteq (\cup_{i \in I} A_i) \cap (\cup_{i \in
+  I}B_i)$.
+
+Solution(b)
+
+\begin{align*}
+  i = \{1,2\} \\
+  A_i = \{\{1\},\{2\}\} \\
+  B_i = \{\{1,2\}, \{3\}\}
+\end{align*}
+
+\section{Problem 25}
+
+Let $a$ and $b$ be any arbitrary element in $\mathbb{Z}$. Let $c$ be
+some element in $\mathbb{Z}$. Since $a$ and $c$ are integer, then
+there exists some integer $k$ such that $ak = c$, so $a | c$.
+Similarly we can prove that $ b | c$.
+
+\section{Problem 26}
+
+Solution(a)
+
+($\Rightarrow$) Let $n$ be an arbitrary element in $\mathbb{Z}$.
+Suppose $15 | n$. Then there exists an integer $k$ such that $15k =
+n$. From $15k = n$, it follows that $3(5k) = n$, so $3 | n$.
+Similarly, from $15k = n$, it follows that $5(3k) = n$, so $5|n$.
+Therefore, if $15 | n$ then $3|n \land 5|n$.
+
+($\Leftarrow$) Suppose $3|n$ and $5|n$. We will prove the
+contradiction. Suppose $15 is not divisible by n$, then there exists
+some $k$ such that $15 k \neq n$. From $15k \neq n$, it follows $3(5k)
+\neq n$. But this contradicts the fact that $3|n$. Therefore, $15 |
+n$.
+
+Solution(b)
+
+$n = 30$
+
+\end{document}
+
+
+
