@@ -107,6 +107,31 @@ A \cup C = \{1,2,3,4\} \\
 B \cup D = \{1,4,5\}\\
 (A \cup C) \times (B \cup D) = \{(1,1),(1,4),(1,5),(2,1),(2,4),(2,5),(3,1),(3,4),(3,5),(4,1),(4,4),(4,5)\}
 \end{align*}
+
+\section{Problem 5}
+
+Solution(a)
+
+($ \Leftarrow $) Let $p$ be an arbitrary element of $A \times (B \cup C)$. Then by the
+definition of cartesian product, $p = (x,y)$ for some $x \in A$ and $y
+\in B \cup C$. Let us consider the cases:
+
+Case 1. $y \in B$. Since $x \in A$ and $y \in B$, it follows that $p
+\in A \times B$. So, $p \in (A \times B) \cup (A \times C)$.
+
+Case 2. $y \in C$. Since $x \in A$, it follows that $p \in A \times
+C$. So, $p \in (A \times B) \cup (A \times C)$.
+
+($ \Rightarrow $) Let $p$ be an arbitrary element of $(A \times B)
+\cup (A \times C)$. Let us consider the cases:
+
+Case 1. $p \in A \times B$ Then there is some element $x$ and $y$ such
+that $p = (x,y)$ and $x \in A$ and $y \in B$. From $y \in B$, it
+follows that $y \in B \cup C$. So, $p \in A \times (B \cup C)$.
+
+Case 2. $p \in A \times C$ Then by definition of cartesian product, $p
+= (x,y)$ for some $x \in A$ and $y \in C$. From $y \in C$, it follows
+that $y \in B \cup C$. So, $p \in A \times (B \cup C)$.
 \end{document}
 
 
