@@ -10,7 +10,7 @@
 \usepackage{tabularx}
 \setlength\parskip{\baselineskip}
 \begin{document}
-\title{Chapter 3 (Section 4.1)}
+\title{Chapter 4 (Section 4.1)}
 \author{Sibi}
 \date{\today}
 \maketitle
@@ -132,6 +132,24 @@ follows that $y \in B \cup C$. So, $p \in A \times (B \cup C)$.
 Case 2. $p \in A \times C$ Then by definition of cartesian product, $p
 = (x,y)$ for some $x \in A$ and $y \in C$. From $y \in C$, it follows
 that $y \in B \cup C$. So, $p \in A \times (B \cup C)$.
+
+Solution(b)
+
+($ \Leftarrow $) Let $p$ be an arbitrary element in $(A \times B) \cap
+(C \times D)$. Then it follows that $p \in A \times B$ and $p \in C
+\times D$. By definition of cartesian product, $p = (x,y)$ for some $x
+\in A$ and $y \in B$. Similarly, $x \in C$ and $y \in D$. It follows
+that $x \in (A \cap C)$ and $y \in (B \cap D)$. So, $(x,y) \in (A \cap
+C) \times (B \cap D)$. Since $p$ is an arbitrary element, $(A \times
+B) \cap (C \times D) \subseteq (A \cap C) \times (B \cap D)$.
+
+($ \Rightarrow $) Let $p$ be an arbitrary element in $(A \cap C)
+\times (B \cap D)$. By the definition of cartesian product it follows
+that $p = (x,y)$ for some $x \in A \cap C$ and $y \in (B \cap D)$.
+From $x \in A \cap C$, we can conclude that $x \in A$ and $x \in C$.
+Similarly, $y \in B$ and $y \in D$. So, $(x,y) \in (A \times B) \cap
+(C \times D)$. Since p is arbitrary, $(A \cap C) \times (B \cap D)
+\subseteq (A \times B) \cap (C \times D)$.
 
 \section{Problem 6}
 
