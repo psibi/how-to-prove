@@ -179,6 +179,41 @@ C$. Therefore, $y \in B \setminus C$. So, $(x,y) \in A \times (B
 \setminus C)$. Since $p$ is arbitrary, we can conclude that $A \times
 (A \setminus C) = (A \times B) \setminus (A \times C)$.
 
+\section{Problem 9}
+
+($ \Leftarrow $) Let $p$ be an arbitrary element in $(A \times B)
+\setminus (C \times D)$. It follows that $p \in A \times B$ and $p
+\notin (C \times D)$. From the definition of cartesian product, it
+follows that $p = (x,y)$ for some $x \in A$ and $y \in B$. Similarly,
+$(x,y) \notin (C \times D)$ which means either $x \notin c$ or $y
+\notin D$. Let us consider the cases separately:
+
+Case 1. $y \notin D$. We already know that $x \in A$ and $y \in B$.
+So, $y \in B \setminus D$. Therefore $(x,y) \in (A \times (B \setminus
+D))$. So, $p \in (A \times (B \setminus D)) \cup ((A \setminus C) \times B)$.
+
+Case 2. $x \notin C$. From earlier, $x \in A$ and $y\in B$. It follows
+that $x \in A \setminus C$. Therefore, $(x,y) \in ((A \setminus c)
+\times B)$. So, $p \in (A \times (B \setminus D)) \cup ((A \setminus
+C) \times B)$.
+
+($ \Rightarrow $) Let $p$ be an arbitrary element in $(A \times (B
+\setminus D)) \cup ((A \setminus C) \times B)$. Let us consider the
+cases separately:
+
+Case 1. $p \in A \times (B \setminus D)$. From the definition of
+cartesian product, it follows that $p = (x,y)$ for some $x \in A$ and
+$y \in B \setminus D$. Therefore $y \in B$ and $y \notin D$. So, $p
+\in (A \times B)$ and since $ y \notin D$, it follows that $(x,y)
+\notin C \times D$. So, $p \in (A \times B) \setminus (C \times D)$.
+
+Case 2. $p \in ((A \setminus C) \times B)$ From the definition of
+cartesian product, it follows that $p = (x,y)$ for some $x \in A
+\setminus C$ and $y \in B$. From $x \in A \setminus C$, it follows
+that $x \in A$ and $x \notin C$. So, $p \in (A \times B)$ and $p
+\notin C \times D$ since $x \notin C$. So, $p \in (A \times B)
+\setminus (C \times D).
+
 \end{document}
 
 
