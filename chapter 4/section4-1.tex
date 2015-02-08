@@ -160,6 +160,25 @@ huh ?
 
 $ m * n$
 
+\section{Problem 8}
+
+($ \Leftarrow $) Let $p$ be an arbitrary element in $A \times (B
+\setminus C)$. From the definition of cartesian product it follows
+that $p = (x,y)$ for some $x \in A$ and $y \in B \setminus C$. From $y
+\in B \setminus C$, it follows that $y \in B$ and $y \notin C$.
+Therefore $(x,y) \in (A \times B)$. Similarly, $(x,y) \in A \times C$.
+Since $p$ is arbitrary, we can conclude that $A \times (B \setminus C)
+\subseteq (A \times B) \setminus (A \times C)$.
+
+($ \Rightarrow $) Let $p$ be an arbitrary element in $(A \times B)
+\setminus (A \times C)$. It follows that $p \in (A \times B)$ and $p
+\notin (A \times C)$. From the definition of cartesian product it
+follows that $p = (x,y)$ for some $x \in A$ and $y \in B$. Similarly
+$(x,y) \notin (A \times C)$. But we know that $x \in A$, so $y \notin
+C$. Therefore, $y \in B \setminus C$. So, $(x,y) \in A \times (B
+\setminus C)$. Since $p$ is arbitrary, we can conclude that $A \times
+(A \setminus C) = (A \times B) \setminus (A \times C)$.
+
 \end{document}
 
 
