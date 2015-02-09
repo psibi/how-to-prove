@@ -227,7 +227,32 @@ C$, then $A \cap C = \emptyset$ or if $y \notin D$ then $B \cap D = \emptyset$.
 
 Solution(a)
 
+Let $p$ be an arbitrary element in $\cup_{i \in I} (A_i \times B_i)$.
+It follows that \exists i \in I(p \in A_i \times B_i). So $p \in A_i
+\times B_i$ for some $i$. From the definition of cartesian product, it
+follows that $p = (x,y)$ for some $x \in A_i$ and $y \in B_i$. From $x
+\in A_i$, we can conclude that $x \in \cup_{i \in I} A_i$. Similarly,
+$y \in \cup_{i \in I} B_i. Therefore $p \in (\cup_{i \in I}A_i \times
+\cup_{i \in I}B_i). Since $p$ is an arbitrary, we can conclude that
+$\cup_{i \in I}(A_i \times B_i) \subseteq \cup_{i \in I})A_i \times
+\cup_{i \in I} B_i$.
 
+Solution (b)
+
+($\Rightarrow$) Let $h$ be an arbitrary element in $\cup_{p in P}C_p$.
+It follows that $\exists p \in P(h \in C_p)$. So, $h \in A_i \times
+B_j$. From the definition of cartesian product, it follows that $h =
+(x,y)$ for some $x \in A_i$ and $y \in B_j$. From $x \in A_i$, we can
+conclude that $x \in \cup_{i \in I}A_i$. Similarly, $y \in \cup_{i \in
+I}B_i$. Therefore $h \in (\cup_{i \in I}A_i) \times (\cup_{i \in I}B_i)$.
+
+($\Leftarrow$) Let $h$ be an arbitrary element in $(\cup_{i \in I}A_i)
+\times (\cup_{i \in I}B_i)$. Then by the definition of cartesian
+product, it follows that $h = (x,y)$ for some $x \in \cup_{i \in
+  I}A_i$ and $y \in \cup_{j \in I}B_j$. From $x \in \cup_{i \in
+  I}A_i$, it follows that for some $i$ in $I$, $x \in A_i$. Similarly,
+$y \in B_j$. Therefore $(x,y) \in A_i \times B_j$. So, $(x,y) \in
+C_{(i,j)}$ for some $i$ and $j$. Therefore $h \in \cup_{p \in P}C_p$.
 
 \end{document}
 
