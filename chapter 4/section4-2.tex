@@ -38,4 +38,44 @@ Solution(b)
 
 Domain = $\mathbb{R}$
 Range = $\{ x \mid x \in \mathbb{R} \land  x > -1 \land x < 1 \}$
+
+\section{Problem 3}
+
+\subsection{Solution (a)}
+\noindent
+
+$L = \{(s,r) \in S \times R \mid \text{the student s lives in the dorm room
+  r}\}$
+
+$L^{-1} = \{(r,s} \in R \times S | (s,r) \in L\}$
+
+$L^{-1} \circ L \text{ is relation on} S$
+
+$L^{-1} \circ L = \{(s,t) \in S \times S \mid \exists r \in R((s,r) \in L \land
+(r,t) \in L^{-1})\}$
+
+$ = \{(s,t) \in S \times S \mid \exists r \in R (\text{ student s lives in
+  dorm room r and so is student t})\}$
+
+$ = \{(s,t) \in S \times S \mid \text{student s and t both live in some dorm
+  room} \}$
+
+
+\subsection{Solution b}
+\noindent
+
+$E \circ (L^{-1} \circ L)$ is relation from S to C.
+
+$E \circ (L^{-1} \circ L) = \{(t,c) \in S \times C \mid \exists s \in
+S((t,s) \in (S \times S) \land (s,c) \in S \times C\}$
+
+\begin{multiline}
+$=\{(t,c) \in S \times C \mid \exists s \in S(\text{ student s and t \\
+  both live in some dorm room and student s is enrolled in course c})\}$
+\end{multiline}
+
+\begin{multiline}
+$=\{(t,c) \in S \times C \mid \text{ t is a student who shares the
+    dorm \\ with another student who is enrolled in course c}\}$
+\end{multiline}
 \end{document}
