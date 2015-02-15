@@ -118,4 +118,49 @@ $R^{-1} \circ S = \{(b,a) \in B \times A \mid \exists c \in C((b,c)
 $= \{(b,a) \in B \times A \exists c \in C((b,c) \in S \land (a,c) \in R\}$
 
 $={(4,1),(4,3),(5,3)}$
+
+\section{Problem 6}
+
+\subsection{Solution (a)}
+
+Note that both $Dom(R)$ and $Ran(R^{-1})$ are subsets of $A$. Let $a$
+be an arbitrary element of $Dom(R)$.
+
+\begin{align*}
+  a \in Dom (R) \iff \exists b \in B ((a,b) \in R) \\
+  \iff \exists b \in B((b,a) \in R^{-1}) \\
+  \iff a \in Ran(R^{-1})
+\end{align*}
+
+\subsection{Solution (b)}
+
+We know that $Dom(R^{-1}) = Ran(R)$. So, it follows that
+$Dom((R^{-1})^{-1}) = Ran (R^{-1})$. From, $(R^{-1})^{-1} = R$, we can
+conclude that $Dom (R) = Ran (R^{-1})$.
+
+\subsection{Solution (c)}
+
+Suppose $(a,d)$ be an arbitrary element in $(T \circ S) \circ R$. By
+the definition of composition, we can chose some $b \in B$ such that
+$(a,b) \in R$ and $(b,d) \in T \circ S$. Similarly from $T \circ S$,
+we can chose some $c \in C$ such that $(b,c) \in S$ and $(c,d) \in T$.
+From $(a,b) \in R$ and $(b,c) \in S$, it follows that $(a,c) \in S
+\circ R$. Also, from $(a,c) \in S \circ R$ and $(c,d) \in T$, it
+follows that $(a,d) \in T \circ (S \circ R)$.
+
+\subsection{Solution(d)}
+\noindent
+
+$(\Rightarrow)$ Let $(c,a)$ be an arbitrary element in $(S \circ
+R)^{-1}$. Then it follows that $(a,c) \in (S \circ R)$. From the
+definition of composition, it follows that there exists some $b \in B$
+such that $(a,b) \in R$ and $(b,c) \in S$. It follows that $(b,a) \in
+R^{-1}$ and $(c,b) \in S^{-1}$. From that we can conclude that $(c,a)
+\in R^{-1} \circ S^{-1}$.
+
+$(\Leftarrow)$ Let $(c,a)$ be an arbitrary element in $R^{-1} \circ
+S^{-1}$. From the definition of composition, it folllows that there
+exists some $b \in B$ such that $(c,b) \in S^{-1}$ and $(b,a) \in
+R^{-1}$. It folllows that $(b,c) \in S$ and $(a,b) \in R$. Composing,
+them we get $(a,c) \in S \circ R$. So, $(c,a) \in (S \circ R)^{-1}$.
 \end{document}
