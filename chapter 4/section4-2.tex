@@ -293,4 +293,51 @@ S \circ R = \{(1,2)\} \\
 T \circ R = \{(1,2)\} \\
 (S \circ R) \setminus (T \circ R) = \emptyset
 \end{align*}
+
+\section{Problem 12}
+
+\subsection{Solution (a)}
+
+Suppose $S \subseteq T$. Let $(a,c)$ be an arbitrary element in $S
+\circ R$. By existential instantiation, it follows that $(a,b) \in R$
+and $(b,c) \in S$. From $S \subseteq T$, it follows that $(b,c) \in
+T$. From $(a,b) \in R$ and $(b,c) \in T$ it follows that $(a,c) \in T
+\circ R$. Since $(a,c)$ is an arbitrary element, we can conclude that
+$S \circ R \subseteq T \circ R$. Therefore $S \subseteq T \implies S
+\circ R \subseteq T \circ R$.
+
+\subsection{Solution (b)}
+
+Let $(a,c)$ be an arbitrary element in $(S \cap T) \circ R$. By
+existential instantiation, $(a,b) \in R$ and $(b,c) \in S \cap T$.
+From $(b,c) \in S \cap T$, we get $(b,c) \in T$. From $(b,c) \in S
+\cap T$, we get $(b,c) \in S$ and $(b,c) \in T$. From $(a,b) \in R$
+and $(b,c) \in S$, it follows that $(a,c) \in S \circ R$. Similarly
+from $(a,b) \in R$ and $(b,c) \in T$, it follows that $(a,c) \in T
+\circ R$. So, $(a,c) \in (S \circ R) \cap (T \circ R)$. Since $(c,c)$
+is an arbitrary element, we can conclude that $(S \cap T) \circ R
+\subseteq (S \circ R) \cap (T \circ R)$
+
+\subsection{Solution (d)}
+
+$(\Rightarrow)$ Let $(a,c)$ be an arbitrary element in $(S \cup T)
+\circ R$. By existential instantiation, $(a,b) \in R$ and $(b,c) \in S
+\cup T$. From $(b,c) \in S \cup T$, it follows that either $(b,c) \in
+S$ or $(b,c) \in T$. Let us consider the cases separately:
+
+Case 1. $(b,c) \in S$ From $(a,b) \in R$, it follows that $(a,c) \in S
+\circ R$. So $(a,c) \in (S \circ R) \cup (T \circ R)$.
+Case 2. $(b,c) \in T$ From $(a,b) \in R$, it follows that $(a,c) \in T
+\circ R$. So $(a,c) \in (S \circ R) \cup (T \circ R)$.
+
+$(\Leftarrow)$ Let $(a,c)$ be an arbitrary element in $(S \circ R)
+\cup (T \circ R)$. Let us consider the cases separately:
+
+Case 1. $(a,c) \in S \circ R$. By existential instantiation, it
+follows that $(a,b) \in R$ and $(b,c) \in S$. So, $(b,c) \in S \cup
+T$. From $(a,b) \in R$, it follows that $(a,c) \in (S \cup T) \circ R$.
+Case 2. $(a,c) in T \circ R$ By existential instantiation, it follows
+that $(a,b) \in R$ and $(b,c) \in T$. So, $(b,c) \in S \cup T$. From
+$(a,b) \in R$, it follows that $(a,c) \in (S \cup T) \circ R$.
+
 \end{document}
