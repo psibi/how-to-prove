@@ -203,4 +203,49 @@ From $Ran(R) \subseteq Dom(S)$, it follows that $b \in Dom(S)$. So,
 there exists some $c \in C$ such that $(b,c) \in S$. From $(a,b) \in
 R$ and $(b,c) \in S$, it follows that $(a,c) \in S \circ R$. Therefore
 $a \in Dom(S \circ R)$.
+
+\subsection{Solution (c)}
+
+(a) $Dom(S \circ R) \subseteq Dom(R)$ \\
+$ \iff Ran((S \circ R)^{-1}) \subseteq Ran(R^{-1})$ \\
+$ \iff Ran(R^{-1} \circ S^{-1}) \subseteq Ran(R^{-1})$
+
+(b) $Ran(R) \subseteq Dom(S) \implies Dom(S \circ R) = Dom(R)$ \\
+$ \iff Dom(R^{-1}) \subseteq Ran(S^{-1}) \implies Ran((S \circ
+R)^{-1}) = Ran(R^{-1})$ \\
+$ \iff Dom(R^{-1}) \subseteq Ran(S^{-1}) \implies Ran(R^{-1} \circ
+S^{-1}) = Ran(R^{-1})$
+
+\section{Problem 9}
+
+\subsection{Solution (a)}
+
+Let $(a,b)$ be an arbitrary element in $R$. Then it follows that $a
+\in Dom(R)$ and $b \in Ran(R)$. So, clearly $(a,b) \in Dom(R) \times Ran(R)$.
+
+\subsection{Solution(b)}
+
+Suppose $R \subseteq S$. Let $(b,a)$ be an arbitrary element in
+$R^{-1}$. It follows that $(a,b) \in R$. From $R \subseteq S$, it
+follows that $(a,b) \in S$. So, $(b,a) \in S^{-1}$. Since $(b,a)$ is
+an arbitrary element, it follows that $R^{-1} \subseteq S^{-1}$.
+
+\subsection{Solution (c)}
+
+$(\Rightarrow)$ Let $(b,a)$ be an arbitrary element in $(R \cup
+S)^{-1}$. It follows that $(a,b) \in R \cup S$. Let us consider the
+cases separately:
+
+Case 1. $(a,b) \in R$ It follows that $(b,a) \in R^{-1}$. So $(b,a)
+\in R^{-1} \cup S^{-1}$.
+Case 2. $(a,b) \in S$ It follows that $(b,a) \in S^{-1}$. So $(b,a)
+\in R^{-1} \cup S^{-1}$.
+
+$(\Leftarrow)$ Let $(b,a)$ be an arbitrary element in $R^{-1} \cup
+S^{-1}$. Let us consider the cases separately:
+
+Case 1. $(b,a) \in R^{-1}$ It follows that $(a,b) \in R$. So $(a,b)
+\in R \cup S$. Therefore $(b,a) \in (R \cup S)^{-1}$.
+Case 2. $(b,a) \in S^{-1}$ It follows that $(a,b) \in S$. So, $(a,b)
+\in R \cup S$ Therefore $(b,a) \in (R \cup S)^{-1}$
 \end{document}
