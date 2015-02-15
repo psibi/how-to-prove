@@ -74,8 +74,28 @@ $=\{(t,c) \in S \times C \mid \exists s \in S(\text{ student s and t \\
   both live in some dorm room and student s is enrolled in course c})\}$
 \end{multiline}
 
-\begin{multiline}
 $=\{(t,c) \in S \times C \mid \text{ t is a student who shares the
     dorm \\ with another student who is enrolled in course c}\}$
-\end{multiline}
+
+\section{Problem 4}
+
+\subsection{Solution (a)}
+\noindent
+
+$S \circ R = \{(a,b) \in A \times B \mid \exists c \in B((a,c) \in R
+\land (c,b) \in S)$
+
+$ = {(1,5), (1,6), (1,4), (2,4), (3,6)}$
+
+\subsection{Solution (b)}
+\noindent
+
+$S \circ S^{- 1} = \{(a,b) \in B \times B \mid \exists c \in B((a,c)
+\in S^{-1} \land (c,b) \in S\}$
+
+$S \circ S^{- 1} = \{(a,b) \in B \times B \mid \exists c \in B((c,a)
+\in S \land (c,b) \in S\}$
+
+$ = \{(5,6),(6,5),(5,5),(6,6),(4,4)\}$
+
 \end{document}
