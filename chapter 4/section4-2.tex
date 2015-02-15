@@ -248,4 +248,21 @@ Case 1. $(b,a) \in R^{-1}$ It follows that $(a,b) \in R$. So $(a,b)
 \in R \cup S$. Therefore $(b,a) \in (R \cup S)^{-1}$.
 Case 2. $(b,a) \in S^{-1}$ It follows that $(a,b) \in S$. So, $(a,b)
 \in R \cup S$ Therefore $(b,a) \in (R \cup S)^{-1}$
+
+\section{Problem 10}
+
+We will prove contrapositive in both directions.
+
+$(\Rightarrow)$ Suppose $(Ran(R) \cap Dom(S)) \neq \emptyset$. Then by
+existential instantiation, $b \in Ran(R)$ and $b \in Dom(S)$. From $b
+\in Ran(R)$, it follows that there exists some $a$ such that $(a,b)
+\in R$. Similarly, $(b,c) \in S$. From $(a,b)in B$ and $(b,c) \in S$,
+it follows that $(a,c) \in S \circ R$. So $S \circ R \neq \emptyset$ 
+
+$(\Leftarrow)$ Suppose $S \circ R \neq \emptyset$. Then it follows
+that there exists some element $(a,c)$ in $S \circ R$. From the
+definition of composition, it follows that $(a,b) \in R$ and $(b,c)
+\in S$ for some $b \in B$. From $(a,b) \in R$, it follows that $b \in
+Ran(R)$. Similarly $b \in Dom(S)$. Therefore, $b \in Ran(R) \cap
+Dom(S)$. So, $Ran (R) \cap Dom(S) \neq \emptyset$
 \end{document}
