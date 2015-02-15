@@ -177,4 +177,30 @@ $E \circ E = \{(Jane, Joseph)\}$
 
 $E \circ E \subseteq F$
 
+\section{Problem 8}
+\subsection{Solution(a)}
+Let $a$ be an arbitrary element in $Dom(S \circ R)$. Thenit follows
+that there exists some element $c \in C$ such that $(a,c) \in S \circ
+R$. From the definition of composition, it follows that there exists
+some element $b \in B$ such that $(a,b) \in R$ and $(b,c) \in S$. So,
+it follows that for some $b$, $(a,b) \in R$. Then clearly, $a \in
+Dom(R)$. Since $a$ is arbitrary, we can conclude that $Dom(S \circ R)
+\subseteq Dom(R)$.
+
+\subsection{Solution (b)}
+
+Suppose $Ran (R) \subseteq Dom(S)$. 
+
+$(\Rightarrow)$ Let $a$ be an arbitrary element in $Dom(S \circ R)$.
+Then it follows that for some $c \in C$, $(a,c) \in S \circ R$. From
+the definition of composition it follows that there exists some $b \in
+B$ such that $(a,b) \in R$ and $(b,c) \in S$. From $(a,b) \in R$, it
+follows that $a \in Dom(R)$.
+
+$(\Leftarrow)$ Let $a$ be an arbitrary element in $Dom(R)$. Then it
+follows that for some element $b \in B$ there exists $(a,b) \in R$.
+From $Ran(R) \subseteq Dom(S)$, it follows that $b \in Dom(S)$. So,
+there exists some $c \in C$ such that $(b,c) \in S$. From $(a,b) \in
+R$ and $(b,c) \in S$, it follows that $(a,c) \in S \circ R$. Therefore
+$a \in Dom(S \circ R)$.
 \end{document}
