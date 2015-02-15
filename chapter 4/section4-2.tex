@@ -265,4 +265,32 @@ definition of composition, it follows that $(a,b) \in R$ and $(b,c)
 \in S$ for some $b \in B$. From $(a,b) \in R$, it follows that $b \in
 Ran(R)$. Similarly $b \in Dom(S)$. Therefore, $b \in Ran(R) \cap
 Dom(S)$. So, $Ran (R) \cap Dom(S) \neq \emptyset$
+
+\section{Problem 11}
+\subsection{Solution (a)}
+Let $(a,c)$ be an arbitrary element in $(S \circ R) \setminus (T \circ
+R)$. It follows that $(a,c) \in S \circ R$ and $(a,c) \notin T \circ
+R$. From $(a,c) \in S \circ R$, it follows that there is some $b \in
+B$ such that $(a,b) \in R$ and $(b,c) \in S$. From $(a,c) \notin T
+\circ R$, it follows that there is some $b \in B$ such that $(a,b)
+\notin R \land (b,c) \notin T$. From $(b,c) \in S$ and $(b,c) \notin
+T$, it follows that $(b,c) \in S \setminus T$. From $(a,b) \in R$, we
+can conclude that $(a,c) \in (S \setminus T) \circ R$.
+
+\subsection{Solution (b)}
+$b$ is not arbitrary there. There can be some other $d in D$ such that
+$(a,d) \in R$ and $(d,c) \in T$ making $(a,c) \in T$.
+
+\subsection{Solution (c)}
+Trick: Trace the wrong proof to find out counterexamples!
+\begin{align*}
+R = \{(1,3),(1,4)\} \\
+S = \{(3,2)\} \\
+T = \{(4,2)\} \\ \\
+S \setminus T = \{(3,2)\} \\
+(S \setminus T) \circ R = \{(1,2)\} \\ \\
+S \circ R = \{(1,2)\} \\
+T \circ R = \{(1,2)\} \\
+(S \circ R) \setminus (T \circ R) = \emptyset
+\end{align*}
 \end{document}
