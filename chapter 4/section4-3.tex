@@ -174,4 +174,25 @@ It follows that both $a \in A$ and $b \in A$. Now since $R$ is
 reflexive it follows that $(b,b) \in R$. Therefore $(a,b) \in R \circ
 R$. Since $(a,b)$ is arbitrary it follows that $R \subseteq R \circ R$.
 
+\section{Problem 12}
+
+\subsection{Solution (a)}
+Suppose $R$ is reflexive. Let $a$ be an arbitrary element in $A$. Then
+it follows that $(a,a) \in R$ . Then clearly $(a,a) \in R^{-1}$. Since
+$a$ was arbitrary it follows that $\forall a \in A((a,a) \in R^{-1})$.
+Therefore, $R^{-1}$ is reflexive.
+
+\subsection{Solution (b)}
+Suppose $R$ is symmetric. Let $a$ and $b$ be an arbitrary element in
+$A$ such that $(a,b) \in R^{-1}$. From $(a,b) \in R^{-1}$ it follows
+that $(b,a) \in R$. Since $R$ is symmetric, it follows that $(a,b) \in
+R$. So, $(b,a) \in R^{-1}$. Therefore $(a,b) \in R^{-1}$. Since $a$
+and $b$ are arbitrary, it follows that $R^{-1}$ is symmetric.
+
+\subsection{Solution (c)}
+Suppose $R$ is transitive. Let $a$, $b$ and $c$ be an arbitrary
+element in $A$ such that $(a,b) \in R^{-1}$ and $(b,c) \in R^{-a}$. It
+follows that $(b,a) \in R$ and $(c,b) \in R$. Since $R$ is transitive
+we get $(c,a) \in R$. So, clearly $(a,c) \in R^{-1}$. Therefore
+$R^{-1}$ is transitive.
 \end{document}
