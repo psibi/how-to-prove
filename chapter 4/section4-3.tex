@@ -35,6 +35,60 @@ $R = \{(cat, cat), (cat, rat), (dog, dog), (dog, birds), (bird, dog),
 \item Symmetric
 \item Not transitive: there is an edge from bird to rat and rat to
   cat. But there is no edge from bird to cat.
-\end
+\end{itemize}
+
+\section{Problem 3}
+
+$i_{A} = \{(x,y) \in A \times A \mid x = y\}$
+$i_{A} = \{(1,1), (2,2), (3,3), (4,4)\}$
+
+\section{Problem 4}
+
+\subsection(Solution (a))
+
+$R = \{(a,c), (c,c), (d,a), (d,b), (b,d)\}$
+
+\begin{itemize}
+\item Not reflexive since $(a,a) \notin R$
+\item Not symmetric since $(a,c) \implies (c,a)$ doesn't hold
+\item Not transitive since $(d,a) \land (d,c) \implies (d,c)$ doesn't hold
+\end{itemize}
+
+\subsection{Solution (b)}
+
+$R = \{(a,b), (b,a), (a,d), (b,d)\}$
+
+\begin{itemize}
+\item Not reflexive since $(a,a) \notin R$
+\item Not symmetric since $(a,d) \implies (d,a)$ doesn't hold
+\item Not transitive since $(a,b) \land (b,a) \implies (a,a)$ doesn't hold
+\end{itemize}
+
+\subsection{Solution (c)}
+
+$R = \{(a,a), (c,c), (b,b), (b,d), (d,b), (d,d)\}$
+
+\begin{itemize}
+\item Reflexive
+\item Symmetric
+\item Transitive
+\end{itemize}
+
+\subsection{Solution (d)}
+
+$R = \{(a,c), (a,b), (a,d), (b,d), (c,d)\}$
+
+\begin{itemize}
+\item Not reflexive
+\item Not symmetric
+\item Transitive
+\end{itemize}
+
+\section{Solution 5}
+
+$S \circ R = \{(a,c) \in A \times C \mid \exists b \in B((a,b) \in R
+\land (b,c) \in S\}$
+
+$S \circ R = \{(b,x), (a,y), (c,y), (a,z), (c,z)\}$
 
 \end{document}
