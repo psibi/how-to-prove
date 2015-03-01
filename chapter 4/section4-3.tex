@@ -10,7 +10,7 @@
 \usepackage{tabularx}
 \setlength\parskip{\baselineskip}
 \begin{document}
-\title{Chapter 4 (Section 4.2)}
+\title{Chapter 4 (Section 4.3)}
 \author{Sibi}
 \date{\today}
 \maketitle
@@ -128,5 +128,31 @@ R$ and $(c,z) \in R$. Since $R$ is transitive, it follows that $(x,z)
 an arbitrary element in $A$ such that $(x,y) \in R$ and $(y,z) \in R$.
 So, $(x,z) \in R \circ R$. It follows that $(x,z) \in R$. Since $x,z$
 are arbitrary, $R$ is transitive.
+
+\section{Problem 9}
+
+\subsection{Solution (a)}
+
+($\Rightarrow$) Suppose $R \circ i_A$. Let $(a,b)$ be an arbitrary
+element in $R \circ i_A$. By existential instantiation, it follows
+that $(a,c) \in i_A$ and $(c,b) \in R$. From $(a,c) \in i_A$, it
+follows that $a = c$. So, $(a,b) \in R$. Since $(a,b)$ is arbitrary it
+follows that $R \circ i_A \subseteq R$.
+
+($\Leftarrow$) Suppose $R$. Let $(a,b)$ be an arbitrary element in
+$R$. Now $a \in A$. So, $(a,a) \in i_A$. Therefore $(a,b) \in R \circ
+i_A$. Since $(a,b)$ is arbitrary, we can conclude that $R \subseteq R
+\circ i_A$.
+
+\subsection{Solution (b)}
+
+($\Rightarrow$) Suppose $i_B \circ R$. Let $(a,b)$ be an arbitrary element in $i_B
+\circ R$. By existential instantiation, $(a,c) \in R$ and $(c,b) \in
+i_B$. From the definition of identity relation it follows that $c =
+b$. So, $(a,b) \in R$. Therefore, $i_B \circ R \subseteq R$.
+
+($\Leftarrow$) Let $(a,b)$ be an arbitrary element in $R$. Now $b \in
+B$. So, $(b,b) \in i_B$. So, $(a,b) \in i_B \circ R$. Since $(a,b)$ is
+arbitrary it follows that $R \subseteq i_B \circ R$.
 
 \end{document}
