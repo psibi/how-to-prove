@@ -117,4 +117,16 @@ element in $A$. Then $(x,x) \in i_A$. From $i_A \subseteq R$, it
 follows that $(x,x) \in R$. Since $x$ was arbitrary we can conclude
 that $R$ is reflexive.
 
+\section{Problem 8}
+
+($\Rightarrow$) Suppose $R$ is transitive. Let $(x,z)$ be an arbitrary
+element in $R \circ R$. Then by existential instantiation, $(x,c) \in
+R$ and $(c,z) \in R$. Since $R$ is transitive, it follows that $(x,z)
+\in R$. So $R \circ R \subseteq R$.
+
+($\Leftarrow$) Suppose $R \circ R \subseteq R$. Let $x$, $y$, $z$ be
+an arbitrary element in $A$ such that $(x,y) \in R$ and $(y,z) \in R$.
+So, $(x,z) \in R \circ R$. It follows that $(x,z) \in R$. Since $x,z$
+are arbitrary, $R$ is transitive.
+
 \end{document}
