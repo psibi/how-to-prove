@@ -91,4 +91,19 @@ $S \circ R = \{(a,c) \in A \times C \mid \exists b \in B((a,b) \in R
 
 $S \circ R = \{(b,x), (a,y), (c,y), (a,z), (c,z)\}$
 
+\section{Solution 6}
+
+$ D_r = \{(x,y) \in R \times R \mid |x - y| < r \}$
+$ D_s = \{(x,y) \in R \times R \mid |x - y| < s \}$
+
+$ D_r \circ D_s = \{(a,b) \in R \times R \mid \exists c \in R((a,c)
+\in D_s \land (c,b) \in D_r)\}$
+$= \{(a,b) \in R \times R \mid \exists c \in R (|a - c| < s \land |c -
+b| < r)\}$
+
+From triangle inequality, $|a + b| < |a| + |b|$
+$|(a-c) + (c-b)| < |a-c| + |c-b|$
+$|a + (-b)| < s + r$
+$ D_r \circ D_s = \{(a,b) \in R \times R \mid |a-b| < s + r\}$
+
 \end{document}
