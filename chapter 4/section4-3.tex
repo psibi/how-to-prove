@@ -196,4 +196,32 @@ element in $A$ such that $(a,b) \in R^{-1}$ and $(b,c) \in R^{-a}$. It
 follows that $(b,a) \in R$ and $(c,b) \in R$. Since $R$ is transitive
 we get $(c,a) \in R$. So, clearly $(a,c) \in R^{-1}$. Therefore
 $R^{-1}$ is transitive.
+
+\section{Problem 13}
+
+\subsection{Solution (a)}
+
+Let $a$ be an arbitrary element in $A$. Suppose $R_1$ and $R_2$ are
+reflexive. Then it follows that $(a,a) \in R_1$ and $(a,a) \in R_2$.
+Therefore $R_1 \cup R_2$ is reflexive.
+
+\subsection{Solution (b)}
+
+Let $a, b$ be an arbitrary element in $A$. Suppose $a (R_1 \cup R_2)b$
+or $(a,b) \in R_1 \cup R_2$. Let us consider the cases separately:
+
+Case 1. $(a,b) \in R_1$. Since $R_1$ is symmetric it follows that
+$(b,a) \in R_1$. Therefore $(b,a) \in R_1 \cup R_2$. 
+Case 2. $(a,b) \in R_2$. Since $R_2$ is symmetric it follows that
+$(b,a) \in R_2$. Therefore $(b,a) \in R_1 \cup R_2$.
+
+Since a and b are arbitrary, it follows that $R_1 \cup R_2$ is symmetric.
+
+\subsection{Solution (c)}
+
+$R_1 = \{(1,2), (2,1), (1,1)$
+$R_2 = \{(4,2), (2,9), (4,9)\}$
+
+It's not transitive since $(4,2) \in R_1 \cup R_2 \land (2,1) \in R_1
+\cup R_2 \implies (4,1) \in R_1 \cup R_2$ doesn't hold.
 \end{document}
