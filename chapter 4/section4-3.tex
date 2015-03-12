@@ -224,4 +224,55 @@ $R_2 = \{(4,2), (2,9), (4,9)\}$
 
 It's not transitive since $(4,2) \in R_1 \cup R_2 \land (2,1) \in R_1
 \cup R_2 \implies (4,1) \in R_1 \cup R_2$ doesn't hold.
+
+\section{Problem 21}
+
+\subsection{Solution (a)}
+
+Suppose $R$ is symmetric. Let $X$ be an arbitrary element in $P(A)$.
+We have to prove that $(X,X) \in S$. Let $x$ be an arbitrary element
+in $X$. From $x \in X$ and $X \in P(A)$, it follows that $x \in A$.
+Since $R$ is symmetric $(x,x) \in R$. Since $x$ is arbitrary, it
+follows that $\forall x \in X (x,x) \in R$. Applying universal
+instantiation and existential generalization gives us $\forall x \in X
+\exists y \in X(x,y) \in R$
+
+Q.E.D
+
+\subsection{Solution(b)}
+
+Counter example: 
+
+
+
+%Phew! this took some time. Finally worked out this solution.
+%with help from lots of nice people.% 
+\section{Problem 23}
+Suppose $F \subseteq P(A)$. Let $a,b,c$ be arbitrary elements of A
+such that $(a,b) \in R$ and $(b,c) \in R$. We have to prove that
+$(a,c) \in R$. Expanding $(a,c) \in R$, we get $\forall X(X \subseteq
+A \setminus \{a,c\}) \implies X \cup \{a\} \in F \implies X \cup \{C\}
+\in F)$. Let $X$ be arbitrary and suppose $X \subseteq A \setminus
+\{a,c\}$ and $X \cup \{a\} \in F$. We have to prove that $X \cup \{c\}
+\in F$. We can consider two cases:
+
+Case 1. $b \notin X$. From $X \subseteq A \setminus \{a,c\}$, it
+follows that $a \notin X$ and $c \notin X$. From $(a,b) \in R$ and
+$(b,c) \in R$, it follows that $X \cup \{c\} \in F$.
+
+Case 2. $b \in X$. Let $X_o = X \setminus \{b\}, X' = X_o \cup \{a\},
+X'' = X_o \cup \{c\}$. We know that $c \notin X$, so $c \notin X'$. So
+$b,c \notin X'$. Also, $X' \cup \{b\} = X_o \cup \{a\} \cup \{b\} = X
+\setminus \{b\} \cup \{a\} \cup \{b\}$. Now $X \setminus \{b\} \cup
+\{a\} \cup \{b\} = X \cup \{a\} $ since $b \in X$. From $X \cup \{a\}
+\in F$, it follows that $X' \cup \{b\} \in F$. It follows that $X'
+\cup \{c\} \in F$ from $(b,c) \in R$. $X' \cup \{c\} = X_o \cup \{a\}
+\cup \{c\} = X'' \cup \{a\}$, so $X'' \cup \{a\} \in F$. We know that
+$a,b \notin X$, so $a,b \notin X_o$. So $a,b \notin X''$. We also know
+that $X'' \cup \{a\} \in F$. So from $(a,b) \in R$, it follows that
+$X'' \cup \{b\} \in F$. $X'' \cup \{b\} = X_o \cup \{b\} \cup \{c\} =
+X \setminus \{b\} \cup \{b\} \cup \{c\}$. $X \setminus \{b\} \cup
+\{b\} \cup \{c\} = X \cup \{c\}$ since $b \in X$. Therefore $X \cup
+\{c\} \in X$.
+
 \end{document}
