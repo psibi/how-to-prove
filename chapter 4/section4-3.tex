@@ -283,6 +283,27 @@ $A$. Since $R$ and $S$ are reflexive, it follows that $(a,a) \in R$
 and $(a,a) \in S$. It follows that, $(a,a) \in R \circ S$. Since $a$
 is arbitrary, we can conclude that $R \circ S$ is reflexive.
 
+\section{Problem 17}
+
+Suppose R and S are symmetric.
+
+($\Rightarrow$) Suppose $R \circ S$ is symmetric. Let $(x,y)$ be an
+arbitrary element in $R \circ S$. Then by existential instantiation,
+it follows that $(x,a) \in S$ and $(a,y) \in R$. Now since $R$ and $S$
+are symmetric it follows that $(a,x) \in S$ and $(y,a) \in R$. So,
+$(y,x) \in S \circ R$. Since $R \circ S$ is symmetric,
+$(y,x) \in R \circ S$. Since $x$ and $y$ are symmetric, it follows
+that $R \circ S \subseteq S \circ R$. Similarly we can prove that $S
+\circ R \subseteq R \circ S$. So, $S \circ R = R \circ S$.
+
+($\Leftarrow$) Suppose $S \circ R = R \circ S$. Let $a,b$ be an
+arbitrary element in $A$ such that $(a,b) \in R \circ S$. From our
+assumption, it follows that $(a,b) \in S \circ R$. By existential
+instantiation, $(a,c) \in R$ and $(c,b) \in S$. Since $R$ and $S$ are
+symmetric, it follows that $(c,a) \in R$ and $(b,a) \in S$. So
+$(b,a) \in R \circ S$. Now since $a$ and $b$ are arbitrary it follows
+that $R \circ S$ is symmetric.
+
 \section{Problem 21}
 
 \subsection{Solution (a)}
