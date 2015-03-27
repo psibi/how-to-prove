@@ -304,6 +304,21 @@ symmetric, it follows that $(c,a) \in R$ and $(b,a) \in S$. So
 $(b,a) \in R \circ S$. Now since $a$ and $b$ are arbitrary it follows
 that $R \circ S$ is symmetric.
 
+\section{Problem 18}
+
+Suppose $S \circ R \subseteq R \circ S$. Let $a,b$ and $c$ be
+arbitrary elements of $A$ such that $(a,b) \in R \circ S$ and
+$(b,c) \in R \circ S$. By existential instantiation, it follows that
+$(a,d) \in S$ and $(d,b) \in R$. Similarly, $(b,e) \in S$ and
+$(e,c) \in R$. It follows that $(d,e) \in S \circ R$. From our
+assumption, it follows that $(d,e) \in R \circ S$. By existential
+instantiation, $(d,f) \in S$ and $(f,e) \in R$. From $(e,c) \in R$ and
+$(f,e) \in R$, it follows that $(f,c) \in R \circ R$. Similarly from
+$(d,f) \in S$ and $(a,d) \in S$, it follows that
+$(a,f) \in S \circ S$. Using Theorem 4.3.4(3), $(f,c) \in R$ and
+$(a,f) \in S$. So $(a,c) \in R \circ S$. Since $a$ and $c$ are
+arbitrary, $R \circ S$ is transitive.
+
 \section{Problem 21}
 
 \subsection{Solution (a)}
