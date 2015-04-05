@@ -225,6 +225,121 @@ $R_2 = \{(4,2), (2,9), (4,9)\}$
 It's not transitive since $(4,2) \in R_1 \cup R_2 \land (2,1) \in R_1
 \cup R_2 \implies (4,1) \in R_1 \cup R_2$ doesn't hold.
 
+\section{Problem 14}
+
+\subsection{Solution (a)}
+
+Suppose $R_1$ and $R_2$ are reflexive. Let $a$ be an arbitrary element
+in $A$. Since $R_1$ and $R_2$ are reflexive, it follows that $(a,a)
+\in R_1 \cap R_2$. Since $a$ is arbitrary, we can conclude that $R_1
+\cap R_2$ is reflexive.
+
+\subsection{Solution (b)}
+
+Suppose $R_1$ and $R_2$ are symmetric. Let $x$ and $y$ be arbitrary
+elements in $A$ such that $(x,y) \in R_1 \cap R_2$. Since both $R_1$
+and $R_2$ are symmetric, it follows that $(y,x) \in R_1 \cap R_2$.
+Since $x$ and $y$ are arbitrary, we can conclude that $R_1 \cap R_2$
+is symmetric.
+
+\subsection{Solution (c)}
+
+Suppose $R_1$ and $R_2$ are transitive. Let $x, y$ and $z$ e an
+arbitrary element in $A$ such that $(x,y) \in R_1 \cap R_2$ and $(y,z)
+\in R_1 \cap R_2$. Since $R_1$ and $R_2$ are transitive, it follows
+that $(x,z) \in R_1 \cap R_2$. Therefore $R_1 \cap R_2$ is transitive.
+
+\section{Problem 15}
+
+\subsection{Solution (a)}
+
+Counterexample:
+
+$A = \{1\}$ \\
+$R_1 = \{(1,1)\}$ \\
+$R_2 = \{(1,1)\}$ \\
+$R_1 \setminus R_2 = \emptyset$
+
+\subsection{Solution (b)}
+
+Suppose $R_1$ and $R_2$ are symmetric. Let $x$ and $y$ be arbitrary
+element in $A$ such that $(x,y) \in R_1 \setminus R_2$. So,
+$(x,y) \in R_1$. Since $R_1$ is symmetric, it follows that
+$(y,x) \in R_1$. Also $(x,y) \notin R_2$. Using contrapositive law and
+symmetric property, then $(y,x) \notin R_2$. Therefore $(y,x) \in
+R_1 \setminus R_2$.
+
+\subsection{Solution (c)}
+
+Counterexample: \\
+$R_1 = \{(1,2),(2,4),(1,4)\}$ \\
+$R_2 = \{(1,3),(3,4),(1,4)\}$ \\
+$R_1 \setminus R_2 = \{(1,2), (3,4)\}$
+
+\section{Problem 16}
+
+Suppose $R$ and $S$ are reflexive. Let $a$ be an arbitrary element in
+$A$. Since $R$ and $S$ are reflexive, it follows that $(a,a) \in R$
+and $(a,a) \in S$. It follows that, $(a,a) \in R \circ S$. Since $a$
+is arbitrary, we can conclude that $R \circ S$ is reflexive.
+
+\section{Problem 17}
+
+Suppose R and S are symmetric.
+
+($\Rightarrow$) Suppose $R \circ S$ is symmetric. Let $(x,y)$ be an
+arbitrary element in $R \circ S$. Then by existential instantiation,
+it follows that $(x,a) \in S$ and $(a,y) \in R$. Now since $R$ and $S$
+are symmetric it follows that $(a,x) \in S$ and $(y,a) \in R$. So,
+$(y,x) \in S \circ R$. Since $R \circ S$ is symmetric,
+$(y,x) \in R \circ S$. Since $x$ and $y$ are symmetric, it follows
+that $R \circ S \subseteq S \circ R$. Similarly we can prove that $S
+\circ R \subseteq R \circ S$. So, $S \circ R = R \circ S$.
+
+($\Leftarrow$) Suppose $S \circ R = R \circ S$. Let $a,b$ be an
+arbitrary element in $A$ such that $(a,b) \in R \circ S$. From our
+assumption, it follows that $(a,b) \in S \circ R$. By existential
+instantiation, $(a,c) \in R$ and $(c,b) \in S$. Since $R$ and $S$ are
+symmetric, it follows that $(c,a) \in R$ and $(b,a) \in S$. So
+$(b,a) \in R \circ S$. Now since $a$ and $b$ are arbitrary it follows
+that $R \circ S$ is symmetric.
+
+\section{Problem 18}
+
+Suppose $S \circ R \subseteq R \circ S$. Let $a,b$ and $c$ be
+arbitrary elements of $A$ such that $(a,b) \in R \circ S$ and
+$(b,c) \in R \circ S$. By existential instantiation, it follows that
+$(a,d) \in S$ and $(d,b) \in R$. Similarly, $(b,e) \in S$ and
+$(e,c) \in R$. It follows that $(d,e) \in S \circ R$. From our
+assumption, it follows that $(d,e) \in R \circ S$. By existential
+instantiation, $(d,f) \in S$ and $(f,e) \in R$. From $(e,c) \in R$ and
+$(f,e) \in R$, it follows that $(f,c) \in R \circ R$. Similarly from
+$(d,f) \in S$ and $(a,d) \in S$, it follows that
+$(a,f) \in S \circ S$. Using Theorem 4.3.4(3), $(f,c) \in R$ and
+$(a,f) \in S$. So $(a,c) \in R \circ S$. Since $a$ and $c$ are
+arbitrary, $R \circ S$ is transitive.
+
+\section{Problem 19}
+
+\subsection{Solution (a)}
+
+Existential instantiation uses same variable.
+
+\subsection{Solution (b)}
+
+Counterexample: \\
+$R = \{(1,3), (2,9)\}$ \\
+$S = \{(\{1\},\{2,3\}), (\{(2,3\}, \{9\})\}$ 
+
+\section{Problem 20}
+
+Suppose $R$ is transitive. Let $X,Y$ and $Z$ be arbitrary elements in
+$B$ such that $(X,Y) \in S$ and $(Y,Z) \in S$. From $(X,Y) \in S$, it
+follows that $\forall x \in X \forall y \in Y xRy$. Similarly,
+$\forall y \in Y \forall z \in Z yRz$. Now since $R$ is transitive,
+$\forall x \in X \forall z \in Z xRz$. Therefore $(X,Z) \in S$. Since
+$X,Y$ and $Z$ are arbitrary, $S$ is transitive.
+
 \section{Problem 21}
 
 \subsection{Solution (a)}
@@ -241,9 +356,27 @@ Q.E.D
 
 \subsection{Solution(b)}
 
-Counter example: 
+Counter example:
 
+$R = \{(1,2), (2,1), (3,1), (1,3)\}$ \\
+$X = \{1\}, Y = \{2,3\}$ \\
+$(Y,X) \notin S$
 
+\subsection{Solution (c)}
+
+Suppose $R$ is transitive. Let $X,Y$ and $Z$ be arbitrary element in
+$P(A)$ such that $(X,Y) \in R$ and $(Y,Z) \in R$. Let $x$ be an
+arbitrary element in $X$ and $z$ be some element in $Z$. We have to
+prove that $xRz$. From $(X,Y) \in R$ and $x \in X$, it follows that
+$\exists y \in Y (xRy)$. From $\exists y \in Y (xRy)$ and
+$(Y,Z) \in R$ and applying the transitive property, we get $xRz$.
+
+\section{Problem 22}
+
+Flaw is in the assumption of $xRy$. No where it is given to be
+assumed. \\
+
+Theorem is false.
 
 %Phew! this took some time. Finally worked out this solution.
 %with help from lots of nice people.% 
@@ -276,3 +409,6 @@ X \setminus \{b\} \cup \{b\} \cup \{c\}$. $X \setminus \{b\} \cup
 \{c\} \in X$.
 
 \end{document}
+
+
+
