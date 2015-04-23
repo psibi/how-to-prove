@@ -114,5 +114,32 @@ follows that $a = b$. Therefore $R$ is symmetric. Also, since
 $(a,b) \in R$ and $(b,a) \in R$ and $a = b$, it follows that $R$ is
 anti-symmetric.
 
+\section{Problem 5}
+Suppose $R$ is partial order on $A$ and $B \subseteq A$.
+
+\subsection{Proof for reflexivity}
+
+Let $b$ be arbitrary element in B. From $B \subseteq A$, it follows
+that $b \in A$. Since we know that $R$ is partial order on $A$ it
+follows that $(b,b) \in R$. Also, $(b,b) \in B \times B$. Therefore
+$(b,b) \in R \cap (B \times B)$. Since $b$ is arbitrary, $R \cap (B
+\times B)$ is reflexive.
+
+\subsection{Proof for transitivity}
+
+Let $a,b$ and $c$ be arbitrary element in $B$ such that $(a,b) \in R
+\cap B \times B$ and $(b,c) \in R \cap B \times B$. Since $a$ and $c$
+is an element of $B$, it follows that $(a,c) \in B \times B$. We know
+that $R$ is partial order on $A$ and $(a,b) \in R$ and $(b,c) \in R$.
+By applying transitive property on $R$ it follows that $(a,c) \in R$.
+Therefore $(a,c) \in R \cap (B \times B)$. Hence $R \cap (B \times B)$
+is transitive.
+
+\subsection{Proof for anti-symmetric}
+Let $a,b$ be arbitrary element in $B$ such that $(a,b) \in R \cap B
+\times B$ and $(b,a) \in R \cap B \times B$. Since $R$ is
+anti-symmetric it follows that $a = b$. Hence $R \cap B \times B$ is
+anti symmetric.
+
 \end{document}
 
