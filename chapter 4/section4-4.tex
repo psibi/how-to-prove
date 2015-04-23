@@ -141,5 +141,39 @@ Let $a,b$ be arbitrary element in $B$ such that $(a,b) \in R \cap B
 anti-symmetric it follows that $a = b$. Hence $R \cap B \times B$ is
 anti symmetric.
 
+\section{Problem 6}
+\subsection{Solution (a)}
+Suppose $R_1$ and $R_2$ are partial orders on $A$.
+
+\subsubsection{Proof for reflexivity}
+
+Let $a$ be an arbitrary element in $A$. Since $R_1$ and $R_2$ are
+partial orders on $A$ it follows that $(a,a) \in R_1$ and $(a,a) \in
+R_2$. So, $(a,a) \in R_1 \cap R_2$. Since $a$ was arbitrary, we can
+conclude that $R_1 \cap R_2$ is reflexive.
+
+\subsubsection{Proof for transitivity}
+
+Let $a,b$ and $c$ be an arbitrary element in $A$ such that $(a,b) \in
+R_1 \cap R_2$ and $(b,c) \in R_1 \cap R_2$. Since $R_1$ and $R_2$ are
+partial orders it follows that $(a,c) \in R_1$ and $(a,c) \in R_2$.
+So, $(a,c) \in R_1 \cap R_2$. Therefore, $R_1 \cap R_2$ is transitive.
+
+\subsubsection{Proof for anti-symmetric}
+Let $a,b$ be an arbitrary element in $A$ such that $(a,b) \in R_1 \cap
+R_2$ and $(b,a) \in R_1 \cap R_2$. Since $R_1$ and $R_2$ are anti
+symmetric it follows that $a = b$. Therefore $R_1 \cap R_2$ is anti
+symmetric.
+
+\subsection{Solution (b)}
+
+Counterexample:
+
+\begin{align*}
+  R_1 = \{(1,2), (1,1), (2,2)\} \\
+  R_2 = \{(2,1), (1,1), (2,2)\} \\
+\end{align*}
+
+$R_1 \cup R_2$ isn't anti-symmetric because $1 \neq 2$.
 \end{document}
 
