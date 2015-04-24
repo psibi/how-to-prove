@@ -228,5 +228,47 @@ Case 2. $(a,b) \in R_2$. Now let's consider the sub-cases:
 \item $(b,a) \in R_2$ Since $R_2$ is partial order it follows that $b
   = a$.
 \end{itemize}
+
+\subsection{Solution (b)}
+\subsubsection{Proof of reflexivity}
+Let $a$ be an arbitrary element in $A_1 \cup A_2$. From $A_1 \cap A_2
+= \emptyset$ it follows that either $a \in A_1$ or $A \in A_2$ but not
+both. Since $R_1$ and $R_2$ are both partial order it follows that
+$(a,a) \in R_1 \cup R_2$. Since $a$ is arbitrary, we can conclude that
+$R_1 \cup R_2 \cup (A_1 \times A_2)$ is reflexive.
+
+\subsubsection{Proof of transitivity}
+Let $a,b$ and $c$ be an arbitrary element in $A_1 \cup A_2$ such that
+$(a,b) \in R_1 \cup R_2 \cup (A_1 \times A_2)$ and $(b,c) \in R_1 \cup
+R_2 \cup (A_1 \times A_2)$. Let us consider the cases separately.
+
+Case 1. $(a,b) \in R_1$. Now let's consider the sub cases:
+\begin{itemize}
+\item $(b,c) \in R_1$ Since $R_1$ is partial order it follows that
+  $(a,c) \in R$. So $(a,c) \in R_1 \cup R_2 \cup (A_1 \times A_2)$.
+\item $(b,c) \in R_2$ From $A_1 \cap A_2 = \emptyset$, it follows that
+  $(b,c) \notin R_1$. So it is vacuously true.
+\item $(b,c)\in A_1 \times A_2$ It follows that $b \in A_1$ and $c \in
+  A_2$. Since $c \in A_2$ from $A_1 \cap A_2 = \emptyset$, we can
+  conclude that $c \notin A_1$. So, $(b,c) \notin R_1$ since $R_1$ is
+  a relation on $A_1$. So it is vacuously true.
+\end{itemize}
+Prove case $2$ similarly.
+
+\subsubsection{Proof of Anti symmetric}
+Let $a,b$ be arbitrary element in $A_1 \cup A_2$ such that $(a,b) \in
+R_1 \cup R_2 \cup (A_1 \times A_2)$ and $(b,c) \in R_1 \cup R_2 \cup
+(A_1 \times A_2)$.
+
+Case 1. $(a,b) \in R_1$. Now let's consider the sub-cases:
+\begin{itemize}
+\item $(b,a) \in R_1$. Since $R_1$ is partial order on $A_1$ it
+  follows that $a = b$.
+\item $(b,a) \in R_2$ Now $(b,a) \notin R_1$ since $A_1 \cap A_2 =
+  \emptyset$. So it is vacuously true.
+\item $(b,a) \in A_1 \times A_2$. Since $a \in A_2$, it follows that
+  $(b,a) \notin R_1$. So it is vacuously true.
+\end{itemize}
+Proof case $2$ similarly.
 \end{document}
 
