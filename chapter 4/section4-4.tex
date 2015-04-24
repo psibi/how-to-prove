@@ -270,5 +270,30 @@ Case 1. $(a,b) \in R_1$. Now let's consider the sub-cases:
   $(b,a) \notin R_1$. So it is vacuously true.
 \end{itemize}
 Proof case $2$ similarly.
+
+\subsection{Solution (c)}
+\subsubsection{Part (i)}
+\begin{align*}
+  A_1 = \{1\} \\
+  A_2 = \{2\} \\
+  R_1 = \{(1,1)\} \\
+  R_2 = \{(2,2)\} \\
+  (1,2) \lor (2,1) \notin R_1 \cup R_2
+\end{align*}
+
+\subsubsection{Part (ii)}
+Let $a$ and $b$ be arbitrary element in $A_1 \cup A_2$. Let us
+consider the cases separately:
+
+Case 1. $a \in A_1$ It has two sub cases:
+\begin{itemize}
+\item $b \in A_1$ Then since $R_1$ is total order it follows that
+  $(a,b) \lor (b,a) \in R_1$. So, we can conclude that $(a,b) \lor
+  (b,a) \in R_1 \cup R_2 \cup (A_1 \times A_2)$
+\item $b \in A_2$ Then it follows that $(a,b) \in A_1 \times A_2$. So
+  $(a,b) \lor (b,a) \in R_1 \cup R_2 \cup A_1 \times A_2$.
+\end{itemize}
+
+Case 2 can be proved similarly.
 \end{document}
 
