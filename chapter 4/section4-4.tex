@@ -175,5 +175,58 @@ Counterexample:
 \end{align*}
 
 $R_1 \cup R_2$ isn't anti-symmetric because $1 \neq 2$.
+
+\section{Problem 7}
+Suppose $R_1$ is a partial order on $A_1$. Suppose $R_2$ is a partial
+order on $A_2$ and $A_1 \cap A_2 = \emptyset$.
+
+\subsection{Solution (a)}
+
+\subsubsection{Proof of reflexivity}
+Let $a$ be an arbitrary element in $A_1 \cup A_2$. Let us consider the
+cases separately:
+
+Case 1. $a \in A_1$ Since $R_1$ is partial order on $A_1$ it follows
+$(a,a) \in R_1$. So $(a,a) \in R_1 \cup R_2$.
+Case 2. $a \in A_2$ Since $R_2$ is partial order on $A_2$ it follows
+that $(a,a) \in R_2$. So $(a,a) \in R_1 \cup R_2$.
+
+\subsubsection{Proof of transitivity}
+Let $a,b$ and $c$ be an arbitrary element in $A_1 \cup A_2$ such that
+$(a,b) \in R_1 \cup R_2$ and $(b,c) \in R_1 \cup R_2$. Let us consider
+the cases:
+
+Case 1. $(a,b) \in R_1$. Now this itself has two cases with it: $(b,c)
+\in R_1$ and $(b,c) \in R_2$. Now when $(b,c) \in R_1$, then since
+$R_1$ is partial order it follows that $(a,c) \in R_1 \cup R_2$. Now
+when $(b,c) \in R_2$, this means that $(b,c) \notin A_1$ since $A_1
+\cap A_2 = \emptyset $. In this case it is vacuously true.
+
+Case 2. $(a,b) \in R_2$. Now this itself has two cases within it.
+$(b,c) \in R_1$ or $(b,c) \in R_2$. If $(b,c) \in R_1$, then $(b,c)
+\notin R_2$ since $A_1 \cap A_2 = \emptyset$. So it is vacuously true.
+On the other hand if $(b,c) \in R_2$, then since $R_2$ is partial
+order we can conclude that $(a,c) \in R_1 \cup R_2$.
+
+\subsubsection{Proof of Anti-symmetric}
+Let $a$ and $b$ be arbitrary element in $A_1 \cup A_2$ such that
+$(a,b) \in R_1 \cup R_2$ and $(b,a) \in R_1 \cup R_2$. Let us consider
+the cases separately:
+
+Case 1. $(a,b) \in R_1$. Now let's consider the sub-cases:
+\begin{itemize}
+\item $(b,a) \in R_1$. Since $R_1$ is partial order, it follows that
+  $a = b$.
+\item $(b,a) \in R_2$. From $A_1 \cap A_2 = \emptyset$, it follows
+  that $(b,a) \notin R_1$. So, it is vacuously true.
+\end{itemize}
+
+Case 2. $(a,b) \in R_2$. Now let's consider the sub-cases:
+\begin{itemize}
+\item $(b,a) \in R_1$ From $A_1 \cap A_2$ it follows that $(b,a)
+  \notin R_2$. So it is vacuously true.
+\item $(b,a) \in R_2$ Since $R_2$ is partial order it follows that $b
+  = a$.
+\end{itemize}
 \end{document}
 
