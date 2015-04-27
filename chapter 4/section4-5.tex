@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Sibi <sibi@psibi.in>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\setlength\parskip{\baselineskip}
+\begin{document}
+\title{Chapter 4 (Section 4.3)}
+\author{Sibi}
+\date{\today}
+\maketitle
+\newpage
+
+\section{Problem 1}
+\subsection{Solution (a)}
+
+Reflexive closure of $R = \{(b,b), (c,c), (a,a), (a,b), (b,c),
+(c,b)\}$ \\
+Symmetric closure of $R = (a,a), (a,b), (b,a), (b,c), (c,b)$ \\
+Transitive closure of $R = (a,a), (a,b), (a,c), (a,b), (b,c), (c,b),
+(b,b)$
+
+\subsection{Solution (b)}
+
+Reflexive closure of $R = \{(x,y \in R \times R \mid x < y \lor x =
+y)\}$ \\
+$= \{(x,y) \in R \times R \mid x \leq y\}$ \\ \\
+Symmetric closure of $R = \{(x,y) \in R \times R \mid x < y \lor y <
+x\}$ \\ \\
+Transitive closure of $R = R$
+
+\subsection{Solution (c)}
+
+Reflexive and symmetric closure of $D_r = D_r$
+Transitive closure of $D_r = \mathbb{R} \times \mathbb{R}$
+
+\section{Problem 3}
+\subsection{Solution (a)}
+
+Suppose $R$ is asymmetric. Let $x$ and $y$ be an arbitrary element in
+$A$ such that $xRy$ and $yRx$. Since $R$ is asymmetric, from $xRy$ it
+follows that $(y,x) \notin R$. But this contradicts with out
+assumption that $yRx$. So, it is vacuously true.
+
+\subsection{Solution (b)}
+Suppose $R$ is a strict partial order on $A$. Let $x$ and $y$ be
+arbitrary element in $A$ such that $(x,y) \in R$. Let us try to prove
+by contradiction. Suppose $(y,x) \in R$. Then from transitive property
+of $R$ it follows that $(x,x) \in R$. But this contradicts the fact
+that $R$ is irreflexive. So $(y,x) \notin R$.
+
+\section{Problem 4}
+\subsection{Solution (a)}
+Suppose $R$ is a strict partial order on $A$. Let $S$ be the reflexive
+closure on $R$. That means $S = R \cup i_A$.
+\subsubsection{Proof of reflexive}
+By the definition of reflexive closure, $S$ is reflexive.
+
+\subsubsection{Proof of transitive}
+Let $x,y$ and $z$ be arbitrary elements in $A$ such that $(x,y) \in S$
+and $(y,z) \in S$. We have to prove that $(x,z) \in S$. Now we know
+that $S = R \cup i_A$. Let us consider the cases separately:
+Case 1. $(x,y) \in R$ Now this itself has two sub cases within it.
+\begin{itemize}
+\item $y,z \in R$ We know that $R$ is transitive, so $x,z \in R$.
+  So $(x,z) \in R \cup i_A$.
+\item $y,z \in i_A$ From the property of identity set it follows that
+  $y = z$. Substituting it in $(x,y) \in R$, we get $(x,z) \in R$. So
+  $(x,z) \in R \cup i_A$.
+\end{itemize}
+Case 2. $(x,y) \in i_A$ From the property of identity set it follows
+that $x = y$. Substituting that in $(y,z) \in S$ gives $(x,z) \in S$.
+
+\subsubsection{Proof of Anti-symmetric}
+Let $x$ and $y$ be arbitrary elements in $A$ such that $(x,y) \in S$
+and $(y,x) \in S$. We have to prove that $x = y$. Now we know
+that $S = R \cup i_A$. Let us consider the cases separately:
+Case 1. $(x,y) \in R$ Now this itself has two sub cases within it.
+\begin{itemize}
+\item $y,x in R$. Since $R$ is transitive, it follows that $(x,x) \in
+  R$. But we know that $R$ is irreflexive, so this contradicts the
+  fact that $(x,x) \notin R$. So $(y,x) \notin R$.
+\item $y,x \in i_A$ From the property of identity set it follows that
+  $y = x$. 
+\end{itemize}
+Case 2. $(x,y) \in i_A$. From the property of identity set, it follows
+that $x = y$
+\end{document}
+
+
