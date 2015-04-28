@@ -122,6 +122,27 @@ Let $T$ be an arbitrary element in $F$. We have to prove that $T
 \subseteq R$, it follows that $(x,y) \in R$. Also since $T$ is
 irreflexive, it follows that $x \neq y$. So $(x,y) \notin i_A$. Hence
 $(x,y) \in R \setminus i_A$. So, $T \subseteq S$.
+
+\subsection{Solution (b)}
+Suppose $R$ is a partial order on $A$.
+\subsubsection{Proof that S is irreflexive}
+Let $x$ be an arbitrary element in $A$. Since $R$ is reflexive it
+follows that $(x,x) \in R$. From the identity property, it follows
+that $(x,x) \in i_A$. So, it can be concluded that $(x,x) \notin R
+\setminus i_A$. Therefore $S$ is irreflexive.
+\subsubsection{Proof that S is transitive}
+Let $x,y$ and $z$ be arbitrary elements in $A$ such that $(x,y) \in S$
+and $(y,z) \in S$. We have to prove that $xSz$. We know that
+$S = R \setminus i_A$. Then we have $(x,y) \in R \land (x,y) \in i_A$
+and $(y,z) \in R \land (y,z) \in i_A$. From
+$(x,y) \in R \land (y,z) \in R$, it follows that $(x,z) \in R$ since
+$R$ is transitive. Now there can be two cases here. If
+$(x,z) \notin i_A$ then $xSz$. But if $(x,z) \in i_A$, then $x = z$.
+From $xRy$ and $yRx$, it follows that $x = y$ since
+$R is antisymmetric$. But we know that $(x,y) \in S$ and so this
+contradicts with the fact that $(x,y) \notin i_A$. Therefore $x \neq
+z$. Hence $xSz$.
+
 \end{document}
 
 
