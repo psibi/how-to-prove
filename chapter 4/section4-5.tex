@@ -104,7 +104,24 @@ the cases separately:
   R \cup i_A$. So $xSy \lor ySx$.
 \end{itemize}
 
-
+\section{Problem 5}
+Suppose $R$ is a relation on $A$. Let $S = R \setminus i_A$.
+\subsection{Solution (a)}
+Let
+$F = \{T \subset A \times A \mid T \subseteq R and T is
+irreflexive\}$. We have to prove things here.
+\subsubsection{Proof $S \in F$}
+Let $x,y$ be arbitrary elements in $A$ such that $(x,y) \in S$. From
+$S = R \setminus i_A$, it follows that $(x,y) \in R$. So, $S \subseteq
+R$. It also follows that $(x,y) \notin i_A$. So $\forall x \forall y
+(x,y) \notin R$. That can be re-stated as $\forall x (x,x) \notin R$.
+So $R$ is irreflexive. So, we can conclude that $S \in F$.
+\subsubsection{S is the largest element in F}
+Let $T$ be an arbitrary element in $F$. We have to prove that $T
+\subseteq S$. Let $(x,y)$ be arbitrary element in $T$. Since $T
+\subseteq R$, it follows that $(x,y) \in R$. Also since $T$ is
+irreflexive, it follows that $x \neq y$. So $(x,y) \notin i_A$. Hence
+$(x,y) \in R \setminus i_A$. So, $T \subseteq S$.
 \end{document}
 
 
