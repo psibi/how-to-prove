@@ -90,6 +90,21 @@ Case 1. $(x,y) \in R$ Now this itself has two sub cases within it.
 \end{itemize}
 Case 2. $(x,y) \in i_A$. From the property of identity set, it follows
 that $x = y$
+
+\subsection{Solution (b)}
+Suppose $R$ is total strict order. Let $x$ and $y$ be arbitrary
+elements in $A$. We have to prove that $xSy \lor ySx$. We know that R
+satisfies trichotomy, so $xRy \lor yRx \lor x = y$. Let us consider
+the cases separately:
+\begin{itemize}
+\item Case 1. $xRy$ Since $S = R \cup i_A$, it follows that $(x,y) \in
+  S$. So $xSy \lor ySx$.
+\item Case 2. $yRx$ Similar to the case 1 proof.
+\item Case 3. $x = y$ So, $(x,y) \in i_A$. It follows that $(x,y) \in
+  R \cup i_A$. So $xSy \lor ySx$.
+\end{itemize}
+
+
 \end{document}
 
 
