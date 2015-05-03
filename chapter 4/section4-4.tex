@@ -362,5 +362,17 @@ it follows that $a \in A$ and $a' in A$. Similarly $b \in B$ and $b'
 (a',a))$. Similarly, $((b,b') \lor (b',b))$. Now if $a \neq a'$, then
 $L$ will not hold. Hence it is not total order.
 
+\section{Problem 10}
+Suppose $x$ and $y$ be arbitrary element in $A$.
+$\Rightarrow$ Suppose $xRy$. Let $a$ be arbitrary element in $P_x$.
+From $a \in P_x$ we know that $aRx$. Since $X$ is partial order on $A$
+and $aRx$ and $xRy$, it follows that $aRy$. So, $a \in P_y$. Since $a$
+is an arbitrary element it follows that $P_x \subseteq P_y$.
+
+$\Leftarrow$ Suppose $P_x \subseteq P_y$. Now clearly $x \in P_x$
+since $R$ is partial order and $(x,x) \in R$. From $P_x \subseteq
+P_y$, it follows that $x \in P_y$. From the definition of $P_y$, then
+$xRy$ is true.
+
 \end{document}
 
