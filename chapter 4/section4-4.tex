@@ -418,5 +418,32 @@ Let $a$ and $b$ be arbitrary element in $A$. Since $R$ is total order,
 we know that $(a,b) \in R$ or $(b,a) \in R$. It follows that $(b,a)
 \in R^{-1}$ or $(a,b) \in R^{-1}$. Since $a$ and $b$ are arbitrary, we
 can conclude that $R^{-1}$ is a total order.
+
+\section{Problem 14}
+\subsection{Solution (a)}
+Suppose $R$ is a partial order on $A$ and $B \subseteq A$ and $b \in
+B$.
+$\Rightarrow$ Suppose $b$ is the R-largest element of $B$. Let $x$ be
+an arbitrary element in $B$. Since $b$ is the largest element, it
+follows that $xRb$. So, $(b,x) \in R^{-1}$. Since $x$ was arbitrary,
+$\forall x \in B(b R^{-1} x)$. Therefore $b$ is the $R$ smallest
+element of $B$.
+$\Leftarrow$ Suppose $b$ is the $R^{-1}$ smallest element of $R$. Let
+$x$ be an arbitrary element of $B$. Since $b$ is the $R^{-1}$ smallest
+element of $B$, it follows that $(b,x) \in R^{-1}$. So, $(x,b) \in R$.
+Since $x$ was arbitrary, we get $\forall x \in B(xRb)$. Therefore $b$
+is the R-largest element of $B$.
+
+\subsection{Solution (b)}
+$\Rightarrow$ Suppose $b$ is an R-maximal element of $B$. Let $x$ be
+an arbitrary element in $B$ such that $xR^{-1}b$.. Since $b$ is an
+R-maximal element of $B$, it follows that $bRx \implies x = b$. From
+$xR^{-1}b$, it follows that $(b,x) \in R$. Then from modulus pollens,
+$x = b$. Hence $b$ is an $R^{-1}$ minimal element of $B$.
+$\Leftarrow$ Suppose $b$ is an $R^{-1}$ minimal element of $B$. Let
+$x$ be an arbitrary element in $B$ such that $bRx$. Since $b$ is an
+$R^{-1}$ minimal element of $B$, it follows that $xR^{1}b \implies x =
+b$. Then from modulus pollens, $x = b$. Hence $b$ is an R-maximal
+element of B.
 \end{document}
 
