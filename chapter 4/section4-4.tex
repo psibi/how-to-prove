@@ -384,5 +384,18 @@ $xRy$ is true.
   Prime numbers.
 \end{align*}
 
+\section{Problem 12}
+First, let's get some things straight: \\
+Let $S = \{(X,Y) \in P(R) \times P(R) \mid X \subseteq Y\}$ \\
+Let $F = \{X \subseteq R \mid X \neq \emptyset \land \forall x \forall
+y ((x \in X \land x < y) \implies y \in X)\}$ \\
+
+To show that it has no minimal element, we have to prove $\exists x
+\in B(xSb \land x \neq b)$.
+
+Suppose $C = \{y \in R \mid y \geq 1\}$. Now let $D = \{y \in R \mid y
+\geq 0\}$. Now $D \in F$ and $(C,D) \in S$ and $C \neq D$. So $F$
+doesn't have any minimal element.
+
 \end{document}
 
