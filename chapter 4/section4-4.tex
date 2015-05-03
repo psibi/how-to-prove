@@ -295,5 +295,39 @@ Case 1. $a \in A_1$ It has two sub cases:
 \end{itemize}
 
 Case 2 can be proved similarly.
+
+\section{Problem 8}
+\subsection{Proof of Reflexivity}
+Let $(a,b)$ be arbitrary element in $A \times B$. It follows that $a
+\in A$ and $b \in B$. Since $R$ is reflexive on $A$ and $S$ is
+reflexive on $B$ it follows that $(a,a) \in R$ and $(b,b) \in S$. From
+$(a,a) \in R$ and $(b,b) \in S$, it follows that $((a,b),(a,b)) \in T$
+from the definition of $T$. Since $(a,b)$ was arbitrary it follows
+that $T$ is reflexive.
+
+\subsection{Proof of transitivity}
+Let $((a,b),(a',b'))$ and $((a',b'),(c,d))$ be arbitrary element of
+$(A \times B) \times (A \times B)$ such that $((a,b),(a',b')) \in T$
+and $((a',b'),(c,d)) \in T$. It follows that $(a,b) \in A \times B$
+and $(a',b') \in A \times B$ such that $(a,a') \in R$ and $(b,b') \in
+S$. Similarly $(a',c) \in R$ and $(b',d) \in S$. Since $R$ is partial
+order it follows that $(a,c) \in R$ and $(b,d) \in S$. So,
+$((a,b),(c,d)) \in T$. So, $T$ is transitive.
+
+\subsection{Proof of Anti-symmetric}
+Let $((),())$ be arbitrary element of $(A \times B) \times (A \times
+B)$ such that $((a,b),(a',b')) \land ((a',b'),(a,b)) \in T$. It
+follows that $(a,a') \in R$ and $(b,b') \in S$. Similarly $(a',a) \in
+R$ and $(b',b) \in S$. Since $R$ is partial order and hence
+anti-symmetric it follows that $a' = a$ and $b' = b$. Therefore
+$((a,b),(a',b')) = ((a',b'),(a,b))$. So $T$ is anti-symmetric.
+
+\subsection{Is T total order?}
+Let $(a,b)$ and $(a',b')$ be arbitrary element of $A \times B$. It
+follows that $(a,a') \in R$ and $(b,b') \in S$. Since $R$ is a total
+order, it follows that $(a,a') \lor (a',a) \in R$. Similarly, $(b,b')
+\lor (b',b) \in S$. So, $((a,b),(a',b')) \lor ((a',b),(a,b)) \lor
+((a,b'),(a',b)) \lor ((a',b),(a,b')) \in T$. Now that doesn't make $T$
+as total order!
 \end{document}
 
