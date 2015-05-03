@@ -183,6 +183,28 @@ Yes, it holds.
   iff \exists b \in B((a,b) \in R) \lor \exists b \in B((b,a) \in R) \\
   iff a \in Ran(R) \cup Dom(R)
 \end{align*}
+
+\section{Problem 9}
+Let $T = \{(x,y) \in S \mid x \in Dom(R) \land y \in Ran(R)\}$ \\
+
+\subsection{Proof of $R \subseteq T$}
+Let $a,b$ be arbitrary element in $A$ such that $(a,b) \in R$. Since
+$a \in Dom(R)$ and $b \in Ran(R)$ it follows that $(a,b) \in T$. Since
+$a$ and $b$ are arbitrary, it follows that $R \subseteq T$.
+
+\subsection{Proof of transitivity of T}
+Let $a,b$ and $c$ be arbitrary element in $A$ such that $(a,b) \in T$
+and $(b,c) \in T$. So, it follows that $(a,b) \in S$ and $(b,c) \in
+S$. Since $S$ is transitive closure, it follows that $(a,c) \in S$.
+So, $(a,c) \in T$. Hence T is transitive.
+
+Proof. Since $T$ is transitive and $R \subseteq T$ it follows that $S
+\subseteq T$. Since $S$ is transitive closure of $R$, we know that $R
+\subseteq S$. So $Dom(R) \subseteq Dom(S)$.
+Let $a,b$ be arbitrary elements in $A$ such that $(a,b) \in S$ . Since
+$S \subseteq T$, it follows that $a \in Dom(R)$ and $b \in Dom(R)$.
+Since $a$ and $b$ were arbitrary it follows that $S \subseteq R$. So,
+$Dom(S) \subseteq Dom(R)$. Therefore $Dom(S) = Dom(R)$.
 \end{document}
 
 
