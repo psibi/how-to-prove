@@ -397,5 +397,26 @@ Suppose $C = \{y \in R \mid y \geq 1\}$. Now let $D = \{y \in R \mid y
 \geq 0\}$. Now $D \in F$ and $(C,D) \in S$ and $C \neq D$. So $F$
 doesn't have any minimal element.
 
+\section{Problem 13}
+Suppose $R$ is a partial order on $A$.
+\subsection{Proof of reflexivity}
+Let $a$ be an arbitrary element in $A$. Since $R$ is partial order, it
+follows that $(a,a) \in R$. So, $(a,a) \in R^{-1}$.
+\subsection{Proof of transitive}
+Let $a,b$ and $c$ be arbitrary element in $A$ such that $(a,b) \in
+R^{-1}$ and $(b,c) \in R^{-1}$. It follows that $(b,a) \in R$ and
+$(c,b) \in R$. Since $R$ is partial order, it follows that $(c,a) \in
+R$. So, $(a,c) \in R^{-1}$. Since $a$ and $c$ are arbitrary element we
+can conclude that $R^{-1}$ is transitive.
+\subsection{Proof of anti-symmetric}
+Let $a$ and $b$ be arbitrary element in $A$ such that $(a,b) \in
+R^{-1}$ and $(b,a) \in R^{-1}$. It follows that $(b,a) \in R$ and
+$(a,b) \in R$. Since $R$ is partial order it follows that $a = b$.
+Since $a$ and $b$ are arbitrary element, $R^{-1}$ is anti-symmetric.
+\subsection{Proof of total order}
+Let $a$ and $b$ be arbitrary element in $A$. Since $R$ is total order,
+we know that $(a,b) \in R$ or $(b,a) \in R$. It follows that $(b,a)
+\in R^{-1}$ or $(a,b) \in R^{-1}$. Since $a$ and $b$ are arbitrary, we
+can conclude that $R^{-1}$ is a total order.
 \end{document}
 
