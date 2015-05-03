@@ -329,5 +329,38 @@ order, it follows that $(a,a') \lor (a',a) \in R$. Similarly, $(b,b')
 \lor (b',b) \in S$. So, $((a,b),(a',b')) \lor ((a',b),(a,b)) \lor
 ((a,b'),(a',b)) \lor ((a',b),(a,b')) \in T$. Now that doesn't make $T$
 as total order!
+
+\section{Problem 9}
+\subsection{Proof of reflexivity}
+Let $(a,b)$ be an arbitrary element in $A \times B$. Then it follows
+that $a \in A$ and $b \in B$. Since $R$ is partial order on $A$ it
+follows that $(a,a) \in R$. Similarly $(b,b) \in S$. From the
+definition of $L$, it follows that $((a,b),(a,b)) \in L$. Since
+$(a,b)$ is arbitrary, $L$ is reflexive.
+
+\subsection{Proof of transitivity}
+Let $(a,b),(a',b')$ and $(c,d)$ be arbitrary element in $A \times B$
+such that $((a,b),(a',b')) \in L$ and $((a',b'),(c,d)) \in L$. From
+the definition of $L$ it follows that $a = a'$ and $a' = c$. So, $a =
+c$. Also from the definition of $L$, $(a,c) \in R$. Also we know that
+$(b,b') \in S$ and $(b',d) \in S$. Since $S$ is partial order on $B$,
+it follows that $(b,d) \in S$. Therefore, $((a,b),(c,d)) \in L$. Hence
+$L$ is transitive.
+
+\subsection{Proof of anti-symmetric}
+Let $(a,b)$ and $(a',b')$ be arbitrary element in $A \times B$ such
+that $((a,b),(a',b')) \in L$ and $((a',b'),(a,b)) \in L$. From the
+definition of $L$, it follows that $a = a'$. Also, $(b,b') \in S$ and
+$(b',b) \in S$. Since $S$ is anti-symmetric it follows that $b = b'$.
+So, we can conclude that $((a,b),(a',b')) = ((a',b'),(a,b))$. Hence
+$L$ is anti-symmetric.
+
+\subsection{Is $L$ total order?}
+Let $(a,b)$ and $(a',b')$ be arbitrary element of $A \times B$. Then
+it follows that $a \in A$ and $a' in A$. Similarly $b \in B$ and $b'
+\in B$. Since $R$ is total order, it follows that $((a,a') \lor
+(a',a))$. Similarly, $((b,b') \lor (b',b))$. Now if $a \neq a'$, then
+$L$ will not hold. Hence it is not total order.
+
 \end{document}
 
