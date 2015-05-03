@@ -462,5 +462,41 @@ element, it follows that $xR_2b \implies x = b$. From $(x,b) \in R_1$
 and $R_1 \subseteq R_2$ it follows that $(x,b) \in R_2$. Applying
 modulus pollens, we get $x = b$. Since $x$ was arbitrary in $B$, we
 can conclude that $b$ is an $R_1$ minimal element of $B$.
+
+\section{Problem 16}
+Suppose $R$ is a partial order on $A$, $B \subseteq A$ and $b \in B$.
+Suppose $b$ is the largest element of $B$. Let $x$ be an arbitrary of
+$B$ and $bRx$. Since $b$ is the largest element of $B$, it follows that
+$xRb$. Since $R$ is partial order on $A$, we can conclude from $bRx$
+and $xRb$ that $x = b$ from the anti-symmetric property. Since $x$ was
+arbitrary we can conclude that $b$ is the maximal element of $B$.\\
+To see that it's the only maximal element, suppose $c$ is also a
+maximal element. Since $b$ is the largest element of $B$, it follows
+$cRb$. Since $c$ is the maximal element, we have $\forall x \in B(cRx
+\implies c = x)$. Applying universal instantiation, we get $cRb
+\implies c = b$. By modulus pollens, we get $c = b$. Hence $b$ is the
+only largest element of $B$.
+
+\section{Problem 17}
+do it
+
+\section{Problem 18}
+do it
+
+\section{Problem 19}
+\subsection{Solution (a)}
+Proof is wrong. Universal generalization doesn't distribute over
+disjunction.
+
+\subsection{Solution (b)}
+Counterexample:
+\begin{align*}
+  R = \{(x,y) \in R \times R \mid x \leq y\} \\
+  B = \{1,2,3\}
+\end{align*}
+Smallest element of $B = 1$. \\
+Largest element of $B = 3$. \\
+$2$ is neither smallest nor largest element of $B$.
+  
 \end{document}
 
