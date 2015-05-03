@@ -153,6 +153,36 @@ $S \circ S^{-1} = \{(p,q) \in P \times P \mid \exists z \in P((p,z)
 ${(p,q) \in P \times P \mid p is the descendant of z and q is the
   descendant of z}$ \\
 ${(p,q) \in P \times P \mid p and q are descendant of some same man}$
+
+\section{Problem 7}
+\subsection{Solution (a)}
+Let $S$ be the reflexive closure of $R$.
+$\Rightarrow$ Suppose $R$ is reflexive. From clause $1$ of reflexive
+closure it follows that $R \subseteq S$. From clause 3, it follows
+that $S \subseteq R$. So, $S = R$.
+$\Leftarrow$ Suppose $R = S$. By clause 2, $R$ is reflexive.
+
+\subsection{Solution (b)}
+Yes, it holds.
+
+\section{Problem 8}
+\begin{align*}
+  a \in Dom(S) iff \exists b \in B((a,b) \in S) \\
+  iff \exists b \in B((a,b) \in R \lor (a,b) \in R^{-1}) \\
+  iff \exists b \in B((b,a) \in R^{-1} \lor (b,a) \in R) \\
+  iff \exists b \in B((b,a) \in R^{-1} \lor R) \\
+  iff \exists b \in B((b,a) \in S) \\
+  iff a \in Ran(S)
+\end{align*}
+
+\begin{align*}
+  a \in Dom(S) iff \exists b \in B((a,b) \in S) \\
+  iff \exists b \in B((a,b) \in R \lor R^{-1}) \\
+  iff \exists b \in B((a,b) \in R \lor (a,b) \in R^{-1}) \\
+  iff \exists b \in B((a,b) \in R \lor (b,a) \in R) \\
+  iff \exists b \in B((a,b) \in R) \lor \exists b \in B((b,a) \in R) \\
+  iff a \in Ran(R) \cup Dom(R)
+\end{align*}
 \end{document}
 
 
