@@ -481,11 +481,43 @@ only largest element of $B$.
 Counterexample:
 $A = \{Set of all words\}$ \\
 $R = \{(x,y) \in A \times A \mid all the lettters in the word x appear
-consecutively in the oight order in the word y\}$
+consecutively in the oight order in the word y\}$ \\
 $B = \{a, me, men, tame, mental\}$
 
 \section{Problem 18}
-do it
+\subsection{Solution (a)}
+Suppose $R$ is a partial order on $A$, $B_1 \subseteq A$, $B_2
+\subseteq A$, $\forall x \in B_1 \exists y \in B_2(xRy)$ and $\forall
+x \in B_2 \exists y \in B_1 (xRy)$.
+($\Rightarrow$) Let $x$ be an arbitrary element of $A$. Suppose $x$ is an
+upper bound of $B_1$. Let $B_2$ be arbitrary element of $B_2$. We have
+to prove that $b_2Rx$. From $\forall x \in B_2 \exists y \in B_1
+(xRy)$, we get $b_2Rb_1$ by applying existential instantiation such
+that $b_1 \in B_1$. We know that $x$ is upper bound of $B_1$, so it
+follows that $b_1Rx$. Since $R$ is a partial order, from $b_2Rb_1$ and
+$b_1Rx$, we can conclude that $b_2Rx$.
+($\Leftarrow$) Suppose $x$ is an upper bound of $B_2$. Let $x$ be an
+arbitrary element of $A$. Let $b_1$ be an arbitrary element of $B_1$.
+We have to prove that $b_1Rx$. From $\forall x \in B_1 \exists y \in
+B_2 (xRy)$, we get $b_1Rb_2$. Since $x$ is an upper bound of $B_2$, it
+follows that $b_2Rx$. Since $R$ is a partial order, we can conclude
+that $b_1Rx$.
+\subsection{Solution (b)}
+Suppose $B_1$ and $B_2$ are disjoint. We will prove by contradiction.
+Let $b_1$ be the maximal element of $B_1$, so $b_1 \in B_1$, so $b_1
+\in B_1$. From $\forall x \in B_1 \exists y \in B_2 (xRy)$, we get
+$b_1Rb_2$ such that $b_2 \in B_2$. Similarly from $\forall x \in B_2
+\exists y \in B_1(xRy)$ we get $b_2Rz$. Since $R$ is partial order,
+from $b_1Rb_2$ and $b_2Rz$ we get $b_1Rz$ such that $z \in B_1$. Let
+us consider the cases:
+Case 1. $z \neq b_1$ Then from $b_1Rz$ it follows that $b_1$ is not
+the maximal element leading to contradiction.
+Case 2. $z = b_1$. Then it follows that $b_2Rb_1$ and $b_1Rb_2$. From
+the anti-symmetric property, $b_1 = b_2$. But this leads to the
+contradiction since $B_1$ and $B_2$ are disjoint.
+The contradiction comes from assuming that $B_1$ has maximal element,
+we can conclude that $B_1$ has no maximal element.
+Follow similar steps for proving for $B_2$.
 
 \section{Problem 19}
 \subsection{Solution (a)}
