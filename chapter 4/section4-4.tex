@@ -533,6 +533,37 @@ Counterexample:
 Smallest element of $B = 1$. \\
 Largest element of $B = 3$. \\
 $2$ is neither smallest nor largest element of $B$.
+
+\section{Problem 20}
+Suppose $R$ is a partial order on $A$, $B \subseteq A$ and $b \in B$.
+\subsection{Solution (a)}
+Suppose $b$ is the smallest element of $B$. We have to prove two
+statements:
+\subsubsection{Proof that b is in lower bound of B}
+Let $x$ be an arbitrary element in $B$. Since $b$ is the smallest
+element of $B$, it follows that $bRx$. Since $x$ is arbitrary,
+$\forall x \in B(bRx)$. So $b$ is an element in the lower bound set
+for $B$.
+\subsubsection{Proof that b is the greatest lower bound of B}
+Suppose $a \in A$ and $a$ is a lower bound of $B$. We have to prove
+that $aRb$. Since $b$ is smallest element, we have $\forall x \in
+B(bRx)$. We also know that $a$ is lower bound so, $\forall x \in
+B(aRx)$. From universal instantiation, we get $aRb$.
+
+\subsection{Solution (b)}
+Suppose $b$ is the largest element of $B$. We have to prove two
+statements.
+\subsection{Proof that b is the upper bound of B}.
+Since $b \in B$, it follows that $b \in A$. Let $x$ be an arbitrary
+element of $B$. We have to prove that $xRb$. Since $b$ is the largest
+element, it follows that $xRb$. Hence $b$ is an upper bound set for
+$B$.
+
+\subsection{Proof that b is the least upper bound of B}
+Suppose $a \in A$ and $a$ is a upper bound of $B$. We have to prove
+that $bRa$. Since $b$ is largest element of $B$, $\forall x \in
+B(bRx)$. Also since $a$ is the upper bound of $B$, it follows that
+$\forall x \in B(xRa)$. From universal instantiation, we get $bRa$.
   
 \end{document}
 
