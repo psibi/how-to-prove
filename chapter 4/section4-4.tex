@@ -564,6 +564,25 @@ Suppose $a \in A$ and $a$ is a upper bound of $B$. We have to prove
 that $bRa$. Since $b$ is largest element of $B$, $\forall x \in
 B(bRx)$. Also since $a$ is the upper bound of $B$, it follows that
 $\forall x \in B(xRa)$. From universal instantiation, we get $bRa$.
-  
+
+\section{Problem 21}
+Suppose $R$ is a partial order on $A$ and $B \subseteq A$. Let $U$ be
+the set of all upper bounds for $B$.
+\subsection{Solution(a)}
+Suppose $x \in U$ and $xRy$. Let $b$ be an arbitrary element in $B$.
+Since $x \in U$, it follows that $bRx$. From $bRx$ and $xRy$, it
+follows that $bRy$. Hence $y$ is an element in the upper bound of $B$.
+\subsection{Solution (b)}
+Let $b$ be an arbitrary element in $B$. Let $u$ be an arbitrary
+element in $U$. We have to prove that $bRu$. We also know that $bRa$
+where $a \in A$ from the set $U$. Now $a$ is an arbitrary element in
+$A$. Since $B \subseteq A$, by universal instantiation, we get $bRu$.
+\subsection{Solution (c)}
+Suppose $x$ is the greatest lower bound of $U$. We proved in (b) that
+every element of $B$ is the lower bound of $U$. So $x$ is the greatest
+element of $B$. So $bRx$ where $b$ is arbitrary element in $B$. An
+element $a \in A$, is upper bound of $B$ if $bRa$. Since $b$ is
+arbitrary, by existential instantiation we get $xRa$.
+
 \end{document}
 
