@@ -591,5 +591,25 @@ where $b_1 \in B_1$ and $a \in A$. $x_1$ is the least upper bound of
 $B_1$ so $x_1Ra$. Now $a$ is an arbitrary element in $A$, so from
 existential instantiation we get $x_1Rx_2$.
 
+\section{Problem 23}
+Suppose $A$ is a set, $F \subseteq P(A)$ and $F \neq \emptyset$.
+\subsection{Proof that $\cup F$ is in the upper bound of F}
+Let $x$ be an arbitrary element in $F$. We know that $x \subseteq
+\cup F$. So $\cup F$ is the upper bound of $F$.
+\subsection{Proof that $\cup F$ is the least upper bound of F}
+Let $x$ be the arbitrary upper bound of $F$. We have to prove that
+$\cup F \subseteq x$. Since $x$ is the upper bound of $F$ it follows
+that $\forall c \in F (c \subseteq x)$. Now we know that $\cup F \in
+F$. So by universal instantiation, we get $\cup F \subseteq x$.
+\subsection{Proof that $\cap F$ is lower bound of F}
+An element $x$ will be the lower bound of $F$ if $\forall c \in
+F(x \subseteq c)$. Now clearly $\cap F \subseteq c$. So $\cap F$ is
+lower bound of $F$.
+\subsection{Proof that $\cap F$ is greatest lower bound of F}
+Let $x$ be an arbitrary lower bound of $F$. We have to prove that $x
+\subseteq \cap F$. Since $x$ is the lower bound of $F$, it follows
+that $\forall c \in F(x \subseteq c)$. We know that $\cap F \in F$. So
+by universal instantiation, we get $x \in \cap F$.
+
 \end{document}
 
