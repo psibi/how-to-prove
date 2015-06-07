@@ -343,7 +343,25 @@ that $(a,b) \in S$. We know that $R \subseteq S$. Let us consider the
 cases:
 Case 1. $(a,b) \in S$. Since $R$ is symmetric, it follows that $(b,a)
 \in R \land (b,a) \in S$.
-Case 2. $(a,b) \notin R$ Then it means $a = b$. And $(b,a) \in S$.
+Case 2. $(a,b) \notin R$ Then it means $a = b$. And $(b,a) \in S$.j
+
+\subsection{Solution (b)}
+Suppose $R$ is transitive. Let $a,b,c$ be arbitrary element in $A$
+such that $(a,b) \in S$ and $(b,c) \in S$. We know that $R \subseteq
+S$. Let us consider the cases:
+
+Case 1. $(a,b) \in R \land (b,c) \in R$. Since $R$ is transitive it
+follows that $(a,c) \in R$. From $R \subseteq S$, it follows that
+$(a,c) \in S$.
+Case 2. $(a,b) \in R \land (b,c) \notin R$. Then it follows that $b =
+c$. So, $(a,c) \in R$. From $R \subseteq S$, it follows that $(a,c)
+\in S$.
+Case 3. $(a,b) \notin R \land (b,c) \in R$. Then it follows that $a =
+b$. So, $(a,c) \in R$. From $R \subseteq S$, it follows that $(a,c)
+\in S$.
+Case 4. $(a,b) \notin R \land (b,c) \notin R$. Then it follows that $a
+= b$ and $b = c$. Since $S$ is reflexive closure of $R$, it follows
+that $(a,c) \in S$.
 \end{document}
 
 
