@@ -285,6 +285,65 @@ $S_2 = R_2 \cup (R_2)^{-1}$
   = R \cup R^{-1} \\
   = S
 \end{align*}
+
+\section{Problem 13}
+Suppose $R_1$ and $R_2$ are relations on $A$. Let $R = R_1 \cap R_2$.
+
+\subsection{Solution (a)}
+Let $S_1, S_2$ and $S$ be the reflexive clsoure of $R_1, R_2$ and $R$.
+
+We know that $R \subseteq R_1$and $R \subseteq R_2$. From exercise 11,
+it follows that $S \subseteq S_1 $ and $S \subseteq S_2$. Let $(a,b)$
+be arbitrary element in $S$. Then it follows that $(a,b) \in S_1 \land
+S_2$. So, $S \subseteq S_1 \cap S_2$.
+
+\subsection{Solution (b)}
+We know that $R \subseteq R_1$ and $R \subseteq R_2$. From exercise
+11, it follows that $S \subseteq S_1$ and $S \subseteq S_2$. So, $S
+\subseteq S_1 \cap S_2$.
+
+\subsection{Solution (c)}
+Similar proof.
+
+\section{Solution 14}
+\begin{align*}
+  R_1 = \{(1,2),(2,5),(2,9)\} \\
+  R_2 = \{(1,2)\} \\
+  S_1 = \{(1,2), (2,5), (1,5), (1,9)\} \\
+  S_2 = \{(1,2)\} \\
+  R = R_1 \setminus R_2 = \{(2,5),(2,9)\} \\
+  S_1 \setminus S_2 = \{(2,5), (1,5), (1,9)\} \\
+  S = \{(2,5), (2,9)\} \\
+  S_1 \setminus S_2 \nsubseteq S \land S \nsubseteq S_1 \setminus S_2 \\
+\end{align*}
+
+\section{Solution 15}
+Suppose $R$ is a relation on $A$. Let $S = R \cup i_A \cup R^{-1}$. We
+know that $S$ is symmetric and reflexive. Let $F = \{ T \subseteq A
+\times A \mid T \text{is reflexive and symmetric and} R \subseteq
+T\}$. Let $T$ be an arbitrary element in $F$. We have to prove that $S
+\subseteq T$. Let $(a,b)$ be arbitrary element in $S$. Now let us
+consider the cases:
+
+Case 1. $(a,b) \in R$. Since $R \subseteq T$, it follows that
+$(a,b)\in T$. So $S \subseteq T$.
+Case 2. $(a,b) \notin R$. Then it means either $(a,b) \in i_A$ ir
+$(a,b) \in R^{-1}$. If $(a,b) \in i_A$ then $a = b$. Since $T$ is
+reflexive closure, $(a,b) \in T$. If $(a,b) \in R^{-1}$, then $(b,a)
+\in R$. Since $R \subseteq T$, it follows that $(b,a) \in T$. Now $T$
+is symmetric closure, so $(a,b) \in T$. So, we can conclude that $S
+\subseteq T$.
+
+\section{Solution 16}
+Suppose $R$ is a relation on $A$ and $S$ be the reflexive closure of
+$R$.
+\subsection{Solution (a)}
+Suppose $R$ is symmetric. Let $a,b$ be arbitrary elements in $A$ such
+that $(a,b) \in S$. We know that $R \subseteq S$. Let us consider the
+cases:
+Case 1. $(a,b) \in S$. Since $R$ is symmetric, it follows that $(b,a)
+\in R \land (b,a) \in S$.
+Case 2. $(a,b) \notin R$ Then it means $a = b$. And $(b,a) \in S$.
 \end{document}
 
 
