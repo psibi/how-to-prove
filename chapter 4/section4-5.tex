@@ -205,6 +205,33 @@ Let $a,b$ be arbitrary elements in $A$ such that $(a,b) \in S$ . Since
 $S \subseteq T$, it follows that $a \in Dom(R)$ and $b \in Dom(R)$.
 Since $a$ and $b$ were arbitrary it follows that $S \subseteq R$. So,
 $Dom(S) \subseteq Dom(R)$. Therefore $Dom(S) = Dom(R)$.
+
+\section{Problem 10}
+\subsection{Solution (a)}
+We know that $A \times A$ is symmetric. Also $R \subseteq A \times A$.
+So from the definition of $F$, it follows that $A \times A \in F$.
+Therefore $F \neq \emptyset$.
+
+\subsection{Solution (b)}
+\subsubsection{Proof of  $R \subseteq \cap F$}
+Let $a,b$ be arbitrary elements in $A$ such that $(a,b) \in R$. Let
+$T$ be arbitrary elements of $F$. Then by the definition of $F$, $R
+\subseteq T$, so $(a,b) \in T$. Since $T$ was arbitrary this shows
+that $\forall T \in F((a,b) \in T)$. So $(a,b) \in \cap F$. Thus $R
+\subseteq \cap F$.
+
+\subsubsection{Proof of $\cap F$ is symmetric}
+Let $a,b$ be arbitrary element in $A$ such that $(a,b) \in S$. Let $T$
+be arbitrary element in $F$. Then by the definition of $F$, $T$ is
+symmetric. So $(a,b) \in S = (a,b) \in \cap F$. So $(a,b) \in T$.
+Since $T$ is symmetric, $(b,a) \in T$. Now since $F$ is arbitrary,
+$(b,a) \in \cap F$. Therefore $\cap F$ is symmetric.
+
+\subsection{$\cap F$ is smallest element in F}
+Let $T$ be arbitrary element in $F$. We have to prove that $\cap F
+\subseteq T$. Let $a,b$ be arbitrary element in $A$ such that $(a,b)
+\in \cap F$. Since $T$ is arbitrary it follows that $\forall T \in
+F((a,b) \in T)$. So, $(a,b) \in T$. Q.E.D.
 \end{document}
 
 
