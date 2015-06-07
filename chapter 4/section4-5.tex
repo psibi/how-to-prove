@@ -232,6 +232,41 @@ Let $T$ be arbitrary element in $F$. We have to prove that $\cap F
 \subseteq T$. Let $a,b$ be arbitrary element in $A$ such that $(a,b)
 \in \cap F$. Since $T$ is arbitrary it follows that $\forall T \in
 F((a,b) \in T)$. So, $(a,b) \in T$. Q.E.D.
+
+\section{Problem 11}
+Suppose $R_1$ and $R_2$ are relations on $A$ and $R_1 \subseteq R_2$.
+\subsection{Solution (a)}
+Let $S_1$ and $S_2$ be reflexive closure of $R_1$ and $R_2$. Then it
+follows that $R_1 \subseteq S_1$ and $R_2 \subseteq S_2$. Let $a,b$ be
+arbitrary element in $A$ such that $(a,b) \in S_1$. There can be two
+cases now:
+
+Case 1. $(a,b) \in R_1$. Since $R_1 \subseteq R_2$, it follows that
+$(a,b) \in R_2$. From $R_2 \subseteq S_2$, it follows that $S_1
+\subseteq S_2$.
+Case 2. $(a,b) \notin R_1$ Then it follows that $(a,b)$ was built as
+part of reflexive closure, so $a = b$. Now $R_2$ is a relation on $A$.
+So, reflexive closure of $R_2$ will have $(a,b)$. So $(a,b) \in S_2$.
+
+\subsection{Transitive closure}
+Let $S_1$ and $S_2$ be transitive closure of $R_1$ and $R_2$. Since
+the transitive closure of a relation is the smallest transitive
+relation containing the original relation, we know $R_1 \subseteq R_2$
+and $R_2 \subseteq S_2$. So, $R_1 \subseteq S_2$. $S_2$ is transitive
+and contains $R_1$, so it must contain the transitive closure of $R_1$
+ie $S_1$. Since the transitive closure is the smallest transitive
+relation containing $R_1$. So $S_1 \subseteq S_2$.
+
+\subsubsection{Symmetric closure}
+Let $S_1$ and $S_2$ be symmetric closure of $R_1$ and $R_2$. Let $a,b$
+be arbitrary element in $A$ such that $(a,b) \in S_1$. We know that
+$R_1 \subseteq S_1$. Let us consider the cases:
+Case 1. $(a,b) \in R_1$ Since $R_1 \subseteq R_2$, it follows that
+$(a,b) \in R_2$. From $R_2 \subseteq S_2$, it follows that $(a,b) \in
+S_2$.
+Case 2. $(a,b) \notin R_1$ This means $(b,a) \in R_1$. Since $R_1
+\subseteq R_2$, it follows that $(b,a) \in R_2$. Now symmetric closure
+of $R_2$ will have $(a,b)$. So $(a,b) \in S_2$.
 \end{document}
 
 
