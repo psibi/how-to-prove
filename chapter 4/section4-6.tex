@@ -33,8 +33,8 @@ Identity relation and $A \times A$
 \section{Problem 3}
 
 \subsection{Solution (a)}
-$R = \{(x,y) \in W \times W \mid the words x and y start with the same
-letter \}$
+$R = \{(x,y) \in W \times W \mid \text{the words x and y start with the same
+letter} \}$
 
 \begin{itemize}
 \item Reflexive: Let $x$ be an arbitrary element in $W$. Then $(x,x)
@@ -42,9 +42,36 @@ letter \}$
 \item Symmetric: Let $x,y$ be an arbitrary element in $W$ such that
   $xRy$. Now we know that $x$ and $y$ start with the same. So, $yRx$.
 \item Transitive: Let $x,y$ and $z$ be arbitrary element in $W$ such
+
   that $xRy$ and $yRz$. Both $x$ and $y$ start with the same letter.
   Similarly, $y$ and $z$ start with the same letter. So, $xRz$.
 \end{itemize}
+
+\subsection{Solution (b)}
+Counterexample for transitive:
+\begin{align*}
+  ("hello","hask") \in S, ("hask", "kitten") \in S \\
+  ("hello", kitten) \notin S
+\end{align*}
+
+\subsection{Solution (c)}
+$T = \{(x,y) \in W \times W \mid \text{the words x and y have the same
+  number of letters}\}$
+
+\begin{itemize}
+\item Reflexive: Let $x$ be an arbitrary element in $W$. It follows
+  that $xTx$ since it has the same number of letters.
+\item Symmetric: Let $x$ and $y$ be arbitrary element in $W$ such that
+  $xTy$. Now from $xTy$, we get to know that $x$ and $y$ have the same
+  number of letters. So, $yTx$.
+\item Transitive: Let $x,y$ and $z$ be arbitrary element in $T$ such
+  that $xTy$ and $yTz$. Now we know $x$ and $y$ have same number of
+  letters. Similarly from $yTz$, we know that $y$ and $z$ have the
+  same number of letters. So, $x$ and $z$ has the same number of
+  letters. So, $xRz$.
+\end{itemize}
+
+\section{Problem 4}
 \end{document}
 
 
