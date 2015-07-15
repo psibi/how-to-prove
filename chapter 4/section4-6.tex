@@ -107,7 +107,22 @@ $P_d = { p \in P \mid  \text{p has birthday on day d}}$ \\
 From the definition of $P$ modulo $B$, we get $P/R = \{X \subseteq P
 \mid \exists x \in P(X = [x]_R)\}$. Now $P_d$ would be an equivalent
 class if there exists at least one person who was born on day $d$. So,
-$P/R = \{P_d \mid d \in D\}$. 
+$P/R = \{P_d \mid d \in D\}$.
+
+\section{Problem 6}
+$S = \{(s,t) \in T \times T \mid \text{the triangles s and t are similar}$
+
+\begin{itemize}
+\item Reflexive. Let $x$ be an arbitrary element in $T$. Since a
+  triangle is similar with itself, $S$ is reflexive.
+\item Symmetric. Let $x,y$ be an arbitrary element in $T$ such that
+  $xSy$. We know that $x$ and $y$ are similar. So, $ySx$.
+\item Transitive. Let $x,y$ and $z$ be arbitrary element in $T$ such
+  that $xSy$ and $ySz$. We know that $x$ and $y$ are similar to each
+  other. Similarly $y$ and $z$ are similar to each other. So. $x$ and
+  $z$ are similar to each other. So, $xSz$. Since $x,y$ and $z$ are
+  arbitrary we can conclude that $S$ is transitive.
+\end{itemize}
 \end{document}
 
 
