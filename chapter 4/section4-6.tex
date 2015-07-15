@@ -123,6 +123,24 @@ $S = \{(s,t) \in T \times T \mid \text{the triangles s and t are similar}$
   $z$ are similar to each other. So, $xSz$. Since $x,y$ and $z$ are
   arbitrary we can conclude that $S$ is transitive.
 \end{itemize}
+
+\section{Problem 7}
+\begin{itemize}
+\item Symmetric. Let $x,y$ be arbitrary elements in $A$ such that
+  $xRy$. So $(x,y) \in R$. Since $R = \cup_{X \in F}(X \times X)$, it
+  follows that for some $X \in F$, $(x,y) \in X \times X$. So, $x \in
+  X$ and $y \in X$. But then $(y,x) \in X \times X$. So, $(y,x) \in
+  \cup_{X \in F}(X \times X)$. Since $x$ and $y$ are arbitrary, it
+  follows that $R$ is symmetric.
+\item Transitive. Let $x,y$ and $z$ be arbitrary elements in $A$ such
+  that $xRy$ and $yRz$. Since $R = \cup_{X \in F}(X \times X)$, it
+  follows that for some $X \in F$, $(x,y) \in X \times X$. Similarly
+  for some $Y \in F$, $(y,z) \in Y \times Y$. So, $y \in X$ and $y \in
+  Y$. But from the definition of partition, we know that $F$ is
+  pairwise disjoint. So, $X=Y$ which leads us to $(x,z) \in \cup_{X
+    \in F}(X \times X)$. Since $x,y$ and $z$ are arbitrary, it follows
+  that $R$ is transitive.
+\end{itemize}
 \end{document}
 
 
