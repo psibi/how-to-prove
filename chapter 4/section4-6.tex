@@ -72,6 +72,42 @@ $T = \{(x,y) \in W \times W \mid \text{the words x and y have the same
 \end{itemize}
 
 \section{Problem 4}
+\subsection{Solution (a)}
+Counterexample for Symmetric property:
+
+\begin{align*}
+  (10,5) \in R \\
+  (5,10) \notin R \text{ since} -5 \notin \mathbb{N}
+\end{align*}
+
+\subsection{Solution (b)}
+\begin{itemize}
+\item Reflexive. Let $x$ be an arbitrary element in $\mathbb{R}$. Since
+  $x - x = 0$ and $0 \in \mathbb{Q}$, it follows that $(x,x) \in S$.
+\item Symmetric. Let $x, y$ be an arbitrary element in $\mathbb{R}$
+  such that $xSy$. It follows that $x - y \in \mathbb{Q}$. Now since
+  $y - x \in \mathbb{Q}$, it follows that $ySx$.
+\item Transitive. Let $x,y$ and $z$ be arbitrary element in
+  $\mathbb{R}$ such that $xSy$ and $ySz$. It follows that $x - y$ and
+  $y - z$ are in $\mathbb{Q}$. Adding two rational numbers gives us a
+  rational number, so $xSz$.
+\end{itemize}
+
+Equivalence classes is the partition of real numbers whose difference
+is a rational number
+
+\subsection{Solution (c)}
+It is an equivalence relation.
+
+\section{Problem 5}
+$P = $ Set of all people \\
+$B = \{(p,q) \in P \times P \mid \text{p and q have same birthday}\}$ \\
+$P_d = { p \in P \mid  \text{p has birthday on day d}}$ \\
+
+From the definition of $P$ modulo $B$, we get $P/R = \{X \subseteq P
+\mid \exists x \in P(X = [x]_R)\}$. Now $P_d$ would be an equivalent
+class if there exists at least one person who was born on day $d$. So,
+$P/R = \{P_d \mid d \in D\}$. 
 \end{document}
 
 
