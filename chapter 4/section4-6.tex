@@ -8,12 +8,28 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{tabularx}
+\usepackage{mathtools}
 \setlength\parskip{\baselineskip}
 \begin{document}
 \title{Chapter 4 (Section 4.6)}
 \author{Sibi}
 \date{\today}
 \maketitle
+
+% See here: http://tex.stackexchange.com/a/43009/69223
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
 \newpage
 
 \section{Problem 1}
@@ -180,7 +196,10 @@ follows that $x \equiv y (\text{ mod m })$ or $\exists k \in Z (x - y
 definition of $C_m$, it follows that $(y,x) \in C_m$. Since $x$ and
 $y$ was arbitrary, it follows that $C_m$ is symmetric.
 
-
+\subsection{Solution (b)}
+$C_2 = \{(x,y) \in \mathbb{Z} \times \mathbb{Z} \mid \abs{x-y} \text{ is even}\}$
+$C_3 = \{(x,y) \in \mathbb{Z} \times \mathbb{Z} \mid \abs{x-y} \text{
+  is divisible by 3}\}$
 
 
 \end{document}
