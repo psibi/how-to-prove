@@ -229,6 +229,30 @@ Similarly we know that $b = d + mk_2$. Then it follows that $cd = cb -
 cmk_2$. Subtracting them we get, $ab - cd = m(bk_1 + ck_2)$. Since
 $bk_1 + ck_2$ is an integer, from the definition of congruent it
 follows that $ab \equiv cd (\text{ mod m})$
+
+\section{Problem 13}
+\subsection{Solution (a)}
+Proof of Reflexive \\ 
+Let $b$ be an arbitrary element on $B$. Since $B \subseteq A$, it
+follows that $b \in A$. Since $R$ is reflexive on $A$, it follows that
+$(b,b) \in R$. From the definition of cartesian product, it follows
+that $(b,b) \in B \times B$. So, $(b,b) \in R \cap (B \times B)$.
+Since $b$ was an arbitrary element of $B$, it follows that
+$R \cap (B \times B)$ is reflexive. \\ \\
+Proof of Symmetric \\ 
+Let $a,b$ be arbitrary element on $B$ such that
+$(a,b) \in R \cap (B \times B)$. Since $R$ is symmetric, it follows
+that $(b,a) \in R$. From the definition of cartesian product, it
+follows that $(b,a) \in B \times B$. So,
+$(b,a) \in R \cap (B \times B)$. Since $a$ and $b$ are an arbitrary
+element of $B$, it follows that $R \cap (B \times B)$ is symmetric. \\\\
+Proof of Transitive \\ 
+Let $a,b$ and $c$ be arbitrary element in $B$ such that $(a,b) \in R
+\cap (B \times B)$ and $(b,c) \in R \cap (B \times B)$. Since $R$ is
+transitive it follows that $(a,c) \in R$. From the definition of
+cartesian product, it follows that $(a,c) \in B \times B$. So, $(a,c)
+\in R \cap (B \times B)$. Since $a,b$ and $c$ are arbitrary we can
+conclude that $R \cap (B \times B)$ is transitive.
 \end{document}
 
 
