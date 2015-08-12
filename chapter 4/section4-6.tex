@@ -277,10 +277,48 @@ Since $y$ was arbitrary it follows that $[x]_S = [x]_R \cap B$.
 Proof for reflexive
 
 Let $X$ be an arbitrary element on $\mathbb{P}(A)$. We know that $X
-\Delta X = \emptyset$. And since null set is part of all st, $X \Delta
-X \sutseteq B$. From the definition of $R$, it follows that $(X,X) \in
+\Delta X = \emptyset$. And since null set is part of all set, $X \Delta
+X \subseteq B$. From the definition of $R$, it follows that $(X,X) \in
 R$. Since $X$ is arbitrary it follows that $R$ is reflexive.
 
+Proof for reflexive
+
+Let $X,Y$ be an arbitrary element on $\mathbb{P}(A)$ such that $(X,Y)
+\in R$. Since $(X,Y) \in R$, it follows that $X \Delta Y \subseteq B$.
+So, $(X \setminus Y) \cup (Y \setminus X) \subseteq B$. This can be
+also written as $(Y \setminus X) \subseteq B \cup (X \setminus Y)$.
+So, $Y \Delta X \subseteq B$. From the definition of $R$, it follows
+that $(Y,X) \in R$. Since $X$ and $Y$ are arbitrary it follows that
+$R$ is symmetric.
+
+Proof for transitive
+
+Let $X,Y$ and $Z$ be arbitrary element of $\mathbb{P}(A)$ such that
+$(X,Y) \in R$ and $(Y,Z) \in R$. From $(X,Y) \in R$, it follows that
+$(X \setminus Y) \cup (Y \setminus X) \subseteq B$. Similarly, $(Y
+\setminus Z) \cup (Z \setminus Y) \subseteq B$. Let $a$ be an
+arbitrary element in $(X \setminus Z) \cup (Z \setminus X)$.
+Case 1. $a \in X \setminus Z$
+It follows that $a \in X$ and $a \notin Z$.Combining union, we get $(X
+\setminus Y) \cup (Y \setminus X) \cup (Y \setminus Z) \cup (Z
+\setminus Y) \subseteq B$. Now we know $a \in X$, so $a \notin (Y
+\setminus X)$. Similarly from $a \notin Z$, it follows that $a \notin
+(Z \setminus Y)$. Simplifying it we get, $(X \setminus Y) \cup (Y
+\setminus Z) \subseteq B$. From the law of excluded middle, $a \in Y$
+or $a \notin Y$. If $a \in Y$, then $a \in Y \setminus Z$ so $a \in
+B$. If $a \notin Y$, then $a \in X \setminus Y$, so $a \in R$.
+Case 2. $a \in Z \setminus X$
+It follows that $a \in Z$ and $a \notin X$. Combining union, we get $(X
+\setminus Y) \cup (Y \setminus X) \cup (Y \setminus Z) \cup (Z
+\setminus Y) \subseteq B$. Now we know $a \in Z$, so $a \notin Y
+\setminus Z$. Also from $a \notin X$, we know that $a \notin X
+\setminus Y$. Simplifying it, we get $(Y \setminus X) \cup (Z
+\setminus Y) \subseteq R$. From the law of excluded middle, $a \in Y$
+or $a \notin Y$. If $a \in Y$, then $a \in Y /setminus X$ so $a \in
+B$. If $a \notin Y$, then $a \in Z / setminus Y$, so $a \in R$.
+
 \end{document}
+
+
 
 
