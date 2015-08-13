@@ -317,8 +317,32 @@ It follows that $a \in Z$ and $a \notin X$. Combining union, we get $(X
 or $a \notin Y$. If $a \in Y$, then $a \in Y /setminus X$ so $a \in
 B$. If $a \notin Y$, then $a \in Z / setminus Y$, so $a \in R$.
 
+\section{Solution 15}
+Suppose $F$ is a partion of $A$ and $G$ is a partition of $B$ and $A$
+and $B$ are disjoint.
+\subsection{Proof of $\cup(F \cup G) = A \cup B$}
+We know that $\cup F = A$ and $\cup G = B$. Taking union of both,
+$(\cup F) \cup (\cup G) = A \cup B$. From chapter 3, exercise 15 we
+know that $(\cup F) \cup (\cup G) = \cup(F \cup G)$. Hence we can
+conclude that $\cup(F \cup G) = A \cup B$.
+
+\subsection{Proof of $F \cup G$ is pairwise disjoint}
+Let $X$ and $Y$ be an arbitrary element in $F \cup G$. Suppose $x \neq
+Y$.
+\\ Case 1: $X \in F \land Y \in F$. Since $F$ is a partition of $A$, we
+know that $F$ is pairwise disjoint. So, $X \cap Y = \emptyset$.
+\\ Case 2: $X \in F \land Y \in G$. Since $\cup F = A$, it follows that
+$X \subseteq A$. Similarly, $Y \subseteq B$. Since $A \cap B =
+\emptyset$, we can conclude that $X \cap Y = \emptyset$. (Prove that
+lemma if you are not yet convinced. (Hint: Use contradiction in that proof)).
+\\ Case 3: $X \in G \land Y \in G$ Similar to case 1.
+\\ Case 4: $X \in G \land Y \in F$ Similar to case 2.
+
+\subsection{$\forall X \in (F \cup G)(X \neq \emptyset)$}
+Let $X$ be an arbitrary element in $F \cup G$. Let us consider the
+cases:
+\\ Case 1: $X \in F$. Since $F$ is partition of $A$, it follows that $x
+\neq \emptyset$.
+\\ Case 2: $X \in G$. Similar as case 1.
 \end{document}
-
-
-
 
