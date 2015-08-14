@@ -344,5 +344,43 @@ cases:
 \\ Case 1: $X \in F$. Since $F$ is partition of $A$, it follows that $x
 \neq \emptyset$.
 \\ Case 2: $X \in G$. Similar as case 1.
+
+\section{Solution 16}
+Suppose $R$ is an equivalence relation on $A$. $S$ is an equivalence
+relation on $B$ and $A \cap B = \emptyset$.
+\subsection{Solution (a)}
+
+Proof for Reflexive
+
+Let $x$ be an arbitrary element on $A \cup B$. Let us consider the
+cases:
+\\ Case 1. $x \in A$. Since $R$ is an equivalence relation on $A$, it
+follows that $(x,x) \in R$. So, $(x,x) \in R \cup S$.
+\\ Case 2. $x \in B$. Since $S$ is an equivalence relation on $B$, it
+follows that $(x,x) \in S$. So, $(x,x) \in R \cup S$.
+
+\noindent
+Proof of Symmetric
+
+Let $x,y$ be an arbitrary element in $A \cup B$ such that $(x,y) \in R
+\cup S$. Let us consider the cases:
+\\ Case 1. $(x,y) \in R$. Since $R$ is symmetric it follows that
+$(y,x) \in R$. So, $(y,x) \in R \cup S$.
+\\ Case 2. $(x,y) \in S$. Similar to case 1.
+
+\noindent
+Proof of Transitive
+
+Let $x,y$ and $z$ be an arbitrary element in $A \cup B$ such that
+$(x,y) \in R \cup S$ and $(y,z) \in R \cup S$. Let us consider the
+cases:
+\\ Case 1. $(x,y) \in R \land (y,z) \in R$. Since $R$ is transitive,
+it follows that $(x,z) \in R$. So, $(x,z) \in R \cup S$.
+\\ Case 2. $(x,y) \in R \land (y,z) \in S$. Now we know that $R$ is an
+equivalence relation on $A$. So, $x \in A$ and $y \in A$. Similarly $y
+\in B$ and $z \in B$. So, $y \in A \cap B$. But we know that $A \cap
+B$ is disjoint. So this case is not possible.
+\\ Case 3. $(x,y) \in S \land (y,z) \in S$ Similar to Case 1.
+\\ Case 4. $(x,y) \in S \land (y,z) \in R$ Similar to Case 2.
 \end{document}
 
