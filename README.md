@@ -13,8 +13,8 @@ proof is wrong or if it needs some clarification.
 Notes:
 -------
 
-From Chapter 2, I have from markdown format to Latex as it helps in
-much easier rendering of mathematical symbols. It can be compiled
+From Chapter 2, I have moved from markdown format to Latex as it helps
+in much easier rendering of mathematical symbols. It can be compiled
 using `pdflatex`:
 
 `pdflatex tex_filename`
