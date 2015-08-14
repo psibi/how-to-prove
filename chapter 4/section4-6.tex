@@ -382,5 +382,24 @@ equivalence relation on $A$. So, $x \in A$ and $y \in A$. Similarly $y
 B$ is disjoint. So this case is not possible.
 \\ Case 3. $(x,y) \in S \land (y,z) \in S$ Similar to Case 1.
 \\ Case 4. $(x,y) \in S \land (y,z) \in R$ Similar to Case 2.
+
+\subsection{Solution (b)}
+Proof of $\forall x \in A ([x]_{R \cup S} = [x]_R)$
+
+Let $x$ be an arbitrary element in $A$
+\\ $(Rightarrow)$ Suppose $y \in [x]_{R \cup S}$. From the definition
+of equivalence class it follows that $(y,x) \in R \cup S$. Let us
+consider the case:
+\\ Case 1. $(y,x) \in R$ Since $(y,x) \in R$, then from the definition of
+equivalence classes it follows that $y \in [x]_R$.
+\\ Case 2. $(y,x) \in S$. We know that $x \in A$. Since $S$ is an
+equivalence relation on $B$, it follows that $y \in B$ and $x \in B$.
+So, $x \in A \cap B$. But we know that $A$ and $B$ are disjoint. So
+this case is not possible.
+
+$(Leftarrow)$ Suppose $y \in [x]_R$. From the definition of
+equivalence classes it follows that $(y,x) \in R$. So, $(y,x) \in R
+\cup S$. Now, we know that $R \cup S$ is an equivalence relation on $A
+\cup B$. So, $y \in [x]_{R \cup S}$.
 \end{document}
 
