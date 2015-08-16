@@ -401,5 +401,38 @@ $(Leftarrow)$ Suppose $y \in [x]_R$. From the definition of
 equivalence classes it follows that $(y,x) \in R$. So, $(y,x) \in R
 \cup S$. Now, we know that $R \cup S$ is an equivalence relation on $A
 \cup B$. So, $y \in [x]_{R \cup S}$.
+
+\section{Solution 17}
+\subsection{Proof of $\cup (F.G) = A$}
+$(\Rightarrow)$ Let $x$ be an arbitrary element of $\cup (F.G)$. Then
+it follows that there is some $Z \in P(A)$ such that $Z \neq
+\emptyset$, $\exists X \in F \exists Y \in G(Z = X \cap Y)$ and $x
+\in Z$. Since $Z \in P(A)$, it follows that $Z \subseteq A$. Since $x
+\in Z$, it follows that $x \in A$.
+
+$(\Leftarrow)$ Let $x$ be an arbitrary element of $A$. Since $F$ is a
+partition of $A$ it follows that that $x \in [x]$. Similarly for $G$,
+$x \in [x]$. So there is some $X \in F$ and $Y \in G$ such that
+$x \in (X \cap Y)$. From the definition of $F.G$ it follows that there
+is some $Z \in F.G$ such that $Z = X \cap Y$ and $Z = \emptyset$ since
+$x \in Z$. So $x \in \cup(F.G)$.
+
+\subsection{Proof of F.G is pairwise disjoint}
+Let $A,B$ be an arbitrary element of $F.G$ such that $A \neq B$. Let
+us prove by contradiction. Suppose $a \in A \cap B$. It follows that
+$a \in A$ and $a \in B$. From $A \in F.G$, it follows that there is
+some $X_1 \in F$ and $Y_1 \in G$ such that $A = X_1 \cap Y_1$. From $a
+\in A$, it follows that $a \in X_1$ and $a \in Y_1$. Now from $B \in
+F.G$, it follows that there is some $X_2 \in F$ and $Y_2 \in G$ such
+that $B = X_2 \cap Y_2$. We know that $a \in X_1$ and $a \in X_2$, so
+$[a] = X_1$ and $[a] = X_2$. So, $X_1 = X_2$. Similarly, $Y_1 = Y_2$.
+So $A = B$. But this contradicts the fact that $A \neq B$. So, $a
+\notin A \cap B$. Since a was an arbitrary element, it follows that $A
+\cap B = \emptyset$.
+
+\subsection{Proof of $\forall X \in F.G(X \neq \emptyset)$}
+Suppose $X \in F.G$. Then from the definition of $F.G$, it follows
+that $X \neq \emptyset$.
+
 \end{document}
 
