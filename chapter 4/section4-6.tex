@@ -473,5 +473,41 @@ The elements are: $\{\mathbb{Z}^{-1}, \mathbb{R}^{-1} \setminus
 \mathbb{Z}, \mathbb{Z}^{+}, \mathbb{R}^{+}
 \setminus \mathbb{Z}, \{0\}\}$
 
+\section{Solution 19}
+\subsection{Solution (a)}
+Proof of Reflexive
+
+Let $x$ be an arbitrary elements in $A$. Since $R$ is equivalence
+relation on $A$, it follows that $(x,x) \in R$. Similarly, $(x,x) \in
+R \cap S$. Since $x$ is an arbitrary elements, we can conclude that
+$T$ is reflexive.
+
+Proof of Symmetric
+
+Let $x,y$ be an arbitrary element on $A$ such that $(x,y) \in T$. It
+follows that $(x,y) \in R$ and $(x,y) \in S$. Since $R$ is symmetric,
+it follows that $(y,x) \in R$. Similarly $(y,x) \in S$. So, $(y,x)\in
+R \cap S$. Since $x$ and $y$ are arbitrary , we can conclude that $T$
+is symmetric.
+
+Proof of Transitive
+
+Let $x,y$ and $z$ be arbitrary element on $A$ such that $(x,y)\in T$
+and $(y,z) \in T$. It follows that $(x,y) \in R$ and $(y,z) \in R$.
+Since $R$ is transitive, it follows that $(x,z) \in R$. For similar
+reasons, $(x,z) \in S$. So, $(x,z) \in R \cap S$. Since $x$ and $z$
+are arbitrary, it follows that $T$ is transitive.
+
+\subsection{Solution (b)}
+Suppose $x \in A$
+$(\Rightarrow)$ Suppose $y \in [x]_T$. Then it follows that $yTx$. We
+know that $T = R \cap S$. So, $(y,x) \in R \land (y,x) \in S$. From
+the definition of equivalence classes, it follows that $y \in [x]_R
+\land y \in [x]_S$.
+
+$(\Leftarrow)$ Suppose $y \in [x]_R \cap [x]_S$. Then it follows that
+$y \in [x]_R \cap y \in [x]_S$. So, $(y,x) \in R \land (y,x) \in S$.
+Combining them, $(x,y) \in R \cap S$. So, $y \in [x]_{R \cap S}$.
+
 \end{document}
 
