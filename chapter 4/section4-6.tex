@@ -515,5 +515,41 @@ follows that $X \neq \emptyset$. Now for some $x \in A$, it follows
 that $X = [x]_T = [x]_R \cap [x]_S$. Since $[x]_R \in A \setminus R$
 and $[x]_S \in A \setminus S$, $X \in (A/R).(A/S)$.
 
+\section{Solution 20}
+\subsection{Proof of $\cup(F \otimes G) = A \times B$}
+
+($\Rightarrow$) Let $(x,y)$ be arbitrary element of
+$\cup(F \otimes G)$. Then it follows that there is some
+$Z \in F \otimes G$ such that $(x,y) \in Z$,
+$\exists Y \in F \exists Y \in G (Z = X \times Y)$. So
+$(x,y) \in X \times Y$. Since $x \in X$ and $X \in F$, $x \in \cup F$.
+Therefore $x \in A$. Similarly, $y \in B$. So, $(x,y) \in A \times B$.
+
+$(\Leftarrow)$ Let $(x,y)$ be an arbitrary of $A \times B$. Since $F$
+is a partition of $A$ and $x \in A$, it follows that there is some $X
+\in F$ such that $x \in X$. Similarly there is some $Y \in G$ such
+that $y \in Y$. So, $(x,y) \in X \times Y$. It follows that there is
+some $Z \in F \otimes G$ such that $(x,y) \in Z$. Hence, $(x,y) \in
+\cup(F \otimes G)$.
+
+\subsection{Proof of $F \otimes G$ is pairwise disjoint}
+Let $X,Y$ be arbitrary element in $F \otimes G$ such that $X \neq Y$.
+Let us prove by contradiction. Suppose there exists some element $x,y$
+such that $(x,y) \in X \cap Y$. Since $X \in F \otimes G$, it follows
+that there is some $X_1 \in F$ and $Y_1 \in G$ such that $X = X_1
+\times Y_1$. Similarly for some $X_2 \in F$ and $Y_2 \in G$ it follows
+that $Y = X_1 \times Y_2$. Now, $(x,y) \in (X_1 \times Y_1) \cap (X_2
+\times Y_2)$. Since $F$ is a partition on $A$, $x \in A$, $x \in X_1$
+and $x \in X_2$, it follows that $X_1 = X_2$ from the definition of
+equivalence class. Similarly $Y_1 = Y_2$. Since $X = X_1 \times Y_1$
+and $Y = X_2 \times Y_2$, it follows that $X = Y$. But this
+contradicts the fact that $X \neq Y$. So, $X \cap Y = \emptyset$.
+
+\subsection{Proof of $\forall X \in F \otimes G(X \neq \emptyset)$}
+Suppose $X \in F \otimes G$. Then there exists some $X_1 \in F$ and
+$Y_1 \in G$ such that $X = X_1 \times Y_1$. Since $F$ is a partition
+on $A$, $X_1 \neq \emptyset$. Similarly $Y_1 \neq \emptyset$.
+Therefore $X_1 \times Y_1 \neq \emptyset$. $So X \neq \emptyset$.
+
 \end{document}
 
