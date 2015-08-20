@@ -605,5 +605,26 @@ $((a',b'),(a,b)) \in T$. So, $(a',b') \in [(a,b)]_T$. Since $a'$ and
 $b'$ are arbitrary it follows that
 $[a]_R \times [b]_R \subseteq [(a,b)]$.
 
+\subsection{Solution (c)}
+$(\Rightarrow)$ Suppose $X \in (A \times B)/T$. Since $(A \times B)/T$
+is a partition it follows that $X \neq \emptyset$. There is some
+$(a,b) \in X$. Since $X \in (A \times B)/T$ and $\cup (A \times B)/T =
+A \times B$, it follows that $(a,b) \in A \times B$. So, $a \in A$ and
+$b \in B$. Since $R$ is a equivalence relation on $A$, $a \in [a]_R$.
+Similarly, $b \in [b]_S$. So, $(a,b) \in [a]_R \times [b]_R$. From the
+definition of $\otimes$, it follows that $[a]_R \times [b]_S \in (A/R)
+\otimes (B/S)$. From (b), it follows that $[(a,b)]_T \in (A/R) \otimes
+(B/S)$. So, $X \in (A/R) \otimes (B/R)$.
+
+$(\Leftarrow)$ Suppose $X \in (A/R) \otimes (B/S)$. It follows that
+there is some $X_1 \in (A/R)$ and $Y_1 \in (B/S)$ such that $X=X_1
+\times Y_1$. Both $X_1$ and $Y_1$ cannot be $\emptyset$. So, suppose
+$x \in X_1$ and $y \in Y_1$. Since $X_1 \in F$ and $\cup F = A$, it
+follows that $x \in A$. Similarly $y \in B$. So, $(x,y) \in A \times
+B$. It follows that $[(x,y)]_T \in (A \times B)/T$. From (b), $[x]_R
+\times [y]_S \subseteq (A \times B)/T$. So, $X_1 \times Y_1 \in (A
+\times B)/T$. So, $X_1 \times Y_1 \in (A \times B)/T$. Hence $X \in (A
+\times B)/T$.
+
 \end{document}
 
