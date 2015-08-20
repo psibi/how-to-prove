@@ -565,5 +565,30 @@ Therefore $X_1 \times Y_1 \neq \emptyset$. $So X \neq \emptyset$.
 For the next part of the answer, just try to visualize the graph in a
 plane and you will figure that out!
 
+\section{Solution 22}
+\subsection{Solution (a)}
+Proof of $T$ is reflexive
+
+Suppose $(a,b) \in A \times B$ for arbitrary $a \in A$ and $b \in B$.
+It follows that $((a,b), (a,b)) \in (A \times B) \times (A \times B)$.
+Since $a$ and $b$ are arbitrary it follows that $T$ is reflexive.
+
+\noindent
+Proof of $T$ is symmetric
+
+Suppose $((a,b), (a',b')) \in T$. We know that $(a',b') \in A \times
+B$ and $(a,b) \in A \times B$. Also, $aRa'$ and $bRb'$. Since $R$ is
+symmetric it follows that $a'Ra$. Similarly $b'Rb$. So,
+$((a',b'),(a,b)) \in T$. Since $a,b,a'$ and $b'$ are arbitrary it
+follows that $T$is symmetric.
+
+\noindent
+Proof of $T$ is transitive Suppose $((a,b),(a',b')) \in T$ and
+$((a',b'),(c,d)) \in T$. It follows that $(a,a') \in R$,
+$(b,b') \in S$, $(a',c) \in R$ and $(b',d) \in S$. From $(a,a') \in R$
+and $(a',c) \in R$, it follows that $(a,c) \in R$. Similarly,
+$(b,d) \in S$. So, $((a,b),(c,d)) \in T$. Since $a,a',b',c$ and $d$
+are arbitrary it follows that $T$ is transitive.
+
 \end{document}
 
