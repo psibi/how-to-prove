@@ -636,5 +636,17 @@ Let $T = \{(X,Y) \in A/S \times A/S \mid \forall x \in X \forall y \in Y(xRy)\}$
   \iff \forall a \in A \forall b \in A (aSx \land bSy \land aRb) \\
   \iff xRy          \text{(Since R is compatible with S)}
 \end{align*}
+
+\subsection{Solution (b)}
+Let us formulate the set $T$:
+
+$T = \{([x]_s, [y]_s) \in A/S \times A/S \mid \forall x \in A \forall
+y \in A(xRy)\}$ \\
+$T = \{(X,Y) \in A/S \times A/S \mid \forall x \in A \forall y \in
+A(xRy \land x \in X \land y \in Y)\}$.
+
+Suppose $x,y,x'$ and $y' \in A$. Suppose $xSx'$ and $ySy'$. It follows
+that $[x]_S = [x']_S$ and $[y]_S = [y']_S$. So, $xRy$ iff
+$[x]_ST[y]_S$ iff $[x']_ST[y']_S$ iff $x'Ry'$.
 \end{document}
 
