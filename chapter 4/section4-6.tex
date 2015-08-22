@@ -626,5 +626,15 @@ B$. It follows that $[(x,y)]_T \in (A \times B)/T$. From (b), $[x]_R
 \times B)/T$. So, $X_1 \times Y_1 \in (A \times B)/T$. Hence $X \in (A
 \times B)/T$.
 
+\section{Solution 23}
+\subsection{Solution (a)}
+Let $T = \{(X,Y) \in A/S \times A/S \mid \forall x \in X \forall y \in Y(xRy)\}$
+\begin{align*}
+  [x]_ST[y]_s \\
+  \iff \forall a \in [x]_S \forall b \in [y]_S (aRb) \\
+  \iff \forall a \in A \forall b \in A (a \in [x]_S \land b \in [y]_S \land aRb) \\
+  \iff \forall a \in A \forall b \in A (aSx \land bSy \land aRb) \\
+  \iff xRy          \text{(Since R is compatible with S)}
+\end{align*}
 \end{document}
 
