@@ -730,5 +730,30 @@ $S = R \cap R^{-1} = \{(X,Y) \in A \times A \mid \text{ X and Y has same
   number of elements}\}$ \\
 $A/S = \{\{\emptyset\}, \{set with single elements\}, ... \}$ \\
 Number of elements is 101.
+
+\section{Solution 26}
+\subsection{Solution (a)}
+Reflexive \\
+
+Lemma. A partition on $A$ refines itself.
+Suppose $F$ be a partition on $A$. Let $X$ be an arbitrary elements in
+$F$. Suppose $Y \in F$ such that $Y = X$ then it follows that $X
+\subseteq Y$. So, $F$ refines itself.
+
+Let $X$ be an arbitrary element in $P$. Now we know that $X$ refines
+$X$. So, $(X,X) \in R$. Since $X$ is arbitrary, it follows that $R$ is
+reflexive.
+
+Transitive \\
+Let $F,G,H$ be arbitrary element in $P$ such that $(F,G) \in R$ and
+$(G,H) \in R$. Since $F$ refines $G$, it follows that $\forall X \in F
+\exists Y \in G(X \subseteq Y)$. Similarly, $\forall A \in G \exists B
+\in H(A \subseteq B)$. Let $X$ be an arbitrary element in $F$ and $Y$
+be an arbitrary element in $G$, it follows that $X \subseteq Y$.
+Universal instantiation gives us $Y \subseteq B$ for some $B \in H$.
+From $X \subseteq Y$ and $Y \subseteq B$, it follows that $X \subseteq
+B$. So, $F$ refines $H$. Since $F,G$ and $H$ are arbitrary, we can
+conclude that $R$ is transitive.
+
 \end{document}
 
