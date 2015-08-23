@@ -671,7 +671,22 @@ Let $a,b$ and $c$ be an arbitrary element on $A$ such that $(a,b) \in
 S$ and $(b,c) \in S$. From $(a,b) \in S$, it follows that $(a,b) \in R
 \land (a,b) \in R^{-1}$. Similarly, $(b,c) \in S$ and $(b,c) \in
 R^{-1}$. Since $R$ and $R^{-1}$ are transitive, it follows that $(a,c)
-\in R \cap R^{-1}$. Since $a,b$ and $c$ are arbitrary, $S$ is transitive.
+\in R \cap R^{-1}$. Since $a,b$ and $c$ are arbitrary, $S$ is
+transitive.
+
+\subsection{Solution (b)}
+From 23 (a), it follows that if $R$ is compatible with $S$, then we
+can prove that there is a unique relation $T$. Suppose $x,y,x'$ and
+$y'$ in A. Suppose $xSx'$ and $ySy'$.
+
+$(\Rightarrow)$ Suppose $xRy$. From $xSx'$, it follows that $xRx'
+\land xR^{-1}x'$. Similarly, $yRy' \land yR^{-1}y'$. From $xR^{-1}x'$,
+it follows that $x'Rx$. From $xRy$ and $yRy'$, it follows that $xRy'$.
+From $x'Rx$ and $xRy'$, it follows that $x'Ry'$.
+
+$(\Leftarrow)$ Suppose $x'Ry'$. We know that $yR^{-1}y'$. So, $y'Ry$.
+From transitive property, it follows that $x'Ry$. We also know,
+$xRx'$. Again from the transitive property it follows that $xRy$.
 
 \end{document}
 
