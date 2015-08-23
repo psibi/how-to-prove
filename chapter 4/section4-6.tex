@@ -688,5 +688,27 @@ $(\Leftarrow)$ Suppose $x'Ry'$. We know that $yR^{-1}y'$. So, $y'Ry$.
 From transitive property, it follows that $x'Ry$. We also know,
 $xRx'$. Again from the transitive property it follows that $xRy$.
 
+\subsection{Solution (c)}
+
+$T = \{(X,Y) \in A/S \times A/S \mid \exists x \in X \exists y \in Y (xRy)\}$
+
+Reflexive \\
+Let $X$ be an arbitrary element on $A/S$. Then it follows that $X \neq
+\emptyset$. Since $A/S$ is a partition. So there is some $x$ such that
+$x \in X$. Now since $X \subseteq A$, it follows that $x \in A$. Since
+$R$is reflexive on $A$, it follows that $xRx$. From the definition of
+$T$, it follows that $(X,X) \in T$. Since $X$ is arbitrary, $T$ is
+reflexive.
+
+Transitive \\
+Let $x,y,z$ be an arbitrary element on $A$ such that $[x]_ST[y]_S$ and
+$[y]_ST[z]_S$. It follows that $xRy$ and $yRz$. Since $R$ is
+transitive, it follows that $xRz$. So, $[x]_ST[y]_S$. Since $x,y$ and
+$z$ are arbitrary it follows that $T$ is transitive.
+
+Anti symmetric \\
+Let $x$ and $y$ be arbitrary element on $A$ such that $[x]_ST[y]_S$
+and $[y]_ST[x]_S$. So $xRy$ and $yRx$. Then $xRy$ and $xR^{-1}y$. So
+$xSy$. So, $[x]_S = [y]_S$. Hence $T$ is anti symmetric.
 \end{document}
 
