@@ -778,6 +778,8 @@ $(a,b) \in T$. Since $a$ and $b$ are arbitrary, it follows that $S
 \subsection{Solution (c)}
 Proof of lower bound
 
+Existence of lower bound
+
 It follows that $\{F,G\} \subseteq P$. We have to prove that $F.G R F$
 and $F.GRG$. Let $Z$ be an arbitrary element in $F.G$. Then it follows
 that there is some element $X \in F$ and $Y \in G$ such that $Z = X
@@ -785,6 +787,17 @@ that there is some element $X \in F$ and $Y \in G$ such that $Z = X
 \subseteq Y$. Since $Z$ is arbitrary in $F.G$ and $Y$ is some element
 in $G$, it follows that $F.G R F$. Similarly prove for $F.G R G$.
 Hence $F.G$ is present in the lower bound of the set.
+
+Greatest lower bound
+
+Let $L$ be the set of lower bound of $\{F,G\} \in R$. Let$A$ be an
+arbitrary element in $L$. To prove that $F.G$ is the greatest lower
+bound we have to prove that $A R F.G$. Simplifying this, we need to
+prove that $X \subseteq F_1 \cap G_1$ for an arbitrary $X \in A$ and
+some $F_1 \in F$ and $G_1 \in G$. Since $A \in L$, it follows that
+$ARF$ and $ARG$.Let $X$ be an arbitrary element in $A$. From $ARF$, it
+follows that $X \subseteq F_1$. Similarly, we get $X \subseteq G_1$.
+So, $X \subseteq F_1 \cap G_1$. Hence proved.
 
 \end{document}
 
