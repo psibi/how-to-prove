@@ -1,0 +1,61 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Sibi <sibi@psibi.in>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\setlength\parskip{\baselineskip}
+\begin{document}
+\title{Chapter 4 (Section 4.6)}
+\author{Sibi}
+\date{\today}
+\maketitle
+
+% See here: http://tex.stackexchange.com/a/43009/69223
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+\newpage
+
+\section{Problem 1}
+
+\subsection{Solution (a)}
+Yes
+
+\subsection{Solution (b)}
+No
+
+\subsection{Solution (c)}
+Yes
+
+\section{Problem 2}
+\subsection{Solution (a)}
+No
+
+\subsection{Solution (b)}
+$f$ is not a function because $(haskell,a) \in f$ and $(haskell,l) \in
+f$.
+
+g is a function.
+
+\subsection{Solution (c)}
+$R = \{(J,F), (M,J), (S,M), (F,J)\}$
+
+R is a function.
+
+\end{document}
