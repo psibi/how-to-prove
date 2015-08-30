@@ -116,4 +116,30 @@ capital of the country in which c_1 is present. \}$
   \frac{-x^2}{x^2 + 2}
 \end{align*}
 
+\section{Solution 7}
+Let $c$ be an arbitrary element in $C$. We must show there is a unique
+$b \in B$ such that $(c,b) \in f \mid C$.
+
+Existence proof \\
+From $C \subseteq A$, it follows that $c \in A$. From $f : A \to B $,
+it follows that $f(c) = b$. Since $b \in B$, it follows that $(c,b)
+\in C \times B$. So, $(c,b) \in f \cap (C \times B)$.
+
+Uniqueness proof \\
+Suppose $(c,b_1) \in f \mid C$ and $(c,b_2) \in f \mid C$. So,
+$(c,b_1) \in f$ and $(c,b_2) \in f$. It follows that $f(c) = b_1$ and
+$f(c) = b_2$. From the definition of function, it follows that there
+can be only one $b \in B$ such that $(c,b) \in f$. Thus, it follows
+that $b_1 = b_2$.
+
+Proof of $f(c) = (f \mid c)(c)$ \\
+We know that $c \in C$ and $f : A \to B$. From $f$, it follows that
+$f(c) = b$. So,
+\begin{align*}
+  f(c) = b \iff (c,b) \in f \\
+  \iff (c,b) \in f \land (c,b) \in C \times B \\
+  \iff (c,b) \in f \mid c \\
+  \iff (f \mid c)(c) = b 
+\end{align*}
+
 \end{document}
