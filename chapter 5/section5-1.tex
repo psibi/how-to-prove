@@ -117,6 +117,7 @@ capital of the country in which c_1 is present. \}$
 \end{align*}
 
 \section{Solution 7}
+\subsection{Solution (a)}
 Let $c$ be an arbitrary element in $C$. We must show there is a unique
 $b \in B$ such that $(c,b) \in f \mid C$.
 
@@ -141,5 +142,18 @@ $f(c) = b$. So,
   \iff (c,b) \in f \mid c \\
   \iff (f \mid c)(c) = b 
 \end{align*}
+
+\subsection{Solution (b)}
+($\Rightarrow$) Suppose $g = f \mid c$. Let $(c,b) \in g$. Since $g = f
+\mid c$, it follows that $(c,b) \in f$. So, $g \subseteq f$.
+($\Leftarrow$) Suppose $g \subseteq f$. Let $(c,b) \in g$. It follows
+that $(c,b) \in f$. And since $c \in C$ and $b \in B$, it follows that
+$(c,b) \in C \times B$. So, $(c,b) \in f \cap (C \times B)$. So, $g
+\subseteq f \cap (C \times B)$. Let $(c,b) \in f \mid C$. It follows
+that $c \in C$ and $b \in B$ and $(c,b) \in f$. We know that $g: C \to
+B$. Since $c \in C$, there exists an element in $B$ which is equal to
+$g(c)$. Since $g \subseteq f$, it follows that $g(c) = b$. So, $(c,b)
+\in g$. Therefore, $f \mid c \subseteq g$.
+
 
 \end{document}
