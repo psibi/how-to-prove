@@ -209,4 +209,29 @@ that $(a,c_2) \in g$. Since $g$ is a function it follows that $c_1 = c_2$.
 \\ Case 3. $(a,c_1) \in g \land (a,c_2) \in f$. Same as case 2.
 \\ Case 4. $(a,c_1) \in g \land (a,c_2) \in g$. Same as case 1.
 
+\section{Solution 10}
+\subsection{Solution (a)}
+Let $b$ be an arbitrary element in $B$. We have to prove that there
+exists a unique $c \in C$ such that $(b,c) \in S$.
+
+Existence
+We know that $b \in B$. Since $B = Dom(S)$, it follows that there
+exists some $c$ such that $(b,c) \in S$.
+
+Uniqueness
+Let $(b,c_1) \in S$ and $(b,c_2) \in S$. Since $B = Dom(S) = Ran(R)$
+and $b \in B$ so $b \in Ran(R)$. So there exists some $a \in A$ such
+that $(a,b) \in R$. Now, $(a,c_1) \in S \circ R$ and $(a,c_2) \in S
+\circ R$. Since $S \circ R$ is a function, $c_1 = c_2$.
+
+\subsection{Solution (b)}
+\begin{align*}
+  A = \{a\} \\
+  B = \{b, b_2\} \\
+  C = \{c\} \\ \\
+  R = \{(a,b_2), (a,b)\} \\
+  S = \{(b,c), (b_2, c)\} \\
+  S \circ R = \{(a,c)\}
+\end{align*}
+
 \end{document}
