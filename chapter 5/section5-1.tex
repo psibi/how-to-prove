@@ -164,4 +164,32 @@ it follows that $h(a) = 2a + 3$. So, $(a,2a + 3) \in h$. Since $b = 2a
 + 3$, $(a,b) \in h$. Since $(a,b)$ is arbitrary, it follows that $g
 \subseteq h$.
 
+\section{Solution 9}
+\subsection{Solution (a)}
+Suppose $A \cap B = \emptyset$. Let $a$ be arbitrary element in $A
+\cup B$. We have to prove that there is a unique $c \in C$ such that
+$(a,c) \in f \cup g$.
+
+Existence. We know that $a \in A \cup B$. Let us consider the cases.
+\\ Case 1. $a \in A$. Since $f$ is a function it follows that $\exists c
+\in C((a,c) \in f)$.
+\\ Case 2. $a \in B$. Since $g$ is a function it follows that $\exists c
+\in C((a,c) \in g)$.
+
+Uniqueness. Suppose $(a,c_1) \in f \cup g$ and $(a,c_2) \in f \cup g$.
+Let us consider the cases:
+\\ Case 1. $(a,c_1) \in f \land (a,c_2) \in f$. Since $f$ is a
+function there is a unique $c \in C$ such that $(a,c) \in f$. So, $c_1
+= c_2$.
+\\ Case 2. $(a,c_1) \in f \land (a,c_2) \in g$ From $(a,c_1) \in f_1$
+it follows that $a \in A$. Similarly from $(a,c_2) \in g$, it follows
+that $a \in B$. But $A \cap B = \emptyset$, so this case is not
+possible.
+\\ Case 3. $(a,c_1) \in g \land (a,c_2) \in f$. Same as case 2.
+\\ Case 4. $(a,c_1) \in g \land (a,c_2) \in g$. Since $g$ is a
+function for $a \in A$, there is a unique $c \in C$ such that $(a,c)
+\in g$. So, $c_1 = c_2$.
+
+
+
 \end{document}
