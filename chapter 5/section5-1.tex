@@ -190,6 +190,23 @@ possible.
 function for $a \in A$, there is a unique $c \in C$ such that $(a,c)
 \in g$. So, $c_1 = c_2$.
 
+\subsection{Solution (b)}
 
+Existence. Same as $9(a)$
+\\ Uniqueness. Let $(a,c_1) \in f \cup g$ and $(a,c_2) \in f \cup g$.
+Let us consider the cases:
+\\ Case 1. $(a,c_1) \in f \land (a,c_2) \in f$. Since $f$ is a function
+and there is a unique $c \in C$ such that $f(a) = c$, it follows that
+$c_1 = c_2$.
+\\ Case 2. $(a,c_1) \in f \land (a,c_2) \in g$. We know that $f \mid
+(A \cap B) = g \mid (A \cap B)$. We know that $f \mid (A \cap B) = f
+\cap ((A \cap B) \times C)$. From $(a,c_1) \in f$ we know that $a \in
+A$ and $c_1 \in C$. Similarly, from $(a,c_2) \in g$ we know that $a \in
+B$ and $c_2 \in C$. So, $a \in A \cap B$. $(a,c_1) \in (A \cap B)
+\times C$. So, $(a,c_1) \in f \mid (A \cap B)$. From $f \mid (A \cap
+B) = g \mid (A \cap B)$, it follows that $(a,c_1) \in g$. We also know
+that $(a,c_2) \in g$. Since $g$ is a function it follows that $c_1 = c_2$.
+\\ Case 3. $(a,c_1) \in g \land (a,c_2) \in f$. Same as case 2.
+\\ Case 4. $(a,c_1) \in g \land (a,c_2) \in g$. Same as case 1.
 
 \end{document}
