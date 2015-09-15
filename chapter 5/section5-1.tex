@@ -257,4 +257,33 @@ $(f(a_2), f(a_3)) \in S$. Since $S$ is transitive, it follows that
 $(f(a_1), f(a_2) \in S)$. So, $(a_1, a_3) \in R$. Since $a_1, a_2$ and
 $a_3$ are arbitrary it follows that $R$ is transitive.
 
+\section{Solution 12}
+\subsection{Solution (a)}
+\begin{align*}
+  A = \{a,b\} \\
+  B = \{x,y\} \\ \\
+  R = \{(a,a), (b,b)\} \\
+  F = \{(a,x), (b,x)\} \\
+  S = \{(x,x)\}
+\end{align*}
+
+No, $S$ is not reflexive.
+
+\subsection{Solution (b)}
+Suppose $R$ is symmetric. Let $a,b$ be arbitrary element in $B$ such
+that $(a,b) \in S$. It follows that $(a,b) \in B \times B$ such that
+$\exists v \in A(f(v) = a)$ and $\exists u \in A(f(u) = b)$. Also,
+$(v,u) \in R$. Since $R$ is symmetric, $(u,v) \in R$. We know that
+$f(u) = b$ and $f(v) = a$. So, $(b,a) \in S$. Since $a$ and $b$ are
+arbitrary we can conclude that $S$ is symmetric.
+
+\subsection{Solution (c)}
+\begin{align*}
+  A = \{x,y,z,o\} \\
+  B = \{a,b,c\} \\ \\
+  R = \{(x,y), (z,o)\} \\
+  S = \{(a,b), (b,c)\} \\
+  F = \{(x,a), (y,b), (z,b), (o,c)\}
+\end{align*}
+
 \end{document}
