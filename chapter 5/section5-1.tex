@@ -286,4 +286,30 @@ arbitrary we can conclude that $S$ is symmetric.
   F = \{(x,a), (y,b), (z,b), (o,c)\}
 \end{align*}
 
+\section{Problem 13}
+\subsection{Solution (a)}
+Suppose $R$ is reflexive. Let $f$ be an arbitrary element in $F$. Let
+$a$ be an arbitrary element in $A$. From the definition of $f$, it
+follows that $(a,f(a)) \in f$. So, $f(a) \in B$. Since $R$ is
+reflexive, so $(f(a),f(a)) \in R$. From the definition of $S$, it
+follows that $(f,f) \in S$. Since $f$ is arbitrary, we can conclude
+that $S$ is reflexive.
+  
+\subsection{Solution (b)}
+Suppose $R$ is symmetric. Let $(f,g)$ be arbitrary element of $S$, It
+follows that $f \in F$. Let $x$ be an arbitrary element in $A$. Then
+$f(x) \in Dom(R)$ and $g(x) \in Ran(R)$. Since $R$ is symmetric, so
+$(g(x),f(x)) \in R$. From the definition of $S$, it follows that
+$(g,f) \in R$. Since $f,g$ are arbitrary, $S$ is symmetric.
+
+\subsection{Solution (c)}
+Suppose $R$ is transitive. Let $f,g,h$ be arbitrary element in $F$
+such that $(f,g) \in S$ and $(g,h) \in S$. Let $x$ be an arbitrary
+element in $A$. From $(f,g) \in S$, it follows that
+$(f(x),g(x)) \in R$. Similarly, $(g(x),h(x)) \in R$. Since $R$ is
+transitive, $(f(x),h(x)) \in R$. From the definition of $S$, it
+follows that $(f,h) \in S$. Since $f,g,h$ are arbitrary we can
+conclude that $S$ is transitive.
+
+
 \end{document}
