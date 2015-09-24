@@ -311,5 +311,26 @@ transitive, $(f(x),h(x)) \in R$. From the definition of $S$, it
 follows that $(f,h) \in S$. Since $f,g,h$ are arbitrary we can
 conclude that $S$ is transitive.
 
+\section{Solution 14}
+\subsection{Solution (a)}
+($\Rightarrow$) Let $(x,y)$ be arbitrary element in $f \circ g$. From
+the definition of $f \circ g$, it follows that there is some element
+$z \in A$ such that $(x,z) \in g$ and $(z,y) \in f$. Since $f$ is a
+constant function, $y = a$. So, $(x,a) \in f \circ g$. We know that $x
+\in A$, so $(x,a) \in f$. Hence $f \circ g \subseteq f$
+
+($\Leftarrow$) Let $(x,y)$ be arbitrary element in $f$. Since $f$ is a
+constant function $y = a$. We know that $x \in A$, so $(x,z) \in g$
+for some $z \in A$. We also know $(z,y) \in f$. So, $(x,y) \in f \circ
+g$. Hence $f \subseteq f \circ g$.
+
+\subsection{Solution (b)}
+We know that $\forall g. (f \circ g) = f$. From universal
+instantiation, we get $f \circ h = f$ where $h$ is some constant
+function on $A$. So, for arbitrary $a \in A$, $h(a) = b$ for some
+$b \in A$. Now, $f(a) = f(h(a)) = f(b)$. Since $a$ is an arbitrary
+element and $b$ is some element in $A$, from $f(a) = f(b)$, we can
+conclude that $f$ is an constant function. 
+
 
 \end{document}
