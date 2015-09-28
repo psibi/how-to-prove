@@ -19,5 +19,5 @@ using `pdflatex`:
 
 `pdflatex tex_filename`
 
-Although I did solve Chapter 3 problems, I still haven't uploaded them
-here because of my laziness.
+Although I did solve Chapter 3 problems, I haven't uploaded all of
+them yet because of my laziness.
