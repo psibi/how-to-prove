@@ -348,6 +348,19 @@ Let $(f,g)$ be an arbitrary element in $R$. It follows that $\exists a
 \in R \forall x > a (f(x) = g(x))$. It can also be written as $\exists a
 \in R \forall x > a (g(x) = f(x))$. So, $(g,f) \in S$. Since $f$ and
 $g$ are arbitrary, we can conclude that $R$ is symmetric.
+\subsubsection{Transitive proof}
+Let $f,g,h$ be arbitrary element on $F$ such that $(f,g) \in R$ and
+$(g,h) \in R$. From $(f,g) \in R$, it follows that $\exists a_1 \in
+R \forall x > a_1(f(x) = g(x))$. Similarly, $\exists a_2 \in R \forall y
+> a_2 (g(y) = h(y))$. Let us consider the cases:
+Case 1. $a_1 = a_2$. Then it follows that  both $x > a$ and $y > a$
+point to same range of numbers. So, $f(x) = g(x) = h(x)$. So, $(f,h)
+\in R$.
+Case 2. $a_1 > a_2$. Since $a_1 > a_2$, it follows that $\forall y >
+a_1(g(y) = h(y))$ We already know that $\forall x > a_1(f(x) = g(x))$.
+Here both $x > a$ and $y > a$ point to same range of numbers. So,
+$f(x) = g(x) = h(x)$. So, $(f,h) \in R$.
+Case 3. $a_1 < a_2$. Same as case 2.
 
 \section{Solution 17}
 \subsection{Solution (a)}
