@@ -371,9 +371,12 @@ that $8x < 8x^2$. So transitively, $7x + 3 < 8x^2$. So, $f \in
 \BigO(g)$.
 
 \subsubsection{Proof of $g \notin \BigO{f}$}
-Suppose $g \in \BigO{f}$. Then $\exists a \exists c \forall x > a(x^2
-\leq c(7x+3))$. Also, $c(7x + 3) < (7x + 3x)$. So, $c(7x + 3) < 10cx$.
-Transitively, $x^2 < 10xc$. This leads to contradiction.
+Suppose $g \in \BigO{f}$. Then
+$\exists a \exists c \forall x > a(x^2 \leq c(7x+3))$. Let $x$ be a
+positive integer such that $x > a$ and $x > 10c$. So, $x^2 > 10cx$. We
+know that $x^2 < c(7x + 3)$. Also, $c(7x + 3) < (7x + 3x)$. So,
+$c(7x + 3) < 10cx$. Transitively, $x^2 < 10xc$. This leads to
+contradiction.
 
 \section{Solution 17}
 \subsection{Solution (a)}
