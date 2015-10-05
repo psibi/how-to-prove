@@ -9,6 +9,7 @@
 \usepackage{amssymb}
 \usepackage{tabularx}
 \usepackage{mathtools}
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\bigl(#1\bigr)}}
 \setlength\parskip{\baselineskip}
 \begin{document}
 \title{Chapter 4 (Section 4.6)}
@@ -361,6 +362,18 @@ a_1(g(y) = h(y))$ We already know that $\forall x > a_1(f(x) = g(x))$.
 Here both $x > a$ and $y > a$ point to same range of numbers. So,
 $f(x) = g(x) = h(x)$. So, $(f,h) \in R$.
 Case 3. $a_1 < a_2$. Same as case 2.
+
+\section{Solution 16}
+\subsection{Solution (a)}
+\subsubsection{Proof of $f \in \BigO{n}$}
+Let $a = 3$, $c = 8$. Suppose $x > 3$, then $7x + 3 < 8x$. And we know
+that $8x < 8x^2$. So transitively, $7x + 3 < 8x^2$. So, $f \in
+\BigO(g)$.
+
+\subsubsection{Proof of $g \notin \BigO{f}$}
+Suppose $g \in \BigO{f}$. Then $\exists a \exists c \forall x > a(x^2
+\leq c(7x+3))$. Also, $c(7x + 3) < (7x + 3x)$. So, $c(7x + 3) < 10cx$.
+Transitively, $x^2 < 10xc$. This leads to contradiction.
 
 \section{Solution 17}
 \subsection{Solution (a)}
