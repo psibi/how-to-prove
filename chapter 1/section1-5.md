@@ -112,12 +112,14 @@ M = Getting mortgage.
 
 (c)
 
-If no one stops him, John will kill himself.
+S = Someone stops John
+K = John kills himself
 
-S = No one stops John.
-K = John kills himself.
+Not being stopped by someone is a necessary and sufficient condition
+for John to kill himself. If he is stopped, then he cannot kill
+himself and if he kills himself, then he was not stopped.
 
-    S -> K
+    ¬S <-> K
 
 (d)
 
