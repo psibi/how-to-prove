@@ -378,6 +378,25 @@ know that $x^2 < c(7x + 3)$. Also, $c(7x + 3) < (7x + 3x)$. So,
 $c(7x + 3) < 10cx$. Transitively, $x^2 < 10xc$. This leads to
 contradiction.
 
+\subsection{Solution (b)}
+\subsubsection{Reflexive proof}
+Let $f$ be an arbitrary element in $F$. We know that $f = f$. So, $f
+\in \BigO{f}$. So, $(f,f) \in S$. Since $f$ is an arbitrary element,
+we can conclude that $S$ is reflexive.
+
+\subsubsection{Proof of transitive}
+Let $f,g,h$ be an arbitrary element in $F$ such that $(f,g) \in S$ and
+$(g,h) \in S$. It follows that $f \in \BigO{g}$ and $g \in \BigO{h}$.
+From $f \in \BigO{g}$, it follows that $\exists a_1 \exists c_1 \forall
+x > a_1(f(x) <= c_1g(x))$. Similarly, $\exists a_2 \exists c_2 \forall
+x > a_2(g(x) <= c_2g(x))$. Then, $f(x) <= c_1g(x)$ and $c_1g(x) <=
+c_1c_2h(x)$. So, $f(x) <= c_1c_2h(x)$. Hence $(f,h) \in S$.
+
+\subsubsection{Proof that S is not anti-symmetric}
+Let $f=x$ and $g=2x$. It follows that $f \in \BigO{g}$. And with $a =
+1$ and $c=2$, it follows that $g \in \BigO{f}$. But we know that $f
+\neq g$. So, $S$ is not anti-symmetric.
+
 \section{Solution 17}
 \subsection{Solution (a)}
 \subsubsection{Reflexive proof}
