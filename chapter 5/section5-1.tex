@@ -442,4 +442,29 @@ g(y)\}$. So, $g(a) = g(b)$. So, $g(a) = [a]_R = g(b) = [b]_R$. So,
 $aRb$. Since $a,b$ are arbitrary, $\{(x,y) \in A \times A \mid g(x) =
 g(y)\} \subseteq R$.
 
+\section{Solution 18}
+\subsection{Solution (a)}
+Let $h = \{(X,y) \in A/R \times B \mid \exists x \in X(f(x) = y)\}$.
+We need to prove that $h$ is a function.
+\subsubsection{Existence proof}
+Let $X$ be an arbitrary element in $A/R$. It follows that $\exists x
+\in X$ such that $f(x) = y$. So, $(X,y) \in h$.
+
+\subsubsection{Uniqueness proof}
+Let $(X,y) \in h$ and $(X,z) \in h$. From $(X,y) \in h$, it follows
+that $\exists x \in X(f(x) = y)$. Similarly, $\exists a \in X(f(a) =
+z)$. Since $R$ is equivalent, it follows that $xRa$ and $f(y) = f(a)$.
+So, $y = z$.
+
+So, $h$ is a function.
+
+\subsubsection{Uniqueness proof of $h$}
+Suppose there exists another function $g$ such that $\forall x \in
+A(g([x]_R) = f(x)$. Let $(X,y)$ be arbitrary element of $g$. Since $X
+\in A/R$, it follows that $\exists x \in X$ such that $[x]_R = X$ and
+$f(x) = y$. Then $(X,y) \in h$. So, $g \subseteq h$. Similarly, 
+$h \subseteq g$. Hence $h$ is unique.
+
+
+
 \end{document}
