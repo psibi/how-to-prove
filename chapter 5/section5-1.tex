@@ -397,6 +397,20 @@ Let $f=x$ and $g=2x$. It follows that $f \in \BigO{g}$. And with $a =
 1$ and $c=2$, it follows that $g \in \BigO{f}$. But we know that $f
 \neq g$. So, $S$ is not anti-symmetric.
 
+\subsection{Solution (c)}
+Suppose $f_1 \in \BigO{g}$ and $f_2 \in \BigO(g)$. It follows that
+$\forall x > a_1(|f_1(x)| <= c_1|g(x)|$. Similarly,
+$\forall x > a_2(|f_2(x)| <= c_2|g(x)|$. Let $a$ be a maximum of $a_1$
+and $a_2$ and $c = |s|c_1 + |t|c_2 + 1$. Then for all $x > a$,
+\begin{align*}
+  |f(x)| = |sf_1(x) + tf_2(x)|
+  <= |sf_1(x)| + |tf_2(x)|
+  <= |s|c_1|g(x)| + |t|c_2|g(x)|
+  <= (|s|c_1 + |t|c_2)|g(x)|
+  <= c|g(x)|
+\end{align*}
+So, $f \in \BigO{g}$
+
 \section{Solution 17}
 \subsection{Solution (a)}
 \subsubsection{Reflexive proof}
