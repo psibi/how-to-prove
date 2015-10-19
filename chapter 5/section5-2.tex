@@ -59,4 +59,19 @@ can conclude that $f$ is one to one.
 Let $a_1$ be arbitrary element in $A$. Let $a_2 = a_1 + 1 / a_1 - 1$.
 Then it follows that $f(a_2) = f(a_1)$. So, $\forall a_1 \in A \exists
 a_2 \in A(f(a_2) = f(a_1))$.
+
+\subsection{Solution 5 (b)}
+$(\Rightarrow)$ Suppose $(a_1, a_2) \in f \circ f$. Then it follows
+$\exists a_3 \in A (a_1, a_2) \in f$ and $(a_3,a_2) \in f$. We know
+that $f(x) = \frac{x + 1}{x - 1}$. So, $a_3 = \frac{a_1 + 1}{a_1 -
+  1}$. Solving it, we get $a_1 = \frac{a_3 + 1}{a_1 - 1}$. Similarly
+from $(a_3, a_2)$ we get, $a_2 = \frac{a_3 + 1}{a_1 - 1}$. So, $a_1 =
+a_2$. Since $a_1 = a_2$, it follows that $(a_1, a_2) \in i_A$. So, $f
+\circ f \subseteq i_A$.
+
+$(\Leftarrow)$ Suppose $(a_1, a_2) \in i_A$. Then it follows that $a_1
+= a_2$. Since $a_1 \in A$, it follows that $(a_1, \frac{a_1 + 1}{a_1 -
+  1}) \in f$. Deducing, we get $(\frac{a_1 + 1}{a_1 - 1}, a_1) \in f$.
+So, $(a_1, a_2) \in f \circ f$. Since $a_1$ and $a_2$ are arbitrary,
+it follows that $i_A \subseteq f \circ f$.
 \end{document}
