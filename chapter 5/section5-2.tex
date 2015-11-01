@@ -224,5 +224,25 @@ So, $(a,c_1) \in S \circ R$ and $(a,c_2) \in S \circ R$. Since $S
 \in S$ and $(b_2, c_1) \in S$. But since $S$ is one to one this is not
 possible. So, $b_1 = b_2$.
 
+\section{Solution 14}
+\subsection{Solution (a)}
+Suppose $R$ is reflexive and $f$ is onto. Let $b$ be arbitrary element
+in $B$. Since $f$ is onto, it follows that $\exists a \in A$ such that
+$f(a) = b$. Now $a \in A$ and since $R$ is reflexive $(a,a) \in R$.
+From the definition of $S$, it follows that $(b,b) \in S$. Since $b$
+is arbitrary we can conclude that $S$ is reflexive.
+
+\subsection{Solution (b)}
+Suppose $R$ is transitive and $f$ is one to one. Let $b_1, b_2$ and
+$b_3$ be arbitrary element in $B$ such that $(b_1, b_2) \in S$ and
+$(b_2, b_3) \in S$. From $(b_1, b_2) \in S$ it follows that $(a_1,
+a_2) \in R$ such that $f(a_1) = b_1$ and $f(a_2) = b_2$. Similarly,
+$(a_3,a_4) \in R$ such that $f(a_3) = b_2$ and $f(a_4) = b_3$. But
+$f(a_2) = b_2$ and $f(a_3) = b_2$ is not possible since $f$ is one to
+one. So, $a_2 = a_3$. So from $(a_1, a_2) \in R$ and $(a_2, a_4) \in
+R$ it follows that $(a_1, a_4) \in R$. From the definition of $S$, it
+follows that $(b_1, b_3) \in S$. Since $b_1, b_2$ and $b_3$ are
+arbitrary we can conclude that $S$ is transitive.
+
 
 \end{document}
