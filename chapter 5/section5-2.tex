@@ -190,4 +190,27 @@ b_1)$. So, $f$ is not onto.
 Case 2. $f(a) = b_1$. For $b_2 \in B$, $\forall a \in A(f(a) \neq
 b_2)$. So, $f$ is not onto.
 
+\section{Solution 12}
+$(\Rightarrow)$ Suppose $f \cup g$ is one to one. Let $c$ be an
+arbitrary element in $Ran(f)$. Then $\exists a \in A$ such that $f(a)
+= c$. We have to prove that $c \notin Ran(g)$. We know that $(a,c) \in
+f \cup g$. Since $f \cup g$ is one to one, $\neg \exists a_1 \in A \cup B \exists
+a \in A \cup B(f \cup g(a_1) = f \cup g(a) \land a_1 \neq a)$. We know
+that $f$ already has $c$ in it's Range. So, $\neg \exists b \in B$,
+such that $g(b) = c$. So, $c \notin Ran(R)$.
+
+$(\Leftarrow)$ Suppose $Ran(f) \cap Ran(g) = \emptyset$. Let $x_1,
+x_2$ be arbitrary element in $A \cup B$ such that $f \cup g(x_1) = f
+\cup g(x_2)$. We know that $A$ and $B$ are disjoint. So, let us
+consider the cases:
+Case 1. $x_1 \in A$ Then it follows that $f(x_1) = c$ for some $c \in
+C$. So, $f \cup g(x_1) = c$. Also, $f \cup g(x_2) = c$. Now let us
+consider the case for $x_2$. \\
+$x_1 \in A$ Then it follows that $f(x_2) = c$. But we know that $f$ is
+one to one. So this is only possible if $x_1 = x_2$. \\
+$x_2 \in B$. Then it follows that $f \cup g(x_2) = c$. So, $(x_2, c)
+\in g$. But we know that $Ran(f) \cap Ran(g) = \emptyset$. So this is
+not possible. \\
+Case 2. Same as case one.
+
 \end{document}
