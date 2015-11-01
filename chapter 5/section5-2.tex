@@ -282,5 +282,24 @@ that $f(a_1) = f(a_2)$. From our initial assumption, we can conclude
 that $a_1Ra_2$. So, $[a_1]_R = [a_2]_R$. So, $X_1 = X_2$. Since $X_1$
 and $X_2$ are arbitrary, we can conclude that $h$ is one to one.
 
+\section{Solution 17}
+\subsection{Solution (a)}
+Suppose $f$ is onto and $g:B \to C, h:B \to C \text{ dvand } g \circ f
+= h \circ f$.
+$(\Rightarrow)$ Let $b,c$ be arbitrary element in $B$ and $C$
+respectively such that $(b,c) \in G$. Since $f$ is onto, $\exists a
+\in A$ such that $f(a) = b$. From $g \circ f = h \circ f$, it follows
+that $g(b) = h(b)$. From $(b,c) \in g$, it follows that $h(b) = c$.
+So, $(b,c) \in h$. Since $b$ and $c$ are arbitrary we can conclude
+that $g \subseteq h$.
+
+\subsection{Solution (b)}
+Let $b$ be arbitrary element in $B$. Suppose $C = \{c_1, c_2\}, g = B
+\times \{c_1\}$ and $h=[B \setminus \{b\} \times \{c_1\} \cup
+\{(b,c_2)\}]$. Then $g \neq h$. So by assumption $g \circ f \neq h
+\circ f$. So, $g \circ f(a) = h \circ f(a)$ for $\exists a \in A$. By
+the way $g$ and $h$ are defined, the only way they are not equal is
+when $a=b$. So, $f(a) = b$. Since $b$ is arbitrary, $f$ is onto.
+
 
 \end{document}
