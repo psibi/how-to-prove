@@ -301,5 +301,24 @@ Let $b$ be arbitrary element in $B$. Suppose $C = \{c_1, c_2\}, g = B
 the way $g$ and $h$ are defined, the only way they are not equal is
 when $a=b$. So, $f(a) = b$. Since $b$ is arbitrary, $f$ is onto.
 
+\section{Solution 18}
+\subsection{Solution (a)}
+Suppose $f$ is one to one, $g:A \to B, h: A \to B$ and $f \circ g = f
+\circ h$.
+$(\Rightarrow)$ Suppose $(a,b) \in g$. So, $a \in A$, $f \circ g(a) =
+f(b)$. Suppose $f(b) = c$. From, $f \circ g = f \circ h$, it follows
+that $f \circ h(a) = c$. Suppose $h(a) = b_1$. Then $f(b_1) = c$. But
+since $f$ is one to one, so $b_1 = b$. So, $h(a) = b$. So, $g
+\subseteq h$.
+$(\Leftarrow)$. Similarly as above.
+
+\subsection{Solution (b)}
+Suppose $f$ is not one to one. We can prove by contradiction. $\exists
+b_1 \in B \exists b_2 \in B$ such that $f(b_1) = f(b_2) \land b_1 \neq
+b_2$. Let $g$ be defined like $\forall x \in A(g(x) = b_1)$.
+Similarly, $h$ is $\forall x \in A(h(x) = b_2)$. Then it follows that
+$g \neq h$. So from our assumption $f \circ g \neq f \circ h$. But we
+know that $f \circ g = f \circ h$. So, $f$ is one to one.
+
 
 \end{document}
