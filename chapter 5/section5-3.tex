@@ -72,4 +72,25 @@ Let's check for $g \circ f = id $
 \end{align*}
 
 From theorem 5.3.4, we can conclude that $f$ is one-to-one and onto.
+
+\section{Solution 4}
+We will try to find a function $g: R \to R$ such that $f \circ g =
+i_\mathbb{R}$ and $g \circ f = i_\mathbb{R}$.
+
+We are hoping to find $g = f^{-1}$. So, $f(x) = \text{unique }y$ such
+that $f^{-1}(y) = x$. So, $2x^3 - 3 = y$. Solving it, we get
+$x = (\frac{3+y}{2})^{1/3}$. So, $g(x) = (\frac{3+x}{2})^{1/3}$.
+
+Let's check for $f \circ g = id$.
+\begin{align*}
+  f \circ g(x) \\
+  = f((\frac{3+x}{2})^{1/3}) \\
+  = 3 + x - 3 \\
+  = x \\
+  = id_R \\
+\end{align*}
+
+Similarly, $g \circ f = id_R$
+
+From theorem 5.3.4, we can conclude that $f$ is one-to-one and onto.
 \end{document}
