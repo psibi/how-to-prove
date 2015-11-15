@@ -329,5 +329,16 @@ such that $g = a \circ f$. Or $x^3 + 1 = a(x^2 + 1)$. Solving it, we
 get $a(x) = (\sqrt{x - 1})^3 + 1$. But this function is undefined for
 $x - 1 < 1$. So, $(g,f) \notin R$.
 
+\subsection{Solution (b)}
+\subsubsection{Proof for Reflexive}
+Let $f$ be an arbitrary element on $F$. We know that $id_R \in F$.
+Since $f = id_R \circ f$, it follows that $(f,f) \in R$. Since $f$ is
+arbitrary we can conclude that $R$ is reflexive.
 
+\subsubsection{Proof for Transitive}
+Let $f,g,h$ be an arbitrary element on $F$ such that $(f,g) \in R$ and
+$(g,h) \in R$. From $(f,g) \in R$, it follows that $\exists h \in F$
+such that $f = h \circ g$. Similarly $\exists a \in F(g = a \circ h)$.
+So, $f = h \circ a \circ h$. So, $(f,h) \in R$. Since $f,g,h$ are
+arbitrary, we can conclude that $R$ is transitive.
 \end{document}
