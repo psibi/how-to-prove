@@ -93,4 +93,39 @@ Let's check for $f \circ g = id$.
 Similarly, $g \circ f = id_R$
 
 From theorem 5.3.4, we can conclude that $f$ is one-to-one and onto.
+
+\section{Solution 5}
+We will try to find a function $g: R^{+} \to R$ such that $f \circ g =
+i_\mathbb{R^{+}}$ and $g \circ f = i_\mathbb{R}$.
+
+We are hoping to find $g = f^{-1}$. So, $f(x) = \text{unique }y$ such
+that $f^{-1}(y) = x$.So,
+\begin{align*}
+  10^{2-x} = y \\
+  \log_{10}10^{2-x} = \log_{10}y \\
+  2 - x = log_{10}y \\
+  x = 2 - log y
+\end{align*}
+
+So, $g(x) = 2 - log(x)$. Let's verify $f \circ g = id_{\mathbb{R^{+}}}$
+
+\begin{align*}
+  f \circ g(x) \\
+  = f(2 - log x) \\
+  = 10^{2 + log x - 2} \\
+  = 10^{log x} \\
+  = x \\
+  = id_{\mathbb{R^{+}}}
+\end{align*}
+
+Also, let's check $g \circ f = id_R$
+\begin{align*}
+  g \circ f(x) \\
+  = g(10^{2 - x}) \\
+  = 2 - log_{10} 10^{2-x}\\
+  = 2 - (2 - x) \\
+  = x \\
+\end{align*}
+
+From theorem 5.3.4, we can conclude that $f$ is one-to-one and onto.
 \end{document}
