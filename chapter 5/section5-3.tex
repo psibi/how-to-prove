@@ -45,4 +45,31 @@ So, \begin{align*}
       F^{-1}(X) = A \setminus X
     \end{align*}
 
+\section{Solution 3}
+We will try to find a function $g: R \to R$ such that $f \circ g =
+i_\mathbb{R}$ and $g \circ f = i_\mathbb{R}$.
+
+We are hoping to find $g = f^{-1}$. So, $f(x) = \text{unique }y$ such
+that $f^{-1}(y) = x$. So, $\frac{2x + 5}{3} = y$. Solving it, we get
+$x = \frac{3y-5}{2}$. So, $g(x) = \frac{3x-5}{2}$.
+
+Let's check for $f \circ g = id$.
+\begin{align*}
+  f(g(x)) \\
+  = f(\frac{3x-5}{2}) \\
+  = \frac{3x - 5 + 5}{3} \\
+  = x \\
+  = id_{\mathbb{R}}(x)
+\end{align*}
+
+Let's check for $g \circ f = id $
+\begin{align*}
+  g(f(x)) \\
+  = g(\frac{2x + 5}{3}) \\
+  = \frac{2x + 5 - 5}{2} \\
+  = x \\
+  = id_{\mathbb{R}}(x)
+\end{align*}
+
+From theorem 5.3.4, we can conclude that $f$ is one-to-one and onto.
 \end{document}
