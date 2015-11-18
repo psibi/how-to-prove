@@ -346,4 +346,38 @@ arbitrary, we can conclude that $R$ is transitive.
 Let $f$ be an arbitrary element in $F$. We know that $i_R \in F$.
 Since $f = f \circ i_R$, it follows that $(f,i_R) \in R$. Since $f$ is
 an arbitrary element $\forall f \in F(fRi_R)$
+
+\section{Solution (d)}
+Let $f$ be an arbitrary element in $F$.
+($\Rightarrow$) Suppose $i_RRf$. Let $a_1, a_2$ be arbitrary element
+in $R$ such that $f(a_1) = f(a_2)$. From $i_RRf$, it follows that $i_R
+= h \circ f$ for some $h \in F$. Applying $h$ function on both sides
+of $f(a_1) = f(a_2)$, we get $h(f(a_1)) = h(f(a_2))$. So, $i_R(a_1) =
+i_R(a_2)$. So, $a_1 = a_2$. So, $f$ is one to one.
+
+($\Leftarrow$) Suppose $f$ is one to one. Let $A = Ran(f)$. Let $h =
+f^{-1} \cup ((R \setminus A) \times \{0\})$. Proof that $h$ is a
+function:
+
+Let $a$ be an arbitrary element in $R$.
+Existence proof. Since $f$ is one to one, it follows that $(a,b) \in
+f$ for some $b$. So, $(b,a) \in f^{-1}$. So, $(b,a) \in h$.
+Uniqueness proof. Let $(b,a_1) \in h$ and $(b,a_2) \in h$. Let us
+consider the cases:
+
+a) $b \in A$. Then it follows that $\exists c \in R$ such that $(c,b)
+\in f$. So, $(b,c) \in f^{-1}$. Then it is the case that $c = a_1 =
+a_2$.
+b) $b \notin A$ Then it follows that $(b,0) \in h$. So, $a_1 = a_2 =
+0$. So, $h$ is a function.
+
+Proof of $i_R = h \circ f$
+\begin{align*}
+  h \circ f(a) = h(f(a)) \\
+  = h(b) \\
+  = a \\
+  = i_R(a)  
+\end{align*}
+
+
 \end{document}
