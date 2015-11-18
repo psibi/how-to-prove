@@ -347,7 +347,7 @@ Let $f$ be an arbitrary element in $F$. We know that $i_R \in F$.
 Since $f = f \circ i_R$, it follows that $(f,i_R) \in R$. Since $f$ is
 an arbitrary element $\forall f \in F(fRi_R)$
 
-\section{Solution (d)}
+\subsection{Solution (d)}
 Let $f$ be an arbitrary element in $F$.
 ($\Rightarrow$) Suppose $i_RRf$. Let $a_1, a_2$ be arbitrary element
 in $R$ such that $f(a_1) = f(a_2)$. From $i_RRf$, it follows that $i_R
@@ -388,10 +388,36 @@ R$. So, $\forall f \in F(gRf)$.
 Suppose $g \in F$ is a constant function. Let $f$ be an arbitrary
 element in $F$.
 ($\Leftarrow$) Suppose $f$ is a constant function. It follows from (e)
-that $forall x \in F(fRx)$. So, $fRg$.
+that $\forall x \in F(fRx)$. So, $fRg$.
 
 ($\Rightarrow$) Suppose $fRg$. Then it follows that $f = h \circ g$
 for some $h \in F$. Now $h \circ g$ is a constant function, since $g$
 is a constant function. So, $f$ is a constant function.
+
+\subsection{Solution (g)}
+Proof: Set of all one to one functions from $R$ to $R$ is the largest
+element of $F/S$ in the partial order $T$.
+
+Let $[a]_S$ be the set of all one to one function from $R$ to $R$. We
+have to prove $\forall [b] \in F/S ([b]_S T [a]_S)$.
+
+Let $[b]_S$ be an arbitrary element in $F\S$. From (d), it follows
+that $i_RRa$. We also know from (c), that $bRi_R$. Since $R$ is
+transitive, $bRa$. From $\forall f \in F \forall g \in F([f]_S T [g]_s
+\iff fRg)$, it follos that $[b]_S T [a]_S$. Since $[b]_S$ is an
+arbitrary element, we can conclude that $[a]_S$ be the largest element
+of $F/S$ on partial order $T$.
+
+Proof. Set of all constant functions from $R$ to $R$ is the smallest
+element.
+
+We need to prove $\forall [b] \in F/S([a]_S T [b]_S)$ where $[a]_S$ is
+the set of all constant functions.
+
+Suppose $[a]_S$ is the set of all constant functions. Let $[b]_S$ be
+an arbitrary element in $F/S$. From
+$\forall f \in F \forall g \in F([f]_S T [g]_s \iff fRg)$ it follows
+that $aRb$. Since $[b]_S$ is arbitrary, we can conclude that $[a]_S$
+is the smallest element in the partial order $T$.
 
 \end{document}
