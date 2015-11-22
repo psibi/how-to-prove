@@ -128,4 +128,39 @@ Also, let's check $g \circ f = id_R$
 \end{align*}
 
 From theorem 5.3.4, we can conclude that $f$ is one-to-one and onto.
+
+\section{Solution 6}
+\subsection{Solution 6(a)}
+We will try to find a $g: B \to A$ such that $f \circ g = i_A$ and $g
+\circ f = i_A$.
+
+$f(x) = $ unique $y$ such that $f^{-1}(y) = x$.
+
+So, $\frac{3x}{x-2} = y$ \\
+Solving it, we get $f^{-1}(y) = \frac{2y}{y-3}$
+
+No $g$ is undefined at $x = 3$. So, let the set $B$ be $R \setminus {3}$.
+
+Now, let's verify $f \circ g = i_B$
+\begin{align*}
+  f \circ g(b) \\
+  = f(g(b)) \\
+  = f(\frac{2b}{b-3}) \\
+  = \frac{6b}{b} \\
+  = b \\
+  = i_B(b)
+\end{align*}
+
+Also, $g \circ f = i_A$
+\begin{align*}
+  g \circ f(a) \\
+  = g(f(a)) \\
+  = g(\frac{3a}{a-2}) \\
+  = \frac{6a}{a}
+  = a \\
+  = i_A(a)
+\end{align*}
+
+\subsection{Solution 6(b)}
+From theorem $5.3.4$, it follows that $f^{-1}(x) = \frac{2x}{x-3}$
 \end{document}
