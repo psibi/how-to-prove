@@ -204,4 +204,24 @@ $(b,a) \in f^{-1}$. Thus,
 \end{align*}
 
 Since $b$ was arbitrary, we can conclude that $f \circ f^{-1} = i_B$.
+
+\subsection{Solution (b)}
+We know that,
+\begin{align*}
+  f^{-1} \circ f = i_A \\
+  f^{-1} \circ f \circ f^{-1} = i_A \circ f^{-1} 
+\end{align*}
+
+Let $b$ be arbitrary element in $B$. Suppose $f(a) = b$. Then $(a,b)
+\in f$ and $(b,a) \in f^{-1}$. So,
+\begin{align*}
+  f^{-1} \circ (f \circ f^{-1})(b) = i_A \circ f^{-1}(b) \\
+  f^{-1}(b) = i_A(a) \\
+  f^{-1}(b) = a \\
+  f \circ f^{-1}(b) = f(a) \tag{Apply f} \\
+  f \circ f^{-a} (b) = b \\
+  f \circ f^{-a} (b) = i_B(b)
+\end{align*}
+Since $b$ was arbitrary, we can conclude that $f \circ f^{-1} = i_B$.
+
 \end{document}
