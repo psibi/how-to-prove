@@ -44,5 +44,17 @@ Induction step. Let $n$ be an arbitrary element and suppose $0 + 1 + 2
   = \frac{(n+1)(n+2)}{2}
 \end{align*}
 
+\section{Solution 2}
+By mathematical induction, \\
+Base case. When $n = 0$, both sides of the equation becomes $0$.
+Induction step. Let $n$ be arbitrary and suppose $0^2 + 1^2 + 2^2 +
+... + n^2 = \frac{n(n+1)(2n+1)}{6}$. Then,
+\begin{align*}
+  0^2 + 1^2 + 2^2 + ... + n^2 + (n+1)^2 = \frac{n(n+1)(n+2)}{6} + (n +
+  1)^2 \\
+  = (n+1)(\frac{n(2n + 1)}{6} + (n + 1)) \\
+  = (n+1)(\frac{2n^2 + n + 6n + 6}{6}) \\
+  = \frac{(n+1)(n+2)(n+3)}{6} \\
+\end{align*}
 
 \end{document}
