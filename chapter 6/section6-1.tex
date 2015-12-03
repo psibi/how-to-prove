@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Sibi <sibi@psibi.in>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\bigl(#1\bigr)}}
+\setlength\parskip{\baselineskip}
+\begin{document}
+\title{Chapter 6 (Section 6.1)}
+\author{Sibi}
+\date{\today}
+\maketitle
+
+% See here: http://tex.stackexchange.com/a/43009/69223
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+\newpage
+
+\section{Solution 1}
+By mathematical induction, \\
+Base case. When $n = 0$, $0 = \frac{n(n+1)}{2} = 0$.
+Induction step. Let $n$ be an arbitrary element and suppose $0 + 1 + 2
++ ... + n = \frac{n(n+1)}{2}$. Then,
+\begin{align*}
+  0 + 1 + 2 + ... + n + (n + 1) = \frac{n(n+1)}{2} + (n + 1) \\
+  = (n+1)(\frac{n}{2} + 1) \\
+  = \frac{(n+1)(n+2)}{2}
+\end{align*}
+
+
+\end{document}
