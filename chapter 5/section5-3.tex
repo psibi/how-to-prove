@@ -337,4 +337,39 @@ be written as $g: B \to B$. It follows that $(f \mid B \circ g) =
 i_B)$. From 14 (a), it follows that $(g \circ f \mid B) = i_B$. From
 14 (b), it follows that $g = (f \mid B)^{-1}$.
 
+\section{Solution 16}
+
+\subsection{Solution (a)}
+$y \in Ran(f)$, if $y = 4x - x^2$. Forming an equation, we get
+$x^2 - 4x + y = 0$. The equations will be real only if
+$b^2 - 4ac >= 0$ on a standard equation $a + bx^2 + c$. So,
+\begin{align*}
+  (-4)^2 - 4.1.y >= 0 \\
+  16 - 4y >= 0 \\
+  16 >= 4y \\
+  4 >= y \\
+  B = \{x \mid 4 >= y \}
+\end{align*}
+
+
+\subsection{Solution (b)}
+From 14, we know that we have to find a $g: R \to R$ such that $f
+\circ g = i_R$. Then $A = Ran(g)$. Let's find $g$.
+\begin{align*}
+  f \circ g(x) = i_R(x) \\
+  f(g(x)) = x \\
+\end{align*}
+Let $g(x) = y$. Then $f(y) = x$. So, $y^2 - 4y + x = 0$.
+$y = 2 + \sqrt{4-x}$. So, $g(x) = 2 + \sqrt{4 - x}$. We have to
+confirm that $g \circ f = i_R$.
+\begin{align*}
+  g \circ f(x) = i_R(x) \\
+  g(4x - x^2) = 2 + \sqrt{4 - 4x + x^2} \\
+  = 2 + \sqrt{(x - 2)^2} \\
+  = 2 + x - 2 \\
+  = x
+\end{align*}
+
+So, $f \mid A$ is one to one and onto function and $(f \mid A)^{-1}
+(x) = 2 + \sqrt{4 - x}$.
 \end{document}
