@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Sibi <sibi@psibi.in>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\bigl(#1\bigr)}}
+\setlength\parskip{\baselineskip}
+\begin{document}
+\title{Chapter 6 (Section 6.2)}
+\author{Sibi}
+\date{\today}
+\maketitle
+
+% See here: http://tex.stackexchange.com/a/43009/69223
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+\newpage
+
+\section{Solution 1}
+
+
+$R' = R \cap (A' \times A')$
+$A' = A \setminus \{a\}$
+
+\subsection{Solution (a)}
+Reflexive.
+
+Let $b$ be an arbitrary element on $A'$. Since $A' \subseteq A$, it
+follows that $(b,b) \in R$ since $R$ is reflexive. Also,
+$(b,b) \in A' \times A'$. So, $(b,b) \in R \cap (A' \times A')$. Since
+$b$ is arbitrary we can conclude that $R$ is reflexive.
+
+Transitive.
+
+Let $b,c,d$ be arbitrary element on $A'$ such that $(b,c) \in R'$ and
+$(c,d) \in R'$. Since $R$ is transitive, it follows that
+$(b,d) \in R$. Also, $(b,d) \in A' \times A'$. So,
+$(b,d) \in R \cap (A' \times A')$.
+
+Anti-symmetric.
+
+Let $x,y$ be arbitrary element on $A'$ such that $xR'y$ and $yR'x$.
+Since $R$ is anti-symmetric, it follows that $x=y$.
+
+\end{document}
