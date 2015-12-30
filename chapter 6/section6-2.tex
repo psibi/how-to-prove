@@ -59,4 +59,48 @@ Anti-symmetric.
 Let $x,y$ be arbitrary element on $A'$ such that $xR'y$ and $yR'x$.
 Since $R$ is anti-symmetric, it follows that $x=y$.
 
+\subsection{Solution (b)}
+Reflexive.
+
+Let $x$ be an arbitrary element in $A$. Then either $x \in A'$ or
+$x \in \{a\}$. Let us consider the cases:
+
+Case 1. $x \in A'$ Since $T'$ is a total order in $A'$, it follows
+that $(x,x) \in T$.
+Case 2. $x \in \{a\}$. Then $x = a$. It follows that
+$(a,a) \in \{a\} \times A$. So, $(x,x) \in T$.
+
+Transitive.
+
+Let $x,y$ and $z$ be arbitrary element in $A$ such that $(x,y) \in T$
+and $(y,z) \in T$. Let us consider the cases.
+
+Case 1. $x \neq a$. Then $x \in A'$. Since
+$T = T' \cup (\{a\} \times A)$, it follows that $y \in A'$ and
+$z \in A'$. Since $T'$ is transitive, it follows that $(x,z) \in T$.
+Case 2. $x = a$ Since $z \in A$, it follows that
+$(a,z) \in \{a\} \times A$. So, $(x,z) \in T$.
+
+Anti-symmetric
+
+Let $x,y$ be arbitrary element on $A$ such that $xTy$ and $yTx$. Let
+us consider the cases:
+Case 1. $x \neq a$. Then $x \in A'$, $y \in A'$ since $(x,y) \in T'
+\cup ({a} \times A)$ and $x \in A'$. So, $(x,y) \in T'$. Similarly,
+$(y,x) \in T'$. Since $T'$ is a total order on $A'$, it follows that
+$x = y$.
+Case 2. $x = a$. So, $(y,a) \in T$. Therefore $(y,a) \in T' \cup \{a\}
+\times A$. Now $T'$ is a relation on $A'$ which doesn't have $a$. So,
+$(y,a) \notin T'$. So, $(y,a) \in \{a\} \times A$. Now, clearly $y =
+a$. So, $x = y$.
+
+$\forall x \in A \forall y \in A (xTy \lor yTx)$
+
+Let $x,y$ be arbitrary element on $A$. Let us consider the cases:
+Case 1. $x = a$. Since $y \in A$, it follows that $(a,y) \in \{a\}
+\times A$. So, $xTy \lor yTx$.
+Case 2. $x \neq a$. Now if $y = a$, then $xRa$ will contradict the $R$
+minimality of $A$. If $y \neq a$, then $y \in A'$. So, $(x,y) \in R'$.
+Since $R' \subseteq T' \subseteq T$, it follows that $(x,y) \in T$.
+
 \end{document}
