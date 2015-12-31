@@ -280,4 +280,31 @@ and $2^n > n^3$. Then,
   > (n+1)^3
 \end{align*}
 So, $2^{n+1} > (n+1)^3$ as required.
+
+\section{Solution 15}
+By mathematical induction,
+
+Base case. When $n=0$, $n \equiv 0 (mod 3)$ holds for $0 \in Z$.
+
+Induction step. Let $n$ be an arbitrary element in $N$. Suppose
+$n \equiv 0 (\text{mod } 3)$ or $n \equiv 1 (\text{mod } 3)$ or
+$n \equiv 2 (\text{mod } 3)$.
+
+Case 1. $n \equiv 0 (\text{mod } 3)$. It follows that $n = 3a$ for
+some $a \in Z$. Adding $1$ on both sides, we get $n+1 = 3a + 1$. So,
+$(n+1) - 1 = 3a$. Therefore, $n+1 = 1(\text{mod } 3)$. So, either
+$n+1 = 0(\text{mod } 3)$ or $n+1 = 1(\text{mod } 3)$ or
+$n+1 = 2(\text{mod } 3)$.
+
+Case 2. $n \equiv 1 (\text{mod } 3)$. It follows that $n-1=3b$ for
+some $b \in Z$. We can rewrite it as $(n+1) - 2 = 3b$. So,
+$(n+1) = 2(\text{mod } 3)$. So, $(n+1) \equiv 2(\text{mod } 3)$. So,
+either $n+1 = 0(\text{mod } 3)$ or $n+1 = 1(\text{mod } 3)$ or
+$n+1 = 2(\text{mod } 3)$.
+
+Case 3. $n \equiv 2 (\text{mod } 3)$. It follows that $n-2 = 3c$ for
+some $c \in Z$. Rewriting it, we get $n+1 = 3(c+1)$. So,
+$n+1 \equiv 0 (\text{mod } 3)$. So, either $n+1 = 0(\text{mod } 3)$ or
+$n+1 = 1(\text{mod } 3)$ or $n+1 = 2(\text{mod } 3)$.
+
 \end{document}
