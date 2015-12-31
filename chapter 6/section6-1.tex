@@ -244,4 +244,20 @@ $(a-b)k = a^n - b^n$ . Thus,
   = (a-b)(ak + b^n) \\
 \end{align*}
 So, $(a-b) \mid (a^{n+1} - b^{n+1})$ as required.
+
+\section{Solution 13}
+Let $a$ and $b$ be arbitrary element. By mathematical induction,
+
+Base case. When $n=0$, $(a+b) \mid (a^{2n+1} + b^{2n + 1})$ holds for
+$1 \in Z$.
+
+Induction step. Let $n$ be an arbitrary element in $N$ such that
+$(a+b)k = a^{2n+1} + b^{2n+1}$. Thus,
+\begin{align*}
+  a^{2(n+1) + 1} + b^{2(n+1) + 1} = a^{2n + 3} + b^{2n + 3} \\
+  = a^2(a^{2n + 1}+ b^{2n+1}) + b^{2n+1}(b^2 - a^2) \\
+  = a^2(a+b)k + b^{2n+1}(b-a)(b+a) \\
+  = (a+b)(a^2k + b^{2n+1}(b-a))
+\end{align*}
+So, $(a+b) \mid a^{2(n+1) + 1} + b^{2(n+1) + 1}$ as required.
 \end{document}
