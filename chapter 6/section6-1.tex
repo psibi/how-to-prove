@@ -160,7 +160,7 @@ suppose $1 - \frac{1}{2} + \frac{1}{3} + ... + \frac{1}{2n - 1} -
 \subsection{Solution (a)}
 By mathematical induction,
 
-Base case. When $n = 0$, $\exsits k \in Z$ such that $2k = n^2 + 2$.
+Base case. When $n = 0$, $\exists k \in Z$ such that $2k = n^2 + 2$.
 Here if $k = 0$, then base case holds.
 
 Induction step. Let $n$ be an arbitrary element in $N$. Suppose $2k =
@@ -205,12 +205,30 @@ Base case. When $n = 0$, $64 \mid (9^n - 8n - 1)$ holds for $0$.
 Induction step. Let $n$ be an arbitrary element in $N$ such that $64k
 = (9^n - 8n - 1)$. Then,
 \begin{align*}
-  9^{n+1} - 8(n+1) - 1 = 9^{n+1} - 8n - 9
-  = 9^{n+1} - 9n - 9 + n
-  = 9(9^n - n - 1) + n
-  = 9(9^n - 8n - 1 + 7n) + n
-  = 9(64k + 7n) + n
-  = 64(9k + n)
+  9^{n+1} - 8(n+1) - 1 = 9^{n+1} - 8n - 9 \\
+  = 9^{n+1} - 9n - 9 + n \\
+  = 9(9^n - n - 1) + n \\
+  = 9(9^n - 8n - 1 + 7n) + n \\
+  = 9(64k + 7n) + n \\
+  = 64(9k + n) \\
 \end{align*}
 So, $64 \mid (9^{n+1} - 8(n+1) - 1)$ as required.
+
+\section{Solution 11}
+By mathematical induction,
+
+Base case. When $n = 0$, $9 \mid (4^n + 6n - 1)$ holds for $0$.
+
+Induction step. Let $n$ be an arbitrary element in $N$ and suppose $9k
+= 4^n + 6n - 1$. Thus,
+\begin{align*}
+  4^{n+1} + 6(n+1) - 1 = 4^{n+1} + 6n + 5 \\
+  = 4^{n+1} + 4n + 2n + 5 \\
+  = 4(4^{n} + n) + 2n + 5 \\
+  = 4(4^{n} + 6n - 1 - 5n + 1) + 2n + 5 \\
+  = 4(9k - 5n + 1) + 2n + 5 \\
+  = 4.9k - 18n + 9 \\
+  = 9(4k - 2n + 1)
+\end{align*}
+So, $9 \mid 4^{n+1} + 6(n+1) - 1$ as required.
 \end{document}
