@@ -376,5 +376,18 @@ By mathematical induction,
 Base case. When $n = 2$, $0 < \sqrt[n]{a} < \sqrt[n]{b}$ since $0 < a
 < b$.
 
-Induction step.
+Induction step. Let $n$ be an arbitrary element such that $n >= 2$.
+Suppose $0 < \sqrt[n]{a} < \sqrt[n]{b}$. Then,
+\begin{align*}
+  0 < \sqrt[n]{a} < \sqrt[n]{b} \\
+  0 < \sqrt{a} x \sqrt[n]{a} < \sqrt{a} x \sqrt[n]{b} \\
+\end{align*}
+\begin{equation} \label{eq:2}
+    0 < (n+1)\sqrt[n+1]{a} < \sqrt{a}.\sqrt[n]{b}
+\end{equation}
+
+We know that $a < b$. So, $\sqrt{a} < \sqrt{b}$. Multiplying it by
+$\sqrt[n]{b}$ on both sides, $\sqrt{n}. \sqrt[n]{b} < \sqrt[n+1]{b}$.
+From \ref{eq:2}, $0 < \sqrt[n+1]{a} < \sqrt[n+1]{b}$ as required.
+
 \end{document}
