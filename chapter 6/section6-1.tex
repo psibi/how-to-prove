@@ -409,4 +409,21 @@ From (a), it follows that $a^{n+1} < b^{n+1}$ . We know that $a - b >
   (a^{n+1} - b^{n+1})(a-b) > 0 \\
   ab^{n+1} + ba^{n+1} < a^{n+2} + b^{n+2}  \text{  as required}
 \end{align*}
+
+\subsection{Solution (d)}
+By mathematical induction,
+
+Base case. When $n = 2$, $(\frac{a+b}{2})^2 < \frac{a^2 + b^2}{2}$ since
+$2ab < a^2 + b^2$. (Apply n = 1, to question 19 (c))
+
+Induction step. Let $n >= 2$ be an arbitrary element and suppose
+$(\frac{a+b}{2})^2 < \frac{a^2 + b^2}{2}$. Then,
+\begin{align*}
+  (\frac{a+b}{2})^{n+1} < \frac{a^n + b^n}{2}.\frac{a+b}{2} \\
+  (\frac{a+b}{2})^{n+1} < \frac{a^{n+1} + b^{n+1} + ba^n + ab^n}{4} \\
+\end{align*}
+From part (c), $ab^n + ba^n < a^{n+1} + b^{n+1}$
+So, $\frac{a^{n+1} + b^{n+1} + ba^n + ab^n}{4} < \frac{2a^{n+1} +
+  2b^{n+1}}{4}$. Hence. $(\frac{a+b}{2})^{n+1} < \frac{a^{n+1} + b^{n+1}}{2}$.
+
 \end{document}
