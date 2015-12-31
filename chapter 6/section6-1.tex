@@ -197,5 +197,20 @@ Induction step. Let $n$ be an arbitrary element in $N$ such that $6
 Now $n(n+1)/2$ is the sum of number series upto $n$. So, $6 \mid
 (n+1)^3 - (n+1)$ holds.
 
-  
+\section{Solution 10}
+By mathematical induction,
+
+Base case. When $n = 0$, $64 \mid (9^n - 8n - 1)$ holds for $0$.
+
+Induction step. Let $n$ be an arbitrary element in $N$ such that $64k
+= (9^n - 8n - 1)$. Then,
+\begin{align*}
+  9^{n+1} - 8(n+1) - 1 = 9^{n+1} - 8n - 9
+  = 9^{n+1} - 9n - 9 + n
+  = 9(9^n - n - 1) + n
+  = 9(9^n - 8n - 1 + 7n) + n
+  = 9(64k + 7n) + n
+  = 64(9k + n)
+\end{align*}
+So, $64 \mid (9^{n+1} - 8(n+1) - 1)$ as required.
 \end{document}
