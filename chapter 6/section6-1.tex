@@ -331,4 +331,26 @@ When $n = 0$, $f(n) = 1$,
 $n \neq 0, f(n) = n3^{n + 1}$.
 
 Proof. Copy the question of 17(a) :-)
+
+\section{Solution 18}
+Suppose $a$ is a real number and $a = 0$. Let $n$ be an arbitrary
+element in $N$. Let us consider the cases.
+
+Case 1. n is even. By mathematical induction,
+
+Base case. When $n = 0$, then $a^n > 0$ since $a^n = 1$.
+
+Induction step. Let $n$ be an even arbitrary number in $N$. Suppose
+$a^n > 0$. We have to prove $a^{n+2} > 0$. We know that $a^n > 0$.
+Since $a$ is a negative real number, $a^2$ will be a positive number.
+So, $a^n.a^2 > 0$. So, $a^{n+2} > 0$ as required.
+
+Case 2. n is odd. By mathematical induction,
+
+Base case. When $n=1$, $a^{n} < 0$ since $a$ is a negative number.
+
+Induction step. Let $n$ be an odd arbitrary number in $N$. Suppose
+$a^n < 0$. We have to prove that $a^{n+2} < 0$. Since $a < 0$, $a^2 >
+0$ since $a$ is a negative number. Multiplying $a^2$ with $a^n < 0$,
+we get $a^{n+2} < 0$ as required.
 \end{document}
