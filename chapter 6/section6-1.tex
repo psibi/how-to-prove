@@ -353,4 +353,28 @@ Induction step. Let $n$ be an odd arbitrary number in $N$. Suppose
 $a^n < 0$. We have to prove that $a^{n+2} < 0$. Since $a < 0$, $a^2 >
 0$ since $a$ is a negative number. Multiplying $a^2$ with $a^n < 0$,
 we get $a^{n+2} < 0$ as required.
+
+\section{Solution 19}
+Suppose $a$ and $b$ are real numbers and $0 < a < b$.
+\subsection{Solution (a)}
+By mathematical induction,
+
+Base case. When $n=1$, $0 < a^n < b^n$.
+
+Induction step. Let $n$ be an arbitrary element such that $n>= 1$.
+Suppose $0 < a^n < b^n$. Then,
+$0 < a^n < b^n$ \\
+\begin{equation}\label{eq:1}
+  0 < a^{n+1} < ab^n
+\end{equation}
+We know that $a < b$. So, $ab^n < b^{n+1}$. From \ref{eq:1} , it follows
+that $0 < a^{n+1} < b^{n+1}$ as required.
+
+\subsection{Solution (b)}
+By mathematical induction,
+
+Base case. When $n = 2$, $0 < \sqrt[n]{a} < \sqrt[n]{b}$ since $0 < a
+< b$.
+
+Induction step.
 \end{document}
