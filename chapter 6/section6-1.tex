@@ -390,4 +390,23 @@ We know that $a < b$. So, $\sqrt{a} < \sqrt{b}$. Multiplying it by
 $\sqrt[n]{b}$ on both sides, $\sqrt{n}. \sqrt[n]{b} < \sqrt[n+1]{b}$.
 From \ref{eq:2}, $0 < \sqrt[n+1]{a} < \sqrt[n+1]{b}$ as required.
 
+\subsection{Solution (c)}
+By mathematical induction,
+
+Base case. Since $a > 0$ and $b>0$, it follows that $(a-b)^2 > 0$. So,
+$a^2 + b^2 - 2ab > 0$. So, $a^2 + b^2 > 2ab$.
+
+Induction step. Let $n$ be an arbitrary element such that $n >= 1$.
+Suppose $ab^n + ba^n < a^{n+1} + b^{n+1}$. Then,
+\begin{align*}
+  0 < a^{n+1} + b^{n+1} - ba^n - ab^n \\
+  0 < a(a^n - b^n) + b(b^n - a^n) \\
+  (a^n - b^n)(a - b) > 0 \\
+\end{align*}
+From (a), it follows that $a^{n+1} < b^{n+1}$ . We know that $a - b >
+0$. Multiplying both,
+\begin{align*}
+  (a^{n+1} - b^{n+1})(a-b) > 0 \\
+  ab^{n+1} + ba^{n+1} < a^{n+2} + b^{n+2}  \text{  as required}
+\end{align*}
 \end{document}
