@@ -231,4 +231,17 @@ Induction step. Let $n$ be an arbitrary element in $N$ and suppose $9k
   = 9(4k - 2n + 1)
 \end{align*}
 So, $9 \mid 4^{n+1} + 6(n+1) - 1$ as required.
+
+\section{Solution 12}
+Let $a$ and $b$ be arbitrary integer. By mathematical induction,
+
+Base case. When $n = 0$, $(a-b) \mid (a^n - b^n)$ holds for $0$.
+Induction step. Let $n$ be arbitrary element in $N$ and suppose
+$(a-b)k = a^n - b^n$ . Thus,
+\begin{align*}
+  a^{n+1} - b^{n+1} = a(a^n - b^n) + b^n(a-b) \\
+  = a(a-b)k + b^n(a-b) \\
+  = (a-b)(ak + b^n) \\
+\end{align*}
+So, $(a-b) \mid (a^{n+1} - b^{n+1})$ as required.
 \end{document}
