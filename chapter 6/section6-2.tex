@@ -180,4 +180,23 @@ Induction step. Let $n$ be arbitrary element and suppose $F_n =
   = F_n + 1
 \end{align*}
 
+\section{Solution 6}
+By mathematical induction,
+
+Base case. When $n=1$, $|a_1| = |a_1|$ so base case holds.
+
+Induction step. Let $n$ be arbitrary element and suppose $a_1 + a_2 +
+... + a_n <= |a_1| + |a_2| + ... + |a_n|$. Let $a_{n+1}$ be arbitrary
+real number. Let us consider the cases.
+
+Case 1. $a_{n+1}$ is positive: From our inductive hypothesis, it
+follows that $a_1 + a_2 + ... + a_n + a_{n+1} <= |a_1| + |a_2| + ... +
+|a_n| + |a_{n+1}|$.
+
+Case 2. $a_{n+1}$ is negative: Then it follows that
+$a_1 + a_2 + ... + a_n + a_{n+1} < |a_1| + |a_2| + ... + |a_n| +
+|a_{n+1}|$. So,
+$a_1 + a_2 + ... + a_n + a_{n+1} <= |a_1| + |a_2| + ... + |a_n| +
+|a_{n+1}|$.
+
 \end{document}
