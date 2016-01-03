@@ -151,4 +151,14 @@ contrary to assumption. So, $(x,c) \notin R$. From the hypothesis on
 $R$, $(c,x) \in R$. From $(c,x) \in R$ and $(x,y) \in R$, it follows
 that $(c,y) \in R \circ R$.
 
+\subsection{Solution (b)}
+\begin{align*}
+  A = \text{Set of all contestants} \\
+  R = \{(x,y) \in A \times A \mid x beats y \} 
+\end{align*}
+Now $R$ satisfies this: $\forall x \in A \forall y \in A(xRy \lor
+yRx)$. Now from $(a)$, it follows that $B \subseteq A$, $\exists x \in
+B(\forall y \in B((x,y) \in R \circ R))$. Let $B=A$, then $(x,y) \in R
+\circ R$. So there is at least one successful player.
+
 \end{document}
