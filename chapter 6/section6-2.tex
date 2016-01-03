@@ -103,4 +103,25 @@ Case 2. $x \neq a$. Now if $y = a$, then $xRa$ will contradict the $R$
 minimality of $A$. If $y \neq a$, then $y \in A'$. So, $(x,y) \in R'$.
 Since $R' \subseteq T' \subseteq T$, it follows that $(x,y) \in T$.
 
+\section{Solution 3}
+We will show by induction that for every natural number $n >= 1$,
+every subset of $A$ with $n$ elements has a smallest element.
+
+Base case. When $n =1$, then the single element present in it is the
+smallest element.
+
+Induction step. Suppose $n >= 1$ and suppose that every subset of $A$
+has a smallest element. Now let $B$ be arbitrary subset of $A$ with
+$n+1$ elements. Let $b$ be an arbitrary element of $B$ and let
+$B' = B \setminus \{b\}$ with n elements. By inductive hypothesis,
+$B'$ has a smallest element $c \in B'$. Let us consider the cases.
+
+Case 1. $bRc$ We know that $\forall x \in B'(cRx)$ and $B' = B
+\setminus \{b\}$.
+Now from $bRc$, it is clear that $b$ is the smallest element. (Note
+that $R$ is transitive).
+
+Case 2. $cRb$ Then it follows that $\forall x \in B(cRx)$. So, $c$ is
+the smallest element.
+
 \end{document}
