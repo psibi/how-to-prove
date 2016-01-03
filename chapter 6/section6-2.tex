@@ -161,4 +161,23 @@ yRx)$. Now from $(a)$, it follows that $B \subseteq A$, $\exists x \in
 B(\forall y \in B((x,y) \in R \circ R))$. Let $B=A$, then $(x,y) \in R
 \circ R$. So there is at least one successful player.
 
+\section{Solution 5}
+By mathematical induction,
+
+Base case. When $n=1$, $F_1 = F_o.F_1.F_2$. Both the sides of the
+equation becomes $5$ and so the base case holds.
+
+Induction step. Let $n$ be arbitrary element and suppose $F_n =
+2^{(2^n)} + 1$. We have to prove that $F_{n+1} = F_0.F_1.F_2 ... F_n +
+2$. By inductive hypothesis,
+\begin{align*}
+  F_n = F_0.F_1.F_2 ... F_{n-1} + 2 \\
+  F_0.F_1.F_2 ... F_{n-1}.F_n = (F_n - 2)F_n \\
+  F_0.F_1.F_2 ... F_{n-1}.F_n + 2 = (F_n - 2)F_n + 2 \\
+  = (F_n)^2 - 2F_n + 2 \\
+  = (2^{(2^n)} + 1)^2 - 2(2^{2^n} + 1) + 2 \\
+  = 2^{(2^n)} + 1 \\
+  = F_n + 1
+\end{align*}
+
 \end{document}
