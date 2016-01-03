@@ -124,4 +124,31 @@ that $R$ is transitive).
 Case 2. $cRb$ Then it follows that $\forall x \in B(cRx)$. So, $c$ is
 the smallest element.
 
+\section{Solution 4}
+\subsection{Solution (a)}
+We will show by mathematical induction that $\forall n >= 1 \forall B
+\subseteq A (\forall x \in A \forall y \in A(xRy \lor yRx) \implies
+\exists z \in B \forall y \in B((z,y) \in R \circ R))$.
+
+Base case. When $n=1$, then $B = \{b\}$ for some $b \in A$. Since
+$(b,b) \in R \circ R$, base case holds.
+
+Induction step. Suppose $n >= 1$ and suppose that every subset of $A$
+has some elements $z \in B$ such that $\forall y \in B((z,y) \in R
+\circ R)$. Now let $C$ be arbitrary subset of $A$ with $n+1$ elements.
+Now let $c$ be some element in $C$ and let $C' = C \setminus \{c\}$.
+By inductive hypothesis, $\exists z \in C' \forall y \in C'((z,y) \in
+R \circ R)$.
+Case 1. $(z,c) \in R \circ R$. Then $\forall y \in C((z,y) \in R \circ
+R)$.
+Case 2. $(z,c) \notin R \circ R$. Then we will try to prove that
+$\forall y \in C((c,y) \in R \circ R)$. Let $y$ be arbitrary element
+in $C$. If $y = c$, then since $R$ is reflexive, $(c,y) \in R \circ
+R$. Now, if $y \neq c$, then $y \in C'$. So, $(z,y) \in R \circ R$.
+This means $\exists x \in A such that (z,x) \in R$ and $(x,y) \in R$.
+Now if $(z,x) \in R$and $(x,c) \in R$, then $(z,c) \in R \circ R$
+contrary to assumption. So, $(x,c) \notin R$. From the hypothesis on
+$R$, $(c,x) \in R$. From $(c,x) \in R$ and $(x,y) \in R$, it follows
+that $(c,y) \in R \circ R$.
+
 \end{document}
