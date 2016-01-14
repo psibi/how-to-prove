@@ -223,4 +223,24 @@ Suppose $a,b$ and $c$ be arbitrary real number and suppose $0 < a <= b
 \end{align*}
 QED.
 
+\subsection{Solution (c)}
+By mathematical induction,
+
+Base case. When $n = 2$, from 7(a), it follows that $\frac{a_1}{a_2} +
+\frac{a_2}{a_1} >= 2$. So base case holds.
+
+Induction step. Let $n >= 2$ be arbitrary element and suppose
+$\frac{a_1}{a_2} + \frac{a_2}{a_3} + \frac{a_3}{a_4} + ... +
+\frac{a_{n-1}}{a_n} + \frac{a_n}{a_1} >= n$. We have to prove
+$\frac{a_1}{a_2} + \frac{a_2}{a_3} + \frac{a_3}{a_4} + ... +
+\frac{a_{n-1}}{a_n} + \frac{a_n}{a_{n+1}} + \frac{a_{n+1}}{a_1} >= n +
+1$. From $7(b)$, it follows that $\frac{a_n}{a_{n+1}} +
+\frac{a_{n+1}}{a_1} - \frac{a_n}{a_1} >= 1$.
+From inductive hypothesis, it follows that:
+$\frac{a_1}{a_2} + \frac{a_2}{a_3} + \frac{a_3}{a_4} + ... +
+\frac{a_{n-1}}{a_n} + \frac{a_n}{a_{n+1}} +
+\frac{a_{n+1}}{a_1} >= n + 1$.
+
+QED.
+
 \end{document}
