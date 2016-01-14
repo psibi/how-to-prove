@@ -256,6 +256,28 @@ $(a-b)^2 >= 0$. So,
 \end{align*}
 QED.
 
+\subsection{Solution (b)}
+By mathematical induction on $n$,
 
+Base case. When $n=1$, From 8(a), base case holds.
+
+Induction step. Suppose $n>=1$ and the arithmetic geometric mean
+inequality holds for lists of length $2^n$. Now let $a_1,a_2,...,
+a_{a^{n+1}}$ be a list of $2^{n+1}$ positive real numbers. Let
+$m_1 = \frac{a_1 + a_2 + ... + a_{2^n}}{2^n} and m_2 = \frac{a_{2^n +
+    1} + a_{2^n + 2} + ... + a_{2^{n+1}}}{2^n}$.
+
+So, $a_1 + a_2 + ... + a_{2^n} = m_12^n$ and similarly $a_{2^n + 1} +
+a_{2^n + 2} + ... + a_{2^{n+1}} = m_22^n$. Also, by inductive
+hypothesis, we know that $m_1 >= \sqrt[2^n]{a_1a_2...a_{2^n}}$ and
+$m_2 >= \sqrt[2^n]{a_{2^n + 1}a_{2^n + 2}...a_{2^{n+1}} }$. Therefore,
+\begin{align*}
+  \frac{a_1 + a_2 + ... + a_{2^n + 1}}{2^{n+1}} \\
+  = \frac{m_12^n + m_22^n}{2^{n+1}} \\
+  = \frac{m_1 + m_2}{2} \\
+  >= \sqrt{m_1m_2}   (\text{from Solution (a)}) \\
+  >= \sqrt{\sqrt[2^n]{a_1a_2...a_{2^n}}\sqrt[2^n]{a_{2^n + 1}a_{2^n+2}...a_{2^{n+1}}}} \\
+  >= \sqrt[2^{n+1}]{a_1a_2...a_{a^{n+1}}}
+\end{align*}
 
 \end{document}
