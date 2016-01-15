@@ -365,4 +365,22 @@ is covered by trapezoidal tiles. Now for the remaining three triangle,
 cut a trapezoidal area such that a corner is removed from each of
 them. Then again applying inductive hypothesis on each of them, we get
 trapezoidal area in each of them.
+
+\section{Solution 13}
+By mathematical induction on $n$,
+
+Base case. When $n = 1$, the chord divides the circle into $2$.
+Calculating $\frac{n^2 + n + 2}{2}$, we know that base case holds.
+
+Induction step. Let $n$ be an arbitrary element such that $n$ chords
+cut the circle into $\frac{n^2 + n + 2}{2}$ regions. Now suppose
+$(n+1)$ chords are drawn in the circle. Now for $n$ chords, we have
+$\frac{n^2 + n + 2}{2}$ regions. And for the next chord, we have
+$(n+1)$ regions.
+So,
+\begin{align*}
+  \frac{n^2 + n + 2}{2} + (n+1) \\
+  = \frac{n^2 + 3n + 4}{2} \\
+  = \frac{(n+1)^2 + (n+1) + 2}{2}
+\end{align*}
 \end{document}
