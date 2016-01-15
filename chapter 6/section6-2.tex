@@ -306,4 +306,14 @@ So, $\frac{a_1 + a_2 + ... + a_{n+1}}{n+1} <
 \subsection{Solution (d)}
 $(b)$ and $(c)$ give contradiction for a list of length $n_0 < 2^n$
 where $n >= 1$. So the inequality must hold.
+
+\section{Solution 9}
+Let $\frac{1}{a_n} = k_n$. From arithmetic geometric mean inequality,
+
+\begin{align*}
+  \frac{k_1 + k_2 + ... + k_n }{n} <= \sqrt[n]{k_1K_2...K_n} \\
+  \frac{n}{k_1 + k_2 + ... + k_n } <= (k_1k_2...k_n)^{-1/n} \\
+  <= (a_1a_2...a_n)^{1/n} \\
+\end{align*}
+QED.
 \end{document}
