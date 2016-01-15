@@ -280,4 +280,27 @@ $m_2 >= \sqrt[2^n]{a_{2^n + 1}a_{2^n + 2}...a_{2^{n+1}} }$. Therefore,
   >= \sqrt[2^{n+1}]{a_1a_2...a_{a^{n+1}}}
 \end{align*}
 
+\section{Solution (c)}
+By mathematical induction on $n$,
+
+Base case. When $n=n_0$, then base case holds because of inductive
+hypothesis.
+
+Induction step. Suppose $n >= n_0$ and there are positive real numbers
+$a_1, a_2, ..., a_n$ such that
+\begin{align*}
+  \frac{a_1 + a_2 + ... + a_n}{n} < \sqrt[n]{a_1a_2...a_n}
+\end{align*}
+Let $m = \frac{a_1 + a_2 + ... + a_n}{n}$ and $a_{n+1} = m$. Then we
+have $m < \sqrt[n]{a_1a_2...a_n}$, so $m^n < a_1a_2...a_n$. So,
+$m^{n+1} < a_1a_2...a_na_{n+1}$. So, $m <
+\sqrt[n+1]{a_1a_2...a_{n+1}}$. Now,
+\begin{align*}
+  \frac{a_1 + a_2 + ... + a_{n+1}}{n+1} \\
+  = \frac{mn + m}{n+1} \\
+  = m
+\end{align*}
+So, $\frac{a_1 + a_2 + ... + a_{n+1}}{n+1} <
+\sqrt[n+1]{a_1a_2...a_{n+1}}$
+
 \end{document}
