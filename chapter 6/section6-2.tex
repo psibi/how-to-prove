@@ -348,4 +348,21 @@ don't contain $a$ are just the subsets of $A'$ and by inductive
 hypothesis there are $n(n-1)/2$ of them. Now the subset of $A$ that
 contain $A$ and have a length of two are $n$. Summing them, we have
 $n(n+1)/2$ elements as required.
+
+\section{Solution 12}
+By mathematical induction,
+
+Base case. When $n=1$, the remaining area is a trapezoidal.
+
+Induction step. Let $n$ be an arbitrary element and suppose if an
+equilateral triangle is cut into $4^n$ congruent equilateral triangles
+and one corner is removed, then the remaining area is covered by
+trapezoidal tiles. Suppose equilateral triangle is cut into $4^{n+1}$
+congruent triangles with $4^n$ triangles in each of them. Now you can
+view this as $4$ congruent equilateral triangles. Now since one corner
+has been removed, one triangle out of the $4$ has remaining area of it
+is covered by trapezoidal tiles. Now for the remaining three triangle,
+cut a trapezoidal area such that a corner is removed from each of
+them. Then again applying inductive hypothesis on each of them, we get
+trapezoidal area in each of them.
 \end{document}
