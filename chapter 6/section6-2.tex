@@ -333,4 +333,19 @@ By inductive hypothesis, $A_1$ has $2^n$ elements. Now $A_2 = A_1
 \times \{x\}$ where $x$ is the $(n+1)$th element.
 
 So, $2^n + 2^n = 2^{n+1}$ elements.
+
+\section{Solution 11}
+By mathematical induction,
+Base case. When $n=0$, $P_2(A)$ has zero elements, so base case holds.
+
+Induction step. Let $n$ be an arbitrary element and suppose if $A$ has
+$n$ elements then $P_2(A)$ has $n(n-1)/2$ elements. Suppose $A$ has
+$n+1$ elements. Let us pick an arbitrary element $a$ from $A$ such
+that $A' = A \setminus \{a\}$. Now $A'$ has $n$ elements and $P_2(A')$
+has $n(n-1)/2$ elements. There are two kinds of subsets of $A$ those
+that contain $a$ as an element and those that don't. The subset hat
+don't contain $a$ are just the subsets of $A'$ and by inductive
+hypothesis there are $n(n-1)/2$ of them. Now the subset of $A$ that
+contain $A$ and have a length of two are $n$. Summing them, we have
+$n(n+1)/2$ elements as required.
 \end{document}
