@@ -316,4 +316,21 @@ Let $\frac{1}{a_n} = k_n$. From arithmetic geometric mean inequality,
   <= (a_1a_2...a_n)^{1/n} \\
 \end{align*}
 QED.
+
+\section{Solution 10}
+By mathematical induction on $n$,
+
+Base case. When $n=0$, $P(A)$ has 1 element which is the empty set.
+
+Induction step. Let $n$ be an arbitrary element and suppose if $A$ has
+$n$ elements then $P(A)$ has $2^n$ elements. Let $A$ has $n+1$
+elements. Then $P(A)$ can be divided into two sets $A_1$ and $A_2$.
+
+$A_1$ = Set which doesn't have $(n+1)$th element in it.
+$A_2$ = Set which has $(n+1)$th element in it.
+
+By inductive hypothesis, $A_1$ has $2^n$ elements. Now $A_2 = A_1
+\times \{x\}$ where $x$ is the $(n+1)$th element.
+
+So, $2^n + 2^n = 2^{n+1}$ elements.
 \end{document}
