@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Sibi <sibi@psibi.in>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\newcommand{\BigO}[1]{\ensuremath{\operatorname{O}\bigl(#1\bigr)}}
+\setlength\parskip{\baselineskip}
+\begin{document}
+\title{Chapter 6 (Section 6.2)}
+\author{Sibi}
+\date{\today}
+\maketitle
+
+% See here: http://tex.stackexchange.com/a/43009/69223
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+\newpage
+
+\section{Solution 1}
+
+\subsection{Solution (a)}
+
+($\Rightarrow$) Suppose $\forall n Q(n)$. Let $n$ be an arbitrary element. Since $Q(n+1)$ is true, it follows $\forall m < n + 1(P(m))$. Let $m = n$. Since $n < n + 1$, it follows that $P(n)$. Since $n$ was arbitrary it follows that $\forall n P(n)$.
+
+($\Leftarrow$) Suppose $\forall n P(n)$. Then it follows that $\forall k < n P(k)$. So, $Q(n)$.
+
+\subsection{Solution (b)}
+
+By mathematical induction on $n$,
+
+Base case. $n = 0$. $\forall k < n P(k)$ is vacously true.
+Induction step. Suppose $Q(n)$. So, $\forall k < n P(k)$. Since $k < n + 1$, it follows that $\forall k < n + 1 P(k)$. Now $\forall k < n + 1 P(k)$ is equivalent to $Q(n + 1)$.
+
+
+\end{document}
