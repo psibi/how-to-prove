@@ -94,5 +94,20 @@ Then,
 
 We know from inductive hypothesis that $x^{n-2} + \frac{1}{x^{n-2}}$  is integer. Also $x^n + \frac{1}{x^n} + x^{n-1} + \frac{1}{x^{n-2}}$ is integer. So, $x^n + \frac{1}{x^n}$ is integer.
 
+\section{Solution 6}
+\section{Solution (a)}
+By mathematical induction on $n$,
+
+Base case. When $n = 0$, both sides of the equation becomes $0$.
+Induction step. Suppose $\sum_{i=0}^{n} F_i = F_{n+2} - 1$. Then,
+\begin{gather*}
+  \begin{align}
+  \sum_{i=0}^{n+1} F_i = \sum_{i=0}^{n} F_i + F_{n+1} \\
+  = F_{n+2} + F_{n+1} - 1 \\
+    = F_{n+3} - 1
+  \end{align}
+\end{gather*}
+So, $\sum_{i=0}^{n} F_i \implies \sum_{i=0}^{n+1} F_i$.
+
 
 \end{document}
