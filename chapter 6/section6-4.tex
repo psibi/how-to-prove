@@ -78,4 +78,21 @@ I will just prove the second item here. Let $n >= 15$ be an arbitrary element.Su
 
 Also see this: http://math.stackexchange.com/a/1745857/124772
 
+\section{Solution 5}
+
+Let $n$ be an arbitrary number such that $n >= 1$. Suppose $\forall k < n$, $x^k + 1/x^k$ is an integer. Let $k = n-1$, then,
+\begin{gather*}
+  x^{n-1} + \frac{1}{x^{n-1}} \text{ is an integer.}
+\end{gather*}
+
+Then,
+\begin{gather*}
+  (x^{n-1} + \frac{1}{x^{n-1}})(x + \frac{1}{x}) \\
+  = x^{n-1}.x + \frac{x}{x^{n-1}} + \frac{x^{n-1}}{x} + \frac{1}{x^{n-1}.x} \\
+  = x^n + \frac{1}{x^n} + x^{n-1} + \frac{1}{x^{n-2}} \\
+\end{gather*}
+
+We know from inductive hypothesis that $x^{n-2} + \frac{1}{x^{n-2}}$  is integer. Also $x^n + \frac{1}{x^n} + x^{n-1} + \frac{1}{x^{n-2}}$ is integer. So, $x^n + \frac{1}{x^n}$ is integer.
+
+
 \end{document}
