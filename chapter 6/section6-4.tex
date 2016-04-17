@@ -48,5 +48,13 @@ By mathematical induction on $n$,
 Base case. $n = 0$. $\forall k < n P(k)$ is vacously true.
 Induction step. Suppose $Q(n)$. So, $\forall k < n P(k)$. Since $k < n + 1$, it follows that $\forall k < n + 1 P(k)$. Now $\forall k < n + 1 P(k)$ is equivalent to $Q(n + 1)$.
 
+\section{Solution 2}
+$P(q) = \forall q \in N (q > 0 \implies \neg \exists p \in N(p/q = \sqrt{2}))$
+
+Let $q$ be an arbitrary element in $N$. Suppose $\forall k < q(P(k))$. Suppose $q > 0$. Let us prove by contradiction. There exists some $p \in N$ such that $p/q = \sqrt{2}$. So, $p^2 = 2q^2$. It follows that $p$ and $q$ are even. So, $p = 2p'$ and $q = 2q'$. Now, $p'/q' = \sqrt{2}$. Since $q' < q$, it contradicts with the Inductive hypothesis. So, $\sqrt{2}$ is irrational.
+
+\section{Solution 3}
+\subsection{Solution (a)}
+
 
 \end{document}
