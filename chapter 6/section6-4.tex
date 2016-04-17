@@ -60,6 +60,22 @@ Suppose $\sqrt{6}$ is rational. Then, $\exists p \in Z^{+} \exists q \in Z^{+}(p
 \subsection{Solution (b)}
 Suppose $\sqrt{2} + \sqrt{3} = p/q$ where $p \in Z^{+}$ and $q \in Z^{+}$. So, $p^2 / q^2 = 5 + 2\sqrt{6}$. So, $\sqrt{6} = (p^2 - 5q^2)/q^2$. This contradicts the part (a).
 
+\section{Solution 4}
+To prove: $\forall n >= 12 \exists a \in \mathbb{N} \exists b \in \mathbb{N}(3a + 7b = n)$.
 
+We have to prove it like this:
+
+\begin{itemize}
+  
+\item 
+  Prove for n=12,13,14
+  
+\item 
+  $\forall n >= 15 \exists a \exists b. (n = 3a + 7b)$
+\end{itemize}
+
+I will just prove the second item here. Let $n >= 15$ be an arbitrary element.Suppose  $\forall k(  15 <= k < n)$, there exists $a$ and $b$ such that $k = 3a + 7b$. Since $n - 3 < n$, it follows that $n - 3 = 3a + 7b$ from inductive hypothesis. So, $n = 3(a + 1) + 7b$. Let $a + 1 = a'$, So, $\exists a' \exists b (n = 3a' + 7b)$. Since $n$ was arbitrary, it follows that $\forall n >= 15 \exists a \exists b. (n = 3a + 7b)$.
+
+Also see this: http://math.stackexchange.com/a/1745857/124772
 
 \end{document}
