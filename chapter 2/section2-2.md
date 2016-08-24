@@ -143,9 +143,9 @@ Either someone doesn't like anyone or someone likes everyone.
 
 (d)
 
-* `¬∀y > 0∃x(ax^2 + bx + c = y)`
-* `∃y > 0∀x¬(ax^2 + bx + c = y)`
-* `∃y > 0∀x¬(ax^2 + bx + c ≠ y)`
+* `¬∀y > 0 ∃x(ax^2 + bx + c = y)`
+* `∃y > 0 ∀x¬(ax^2 + bx + c = y)`
+* `∃y > 0 ∀x(ax^2 + bx + c ≠ y)`
 
 Exercise 3
 ----------
@@ -345,25 +345,33 @@ x is a teacher of one person.
 
 * `∃x∃!yT (x, y)`
 
-For some x there exists one y such that x is a teacher of y.
+Literally: For some x there exists one y such that x is a teacher of y.
+
+There is a teacher who teaches exactly one student.
 
 (c)
 
 * `∃!x∃yT (x, y)`
 
-There exists only one x for some y such that x is a teacher of y.
+Literally: There exists only one x for some y such that x is a teacher of y.
+
+There is a student who has only one teacher.
 
 (d)
 
 * `∃y∃!x T (x, y)`
 
-For some y there exits one x such that x is a teacher of y.
+Literally: For some y there exits one x such that x is a teacher of y.
+
+There is a student who has only one teacher.  (equivalent to c)
 
 (e)
 
 * `∃!x∃!yT (x, y)`
 
-There exists exactly one x and y such that x is a teacher of y.
+Literally: There exists exactly one x and y such that x is a teacher of y.
+
+There is exactly one teacher who teaches exactly one student.
 
 (f)
 
@@ -372,3 +380,5 @@ There exists exactly one x and y such that x is a teacher of y.
 * `∃x∃y[T (x, y) ∧ ∀u∀v(¬T (u, v) ∨ ((u = x) ∧ v = y))]`
 * `∃x∃y[T (x, y) ∧ ∀u∀v(T(u,v) -> ((u = x) ∧ v = y))]`
 * `∃!x∃!yT (x, y)`
+
+f is equivalent to e
