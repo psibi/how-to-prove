@@ -143,9 +143,9 @@ Either someone doesn't like anyone or someone likes everyone.
 
 (d)
 
-* `¬∀y > 0∃x(ax^2 + bx + c = y)`
-* `∃y > 0∀x¬(ax^2 + bx + c = y)`
-* `∃y > 0∀x¬(ax^2 + bx + c ≠ y)`
+* `¬∀y > 0 ∃x(ax^2 + bx + c = y)`
+* `∃y > 0 ∀x¬(ax^2 + bx + c = y)`
+* `∃y > 0 ∀x(ax^2 + bx + c ≠ y)`
 
 Exercise 3
 ----------
