@@ -10,7 +10,7 @@
 \usepackage{tabularx}
 \setlength\parskip{\baselineskip}
 \begin{document}
-\title{Chapter 3 (Section 3.1)}
+\title{Chapter 3 (Section 3.2)}
 \author{Sibi}
 \date{\today}
 \maketitle
@@ -113,10 +113,20 @@ P$ be true. But $\neg P$ is true but our given $P$ is also true which
 leads us to a contradiction. Therefore, $\neg(Q \implies \neg P)$ is
 true.
 
+Alt. Proof: Suppose $Q$. Then $\neg (Q \implies \neg P) \equiv Q \land P$,
+because $\neg (Q \implies \neg P) \equiv \neg ( \neg Q \lor \neg P )$.
+Since we are given P and assumed Q, then $Q \land  P$ is true, 
+therefore if $P$ and $Q$ are true then $Q \implies \neg (Q \implies \neg P)$ 
+is also true.
+
 \section{Problem 3}
 
 Proof. Suppse $x \in A$. Since $A \subseteq C$, it follows $x \in C$.
 But B and C are disjoint, so $x \notin B$.
+
+Expanded Proof. Suppose $x \in A$. Since $A \subseteq C$ then it holds that
+$x \in A \implies x \in C$, so $x \in C$. Since $B \cap C = \emptyset$ then
+$x \in C \implies x \notin B$, therefore $x \notin B$.
 
 \section{Problem 4}
 
@@ -126,24 +136,34 @@ Therefore, if $x \in C$, then $x \in B$.
 
 \section{Problem 5}
 
-Proof. Suppose $a \in A \setminus B$. We will prove the
-contrapositive. It follows that $a \in A$ from our assumption. Also,
+Proof. (by contradiction) Suppose $a \in A \setminus B$. 
+It follows that $a \in A$ from our assumption. Also,
 $a \in C$ from which we can conclude that $a \in B$ since $A \cap C
 \subseteq B$ But this contradicts the fact that $a \notin B$.
 Therefore $a \notin A \setminus B$.
 
 \section{Problem 6}
 
-Proof. Suppose $a \notin C$. We will prove the contrapositive. From $a
+Proof. (by contradiction) Suppose $a \notin C$. From $a
 \notin B \setminus C$, we can conclude that either $a \notin B$ or $a
 \in C$ is true. Since $a \in A$, we can conclude that $a \in B$ from
 $A \subseteq B$. So, $a \notin B$ is false. Therefore, $a \in C$
 should be true. But this contradicts the fact that $a \notin C$.
 Therefore $a \in C$.
 
+Note: This can be proven by focusing on $a \in B$ as well. By assuming
+$a \notin C$ we know that $a \notin B$ by $a \notin B \setminus C$, since this
+means logically that $\neg (a \in B \land a \notin C)$ which simplifies
+to $a \notin B \lor a \in C$. By assuming $a \notin C$ we automatically
+must have $a \notin B$. But since we have $a \in A$ then by the subset
+$A \subseteq B$ we have $\forall x ( x \in A \implies x \in B)$ and
+therefore $a \in A$ is sufficient to force $a \in B$. But this
+contradicts that $a$ cannot be in $B$ since we assumed $a \notin C$.
+Since $a \notin C$ causes an impossible situation, $a$ must be in $C$.
+
 \section{Problem 7}
 
-Proof. Suppose $y = 0$. We will prove the contrapositive. Solving $y +
+Proof. (by contradiction) Suppose $y = 0$. Solving $y +
 x = 2y - x$ by substituting $y=0$ we get that $x=0$. But it
 contradicts the fact that both $x$ and $y$ cannot be $0$. Therefore,
 $y \neq 0$.
@@ -159,7 +179,7 @@ negative number we get $a^2 < 1$. From that we can conclude that $a <
 
 \section{Problem 9}
 
-Proof. Suppose $x^2y = 2x + y$. Suppose $y \neq 0$ Suppose $x = 0$.
+Proof. (by contradiction) Suppose $x^2y = 2x + y$. Suppose $y \neq 0$ Suppose $x = 0$.
 Substituting this into the equivalent $x^2y = 2x + y$, we get $y = 0$.
 But this contradicts the fact that $y \neq 0$. Therefore $x \neq 0$.
 Thus, if $y \neq 0$, then $x \neq 0$.
@@ -192,6 +212,16 @@ C$.
 From $x \notin B$ and $B \subseteq C$, we cannot conclude that $x
 \notin C$.
 
+Expansion:
+
+$A \subseteq C$ means $\forall x ( x \in A \implies x \in B )$. Likewise,
+$B \subseteq C$ means $\forall x ( x \in B \implies x \in C )$. We are given
+that $x \in A$, therefore we know $x \in C$ by the first given. Now if we
+claim that $x \notin C$ because $x \notin B$ then we are committing the 
+fallacy of denying the hypothesis, or trying to accept the inverse of
+$x \in B \implies x \in C$. This is clearly wrong, therefore the proof
+is invalid.
+
 Solution (b)
 
 $ C = \{1,2,3,4,5\} $
@@ -199,4 +229,3 @@ $ A = \{1,2\}$
 $ B = \{3,4,5\}$
 $ x = 1 $
 \end{document}
-
