@@ -55,7 +55,7 @@ Exercise 3
 a)
 
     p q | p + q
-    T T | F 
+    T T | F
     T F | T
     F T | T
     F F | F
@@ -117,7 +117,7 @@ Exercise 5
 Find formulas using only the connective ↓ that are equivalent to ¬P,
 P ∨ Q, and P ∧ Q.
 
-    p ↓ p 
+    p ↓ p
     ¬(p ↓ q) ≡ (p ↓ q) ↓ (p ↓ q)
     ¬p ↓ ¬q  ≡ (p ↓ p) ↓ (q ↓ q)
 
@@ -153,7 +153,7 @@ One of these:
     ¬p ≡ (p | p)
     p ∨ q ≡ (¬p | ¬q) ≡ ((p | p) | (q | q))
     p ∧ q ≡ ¬(p | q) ≡ (p | q) | (p | q)
-    
+
 
 Exercise 7
 -----------
@@ -457,7 +457,7 @@ Exercise 11
     => ((P ∧ Q) ∨ P) ∧ ((P ∧ Q) ∨ ¬Q)  [Distributive law]
     => (P ∨ (P ∧ Q)) ∧ (¬Q ∨ (P ∧ Q))  [Associative law]
     => P ∧ ((¬Q ∨ P) ∧ (¬Q ∨ Q)) [Absorption law & Distributive law]
-    => P ∧ (¬Q ∨ P) 
+    => P ∧ (¬Q ∨ P)
     => P [Absorption law]
 
 (c)
@@ -480,10 +480,9 @@ Exercise 12
 (a)
 
     ¬(¬P ∨ Q) ∨ (P ∧ ¬R)
-    => (P ∧ ¬Q) ∨ (P ∧ ¬R) [Demorgan's law]
-
-Can't reduce more than this. Let me know if it's more reducible than
-this.
+    => (¬¬P ∧ ¬Q) ∨ (P ∧ ¬R) [Demorgan's law]
+    => (P ∧ ¬Q) ∨ (P ∧ ¬R) [Double Negation law]
+    => P ∧ (¬Q ∨ ¬R) [Distributive law]
 
 (b)
 
@@ -498,7 +497,7 @@ this.
     (P ∧ R) ∨ [¬R ∧ (P ∨ Q)]
     => (P ∧ R) ∨ (¬R ∧ P) ∨ (¬R ∧ Q) [Distributive law]
     => (P ∧ (R ∨ ¬R)) ∨ (¬R ∧ Q) [Distributive law]
-    => P ∨ (¬R ∧ Q) 
+    => P ∨ (¬R ∧ Q)
 
 Exercise 13
 ------------
@@ -571,4 +570,3 @@ of the argument in this case.
 What if one of the premises is either a tautology or a contradiction?
 Doesn't really matter as the conclusion of an argument is an
 tautology.
-
