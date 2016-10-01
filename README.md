@@ -8,7 +8,14 @@ The reason I have started studying this is to ultimately study
 
 Feel free to raise
 [issue](https://github.com/psibi/how-to-prove/issues) if you think a
-proof is wrong or if it needs some clarification.
+proof is wrong or if it needs some clarification. Pull requests and
+contributions are welcome.
+
+Credits
+--------
+
+* [David Cantrell](https://github.com/davecan) for Section 3.3 and
+various other improvements.
 
 Notes:
 -------
