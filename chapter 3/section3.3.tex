@@ -1,0 +1,1079 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: David Cantrell <github.com/davecan>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{csquotes}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[utf8]{inputenc}
+
+\newcommand{\assumed}{ \;\; \text{ assumed} }
+\newcommand{\arb}{ \;\; \text{ assumed arbitrary} }
+\newcommand{\exinst}[1]{ \;\; \text{ \textbf{EI} of #1} }
+\newcommand{\uninst}[1]{ \;\; \text{ \textbf{UI} of #1} }
+\newcommand{\mopo}[2]{ \;\; \text{ \textbf{MP} of #1 by #2} }
+\newcommand{\given}[1]{#1 \;\;}
+\newcommand{\pad}{\;\;\;\;}
+\newcommand{\padd}{\pad \;}
+\newcommand{\Pf}{ \underline{Pf.} }
+\newcommand{\qed}{$\square$}
+\newcommand{\LE}{ \;\; \textbf{LE} }
+\newcommand{\LEof}[1]{ \;\; \text{ \textbf{LE} of #1} }
+\newcommand{\powerset}[1]{ \mathcal{P} (#1) }
+\newcommand{\N}{ \mathbb{N} }
+\newcommand{\Z}{ \mathbb{Z} }
+\newcommand{\F}{ \mathcal{F} }
+\newcommand{\G}{ \mathcal{G} }
+
+\setlength\parskip{\baselineskip}
+\begin{document}
+\title{Chapter 3 (Section 3.3)}
+\author{
+  David Cantrell \\ \\ 
+  \textit{In support of Sibi's open source} \\ 
+  \textit{student solution project.}
+}
+\date{\today}
+\maketitle
+\newpage
+
+\section*{Notes}
+
+\begin{itemize}
+\item \textbf{LE} means logical equivalence, usually of the previous line. 
+
+\item \textbf{EI} and \textbf{UI} mean existential instantiation and universal
+ instantiation, respectively. 
+
+\item \textbf{MP} means Modus Ponens.
+\end{itemize}
+
+\section{Problem 1}
+
+Use the methods of this section to prove that if $\exists x (P(x) \implies Q(x))$ 
+is true, then $\forall x P(x) \implies \exists x Q(x)$ is true.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+\given{1} \exists x (P(x) \implies Q(x)) \assumed 
+ & \forall x P(x) \implies \exists x Q(x) \\
+ & \\
+\given{2} \forall x P(x) \assumed & \exists x Q(x) \\
+\given{3} x_0 \exinst{1} & \\
+     \pad P(x_0) \implies Q(x_0) & \\
+\given{4} P(x_0) \uninst{2} & \\
+\given{5} Q(x_0) \mopo{3}{4} & \\
+\hline
+\end{tabular}
+
+\Pf Suppose $\exists x (P(x) \implies Q(x))$, and $\forall x P(x)$. Let
+$x_0$ be an arbitrary element such that $P(x_0) \implies Q(x_0)$. Then
+$Q(x_0)$ must be true by Modus Ponens. Thus, if $\exists x (P(x) 
+\implies Q(x))$ then $\forall x P(x) \implies \exists x Q(x)$. \qed
+
+
+\section{Problem 2}
+Prove that if $A$ and $B \setminus C$ are disjoint, then 
+$A \cap B \subseteq C$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & (A \cap B \setminus C = \emptyset) \implies (A \cap B \subseteq C) \\
+ & \\
+ 
+\given{1} A \cap B \setminus C = \emptyset \assumed & A \cap B \subseteq C \\
+
+\pad \forall x ( x \notin A \lor x \notin B \lor x \in C) \LE 
+ & \forall x ( x \in A \cap B \implies x \in C) \LE \\
+ & \\
+
+\given{2} x \arb & x \in A \cap B \implies x \in C \\  
+ & \\
+ 
+\given{3} x \in A \cap B \assumed & x \in C \\
+\given{4} x \notin A \lor x \notin B \lor x \in C \uninst{1} & \\
+\given{5} (x \notin A \lor x \notin B) \text{ false by 3} & \\
+\given{6} x \in C \text{ by 1, 5} & \\
+\hline
+\end{tabular}
+
+\Pf Suppose $A$ and $B \setminus C$ disjoint. Let $x$ be an arbitrary
+element of $A \cap B$. Since $A$ and $B \setminus C$ are disjoint,
+then it must be true that either $x$ is not in $A$, $x$ is not in $B$, 
+or $x$ is in $C$. Since $x$ is in $A$ and $B$ by $x \in A \cap B$, 
+therefore $x$ must be in $C$ as well. Thus, if the sets $A$ and $B \setminus C$
+are disjoint, then $A \cap B$ is a subset of $C$. \qed
+
+
+\section{Problem 3}
+
+Prove that if $A \subseteq B \setminus C$ then $A$ and $C$ are disjoint.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & (A \subseteq B \setminus C) \implies A \cap B = \emptyset \\
+ & \\
+\given{1} A \subseteq B \setminus C \text{ assumed} & A \cap B = \emptyset \\
+     \pad \forall x ( x \in A \implies (x \in B \land x \notin C) \LE 
+ &  \forall x ( x \notin A \lor x \notin C) \LE \\
+ & \\
+
+\given{2} x \text{ arbitrary assumed} & x \notin A \lor x \notin C \\
+\given{3} x \text{ is univ. inst. of 1} & \\
+\given{4} x \in A \implies (x \in B \land x \notin C) & \\
+\pad x \notin A \lor (x \in B \land x \notin C) \LE & \\
+\given{5} x \notin A \lor x \notin C \text{ conj. simpl. of 4} & \\
+\hline
+\end{tabular}
+
+\Pf Suppose $A$ is a subset of $B \setminus C$, and let $x$ be any arbitrary value.
+Then by definition of subset we know $x \notin A$ or that both $x \in B$ and
+$x \notin C$. In particular, we know that either $x \notin A$ or $x \notin C$.
+But if $x$ is either not in $A$ or not in $C$ then $A$ and $C$ are disjoint.
+Therefore we know that if $A$ is a subset of $B \setminus C$ then $A$ and $C$
+are disjoint. \qed
+
+
+\section{Problem 4}
+
+Suppose $A \subseteq \powerset{A}$. Prove that 
+$\powerset{A} \subseteq \powerset{ \powerset{A} }$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+\given{1} A \subseteq \powerset{A} & 
+          \powerset{A} \subseteq \powerset{ \powerset{A} } \\
+ & \forall x (x \in \powerset{A} \implies x \in \powerset{ \powerset{A} } ) \\
+ & \\ 
+ 
+\given{2} x \arb & 
+          x \in \powerset{A} \implies x \in \powerset{ \powerset{A} } \\
+ & \\
+ 
+\given{3} x \in \powerset{A} \assumed & x \in \powerset{ \powerset{A} } \\
+ & x \subseteq \powerset{A} \\
+ & \forall y ( y \in x \implies y \in \powerset{A} ) \\
+ & \\
+ 
+\given{4} y \arb & y \in x \implies y \in \powerset{A} \\
+ & \\
+ 
+\given{5} y \in x \assumed & y \in \powerset{A} \\
+ & y \subseteq A \\
+ & \forall z ( z \in y \implies z \in A ) \\
+ & \\
+ 
+\given{6} z \arb & z \in y \implies z \in A \\
+ & \\
+ 
+\given{7} z \in y \assumed & z \in A \\
+ & \\
+ 
+\given{8} \forall m ( m \in A \implies m \in \powerset{A} ) & \\
+     \pad \forall m ( m \in A \implies m \subseteq A) & \\
+     \pad \forall m ( m \in A \implies \forall n ( n \in m \implies n \in A ) ) & \\
+
+\given{9} x \subseteq A \LEof{3} & \\
+     \pad \forall a ( a \in x \implies a \in A ) & \\
+
+\given{10} y \uninst{9} & \\
+     \padd y \in x \implies y \in A & \\
+  
+\given{11} y \in A \mopo{10}{5} & \\
+\given{12} y \uninst{8} & \\
+     \padd y \in A \implies \forall n ( n \in y \implies n \in A ) & \\
+\given{13} \forall n ( n \in y \implies n \in A ) \mopo{12}{11} & \\
+
+\given{14} z \uninst{13} & \\
+     \padd z \in y \implies z \in A & \\
+
+\given{15} z \in A \mopo{14}{7} & \\
+\hline
+\end{tabular}
+
+\Pf Suppose $x$ an arbitrary element of $\powerset{A}$ and $y$ an
+arbitrary element of $x$. Since $y$ is also a set, assume $z$ an arbitrary
+element of $y$. Thus $z \in y$ and $y \in x$, and $x \in \powerset{A}$.
+Since $x \in \powerset{A}$ then $x$ is a subset of $A$, and so $y$ is also
+in $A$. Further, since $A$ is a subset of $\powerset{A}$ then all elements
+contained in elements of $A$ are also in $A$, so $z$ is in $A$ also. Thus, if
+$A$ is a subset of $\powerset{A}$ then $\powerset{A}$ is a subset of
+$\powerset{ \powerset{A} }$. \qed
+
+
+
+\section{Problem 5}
+
+The hypothesis of the theorem proven in exercise 4 is $A \subseteq \powerset{A}$.
+
+\textbf{Part a}
+
+Can you think of a set A for which this hypothesis is true?
+
+\textbf{Answer.}
+
+Let $A$ = the set of all $\N$ unioned with the set of all sets of $\N$: 
+$A = \N \cup \powerset{\N}$. 
+
+Clearly, $\N$ is a subset of its own power set, so the condition 
+$\N \subseteq \powerset{\N}$ holds.
+
+Example using the givens:
+
+$\N = \{ 1, 2, 3, ... \}$.
+
+Then $\powerset{\N} = \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 3 \}, 
+                         \{ 1, 2 \}, \{ 1, 3 \}, \{ 2, 3 \}, \{ 1, 2, 3 \} \}$.
+
+Let $A = \N \cup \powerset{\N} = 
+     \{ \emptyset, \{ 1 \}, \{ 2 \}, \{ 3 \}, 
+                   \{ 1, 2 \}, \{ 1, 3 \}, \{ 2, 3 \}, \{ 1, 2, 3 \},
+                   1, 2, 3, ... \}$.
+                               
+Let $x = \{ \{ 1, 2 \}, \{ 1, 3 \} \}$. Then $x \in \powerset{A}$ is true.
+
+Let $y = \{ 1, 2 \}$. Then $y \in x$ and $y \subseteq A$ are both true.
+
+Let $z = \{ 1 \}$. Then $z \in y$ and $z \subseteq A$ are both true.
+
+
+\textbf{Part b}
+
+Can you think of another?
+
+\textbf{Answer.}
+
+The previous reasoning will work for any set $X$ unioned with its power set.
+
+So for example it will work for all integers, e.g. 
+$A = \Z \cup \powerset{\Z}$, etc.
+
+Note however it will also work for the empty set!
+
+Let $A = \emptyset$. Then $\powerset{\emptyset} = \{ \emptyset, \{ \emptyset \} \}$,
+and $\powerset{ \powerset{A} } = 
+  \{ \emptyset, \{ \emptyset \}, \{ \{ \emptyset \} \}, 
+  \{ \emptyset, \{ \emptyset \} \} \}$.
+
+Let $x = \{ \emptyset \}$. Then $x \in \powerset{A}$ is true.
+
+Let $y = \emptyset$. Then $y \in x$ and $y \subseteq A$ are both true.
+
+Let $z = \emptyset$. Then $z \in y$ and $z \subseteq A$ are also both true. (see below)
+
+It may be argued that $z$ is false since the empty set has no elements, so
+$z = \emptyset \in y = \emptyset$ is false. This is correct, but the
+given in step 14 uses $z$ as the universal instantiation of the logical form
+of $y \subseteq A$, or in instantiated form, $z \in y \implies z \in A$.
+Since $z \in y$ is false for $z$ the empty set, $z \in A$ is vacuously true.
+
+
+\section{Problem 6}
+
+Suppose $x$ is a real number.
+
+\textbf{Part a}
+
+Prove that if $x \neq 1$ then there is a real number $y$ such that 
+$\frac{y+1}{y - 2} = x$.
+
+\textbf{Answer.}
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & (x \neq 1) \implies \exists y ( \frac{y + 1}{y - 2} = x ) \\
+ & \\
+\given{1} x \neq 1 \assumed & \exists y ( \frac{y + 1}{y - 2} = x ) \\
+\hline
+\end{tabular}
+
+At this point the book tells us to consider assuming the existence statement
+is true and try to find a value that fits. Solving for $y$ works here.
+
+\Pf Suppose $x \neq 1$. Then we must find a $y$ such that
+$\frac{y + 1}{y - 2} = x$. Solving for $y$ yields $y = \frac{1}{1 - x}$
+which is a real number defined whenever $x \neq 1$ by the closure property
+of the reals. Thus, if $x \neq 1$ is true then there is a value
+of $y$ that satisfies $\frac{y + 1}{y - 2} = x$. \qed
+
+\textbf{Part b}
+
+Prove that if there is a real number $y$ such that 
+$\frac{y+1}{y-2} = x$, then $x \neq 1$.
+
+\textbf{Answer.}
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & \exists y ( \frac{y + 1}{y - 2} = x ) \implies (x \neq 1) \\
+ & \\
+1 \;\; \exists y ( \frac{y + 1}{y - 2} = x ) \assumed & x \neq 1 \\
+2 \;\; a \text{ is univ. inst. of 1} & \\
+\;\;\;\; \frac{a + 1}{a - 2} = x & \\
+\;\;\;\; a = \frac{-3}{1-x} & \\
+\hline
+\end{tabular}
+
+\Pf Suppose $\exists y ( \frac{y + 1}{y - 2} = x )$. This means
+we know there is some arbitrary value $a$ that satisfies the condition 
+$\frac{a + 1}{a - 2} = x$. Then $a = \frac{-3}{1-x}$, and clearly $x$ cannot
+equal $1$ here. Therefore, if such a $y$ exists, $x$ cannot equal $1$. \qed
+
+
+\section{Problem 7}
+
+Prove that for every real number $x$, if $x > 2$ then there is a real number
+$y$ such that $y + \frac{1}{y} = x$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & \forall x [ (x > 2) \implies \exists y (y + \frac{1}{y} = x) ]  \\
+ & \\
+
+\given{1} x \arb & (x > 2) \implies \exists y (y + \frac{1}{y} = x) ] \\
+ & \\
+\given{2} x > 2 \assumed & \exists y (y + \frac{1}{y} = x) ] \\
+\hline
+\end{tabular}
+
+\Pf Take $x$ to be any arbitrary value greater than 2. Solving for $y$
+using the quadratic formula yields two values that satisfy the existence
+proposition: $\frac{1}{2} ( x \pm \sqrt{x^2 - 4} )$. Both of these are
+real numbers. Therefore, since $x$ is arbitrary, if $x > 2$ then there 
+is a real number $y$ such that $y + \frac{1}{y} = x$. \qed
+
+\section{Problem 8}
+
+Prove that if $\F$ is a family of sets and $A \in \F$, then 
+$A \subseteq \cup \F$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & (A \in \F) \implies (A \subseteq \cup \F)  \\
+ & \\
+
+\given{1} A \in \F \assumed & A \subseteq \cup \F \\
+ & \forall x ( x \in A \implies x \in \cup \F ) \\
+ & \\
+ 
+\given{2} x \arb & x \in A \implies x \in \cup \F \\
+ & \\
+ 
+\given{3} x \in A \assumed & x \in \cup \F \\
+ & \exists M ( M \in \F \land x \in M ) \\
+ & \\
+\hline
+\end{tabular}
+
+\Pf Assume that $A$ is an element in $\F$, and $x$ is any element
+in $A$. To say $A$ is a subset of $\cup \F$ is to say that each
+value in $A$ is contained in some (possibly the same) set in $\F$.
+Since $x$ was chosen as an arbitrary element of $A$, and $A$ is
+an arbitrary element of $\F$, then $x$ is a member of a set in $\F$.
+Therefore, if $\F$ is a family of sets and $A \in \F$, then 
+$A \subseteq \cup \F$. \qed
+
+
+\section{Problem 9}
+
+Prove that if $\F$ is a family of sets and $A \in \F$, then 
+$\cap \F \subseteq A$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & (A \in \F) \implies (\cap \F \subseteq A)  \\
+ & \\
+
+\given{1} A \in \F \assumed & \cap \F \subseteq A \\
+ & \forall x ( x \in \cap \F \implies x \in A ) \\
+ & \\
+ 
+\given{2} x \arb & x \in \cap \F \implies x \in A \\
+ & \\
+ 
+\given{3} x \in \cap \F \assumed & x \in A \\
+ \pad     \forall M ( M \in F \implies x \in M ) & \\
+ & \\
+ 
+\given{4} A \uninst{3} & \\
+ \pad     A \in \F \implies x \in A & \\
+ & \\
+ 
+\given{5} x \in A \mopo{4}{1} & \\
+
+\hline
+\end{tabular}
+
+\Pf Assume $A$ is some set in $\F$. If $\cap \F$ is a subset
+of $A$ then every element in $\cap \F$ is also in $A$.
+Let $x$ be an arbitrary element in $\cap \F$. Then $x$ is a 
+member of every set in $\F$. In particular, $x$ is in $A$.
+Thus, since every value found in $\cap \F$ is also found in $A$,
+then if $A$ is in $\F$, $\cap \F$ is a subset of $A$. \qed
+
+
+\section{Problem 10}
+
+Suppose that $\F$ is a nonempty family of sets, $B$ is a set, and 
+$\forall A \in \F ( B \subseteq A )$. Prove that $B \subseteq \cap \F$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+\given{1} \forall A \in \F ( B \subseteq A ) & B \subseteq \cap \F \\
+ \pad     \forall A ( A \in \F \implies ( B \subseteq A ) ) \LE
+ & \forall x ( x \in B \implies x \in \cap \F ) \LE \\
+ & \\
+
+\given{2} x \arb & x \in B \implies x \in \cap \F \\
+ & \\
+ 
+\given{3} x \in B \assumed & x \in \cap \F \\
+ & \forall M ( M \in \F \implies x \in M ) \LE \\
+ & \\
+ 
+\given{4} M \arb & M \in \F \implies x \in M \\
+ & \\
+ 
+\given{5} M \in \F \assumed & x \in M \\
+ & \\
+ 
+\given{6} M \uninst{1} & \\
+     \pad M \in \F \implies B \subseteq M & \\
+ & \\
+ 
+\given{7} B \subseteq M \mopo{6}{5} & \\
+     \pad \forall y ( y \in B \implies y \in M ) & \\
+ & \\
+ 
+\given{8} x \uninst{7} & \\
+     \pad x \in B \implies x \in M & \\
+ & \\
+ 
+\given{9} x \in M \mopo{8}{3} & \\
+
+\hline
+\end{tabular}
+
+\Pf Assume $M$ an arbitrary set in $\F$. Then $B$ is a subset of $M$, 
+since all sets in $F$ contain $B$. Now let $x$ be any element in $B$.
+Then $x$ is in $M$ as well. Since $M$ is allowed to be any set in
+$\F$, to say $x$ is in $M$ means that $x$ is also in $\cap \F$. This
+then means that $B$ is a subset of $\cap \F$, because $x$ is any
+arbitrary element in $B$. Therefore, under the given initial 
+conditions, $B \subseteq \cap \F$ is true. \qed
+    
+
+\section{Problem 11}
+
+Suppose that $\F$ is a family of sets. Prove that if $\emptyset 
+\in \F$ then $\cap \F = \emptyset$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & (\emptyset \in \F) \implies (\cap \F = \emptyset) \\
+ & \\
+\given{1} \emptyset \in \F \assumed & \cap \F = \emptyset \\
+ & \forall x ( x \notin \cap \F \lor x \notin \emptyset ) \\
+ & \\
+
+\given{2} x \arb & x \notin \cap \F \lor x \notin \emptyset \\
+ & x \notin \cap \F \\
+ & x \notin \{ y | \forall A ( A \in \F \implies y \in A ) \} \LE \\
+ & \neg [ \forall A ( A \in \F \implies x \in A ) ] \LE \\
+ & \exists A ( A \in F \land x \notin A ) \LE \\
+ & \\
+ 
+\given{3} A \in \F \land x \notin A \assumed & \text{Find an $x$ or $A$ that satisfies} \\
+ & \\
+\given{4} Let A = \emptyset & \\
+ & \\
+\given{5} \emptyset \in \F \land x \notin \emptyset \text{ holds} & \\
+ 
+\hline
+\end{tabular}
+
+\Pf Suppose $\emptyset$ is in $\F$, and let $x$ be any arbitrary value. To say
+$\cap \F$ is disjoint is to say there is at least one set in $\F$ that does not 
+share any elements with any other set in $\F$. Such a set does exist in $\F$,
+the empty set. Thus, if the empty set is in $\F$ then $\cap \F$ is disjoint. \qed
+
+
+\section{Problem 12}
+
+Suppose $\F$ and $\G$ are families of sets. Prove that if $\F \subseteq G$ then 
+$\cup \F \subseteq \cup \G$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & (\F \subseteq \G) \implies (\cup \F \subseteq \cup \G) \\
+ & \\
+
+\given{1} \F \subseteq G \assumed & \cup \F \subseteq \cup \G \\
+     \pad \forall A ( A \in \F \implies A \in \G ) \LE
+          & \forall M ( M \in \cup \F \implies M \in \cup \G ) \\
+ & \\
+
+\given{2} M \arb & M \in \cup \F \implies M \in \cup \G \\
+ & \\
+
+\given{3} M \in \cup \F \assumed & M \in \cup \G \\
+     \pad \exists A ( A \in \F \land M \in A ) \LE 
+        & \exists N ( N \in \G \land M \in N ) \LE \\
+ & \\
+ 
+\given{4} A_0 \exinst{3} & \\
+     \pad A_0 \in \F \land M \in A_0 & \\
+ & \\
+ 
+\given{5} A_0 \uninst{1} & \\
+     \pad A_0 \in \F \implies A_0 \in \G & \\
+ & \\
+
+\given{6} A_0 \in \G \mopo{5}{4} & \\
+ & \\
+ 
+\given{7} A_0 \in \G \land M \in A_0 & \\
+
+\hline
+\end{tabular}
+
+\Pf Suppose $\F$ is a subset of $\G$, and let $M$ be an arbitrary element
+in $\cup \F$. Then we know there is a set in $\F$ that contains $M$. Call
+this set $A_0$. Since $\F$ is a subset of $\G$, $A_0$ must also be in $\G$.
+For $\cup \F$ to be a subset of $\cup \G$ we must have a set in $\G$ that
+contains any element in $\cup \F$. And so we have, with $A_0$ in $\G$, and
+$M$ which is in $\cup \F$ and also in $A_0$. Thus, if $\F \subseteq \G$,
+then $\cup \F \subseteq \cup \G$. \qed
+
+
+
+\section{Problem 13}
+
+Suppose $\F$ and $\G$ are nonempty families of sets. Prove that if 
+$\F \subseteq \G$ then $\cap \G \subseteq \cap \F$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & (\F \subseteq \G) \implies (\cap \G \subseteq \cap \F) \\
+ & \\
+
+\given{1} \F \subseteq \G \assumed & \cap \G \subseteq \cap \F \\
+     \pad \forall A ( A \in \F \implies A \in \G ) 
+        & \forall M ( M \in \cap \G \implies M \in \cap \F ) \\
+ & \\
+ 
+\given{2} M \arb & M \in \cap \G \implies M \in \cap \F \\
+ & \\
+ 
+\given{3} M \in \cap \G \assumed & M \in \cap \F \\
+     \pad \forall A ( A \in \G \implies M \in A )
+        & \forall N ( N \in \F \implies M \in N ) \\
+ & \\
+ 
+\given{4} N \arb & N \in \F \implies M \in N \\
+ & \\
+ 
+\given{5} N \in \F \assumed & M \in N \\
+ & \\
+ 
+\given{6} N \uninst{1} & \\
+     \pad N \in \F \implies N \in \G & \\
+
+\given{7} N \in \G \mopo{6}{5} & \\
+
+\given{8} N \uninst{3} & \\
+     \pad N \in \G \implies M \in N & \\
+     
+\given{9} M \in N \mopo{8}{7} & \\
+
+\hline
+\end{tabular}
+
+\Pf Assume $\F \subseteq \G$, and $M$ any value in $\cap \G$.  Next, let $N$ be
+any set in $\F$. Then $N$ is also in $\G$, and $M$ is also in $N$. Because $M$
+is in $\G$ and also in $\F$, and $M$ and $N$ are chosen arbitrarily, then if
+$\F \subseteq \G$ then $\cap \G$ is a subset of $\cap \F$. \qed
+
+
+\section{Problem 14}
+
+Suppose $\{ A_i | i \in I \}$ is an indexed family of sets. Prove that \\
+$\cup_{i \in I} \powerset{A_i} \subseteq \powerset{\cup_{i \in I} A_i}$.
+(Hint: First make sure you know what all the notation means!)
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & \cup_{i \in I} \powerset{A_i} \subseteq \powerset{\cup_{i \in I} A_i} \\
+ & \forall M ( M \in \cup_{i \in I} \powerset{A_i} \implies M \in \powerset{\cup_{i \in I} A_i} ) \\
+ & \\
+
+\given{1} M \arb & M \in \cup_{i \in I} \powerset{A_i} \implies M \in \powerset{\cup_{i \in I} A_i} \\ 
+ & \\
+ 
+\given{2} M \in \cup_{i \in I} \powerset{A_i} \assumed & M \in \powerset{\cup_{i \in I} A_i} \\
+     \pad \exists i \in I ( M \in \powerset{A_i} ) & M \subseteq \cup_{i \in I} A_i \\
+     \pad \exists i \in I ( M \subseteq A_i ) & \forall N ( N \in M \implies N \in \cup_{i \in I} A_i ) \\
+     \pad \exists i \in I ( \forall x ( x \in M \implies x \in A_i ) ) & \\
+ & \\
+
+\given{3} N \arb & N \in M \implies N \in \cup_{i \in I} A_i \\
+ & \\
+ 
+\given{4} N \in M \assumed & N \in \cup_{i \in I} A_i \\
+ & N \in \{ x | \exists i \in I ( x \in A_i ) \} \\
+ & \exists i \in I ( N \in A_i ) \\
+ & \\
+ 
+\given{5} k \exinst{2} & \\
+     \pad \forall x ( x \in M \implies x \in A_k ) & \\
+ & \\
+
+\given{6} N \uninst{5} & \\
+     \pad N \in M \implies N \in A_k & \\
+ & \\
+ 
+\given{7} N \in A_k \mopo{6}{4} & \\
+
+\hline
+\end{tabular}
+
+
+\Pf Let $M$ be an arbitrary set in $\cup_{i \in I} \powerset{A_i}$. Then there must be an $i \in I$
+such that all elements of $M$ are in $\powerset{\cup_{i \in I} A_i}$ also. Fix this particular $i$
+and label it as $k$. Then all elements of $M$ are in $\powerset{A_k}$. Now let $N$ be any elements of 
+$M$. Then $N$ is also in $A_k$. Therefore, because $N$ is in $M$ and $A_k$, $M$ is a subset of $A_k$.
+Since $A_k$ is a particular set in $\cup_{i \in I} A_i$, $M$ is also a subset of $\cup_{i \in I} A_i$.
+This means then that $M$ is also a subset of $\powerset{\cup_{i \in I} A_i}$. We assumed $M$ is an
+arbitrary element of $\cup_{i \in I} \powerset{A_i}$. Thus, when $\{ A_i | i \in I \}$ is an indexed 
+family, $\cup_{i \in I} \powerset{A_i}$ is a subset of $\powerset{\cup_{i \in I} A_i}$. \qed
+
+
+
+\section{Problem 15}
+
+Suppose $\{ A_i | i \in I \}$ is an indexed family of sets and $I \neq \emptyset$.  Prove that
+$\cap_{i \in I} A_i \in \cap_{i \in I} \powerset{A_i}$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & \cap_{i \in I} A_i \in \cap_{i \in I} \powerset{A_i} \\
+ & \\
+
+\given{1} \text{Let } \cap \F = \cap_{i \in I} A_i & \cap \F \in \cap_{i \in I} \powerset{A_i} \\
+ & \cap \F \in \{ x | \forall i \in I ( x \in \powerset{A_i} ) \} \\
+ & \forall i \in I ( \cap \F \in \powerset{A_i} ) \\
+ & \\
+ 
+\given{2} k \text{ an arbitrary element of } I & \cap \F \in \powerset{A_k} \\
+ & \cap \F \subseteq A_k \\
+ & \forall M ( M \in \cap \F \implies M \in A_k ) \\
+ & \\
+ 
+\given{3} M \arb & M \in \cap \F \implies M \in A_k \\
+ & \\
+ 
+\given{4} M \in \cap \F \assumed & M \in A_k \\
+     \pad \forall i \in I ( M \in A_i ) & \\
+ & \\
+ 
+\given{5} k \uninst{4}{2} & \\
+     \pad M \in A_k & \\
+ 
+\hline
+\end{tabular}
+
+\Pf Let $k$ be a specific arbitrary index value in $I$, and $M$ an arbitrary element in $\cap_{i \in I} A_i$.
+Then in particular $M$ is an element of $A_k$. Because $M$ is in $A_k$ it is also in $\powerset{A_k}$, and
+therefore it is in $\cap_{i \in I} \powerset{A_i}$, since $k \in I$. Therefore, if $\{ A_i | i \in I \}$ 
+is an indexed family with $I \neq \emptyset$, then $\cap_{i \in I} A_i$ is an element of 
+$\cap_{i \in I} \powerset{A_i}$. \qed
+
+
+
+\section{Problem 16}
+
+Prove the converse of the statement proven in Example 3.3.5. In other words, prove that if 
+$\F \subseteq \powerset{B}$ then $\cup \F \subseteq B$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & ( \F \subseteq \powerset{B} ) \implies \cup \F \subseteq B \\
+ & \\
+
+\given{1} \F \subseteq \powerset{B} \assumed & \cup \F \subseteq B \\
+     \pad \forall A ( A \in \F \implies A \in \powerset{B} ) 
+        & \forall M ( M \in \cup \F \implies M \in B ) \\
+     \pad \forall A ( A \in \F \implies A \subseteq B ) & \\
+     \pad \forall A ( A \in \F \implies \forall x ( x \in A \implies x \in B ) & \\
+ & \\
+ 
+\given{2} M \arb & M \in \cup \F \implies M \in B \\
+ & \\
+ 
+\given{3} M \in \cup \F \assumed & M \in B \\
+     \pad M \in \{ x | \exists N ( N \in \F \land x \in N ) \} & \\
+     \pad \exists N ( N \in \F \land M \in N ) & \\
+ & \\
+ 
+\given{4} \eta \exinst{3} & \\
+     \pad \eta \in \F \land M \in \eta & \\
+ & \\
+ 
+\given{5} \eta \uninst{1} & \\
+     \pad \eta \in \F \implies \forall x ( x \in \eta \implies x \in B ) & \\
+ & \\
+ 
+\given{6} \forall x ( x \in \eta \implies x \in B )  \mopo{5}{4} & \\
+ & \\
+ 
+\given{7} M \uninst{6} & \\
+     \pad M \in \eta \implies M \in B & \\
+ & \\
+ 
+\given{8} M \in B \mopo{7}{4} & \\
+ 
+\hline
+\end{tabular}
+
+\Pf Suppose $\F \subseteq \powerset{B}$, and let $M$ be an arbitrary element in $\cup \F$.
+Then there is a set in $\F$ that also contains $M$. Call this set $eta$. Since $eta$ is
+in $\F$ then all elements of $eta$ are in $B$ as well, since $\F$ is a subset of the
+powerset of $B$. In particular, $M$ is an element of $\eta$ that is also in $B$. And since
+$\eta$ is in $\F$ then it is in the union $\cup \F$, and so $\cup \F$ is a subset of $B$
+since the arbitrary element $M$ is in both. Thus, if $\F \subseteq \powerset{B}$ then
+$\cup \F$ is a subset of $B$. \qed
+
+
+\section{Problem 17}
+
+Suppose $\F$ and $\G$ are nonempty families of sets, and every element of
+$\F$ is a subset of every element of $\G$. Prove that $\cup \F \subseteq \cap \G$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+ & \cup \F \subseteq \cap \G \\
+ & \forall M ( M \in \cup \F \implies M \in \cap \G ) \\
+ & \\
+
+\given{1} \text{Every element of $\F$ is a subset of every element of $\G$} & \\
+     \pad \forall f ( f \in \F \implies \forall g ( g \in \G \implies f \subseteq g ) ) & \\     
+& \\
+ 
+\given{2} M \arb & M \in \cup \F \implies M \in \cap \G \\
+& \\
+ 
+\given{3} M \in \cup \F \assumed & M \in \cap \G \\
+     \pad \exists A ( A \in \F \land M \in A ) & \forall N ( N \in \G \implies M \in N ) \\
+& \\
+ 
+\given{4} N \arb & N \in \G \implies M \in N \\
+& \\
+ 
+\given{5} N \in \G \assumed & M \in N \\
+& \\
+ 
+\given{6} A_0 \exinst{3} & \\
+     \pad A_0 \in \F \land M \in A_0 & \\
+& \\
+ 
+\given{7} A_0 \uninst{1} & \\
+     \pad A_o \in \F \implies \forall g ( g \in \G \implies A_0 \subseteq g ) & \\
+& \\
+ 
+\given{8} \forall g ( g \in \G \implies A_0 \subseteq g ) \mopo{7}{6} & \\
+& \\
+
+\given{9} N \uninst{8} & \\
+     \pad N \in \G \implies A_0 \subseteq N & \\
+& \\
+
+\given{10} A_0 \subseteq N \mopo{9}{5} & \\
+     \padd \forall x ( x \in A_0 \implies x \in N ) & \\
+& \\
+
+\given{11} M \uninst{10} & \\
+     \padd M \in A_0 \implies M \in N & \\
+& \\
+
+\given{12} M \in N \mopo{11}{6} & \\
+
+ 
+\hline
+\end{tabular}
+
+
+\Pf Assume $M$ to be any arbitrary element in $\cup \F$. Then there is a set in $\F$ that contains
+$M$. Call this set $A_0$. Because every element of $\F$ is a subset of every element of $\G$, and
+$A_0$ is an element of $\F$, then $A_0$ is also a subset of all sets in $\G$. Now, assume $N$ an 
+arbitrary set in $\G$. Then in particular $A_0$ is a subset of $N$. Since $M$ is in $A_0$ then it
+is also in $N$. Because $M$ is an arbitrary element of $\cup \F$, and $N$ an arbitrary element in
+$\cap \G$, it follows that for any arbitrary value in $\cup \F$, that value is also in $\cap \G$. \qed
+
+
+\section{Problem 18}
+
+In this problem all variables range over $\Z$, the set of all integers.
+
+\textbf{Part a}
+
+Prove that if $a | b$ and $a | c$, then $a | (b + c)$.
+
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+& \forall a \forall b \forall c ( (a | b) \land (a | c) \implies a | (b + c)) \\
+& \\
+
+\given{1} a, b, c \arb & (a | b) \land (a | c) \implies a | (b + c) \\
+& \\
+
+\given{2} (a | b) \land (a | c) \assumed & a | (b + c) \\
+     \pad \exists m ( am = b ) \land \exists n ( an = c ) & \exists x ( ax = b + c ) \\
+& \\
+
+\given{3} m_0, n_0 \exinst{2} & \\
+     \pad a m_0 = b \land a n_0 = c & \\
+& \\
+
+\given{4} ax = b + c \assumed & \text{Find an $x$ that satisfies} \\
+& \\
+
+\given{5} ax = a m_0 + a n_0 & \\
+     \pad ax = a ( m_0 + n_0 ) & \\
+     \pad  x = m_0 + n_0 & \\
+ 
+\hline
+\end{tabular}
+
+
+\Pf Let $a$, $b$, and $c$ be arbitrary integers, and suppose $a$ divides both $b$ and $c$.
+To say $a$ divides $b$ means there is a third value which, when multiplied by $a$, equals $b$.
+And likewise for $a$ divides $c$, and so on. Let $m$ represent the value such that $am = b$, 
+and $n$ the value such that $an = c$. Further, let $x$ be the value which when multiplied by
+$a$ yields $b + c$. The claim is that there is an $x$ such that $ax = b + c$. Solving for $x$ 
+here shows there is indeed an integer $m + n$ that satisfies this claim. Thus, if
+$a$ divides both $b$ and $c$ then it also divides $b + c$. \qed
+
+
+\textbf{Part b}
+
+Prove that if $ac | bc$ and $c \neq 0$, then $a | b$.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+& ( (ac | bc) \land c \neq 0 ) \implies a | b \\
+& \\
+
+\given{1} (ac | bc) \land c \neq 0 & a | b \\
+     \pad \exists m (acm = bc) & \exists x (ax = b) \\
+& \\
+
+\given{2} ax = b \assumed & \text{Find an $x$ that satisfies} \\
+& \\
+
+\given{3} m_0 \exinst{1} & \\
+     \pad a c m_0 = b c & \\
+     \pad m_0 = \frac{bc}{ac} = \frac{b}{a} & \\
+& \\
+
+\given{4} a x = b & \\
+     \pad a c x = b c & \\
+     \pad x = \frac{b}{a} & \\
+ 
+\hline
+\end{tabular}
+
+\Pf Suppose $ac$ divides $bc$, and $c \neq 0$. Then there must exist an $m$ such that
+$a c m = b c$. We claim there must be an $x$ such that $a x = b$, since we claim that
+$a | b$. To find such an $x$, we see that multiplying the equation through by $c$
+yields $a c x = b c$, which is the same form as $a c m = b c$. And clearly both
+$m$ and $x$ equal $\frac{b}{a}$. Therefore, if $ac | bc$ and $c \neq 0$, then $a | b$. \qed
+
+
+
+\section{Problem 19}
+
+\textbf{Part a}
+
+Prove that for all real numbers $x$ and $y$ there is a real number $z$ such
+that $x + z = y - z$.
+
+Note: We can solve the equation directly without going through the givens and goals, but 
+will instead follow the techniques given by the text to expose the underlying proof method.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+& \forall x \forall y \exists z ( x + z = y - z ) \\
+& \\
+
+\given{1} x, y \arb & \exists z ( x + z = y - z ) \\
+& \\
+
+\given{2} x + z = y - z \assumed & \text{Find a $z$ that satisfies} \\
+     \pad 2z = y - x & \\
+     \pad z = \frac{y - x}{2} & \\
+ 
+\hline
+\end{tabular}
+
+\Pf Assuming $x$ and $y$ are arbitrary and solving for $z$ quickly shows there is such a 
+real number, $\frac{y - x}{2}$. \qed
+
+
+\textbf{Part b}
+
+Would the statement in part (a) be correct if “real number” were
+changed to “integer”? Justify your answer.
+
+\textbf{Answer:} No, because not all integers are divisible by 2. But it is true for the set of even integers.
+
+
+
+\section{Problem 20}
+
+Consider the following theorem:
+
+\textbf{Theorem.} For every real number $x$, $x^2 \geq 0$.
+
+What’s wrong with the following proof of the theorem?
+
+\textit{Proof.} Suppose not. Then for every real number $x$, $x^2 < 0$. In particular,
+plugging in $x = 3$ we would get $9 < 0$, which is clearly false. This
+contradiction shows that for every number $x$, $x^2 \geq 0$.
+
+\textbf{Answer.} The following shows the givens and goals used in the reasoning for the above proof.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+& \forall x ( x^2 \geq 0 ) \\
+& \\
+
+\given{1} \neg \forall x ( x^2 \geq 0 ) & \text{Contradiction sought} \\
+     \pad \exists x \neg ( x^2 \geq 0 ) & \\
+     \pad \exists x ( x^2 < 0 ) & \\
+& \\
+
+\hline
+\end{tabular}
+
+The proof is incorrect at this statement:
+
+\begin{displayquote}
+Suppose not. Then for every real number $x$, $x^2 < 0$.
+\end{displayquote}
+
+This claims the negation of $\forall x P(x)$ is $\forall x \neg P(x)$, which is invalid.
+
+
+\section{Problem 21}
+
+Consider the following incorrect theorem:
+
+\textbf{Incorrect Theorem.} If $\forall x \in A ( x \neq 0 )$ and $A \subseteq B$ then 
+$\forall x \in B ( x \neq 0 )$.
+
+\textbf{Part a}
+
+What’s wrong with the following proof of the theorem?
+
+\textit{Proof.} Let $x$ be an arbitrary element of $A$. Since $\forall x \in A ( x \neq 0 )$,
+we can conclude that $x \neq 0$. Also, since $A \subseteq B$, $x \in B$. Since
+$x \in B$, $x \neq 0$, and $x$ was arbitrary, we can conclude that $\forall x \in B ( x \neq 0 )$.
+
+\textbf{Answer.} The following shows the givens and goals used in the reasoning for the above proof.
+
+\begin{tabular}{| >{$}l<{$} | >{$}l<{$} |}
+\hline
+Givens & Goals \\
+\hline
+& ( \forall x \in A ( x \neq 0 ) \land A \subseteq B ) \implies \forall x \in B ( x \neq 0 ) \\
+& \\
+
+\given{1} \forall x \in A ( x \neq 0 ) \land A \subseteq B \assumed & \forall x \in B ( x \neq 0 ) \\
+     \pad \forall x ( x \in A \implies x \neq 0 ) \land \forall x ( x \in A \implies x \in B )
+        & \forall x ( x \in B \implies x \neq 0 ) \\
+& \\
+
+\given{2} x \arb & x \in B \implies x \neq 0 \\
+& \\
+
+\given{3} x \in A \assumed & \\
+& \\
+
+\given{4} x \uninst{1} & \\
+     \pad (x \in A \implies x \neq 0) \land (x \in A \implies x \in B) & \\
+     \pad x \in A \implies (x \neq 0 \land x \in B ) & \\
+& \\
+    
+\given{5} x \neq 0 \land x \in B & \\
+
+\hline
+\end{tabular}
+
+The proof is incorrect because it concludes that both $x \neq 0$ and $x \in B$ are true, but it does
+not prove that if $x$ is in B then $x$ \textit{must} be true, which is what is sought by the conclusion.
+$x \neq 0 \land x \in B$ is not logically equivalent to $x \in B \implies x \neq 0$.
+
+\textbf{Part b}
+
+Find a counterexample to the theorem. In other words, find an example
+of sets $A$ and $B$ for which the hypotheses of the theorem are
+true but the conclusion is false.
+
+\textbf{Answer.}
+
+$B = \{ 0, 1 \}$
+
+$A = \{ 1 \}$
+
+$A \subseteq B$ is true, and no element in $A$ is equal to zero, but not all elements of $B$ are non-zero.
+
+
+\end{document}
