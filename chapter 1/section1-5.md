@@ -431,6 +431,16 @@ Truth table of `(P → Q) ∨ (Q → R)`:
 
 As every row in fourth column is `T`, they are tautology.
 
+Alternative Solution:
+
+    (P → Q) ∨ (Q → R)
+    (¬P ∨ Q)∨ (¬Q v R)   Conditional Law
+    (¬P ∨ R)∨ (¬Q v Q)   Associative Law
+    In the above statement (¬Q v Q) is a tautology,
+    (¬P ∨ R)∨ (Tautology)
+    From tautology laws, (Statement) v (tautology) is a tautology
+    Hence the complete statment is a tautology
+
 Exercise 8
 -----------
 
