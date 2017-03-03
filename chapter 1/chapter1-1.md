@@ -137,7 +137,7 @@ P ∧ ¬S = I will buy the Pant but not the shirt.
 
 (c)
 
-(¬P ∨ ¬S) ∧ ¬(¬P ∧ ¬Q) = Either I won't buy the pant or won't buy the shirt. (XOR)
+(¬P ∨ ¬S) ∧ ¬(¬P ∧ ¬Q) = Either I won't buy the pant or won't buy the shirt.
 
 Exercise 6
 -----------
