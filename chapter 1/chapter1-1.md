@@ -196,18 +196,6 @@ Alternatively we can prove the statement using a truthtable,
 when we have to prove that a sequence of statements conclude an argument,
 the logical and (conjunction) of all the premises must imply the conclusion.
 
-C|J|P|((¬(J ∧ P) ∧ ((P ∧ C) ∧ (¬(P ∧ C) ∧ J))) → C)|
-|---|---|---|---|---|
-F|F|F|T|
-F|F|T|T|
-F|T|F|T|
-F|T|T|T|
-T|F|F|T|
-T|F|T|T|
-T|T|F|T|
-T|T|T|T|
-
-
 (b)
 
 B = Beef will be the main course.
