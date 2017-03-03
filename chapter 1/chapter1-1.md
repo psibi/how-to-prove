@@ -100,7 +100,7 @@ A ∧ B = Alice and Bob are both in the room
 
 'Either Alice or Bob is not in the room.', translates to 'Either Alice is not in the room or Bob is not in the room, but it is not the case that both are missing from the room.'. This is captured by xor.
 
-(¬A ∨ ¬B) ∧ ¬(¬A ∧ ¬B)  
+(¬A ∨ ¬B) ∧ ¬(¬A ∧ ¬B)
 
 (d)
 
@@ -214,7 +214,6 @@ Conclusion:
 Reasoning seems invalid: In a case where you cannot have both fish and
 corn, you will end up with Beef and Peas.
 
-
 (c)
 
 J = John is telling the truth.
@@ -229,7 +228,6 @@ Conclusion:
 (J ∨ ¬S) ∧ ¬(J ∧ ¬S)
 
 Reasoning seems valid: J ∨ B ∨ ¬S ∨ ¬B gives J ∨ ¬S
-
 
 (d) Either sales will go up and the boss will be happy, or expenses will go
 up and the boss won’t be happy. Therefore, sales and expenses will not
