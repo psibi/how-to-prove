@@ -182,7 +182,9 @@ C = Pete will win the chemistry prize.
 Premises:
 
 ¬ (J ∧ P)
+
 (P ∨ C) ∧ ¬(P ∧ C)
+
 J
 
 Conclusion:
@@ -218,17 +220,20 @@ C = Corn will be the vegetable.
 
 Premises:
 (B ∨ F) ∧ ¬(B ∧ F)
+
 (P ∨ C) ∧ ¬(P ∧ C)
+
 ¬(F ∧ C)
 
 Conclusion:
+
 ¬(B ∧ P)
 
 Reasoning seems invalid: In a case where you cannot have both fish and
 corn, you will end up with Beef and Peas.
 
 
-B|C|P|Q|((((B ∨ Q) ∧ ¬(B ∧ Q)) ∧ (((P ∨ C) ∧ ¬(P ∧ C)) ∧ ¬(Q ∧ C))) → ¬(B ∧ P))|
+B|C|P|F|((((B ∨ F) ∧ ¬(B ∧ F)) ∧ (((P ∨ C) ∧ ¬(P ∧ C)) ∧ ¬(F ∧ C))) → ¬(B ∧ P))|
 |---|---|---|---|---|
 F|F|F|F|T|
 F|F|F|T|T|
@@ -254,10 +259,13 @@ B = Bill is telling the truth.
 S = Sam is telling the truth.
 
 Premises:
+
 (J ∨ B) ∧ ¬(J ∧ B)
+
 (¬S ∨ ¬B) ∧ ¬(¬S ∧ ¬B)
 
 Conclusion:
+
 (J ∨ ¬S) ∧ ¬(J ∧ ¬S)
 
 Reasoning seems valid: J ∨ B ∨ ¬S ∨ ¬B gives J ∨ ¬S
@@ -283,9 +291,11 @@ B = Boss will be happy.
 E = Expenses will go up.
 
 Premises:
+
 (S ∧ B) ∨ (E ∧ ¬B)
 
 Conclusion:
+
 ¬(S ∧ E)
 
 Reasoning is invalid: When S = T, E = T, B = T, them premise is True
