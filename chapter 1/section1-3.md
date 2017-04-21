@@ -28,7 +28,7 @@ D(x,y) = x is divisible by y
 N(x) = x is a natural number.
 P(x) = x is a prime number
 
-    N(x) ∧ N(y) ∧ (P(x) ∨ P(y))
+    N(x) ∧ N(y) ∧ (((P(x) ∨ P(y)) ∧ (¬P(x) ∨ ¬P(y)))
 
 Exercise 2
 ----------

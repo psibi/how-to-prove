@@ -98,7 +98,9 @@ A ∧ B = Alice and Bob are both in the room
 
 (c)
 
-¬A ∨ ¬B
+'Either Alice or Bob is not in the room.', translates to 'Either Alice is not in the room or Bob is not in the room, but it is not the case that both are missing from the room.'. This is captured by xor.
+
+(¬A ∨ ¬B) ∧ ¬(¬A ∧ ¬B)
 
 (d)
 
@@ -135,7 +137,7 @@ P ∧ ¬S = I will buy the Pant but not the shirt.
 
 (c)
 
-¬P ∨ ¬S = Either I won't buy the pant or won't buy the shirt.
+(¬P ∨ ¬S) ∧ ¬(¬P ∧ ¬Q) = Either I won't buy the pant or won't buy the shirt.
 
 Exercise 6
 -----------
@@ -180,7 +182,7 @@ C = Pete will win the chemistry prize.
 Premises:
 
 ¬ (J ∧ P)
-P ∨ C
+(P ∨ C) ∧ ¬(P ∧ C)
 J
 
 Conclusion:
@@ -190,6 +192,10 @@ Reasoning is valid: Jane has won the math prize so Pete can't win the
 math prize. So he can only will the chemistry prize according to the
 premises.
 
+Alternatively we can prove the statement using a truthtable,
+when we have to prove that a sequence of statements conclude an argument,
+the logical and (conjunction) of all the premises must imply the conclusion.
+
 (b)
 
 B = Beef will be the main course.
@@ -198,8 +204,8 @@ P = Peas will be the vegetable.
 C = Corn will be the vegetable.
 
 Premises:
-B ∨ F
-P ∨ C
+(B ∨ F) ∧ ¬(B ∧ F)
+(P ∨ C) ∧ ¬(P ∧ C)
 ¬(F ∧ C)
 
 Conclusion:
@@ -215,11 +221,11 @@ B = Bill is telling the truth.
 S = Sam is telling the truth.
 
 Premises:
-J ∨ B
-¬S ∨ ¬B
+(J ∨ B) ∧ ¬(J ∧ B)
+(¬S ∨ ¬B) ∧ ¬(¬S ∧ ¬B)
 
 Conclusion:
-J ∨ ¬S
+(J ∨ ¬S) ∧ ¬(J ∧ ¬S)
 
 Reasoning seems valid: J ∨ B ∨ ¬S ∨ ¬B gives J ∨ ¬S
 
