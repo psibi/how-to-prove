@@ -369,6 +369,7 @@ Exercise 8
 * `∀x∃y(y > x ∧ ∃z(y + z = 100))`
 * For all `x` and some `y`, `y > x` and there exists some `z` such
   that `y + z = 100`
+ 
 
         True
 
