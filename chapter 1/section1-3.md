@@ -75,7 +75,7 @@ Exercise 3
 
 (b)
 
-    {x | x is a university }
+    {x | x is an ivy-league university }
 
 (c)
 
