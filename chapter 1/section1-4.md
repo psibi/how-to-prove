@@ -184,6 +184,9 @@ First some logical analysis:
     x ∈ (A ∪ B) ∧ x ∈ ¬B
     (x ∈ A ∨ x ∈ B) ∧ x ∈ ¬B
     x ∈ ¬B ∧ (x ∈ A ∨ x ∈ B)
+    (x ∈ ¬B ∧ x ∈ A ) ∨ (x ∈ ¬B ∧ x ∈ B)
+    (x ∈ ¬B ∧ x ∈ A ) ∨ (False ∧ True)[ or True ∧ False]
+    (x ∈ ¬B ∧ x ∈ A ) ∨ (False)
     x ∈ ¬B ∧ x ∈ A
 
 B = {2,4}
