@@ -385,6 +385,20 @@ $xRy$ is true.
 \end{align*}
 
 \section{Problem 12}
+dcapgit: Here is what I believe is an acceptable solution. The one
+         below does not define correctly what it means for a set to
+         not have a minimal element. You will have to convert this to 
+         Math TeX format, as I don't have the tool to do this.
+         
+1. F has no minimal element iff for every X in F there exists a Y in F such that Y is a subset of X and Y is not equal to X. This is what we need to prove.
+
+2. Suppose X is an arbitrary element of F. By the definition of F, there exists a real number x that is a minimal element of X.
+
+3. Also by the definition of F, for any real number y greater than x, y is an element of X and there exists a Y in F such that y is a minimal element of Y.
+
+4. So since Y is a subset of X and x is not an element of Y we conclude that F has no minimal element.
+
+
 First, let's get some things straight: \\
 Let $S = \{(X,Y) \in P(R) \times P(R) \mid X \subseteq Y\}$ \\
 Let $F = \{X \subseteq R \mid X \neq \emptyset \land \forall x \forall
