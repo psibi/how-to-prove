@@ -1,4 +1,4 @@
-How to Prove
+How to Prove It: A Structured Approach
 ------------
 
 Contains solution for the Velleman's book.
