@@ -199,6 +199,25 @@ So, the key thing to figure out here is that if set B contains any
 elements which is present in set `A`, then `(A ∪ B) \ B` is not equal
 to `A`.
 
+Exercise 11
+-----------
+
+    (b) Give an example of sets A, B, and C for which (A ∪ B) \ C ≠ A ∪ (B \ C).
+
+    A = {1, 2}
+    B = {1, 2}
+    C = {1, 2}
+
+    (A ∪ B) \ C = ({1, 2} ∪ {1, 2}) \ {1, 2}
+                = {1, 2} \ {1, 2}
+                = {} or ∅
+
+    A ∪ (B \ C) = {1, 2} ∪ ({1, 2} \ {1, 2})
+                = {1, 2} ∪ {}
+                = {1, 2}
+                
+    Hence, shown that (A ∪ B) \ C ≠ A ∪ (B \ C)
+            
 Exercise 13
 -----------
 
