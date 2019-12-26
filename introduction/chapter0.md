@@ -81,9 +81,11 @@ The way to solve this problem is to understand Theorem 3 (Euler's
 Theorem ?).
 
 (a) 2.3.5.7 + 1 = 211
+
 (b) 2.3.5.7.11 + 1 = 2311
 
 Or 2 + 1 = 3
+
    2.3 + 1 = 7
 
 They are giving redundant information (5,11) in the question to
@@ -106,14 +108,18 @@ Exercise 5
 Use the table in Figure 1 and the discussion on p. 5 to find two more perfect
 numbers.
 
-Two perfect numbers are already given in the book: 6,28. I would
-rather write a
-[program](https://github.com/psibi/rwh/blob/a8cd5f077ed3b47e07e4dd3020ec6986c769a64b/misc/Factor.hs#L26)
-rather than drawing a table to find out the next two perfect numbers.
+Two perfect numbers are already given in the book: 6,28.
 
-Next two numbers are: 496,8128
+Using Euclid's proof on p. 5 that if 2 ^ n - 1 is prime, then (2 ^ (n - 1)) (2 ^ n - 1) is perfect, we can see that n = 2 and n = 3 gives us the 6 and 28.
 
-Findingg 8128 with a paper and pen will be a nightmare!
+Using the other 2 values of n for which 2 ^ n - 1 is prime gives us two more perfect numbers.
+
+For n = 5 and n = 7 :
+
+(2 ^ (5 - 1)) (2 ^ 5 - 1) = 496
+
+(2 ^ (7 - 1)) (2 ^ 7 - 1) = 8128
+
 
 Exercise 6
 -----------
