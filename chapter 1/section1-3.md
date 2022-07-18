@@ -85,7 +85,7 @@ Exercise 3
 
 (d)
 
-    {x | x is a place in Canada}
+    {x | x is a province in Canada}
 
 Exercise 4
 ----------
