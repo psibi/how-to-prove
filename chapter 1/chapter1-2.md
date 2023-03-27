@@ -505,7 +505,7 @@ Exercise 13
     Use the first DeMorgan’s law and the double negation law to derive the
     second DeMorgan’s law.
 
-Firt Demorgan's law: `¬(P ∧ Q) is equivalent to ¬P ∨ ¬Q`
+First Demorgan's law: `¬(P ∧ Q) is equivalent to ¬P ∨ ¬Q`
 Second Demorgan's law: `¬(P ∨ Q) is equivalent to ¬P ∧ ¬Q`
 
     ¬(P ∨ Q) [LHS of second demorgan's law]
