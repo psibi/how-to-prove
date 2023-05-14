@@ -115,7 +115,7 @@ Negate:
 * `∀x ¬F(x) ∨ ∃yR(x,y)`
 * `∀x F(x) -> ∃yR(x,y)`
 
-        Everyone in the freshman class has atleast one roommate.
+        Everyone in the freshman class has at least one roommate.
 
 (b)
 

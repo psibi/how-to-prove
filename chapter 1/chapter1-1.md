@@ -237,5 +237,5 @@ Premises:
 Conclusion:
 ¬(S ∧ E)
 
-Reasoning is invalide: When S = T, E = T, B = T, them premise is True
+Reasoning is invalid: When S = T, E = T, B = T, them premise is True
 and Conclusion is false.

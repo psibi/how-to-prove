@@ -439,7 +439,7 @@ Alternative Solution:
     In the above statement (¬Q v Q) is a tautology,
     (¬P ∨ R)∨ (Tautology)
     From tautology laws, (Statement) v (tautology) is a tautology
-    Hence the complete statment is a tautology
+    Hence the complete statement is a tautology
 
 Exercise 8
 -----------
