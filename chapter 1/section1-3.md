@@ -97,7 +97,7 @@ Exercise 4
 
 (a)
 
-    {x^2 | x ∈ Z+}
+    {x^2 | x ∈ Z+} / {x^2 | x ∈ N}
 
 (b)
 
