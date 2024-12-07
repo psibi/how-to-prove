@@ -360,12 +360,7 @@ Exercise 6
 
     (P -> R) ∧ (Q -> R)
     (¬P ∨ R) ∧ (¬Q ∨ R)
-    ((¬P ∨ R) ∧ ¬Q) ∨ ((¬P ∨ R) ∧ R)
-    ((¬P ∨ R) ∧ ¬Q) ∨ R
-    (¬P ∧ ¬Q) ∨ (R ∧ ¬Q) ∨ R
-    (¬P ∧ ¬Q) ∨ ((R ∨ R) ∧ (¬Q ∨ R))
-    (¬P ∧ ¬Q) ∨ (R ∧ (¬Q ∨ R))
-    (¬P ∧ ¬Q) ∨ R
+    (¬P ∧ ¬Q) ∨ R [Distributive Law]
     ¬(P ∨ Q) ∨ R
     (P ∨ Q) -> R
 
