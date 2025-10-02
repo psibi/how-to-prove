@@ -39,7 +39,7 @@ S(x,y) = x is smarter than y.
 
 (c)
 
-* If someone doesn't like Mary, then that someone must by mary Mary
+* If someone doesn't like Mary, then that someone must be Mary
 * If someone isn't Mary, then someone likes Mary.
 
 L(x,y) = x likes y
