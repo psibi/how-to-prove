@@ -228,4 +228,94 @@ $ C = \{1,2,3,4,5\} $
 $ A = \{1,2\}$
 $ B = \{3,4,5\}$
 $ x = 1 $
+
+\subsection{Problem 13}
+Hypotheses:
+\begin{itemize}
+\item $P \rightarrow Q$
+\item $\lnot Q$
+\end{itemize}
+Conclusion: then $\lnot P$.\\
+\begin{table}[h!]
+\begin{tabular}{c|c|c|c|c}
+$P$ & $Q$ & $\lnot Q$ & $P \rightarrow Q$ & $\lnot P$ \\\hline
+1 & 1 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 1 & 1\\\hline
+\textbf{0} & \textbf{0} & \textbf{1} & \textbf{1} & \textbf{1}\\\hline
+\end{tabular}
+\end{table}
+\newpage
+\subsection{Problem 14}
+Truth table for 3.2.4
+\begin{table}[h!]
+\begin{tabular}{c|c|c|c|c}
+$P$ & $Q$ & $R$ & $P \rightarrow (Q \rightarrow R)$ & $\lnot R \rightarrow (P \rightarrow \lnot Q)$ \\\hline
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 0 & 1 & 1 & 1\\
+1 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1
+\end{tabular}
+\end{table}
+
+\subsection{Problem 15}
+(a)
+\begin{table}[h!]
+\begin{tabular}{c|c|c|c|c|c}
+$P$ & $Q$ & $R$ & $P \rightarrow Q$ & $Q \rightarrow R$ & $P\rightarrow R$\\\hline
+0 & 0 & 0 & 1 & 1 & 1\\
+0 & 0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 1 & 1\\
+1 & 1 & 0 & 1 & 0 & 0\\
+1 & 1 & 1 & 1 & 1 & 1
+\end{tabular}
+\end{table}\\
+(b)
+\begin{table}[h!]
+\begin{tabular}{c|c|c|c|c}
+$P$ & $Q$ & $R$ & $\lnot R \rightarrow (P \rightarrow \lnot Q)$ & $P \rightarrow (Q \rightarrow R)$ \\\hline
+0 & 0 & 0 & 1 & 1\\
+0 & 0 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 1\\
+0 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 1 & 1\\
+1 & 0 & 1 & 1 & 1\\
+1 & 1 & 0 & 0 & 0\\
+1 & 1 & 1 & 1 & 1
+\end{tabular}
+\end{table}
+\newpage
+\subsection{Problem 16}
+(a)\\
+\begin{tabular}{c|c|c|c|c|c}
+$P$ & $Q$ & $R$ & $P \rightarrow Q$ & $R \rightarrow \lnot Q$ & $P \rightarrow \lnot R$\\\hline
+0 & 0 & 0 & 1 & 1 & 1\\
+0 & 0 & 1 & 1 & 1 & 1\\
+0 & 1 & 0 & 1 & 1 & 1\\
+0 & 1 & 1 & 1 & 0 & 1\\
+1 & 0 & 0 & 0 & 1 & 1\\
+1 & 0 & 1 & 0 & 1 & 0\\
+1 & 1 & 0 & 1 & 1 & 1\\
+1 & 1 & 1 & 1 & 0 & 0
+\end{tabular}\\
+(b)
+\begin{table}[h!]
+\begin{tabular}{c|c|c|c}
+$P$ & $Q$ & $P$ & $Q \rightarrow \lnot (Q \rightarrow \lnot P)$ \\\hline
+0 & 0 & 0 & 1\\
+0 & 1 & 0 & 0\\
+1 & 0 & 1 & 1\\
+1 & 1 & 1 & 1 
+\end{tabular}
+\end{table}\
+
+\subsection{Problem 17}
+No. If we assume $y=4$ and substitute into the equation ($x^2+4=13 \equiv x = \pm 3$) we get $x=-3$. Such that $y=4$ and $x=-3$ is a counterexample to the theorem.
 \end{document}
