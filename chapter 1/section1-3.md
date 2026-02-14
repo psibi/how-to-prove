@@ -170,7 +170,7 @@ Thanks for the hints!
     let P = {y | y is a prime number}
     4 ∈ {x ∈ P | 13 − 2x > 1}
 
-    Bound variable: x
+    Bound variable: x, y
     Statement is false since 4 is not a prime number.
 
 Exercise 7
@@ -198,6 +198,26 @@ Copied the husband names from the answers section since I didn't know them.
 
     {x | x is the author of this book} = {Daniel J Velleman}
 
+Exercise 7 (Third edition)
+-----------
+
+    List the elements of the following sets:
+    (a) {x ∈ R | 2x^2 + x - 1 = 0}
+
+{-1, 1/2}
+
+    (b) {x ∈ R+ | 2x^2 + x - 1 = 0}
+
+{1/2}
+
+    (c) {x ∈ Z | 2x^2 + x - 1 = 0}
+
+{-1}
+
+    (d) {x ∈ N | 2x^2 + x - 1 = 0}
+
+∅
+
 Exercise 8
 -----------
 
@@ -209,11 +229,11 @@ Exercise 8
 
 (a)
 
-    {x ∈ R | x^2 − 4x + 3 = 0}
+    {x ∈ {1, 3} | x^2 − 4x + 3 = 0}
 
 (b)
 
-    {x ∈ R | x^2 − 2x + 3 = 0}
+    {x ∈ ∅ | x^2 − 2x + 3 = 0}
 
 (c)
 
